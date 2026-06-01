@@ -19,6 +19,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bommakugroup.com"),
+  icons: {
+    icon: "/tab-icon.jpeg",
+    apple: "/tab-icon.jpeg",
+  },
   title: "The Pavilion | Standalone Villas in Boduppal by Bommak Group",
   description:
     "The Pavilion — A Clean Slate. Most homes are built, then sold. Yours is built as you decide. 45 standalone G+1+Penthouse villas in Surya Hills, Boduppal, East Hyderabad by Bommak Constructions.",
