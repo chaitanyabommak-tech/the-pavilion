@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useInView } from "framer-motion";
 import { type LeadFormData } from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
@@ -31,7 +32,8 @@ async function handleLeadSubmit(data: LeadFormData) {
 export default function Contact() {
   const [form, setForm] = useState<LeadFormData>(initialForm);
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const router = useRouter();
+
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -46,7 +48,7 @@ export default function Contact() {
     setSubmitting(true);
     try {
       await handleLeadSubmit(form);
-      setSuccess(true);
+      router.push("/thank-you");
     } finally {
       setSubmitting(false);
     }
@@ -140,22 +142,12 @@ export default function Contact() {
             </h3>
             <div className="w-10 h-px mb-8" style={{ background: "var(--accent)" }} />
 
-            {success ? (
-              <div className="text-center py-12">
-                <div className="w-14 h-14 border-2 rounded-full flex items-center justify-center mx-auto mb-6" style={{ borderColor: "var(--accent)" }}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <h4 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">
-                  Thank you.
-                </h4>
-                <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
-                  Our team will contact you shortly.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                data-track="enquiry-form"
+                data-form-id="main-enquiry"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
@@ -165,6 +157,8 @@ export default function Contact() {
                       type="text"
                       name="name"
                       required
+                      aria-required="true"
+                      autoComplete="name"
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your name"
@@ -179,6 +173,8 @@ export default function Contact() {
                       type="tel"
                       name="phone"
                       required
+                      aria-required="true"
+                      autoComplete="tel"
                       value={form.phone}
                       onChange={handleChange}
                       placeholder="+91"
@@ -189,24 +185,12 @@ export default function Contact() {
 
                 <div>
                   <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="you@email.com"
-                    className="input-field"
-                  />
-                </div>
-
-                <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Preferred Villa Type
+                    Preferred Villa Type *
                   </label>
                   <select
                     name="villaType"
+                    required
+                    aria-required="true"
                     value={form.villaType}
                     onChange={handleChange}
                     className="input-field"
@@ -219,6 +203,21 @@ export default function Contact() {
                     <option value="Type B East">Type B East — 167 Sq.Yds</option>
                     <option value="Type C">Type C — 222–250 Sq.Yds</option>
                   </select>
+                </div>
+
+                <div>
+                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="you@email.com"
+                    className="input-field"
+                  />
                 </div>
 
                 <div>
@@ -242,8 +241,11 @@ export default function Contact() {
                 >
                   {submitting ? "Submitting..." : "Submit Enquiry"}
                 </button>
+
+                <p style={{ color: "var(--ink-3)" }} className="text-xs text-center leading-relaxed">
+                  Complimentary site visit. No obligations. Our team will call within 2 hours.
+                </p>
               </form>
-            )}
           </motion.div>
         </div>
       </div>

@@ -46,6 +46,8 @@ export default function Hero() {
             src="/images/pavilion-mobile-hero.png"
             alt=""
             className="w-full h-full object-cover object-top"
+            loading="eager"
+            fetchPriority="high"
             onError={(e) => {
               (e.target as HTMLImageElement).src = "/assets/community-aerial.jpeg";
             }}
@@ -111,6 +113,8 @@ export default function Hero() {
                   onClick={() => openModal("brochure")}
                   style={{ border: "1px solid var(--out-bd)", color: "var(--out-tx)" }}
                   className="px-8 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center gap-2 hover:opacity-80"
+                  data-track="brochure-download-intent"
+                  aria-label="Download The Pavilion brochure — enter your details to receive it"
                 >
                   Download Brochure
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -134,6 +138,10 @@ export default function Hero() {
               src="/assets/pavilion-hero.png"
               alt="The Pavilion community living aerial view, Surya Hills Boduppal East Hyderabad"
               className="absolute inset-0 w-full h-full object-cover object-center"
+              loading="eager"
+              fetchPriority="high"
+              width={1440}
+              height={810}
             />
           </motion.div>
         </div>
@@ -178,7 +186,8 @@ export default function Hero() {
           <button
             onClick={() => openModal("brochure")}
             className="hero-mob-dl-btn btn-primary"
-            aria-label="Download Pavilion brochure"
+            aria-label="Download The Pavilion brochure — enter your details to receive it"
+            data-track="brochure-download-intent"
           >
             Download Brochure
             <svg

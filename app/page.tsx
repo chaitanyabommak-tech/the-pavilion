@@ -16,7 +16,7 @@ export default function Home() {
       <DisclaimerOverlay />
       <Navbar />
 
-      <main className="pb-[130px] lg:pb-0">
+      <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
         <Hero />
         <Gallery />
         <VillaConfigurations />

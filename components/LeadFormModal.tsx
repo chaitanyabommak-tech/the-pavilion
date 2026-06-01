@@ -155,7 +155,7 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5" data-track="enquiry-form" data-form-id="main-enquiry">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
@@ -165,6 +165,8 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                       type="text"
                       name="name"
                       required
+                      aria-required="true"
+                      autoComplete="name"
                       value={form.name}
                       onChange={handleChange}
                       className="input-field"
@@ -179,6 +181,8 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                       type="tel"
                       name="phone"
                       required
+                      aria-required="true"
+                      autoComplete="tel"
                       value={form.phone}
                       onChange={handleChange}
                       className="input-field"
@@ -195,6 +199,7 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                     type="email"
                     name="email"
                     required={type === "brochure"}
+                    autoComplete="email"
                     value={form.email}
                     onChange={handleChange}
                     className="input-field"
@@ -266,8 +271,8 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                     : "Submit Enquiry"}
                 </button>
 
-                <p style={{ color: "var(--ink-2)" }} className="text-xs text-center">
-                  By submitting, you agree to be contacted by our sales team.
+                <p style={{ color: "var(--ink-3)" }} className="text-xs text-center leading-relaxed">
+                  Complimentary site visit. No obligations. Our team will call within 2 hours.
                 </p>
               </form>
             )}
