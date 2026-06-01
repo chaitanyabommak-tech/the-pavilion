@@ -111,11 +111,11 @@ export default function Footer() {
 
           <div className="footer-legal">
             <div className="footer-legal-links">
-              <a href="#">Privacy Policy</a>
+              <a href="/privacy">Privacy Policy</a>
               <span aria-hidden="true">·</span>
-              <a href="#">Terms and Conditions</a>
+              <a href="/terms">Terms and Conditions</a>
               <span aria-hidden="true">·</span>
-              <a href="#">Disclaimer</a>
+              <a href="/disclaimer">Disclaimer</a>
             </div>
             <p className="footer-copy">
               © 2026 Bommak Constructions. All rights reserved.
