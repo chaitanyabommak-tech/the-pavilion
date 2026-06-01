@@ -20,8 +20,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bommakugroup.com"),
   icons: {
-    icon: "/tab-icon.jpeg",
-    apple: "/tab-icon.jpeg",
+    icon: "/tab-icon.png",
+    apple: "/tab-icon.png",
   },
   title: "The Pavilion | Standalone Villas in Boduppal by Bommak Group",
   description:
