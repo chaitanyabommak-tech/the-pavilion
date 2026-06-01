@@ -1,0 +1,1839 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --color-forest-green:       #2D4A3E;
+  --color-forest-green-light: #3A5E50;
+  --color-forest-green-dark:  #1E3329;
+  --color-stone-beige:        #C8B49A;
+  --color-stone-beige-light:  #DDD0BE;
+  --color-off-white:          #F5F0EA;
+  --color-cream:              #F9F6F2;
+  --color-charcoal:           #1C1C1C;
+  --color-charcoal-light:     #2E2E2E;
+  --color-muted-gold:         #C9A84C;
+  --color-muted-gold-light:   #D4B96A;
+  --color-warm-gray:          #6B6360;
+  --font-heading:             var(--font-cormorant);
+  --font-body:                var(--font-inter);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   THEME TOKENS  —  light is the default
+   ═══════════════════════════════════════════════════════════════════ */
+:root,
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg:       #E5E4E2;
+  --surface:  #F3F0EA;
+  --card:     #FFFFFF;
+  --stats:    #FFFFFF;
+  --img-ph:   rgba(200, 180, 154, 0.18);
+
+  /* Text */
+  --ink:      #0A0A0A;
+  --ink-2:    #2B2B2B;
+  --ink-3:    #5F6062;
+
+  /* Accent */
+  --accent:   #536878;
+  --accent-h: #455865;
+
+  /* Primary button */
+  --btn-bg:   #0A0A0A;
+  --btn-tx:   #F4F1EA;
+  --btn-hv:   #536878;
+
+  /* Borders / grid gaps */
+  --edge:     rgba(0, 0, 0, 0.10);
+  --gap:      rgba(0, 0, 0, 0.08);
+
+  /* Outline / ghost buttons (brochure, enquire inline, etc.) */
+  --out-bd:   rgba(10, 10, 10, 0.22);
+  --out-tx:   #0A0A0A;
+  --out-hv:   rgba(10, 10, 10, 0.06);
+
+  /* Selected card (villa picker) */
+  --sel-bg:   rgba(255, 255, 255, 0.80);
+  --sel-bd:   rgba(10, 10, 10, 0.35);
+
+  /* Coloured links (phone / email) */
+  --lnk:      #536878;
+  --lnk-h:    #455865;
+
+  /* Misc components */
+  --fp-bg:    #FFFFFF;          /* floor plan container */
+  --tag-cl:   #0A0A0A;          /* footer tagline italic */
+  --ring-c:   #0A0A0A;          /* gallery thumbnail ring */
+  --ring-off: #E5E4E2;          /* ring offset bg */
+
+  /* Form inputs */
+  --in-bd:    rgba(0, 0, 0, 0.15);
+  --in-tx:    #0A0A0A;
+  --in-ph:    rgba(43, 43, 43, 0.40);
+  --in-fc:    #536878;
+  --in-sel:   #FFFFFF;
+
+  /* Navbar glass — dark glassmorphism (warm charcoal, works over any bg) */
+  --nav-a:    rgba(12, 9, 6, 0.52);
+  --nav-b:    rgba(12, 9, 6, 0.22);
+  --nav-sa:   rgba(12, 9, 6, 0.76);
+  --nav-sb:   rgba(12, 9, 6, 0.42);
+  --nav-sc:   transparent;
+
+  /* Navbar CTA — Book Site Visit (light text on dark glass) */
+  --nv-bg:    rgba(255, 255, 255, 0.10);
+  --nv-bd:    rgba(255, 255, 255, 0.28);
+  --nv-cl:    #F4F1EA;
+  --nv-hbg:   rgba(255, 255, 255, 0.18);
+  --nv-hbd:   rgba(255, 255, 255, 0.45);
+
+  /* Navbar CTA — Enquire Now */
+  --nv-en-bg:  rgba(244, 241, 234, 0.14);
+  --nv-en-bd:  rgba(244, 241, 234, 0.38);
+  --nv-en-cl:  #F4F1EA;
+  --nv-en-hbg: rgba(244, 241, 234, 0.24);
+  --nv-en-hbd: rgba(244, 241, 234, 0.55);
+
+  /* Logo */
+  --logo-f:   brightness(0) drop-shadow(0 1px 6px rgba(255,255,255,0.5));
+
+  /* Mobile/tablet CTA bar */
+  --mob-bg:      rgba(229, 228, 226, 0.94);
+  --mob-border:  rgba(10, 10, 10, 0.12);
+  --mob-accent:  #536878;
+  --mob-tx:      #0A0A0A;
+  --mob-divider: rgba(10, 10, 10, 0.08);
+
+  /* Hero stats bar */
+  --hero-stats-bg:     #F3F0EA;
+  --hero-stats-tx:     #0A0A0A;
+  --hero-stats-tx2:    #5F6062;
+  --hero-stats-div:    rgba(0, 0, 0, 0.10);
+  --hero-stats-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  /* Footer */
+  --footer-bg:     #b9b2a8;
+  --footer-text:   #3f3544;
+  --footer-border: rgba(63, 53, 68, 0.35);
+  /* Bank approval dividers */
+  --bank-divider:  rgba(0, 0, 0, 0.18);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg:       #0A0A0A;
+  --surface:  #111214;
+  --card:     #18191B;
+  --stats:    #18191B;
+  --img-ph:   #1A1A1A;
+
+  /* Text */
+  --ink:      #F4F1EA;
+  --ink-2:    #C8C3BA;
+  --ink-3:    #8F8A82;
+
+  /* Accent */
+  --accent:   #E5E4E2;
+  --accent-h: #C8C3BA;
+
+  /* Primary button */
+  --btn-bg:   #F4F1EA;
+  --btn-tx:   #0A0A0A;
+  --btn-hv:   #C8C3BA;
+
+  /* Borders / gaps */
+  --edge:     rgba(255, 255, 255, 0.08);
+  --gap:      rgba(255, 255, 255, 0.05);
+
+  /* Outline buttons */
+  --out-bd:   rgba(255, 255, 255, 0.20);
+  --out-tx:   #F4F1EA;
+  --out-hv:   rgba(255, 255, 255, 0.07);
+
+  /* Selected card */
+  --sel-bg:   rgba(255, 255, 255, 0.04);
+  --sel-bd:   rgba(255, 255, 255, 0.30);
+
+  /* Coloured links */
+  --lnk:      #A8BAC8;
+  --lnk-h:    #C8D4DC;
+
+  /* Misc */
+  --fp-bg:    #18191B;
+  --tag-cl:   #E5E4E2;
+  --ring-c:   #E5E4E2;
+  --ring-off: #111214;
+
+  /* Form inputs */
+  --in-bd:    rgba(255, 255, 255, 0.14);
+  --in-tx:    #F4F1EA;
+  --in-ph:    rgba(200, 195, 186, 0.50);
+  --in-fc:    #E5E4E2;
+  --in-sel:   #18191B;
+
+  /* Navbar glass — dark glassmorphism */
+  --nav-a:    rgba(6, 4, 2, 0.60);
+  --nav-b:    rgba(6, 4, 2, 0.28);
+  --nav-sa:   rgba(6, 4, 2, 0.84);
+  --nav-sb:   rgba(6, 4, 2, 0.50);
+  --nav-sc:   transparent;
+
+  /* Navbar CTA — Book Site Visit */
+  --nv-bg:    rgba(255, 255, 255, 0.07);
+  --nv-bd:    rgba(255, 255, 255, 0.22);
+  --nv-cl:    #F4F1EA;
+  --nv-hbg:   rgba(255, 255, 255, 0.14);
+  --nv-hbd:   rgba(255, 255, 255, 0.40);
+
+  /* Navbar CTA — Enquire Now */
+  --nv-en-bg:  rgba(244, 241, 234, 0.10);
+  --nv-en-bd:  rgba(244, 241, 234, 0.28);
+  --nv-en-cl:  #F4F1EA;
+  --nv-en-hbg: rgba(244, 241, 234, 0.18);
+  --nv-en-hbd: rgba(244, 241, 234, 0.44);
+
+  /* Logo */
+  --logo-f:   brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,0.8));
+
+  /* Mobile/tablet CTA bar */
+  --mob-bg:      rgba(17, 18, 20, 0.94);
+  --mob-border:  rgba(244, 241, 234, 0.14);
+  --mob-accent:  #A8BAC8;
+  --mob-tx:      #F4F1EA;
+  --mob-divider: rgba(244, 241, 234, 0.08);
+
+  /* Hero stats bar */
+  --hero-stats-bg:     #1A1B1D;
+  --hero-stats-tx:     #F4F1EA;
+  --hero-stats-tx2:    #8F8A82;
+  --hero-stats-div:    rgba(255, 255, 255, 0.10);
+  --hero-stats-shadow: 0 6px 28px rgba(0, 0, 0, 0.55);
+
+  /* Footer */
+  --footer-bg:     #09090d;
+  --footer-text:   #f3efe8;
+  --footer-border: rgba(243, 239, 232, 0.22);
+  /* Bank approval dividers */
+  --bank-divider:  rgba(255, 255, 255, 0.15);
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════════════════════ */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background:               var(--bg);
+  color:                    var(--ink);
+  font-family:              var(--font-inter), sans-serif;
+  -webkit-font-smoothing:   antialiased;
+  -moz-osx-font-smoothing:  grayscale;
+  transition:               background-color 300ms ease, color 300ms ease;
+}
+
+/* Smooth theme transitions on structural elements */
+section,
+footer,
+header {
+  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+}
+
+.font-heading {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Stat numerals — Inter bold, concrete and readable */
+.font-stat {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.text-shadow    { text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+.text-shadow-sm { text-shadow: 0 1px 8px rgba(0,0,0,0.5);  }
+
+/* Scrollbar */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg); }
+::-webkit-scrollbar-thumb  { background: var(--edge); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Gold divider */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 1.5rem 0;
+}
+
+/* Premium card hover */
+.premium-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   NAVBAR — glass overlay (theme-aware via CSS vars)
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-glass {
+  background: linear-gradient(
+    to bottom,
+    var(--nav-a)  0%,
+    var(--nav-b) 65%,
+    transparent 100%
+  );
+  backdrop-filter:         blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+.nav-glass-scrolled {
+  background: linear-gradient(
+    to bottom,
+    var(--nav-sa)  0%,
+    var(--nav-sb) 70%,
+    var(--nav-sc) 100%
+  );
+  backdrop-filter:         blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   NAVBAR BUTTONS
+   ═══════════════════════════════════════════════════════════════════ */
+.btn-nav-visit {
+  background:   var(--nv-bg);
+  border:       1px solid var(--nv-bd);
+  color:        var(--nv-cl);
+  border-radius: 3px;
+  padding:      0.5rem 1.25rem;
+  font-size:    0.7rem;
+  font-weight:  600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:   background 250ms ease, border-color 250ms ease, color 250ms ease;
+  display:      inline-flex;
+  align-items:  center;
+  cursor:       pointer;
+  white-space:  nowrap;
+}
+.btn-nav-visit:hover {
+  background:    var(--nv-hbg);
+  border-color:  var(--nv-hbd);
+}
+
+.btn-nav-enquire {
+  background:   var(--nv-en-bg);
+  border:       1px solid var(--nv-en-bd);
+  color:        var(--nv-en-cl);
+  border-radius: 3px;
+  padding:      0.5rem 1.25rem;
+  font-size:    0.7rem;
+  font-weight:  600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:   background 250ms ease, border-color 250ms ease, color 250ms ease;
+  display:      inline-flex;
+  align-items:  center;
+  white-space:  nowrap;
+}
+.btn-nav-enquire:hover {
+  background:    var(--nv-en-hbg);
+  border-color:  var(--nv-en-hbd);
+}
+
+/* Navbar is always dark glass — force light/white logo regardless of theme */
+header a span img:first-child  { opacity: 0 !important; }
+header a span img:nth-child(2) { opacity: 1 !important; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   PRIMARY BUTTON — theme-aware filled CTA
+   ═══════════════════════════════════════════════════════════════════ */
+.btn-primary {
+  background:      var(--btn-bg);
+  color:           var(--btn-tx);
+  border:          none;
+  cursor:          pointer;
+  transition:      background 250ms ease, color 250ms ease;
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+}
+.btn-primary:hover:not(:disabled) {
+  background:      var(--btn-hv);
+}
+.btn-primary:disabled {
+  opacity:         0.55;
+  cursor:          not-allowed;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   SECTION SCROLL SNAP — desktop only, proximity (non-trapping)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  section,
+  footer {
+    scroll-snap-align: start;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   GET LOCATION CTA — premium ghost pill
+   ═══════════════════════════════════════════════════════════════════ */
+.btn-get-location {
+  background:    transparent;
+  border:        1px solid var(--out-bd);
+  color:         var(--ink);
+  padding:       11px 24px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  font-weight:   500;
+  font-size:     0.875rem;
+  transition:    background 250ms ease, color 250ms ease, border-color 250ms ease;
+  display:       inline-flex;
+  align-items:   center;
+  gap:           0.45em;
+  white-space:   nowrap;
+}
+.btn-get-location:hover {
+  background:    var(--ink);
+  color:         var(--bg);
+  border-color:  var(--ink);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DISCLAIMER OVERLAY — base (desktop-first, no scroll)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Card: flex column so footer is always pinned at bottom */
+.disclaimer-card {
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner content: flex column, fills card height */
+.disclaimer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 44px 52px;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Header row */
+.disclaimer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+.disclaimer-title-block { min-width: 0; }
+.disclaimer-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+.disclaimer-title   { font-size: 3.4rem; }
+.disclaimer-rule-line {
+  width: 40px;
+  height: 1px;
+  margin-top: 14px;
+}
+.disclaimer-brand {
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.disclaimer-brand p   { display: block; }
+.disclaimer-brand p:first-child { font-size: 20px; margin-bottom: 4px; }
+.disclaimer-brand p:nth-child(2) { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; }
+.disclaimer-brand-location { font-size: 11px; margin-top: 4px; }
+
+/* HR divider */
+.disclaimer-hr { margin-bottom: 22px; }
+
+/* Body paragraphs — scrollable so stats + button always visible */
+.disclaimer-body {
+  font-size: 14px;
+  line-height: 1.78;
+  margin-bottom: 22px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.disclaimer-body p { margin-bottom: 12px; }
+.disclaimer-body p:last-child { margin-bottom: 0; }
+.disclaimer-accept-line { margin-top: 4px; }
+
+/* Stats strip: single horizontal row */
+.disclaimer-stats {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+.disclaimer-stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 14px 8px;
+}
+.disclaimer-stat-value {
+  font-size: 17px;
+  display: block;
+}
+.disclaimer-stat-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Footer row */
+.disclaimer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.disclaimer-footer-note { text-align: right; }
+.disclaimer-footer-note p:first-child { font-size: 13px; font-weight: 500; }
+.disclaimer-reg-sub { font-size: 11px; margin-top: 2px; display: block; }
+
+/* Accept button */
+.disclaimer-accept-btn {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 26px;
+  padding: 15px 48px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 200ms;
+}
+.disclaimer-accept-btn:hover { opacity: 0.88; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   FORM INPUT — theme-aware
+   ═══════════════════════════════════════════════════════════════════ */
+.input-field {
+  background:    transparent;
+  border-bottom: 1px solid var(--in-bd);
+  color:         var(--in-tx);
+  width:         100%;
+  padding:       0.5rem 0;
+  font-size:     0.875rem;
+  outline:       none;
+  transition:    border-color 250ms ease, color 250ms ease;
+}
+.input-field::placeholder { color: var(--in-ph); }
+.input-field:focus         { border-color: var(--in-fc); }
+.input-field option        { background: var(--in-sel); color: var(--in-tx); }
+
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] select { color-scheme: dark; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   BANK APPROVAL SECTION — desktop-first
+   ═══════════════════════════════════════════════════════════════════ */
+.finance-approval-section {
+  background: var(--card);
+  border-top: 1px solid var(--edge);
+  border-bottom: 1px solid var(--edge);
+  text-align: center;
+  padding: 110px 40px 120px;
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+.finance-approval-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.finance-heading {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 60px;
+  transition: color 300ms ease;
+}
+.bank-logo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.bank-logo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+/* Horizontal rule between row 1 and row 2 */
+.bank-logo-row:first-child {
+  border-bottom: 1px solid var(--bank-divider);
+  transition: border-color 300ms ease;
+}
+.bank-logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  position: relative;
+  padding: 28px 40px;
+}
+/* Row 2 (Bajaj / Kotak / KVB) needs more room for the enlarged logos */
+.bank-logo-row:last-child .bank-logo-cell {
+  min-height: 210px;
+}
+/* Vertical divider between cells */
+.bank-logo-cell:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18%;
+  height: 64%;
+  width: 1px;
+  background: var(--bank-divider);
+  transition: background-color 300ms ease;
+}
+.bank-logo {
+  max-width: 180px;
+  max-height: 46px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  /* Keep banner-logos (HDFC/Bajaj) from stretching */
+  border-radius: 3px;
+}
+/* Per-logo size overrides */
+.bank-logo[alt="Kotak Mahindra Bank"] {
+  max-height: 138px;
+  max-width: 460px;
+}
+.bank-logo[alt="Karur Vysya Bank"] {
+  max-height: 138px;
+  max-width: 420px;
+}
+.bank-logo[alt="SBI"] {
+  max-height: 28px;
+  max-width: 82px;
+}
+.bank-logo[alt="ICICI Bank"] {
+  max-height: 52px;
+  max-width: 262px;
+}
+.bank-logo[alt="HDFC Bank"] {
+  max-height: 52px;
+  max-width: 312px;
+}
+.bank-logo[alt="Bajaj"] {
+  max-height: 52px;
+  max-width: 120px;
+}
+.finance-more-text {
+  margin-top: 60px;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--ink);
+  transition: color 300ms ease;
+}
+
+/* Dark mode: white plate per cell so coloured logos stay visible */
+[data-theme="dark"] .bank-logo-cell {
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 6px;
+  margin: 10px 16px;
+  padding: 14px 24px;
+}
+[data-theme="dark"] .bank-logo-row:first-child {
+  border-bottom-color: rgba(255,255,255,0.10);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SITE FOOTER — desktop-first
+   ═══════════════════════════════════════════════════════════════════ */
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 120px 40px 72px;
+  border-top: 1px solid var(--footer-border);
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-logo {
+  width: 240px;
+  height: auto;
+  margin: 0 auto 52px;
+  display: block;
+  object-fit: contain;
+}
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  margin-bottom: 90px;
+}
+.footer-social-link {
+  color: var(--footer-text);
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(63, 53, 68, 0.35);
+  transition: opacity 200ms ease;
+}
+[data-theme="dark"] .footer-social-link {
+  text-decoration-color: rgba(243, 239, 232, 0.25);
+}
+.footer-social-link:hover { opacity: 0.7; }
+.footer-legal {
+  border-top: 1px solid var(--footer-border);
+  padding-top: 38px;
+  transition: border-color 300ms ease;
+}
+.footer-legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: var(--footer-text);
+}
+.footer-legal-links a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.82;
+  transition: opacity 200ms ease;
+}
+.footer-legal-links a:hover { opacity: 1; }
+.footer-legal-links span { opacity: 0.35; }
+.footer-copy {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.65;
+  color: var(--footer-text);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOBILE COMPLETE REBUILD — max-width: 767px
+   All desktop layout, spacing, typography, animations: 100% untouched.
+   Every rule below is mobile-only.
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* ─── 1. GLOBAL CONTAINER + OVERFLOW ─────────────────────────── */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  img { max-width: 100%; height: auto; }
+  html { scroll-snap-type: none !important; }
+  section, footer { scroll-snap-align: none !important; }
+
+  /* Main — bottom clearance for floating CTA */
+  main { padding-bottom: 120px !important; }
+
+  /* ─── 2. SECTION RHYTHM — Elena-style ────────────────────────── */
+  #gallery,
+  #amenities,
+  #location,
+  #contact {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  #villa-plans,
+  #master-plan {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+  }
+
+  /* Section horizontal padding — consistent 24px */
+  #gallery .max-w-7xl,
+  #villa-plans .max-w-7xl,
+  #master-plan .max-w-7xl,
+  #amenities .max-w-7xl,
+  #location .max-w-7xl,
+  #contact .max-w-7xl {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* Section eyebrow labels */
+  .text-xs.tracking-\[0\.4em\] {
+    font-size: 11px !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  /* Section headings */
+  #gallery h2        { font-size: clamp(30px, 9vw, 44px) !important; }
+  #villa-plans h2    { font-size: clamp(28px, 8vw, 40px) !important; }
+  #master-plan h2    { font-size: clamp(28px, 8vw, 40px) !important; }
+  #amenities h2      { font-size: clamp(30px, 9vw, 44px) !important; }
+  #location h2       { font-size: clamp(26px, 7.5vw, 38px) !important; line-height: 1.15 !important; }
+  #contact h2        { font-size: clamp(28px, 8vw, 42px) !important; }
+
+  /* ─── 3. NAVBAR ───────────────────────────────────────────────── */
+  .btn-nav-enquire {
+    padding: 13px 16px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.10em !important;
+    border-radius: 4px !important;
+  }
+  header .flex.items-center.gap-2,
+  header .flex.items-center.gap-3 { gap: 8px !important; }
+
+  /* Book Site Visit hidden on mobile — only logo + toggle + Enquire Now shown */
+  .btn-nav-visit { display: none !important; }
+
+  /* Increase nav bar height to accommodate larger logo */
+  header > div {
+    height: 88px !important;
+  }
+
+  /*
+   * FIX: globals.css unlayered rule "img { height: auto }" overrides Tailwind's
+   * h-full utility (which sits inside @layer utilities and therefore loses the
+   * cascade). The logo PNG rendered at natural size can be 1000px+ wide, pushing
+   * ThemeToggle + Enquire Now off the right edge and hidden by overflow-x:hidden.
+   * Explicit max-height + max-width here re-constrains the logo correctly.
+   */
+  header a span img {
+    max-height: 64px !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: 150px !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+  }
+
+  /* ─── 4. HERO — full-screen overlay card (Elena-style) ──────── */
+  /* Section fills full viewport height on mobile */
+  .hero-section-wrap {
+    height: 100svh !important;
+    min-height: unset !important;
+  }
+
+  /* Mobile background image — fills section */
+  .hero-mob-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+  }
+  .hero-mob-bg img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+  }
+
+  /* Content card — floating over hero image */
+  .hero-mob-card {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: calc(116px + env(safe-area-inset-bottom, 0px)) !important;
+    padding: 26px 22px 26px !important;
+    background: rgba(243, 240, 234, 0.90) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.48) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.20) !important;
+    text-align: center !important;
+    z-index: 10 !important;
+    max-height: calc(100svh - 220px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Eyebrow */
+  .hero-mob-eyebrow {
+    display: block !important;
+    font-size: 10px !important;
+    letter-spacing: 0.24em !important;
+    text-transform: uppercase !important;
+    color: #7A7068 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Title */
+  .hero-mob-title {
+    font-size: clamp(34px, 10vw, 42px) !important;
+    line-height: 1.05 !important;
+    color: #1A1510 !important;
+    font-weight: 300 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Subtitle */
+  .hero-mob-subtitle {
+    display: block !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #5C5654 !important;
+    max-width: 300px !important;
+    margin: 0 auto 22px !important;
+  }
+
+  /* Stats strip */
+  .hero-mob-stats-strip {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    background: rgba(255, 255, 255, 0.82) !important;
+    border-radius: 10px !important;
+    padding: 12px 4px !important;
+    margin-bottom: 20px !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+  .hero-mob-stats-strip::-webkit-scrollbar { display: none !important; }
+
+  /* Stat cell */
+  .hero-mob-stat-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 4px 2px !important;
+    min-width: 52px !important;
+  }
+
+  /* Stat value */
+  .hero-mob-stat-val {
+    font-family: var(--font-cormorant), Georgia, serif !important;
+    font-size: clamp(14px, 3.8vw, 18px) !important;
+    font-weight: 500 !important;
+    color: #1A1510 !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Stat label */
+  .hero-mob-stat-lbl {
+    font-size: clamp(9px, 2vw, 10px) !important;
+    color: #7A7068 !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* Download Brochure button */
+  .hero-mob-dl-btn {
+    width: 100% !important;
+    height: 52px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    letter-spacing: 0.07em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* ─── 5. HERO STATS STRIP — hidden (replaced by card) ────────── */
+  .hero-stats-mobile { display: none !important; }
+
+  /* ─── 6. GALLERY ─────────────────────────────────────────────── */
+  #gallery .mb-12 { margin-bottom: 28px !important; }
+
+  /* Thumbnail strip — hide scrollbar */
+  #gallery .overflow-x-auto {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #gallery .overflow-x-auto::-webkit-scrollbar { display: none; }
+
+  /* Thumbnails — compact */
+  #gallery .w-20.h-12 {
+    width: 60px !important;
+    height: 38px !important;
+  }
+
+  /* ─── 7. VILLA CONFIGURATIONS (FLOOR PLANS) — MOBILE ─────────── */
+
+  /* Mobile section wrapper */
+  .mob-fp-mobile {
+    padding-bottom: 150px;
+  }
+
+  /* Type tabs */
+  .mob-fp-tabs-wrap {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .mob-fp-tab {
+    flex: 1;
+    text-align: center;
+    padding: 14px 6px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    transition: color 200ms;
+  }
+
+  /* Option cards — horizontal scroll strip */
+  .mob-fp-cards-wrap {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 6px;
+    margin-bottom: 24px;
+  }
+  .mob-fp-cards-wrap::-webkit-scrollbar { display: none; }
+
+  .mob-fp-card {
+    flex-shrink: 0;
+    width: 124px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    transition: border-color 200ms, background 200ms;
+  }
+  .mob-fp-card-thumb {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  .mob-fp-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .mob-fp-card-facing {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+  .mob-fp-card-plot {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+  .mob-fp-card-price {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* Plan title */
+  .mob-fp-plan-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Floor plan image */
+  .mob-fp-img-wrap {
+    width: 100%;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .mob-fp-img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Spec table */
+  .mob-fp-spec-table {
+    margin-bottom: 28px;
+  }
+  .mob-fp-spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .mob-fp-spec-key {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    flex-shrink: 0;
+    padding-right: 12px;
+  }
+  .mob-fp-spec-val {
+    font-size: 12px;
+    text-align: right;
+    max-width: 60%;
+    line-height: 1.4;
+  }
+
+  /* Enquire button */
+  .mob-fp-enquire-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .mob-fp-enquire-btn {
+    width: 100%;
+    max-width: 320px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ─── 8. MASTER PLAN ─────────────────────────────────────────── */
+  .mplan-header {
+    align-items: stretch !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+  }
+  .mplan-header .btn-primary {
+    width: 100% !important;
+    justify-content: center !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+
+  /* ─── 9. AMENITIES ───────────────────────────────────────────── */
+  .amenity-groups-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  #amenities .font-stat.text-2xl {
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+  }
+  #amenities .flex.flex-col.md\:flex-row.md\:items-end.md\:justify-between.gap-6 {
+    margin-bottom: 28px !important;
+  }
+
+  /* ─── 10. LOCATION ───────────────────────────────────────────── */
+
+  /* Section: kill the large 64px top padding, give bottom for CTA */
+  #location {
+    padding-top: 20px !important;
+    padding-bottom: 148px !important;
+  }
+
+  /* Flex column so CSS order works */
+  #location .max-w-7xl {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .loc-header    { order: 1; }
+  .loc-map-block { order: 2; }
+  .loc-metrics   { order: 3; }
+
+  /* ── Heading block: strip it down so map starts high ── */
+  .loc-header {
+    margin-bottom: 14px !important;
+    gap: 0 !important;
+  }
+  /* Hide eyebrow "Location" label — saves ~30px */
+  .loc-header > div > p:first-child { display: none !important; }
+  /* Hide decorative gold divider — saves ~30px */
+  .loc-header > div > div { display: none !important; }
+  /* Hide "Get Location" link */
+  .loc-get-location { display: none !important; }
+
+  /* Compact heading */
+  #location h2 {
+    font-size: 30px !important;
+    line-height: 1.06 !important;
+    margin-bottom: 0 !important;
+  }
+  #location h2 span { font-size: 26px !important; }
+
+  /* ── Map block ── */
+  .loc-nearby { display: none !important; }
+  .loc-map-block {
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Map container: full width, 292px tall, flat edges */
+  .location-map-wrap {
+    aspect-ratio: unset !important;
+    width: 100% !important;
+    height: 292px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .location-map-wrap iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    display: block !important;
+  }
+
+  /* ── Metrics grid: clean 2×2, no cards, no gap-px trickery ── */
+  .loc-metrics {
+    display: grid !important;
+    /* reset shorthand first so individual axes win */
+    gap: 0 !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 34px !important;
+    row-gap: 58px !important;
+    margin-top: 62px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+  .loc-metrics > div {
+    background: transparent !important;
+    text-align: left !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  /* Time value — mobile */
+  .loc-metrics .font-stat {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+  }
+  /* Label — mobile */
+  .loc-metrics p.text-sm,
+  .loc-metrics p.text-base {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    line-height: 1.35 !important;
+    margin-top: 6px !important;
+  }
+
+  /* ─── 11. CONTACT ────────────────────────────────────────────── */
+  .contact-form-panel { padding: 24px !important; }
+
+  .input-field {
+    min-height: 48px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    font-size: 16px !important; /* prevents iOS Safari zoom */
+  }
+  textarea.input-field {
+    min-height: unset !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  #contact .btn-primary {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+    font-size: 14px !important;
+  }
+  #contact .p-6 { padding: 20px !important; }
+
+  /* ─── 12. FOOTER ─────────────────────────────────────────────── */
+  /* Bank section mobile */
+  .finance-approval-section {
+    padding: 60px 20px 72px !important;
+  }
+  .finance-heading {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 36px !important;
+    text-align: center !important;
+  }
+  /* 2-col flat grid — gap acts as 1px divider */
+  .bank-logo-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1px !important;
+    background: var(--bank-divider) !important;
+    border: 1px solid var(--bank-divider) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  .bank-logo-row {
+    display: contents !important;
+  }
+  .bank-logo-row:first-child {
+    border-bottom: none !important;
+  }
+  .bank-logo-row:last-child .bank-logo-cell {
+    min-height: 0 !important;
+  }
+  .bank-logo-cell {
+    background: var(--card) !important;
+    min-height: 114px !important;
+    padding: 22px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+  }
+  .bank-logo-cell:not(:last-child)::after {
+    display: none !important;
+  }
+  /* Dark mode: white plates with visible gap */
+  [data-theme="dark"] .bank-logo-grid {
+    background: var(--surface) !important;
+    border-color: rgba(255,255,255,0.08) !important;
+    gap: 10px !important;
+  }
+  [data-theme="dark"] .bank-logo-cell {
+    background: rgba(255,255,255,0.93) !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    padding: 18px 12px !important;
+  }
+  /* Logo sizes for 2-col cells (~150px usable width) */
+  .bank-logo {
+    max-width: 130px !important;
+    max-height: 36px !important;
+  }
+  .bank-logo[alt="Kotak Mahindra Bank"] {
+    max-height: 64px !important;
+    max-width: 160px !important;
+  }
+  .bank-logo[alt="Karur Vysya Bank"] {
+    max-height: 64px !important;
+    max-width: 160px !important;
+  }
+  .bank-logo[alt="SBI"] {
+    max-height: 20px !important;
+    max-width: 58px !important;
+  }
+  .bank-logo[alt="ICICI Bank"] {
+    max-height: 40px !important;
+    max-width: 150px !important;
+  }
+  .bank-logo[alt="HDFC Bank"] {
+    max-height: 40px !important;
+    max-width: 150px !important;
+  }
+  .bank-logo[alt="Bajaj"] {
+    max-height: 40px !important;
+    max-width: 100px !important;
+  }
+  .finance-more-text {
+    margin-top: 40px !important;
+    font-size: 24px !important;
+    text-align: center !important;
+  }
+  /* Site footer mobile */
+  .site-footer {
+    padding: 90px 22px 170px !important;
+  }
+  .footer-logo {
+    width: 200px !important;
+    margin-bottom: 48px !important;
+  }
+  .footer-socials {
+    gap: 28px !important;
+    margin-bottom: 100px !important;
+  }
+  .footer-social-link { font-size: 20px !important; }
+  .footer-legal { padding-top: 34px !important; }
+  .footer-legal-links {
+    font-size: 14px !important;
+    gap: 8px 12px !important;
+    margin-bottom: 16px !important;
+  }
+  .footer-copy { font-size: 13px !important; }
+
+  /* ─── 13. FLOATING CTA — Elena-matched dark bar ───────────────── */
+  .floating-cta-bar {
+    position: fixed !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+    height: 64px !important;
+    border-radius: 7px !important;
+    background: #08090f !important;
+    border: none !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .floating-cta-bar a,
+  .floating-cta-bar button {
+    color: #ffffff !important;
+    padding: 0 !important;
+    height: 64px !important;
+    gap: 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    letter-spacing: 0.045em !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+  .floating-cta-bar svg {
+    width: 19px !important;
+    height: 19px !important;
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    fill: #ffffff !important;
+    stroke-width: 1.5 !important;
+  }
+  /* WhatsApp icon uses fill not stroke */
+  .floating-cta-bar a[aria-label="Open WhatsApp"] svg {
+    stroke: none !important;
+    stroke-width: 0 !important;
+  }
+  .floating-cta-bar span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.045em !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+  }
+  /* Inset vertical dividers between items using ::after on items 1 and 2 */
+  .floating-cta-bar > *:nth-child(1),
+  .floating-cta-bar > *:nth-child(2) {
+    position: relative !important;
+  }
+  .floating-cta-bar > *:nth-child(1)::after,
+  .floating-cta-bar > *:nth-child(2)::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 1px !important;
+    height: 30px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+  }
+  /* Remove old nth-child(2) side borders */
+  .floating-cta-bar > *:nth-child(2) {
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  /* ─── 14. DISCLAIMER — mobile single-screen, no scroll ─────────── */
+
+  /* Card: full width, auto height, no scroll */
+  .disclaimer-card {
+    width: calc(100vw - 36px) !important;
+    max-width: 420px !important;
+    max-height: 90svh !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+
+  /* Content: tight padding, no overflow */
+  .disclaimer-content {
+    padding: 22px 20px !important;
+    overflow: hidden !important;
+    gap: 0 !important;
+  }
+
+  /* Header: side-by-side, compact */
+  .disclaimer-header {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+  .disclaimer-eyebrow { display: none !important; }
+  .disclaimer-title { font-size: 30px !important; }
+  .disclaimer-rule-line { margin-top: 10px !important; }
+
+  /* Brand: right-aligned, compact */
+  .disclaimer-brand { text-align: right !important; }
+  .disclaimer-brand p:first-child { font-size: 13px !important; }
+  .disclaimer-brand p:nth-child(2) { font-size: 9px !important; }
+  .disclaimer-brand-location { display: none !important; }
+
+  /* HR */
+  .disclaimer-hr { margin-bottom: 12px !important; }
+
+  /* Body: show only para 1 + accept line; hide p2, p3 */
+  .disclaimer-body {
+    font-size: 12px !important;
+    line-height: 1.62 !important;
+    margin-bottom: 14px !important;
+  }
+  .disclaimer-body p { margin-bottom: 8px !important; }
+  .disclaimer-p2,
+  .disclaimer-p3 { display: none !important; }
+  .disclaimer-accept-line { font-size: 12px !important; }
+
+  /* Stats: single horizontal row, compact */
+  .disclaimer-stats {
+    border-radius: 8px !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+  }
+  .disclaimer-stat-item {
+    padding: 10px 3px !important;
+  }
+  .disclaimer-stat-value { font-size: 13px !important; }
+  .disclaimer-stat-label { font-size: 7px !important; letter-spacing: 0.12em !important; }
+
+  /* Footer: stacked, centered */
+  .disclaimer-footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+  .disclaimer-footer-note { text-align: center !important; }
+  .disclaimer-footer-note p:first-child { font-size: 11px !important; }
+  .disclaimer-reg-sub { display: none !important; }
+
+  /* Accept button: full width */
+  .disclaimer-accept-btn {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    border-radius: 999px !important;
+    font-size: 14px !important;
+    letter-spacing: 0.06em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   479px — tighter small phones
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 479px) {
+
+  /* Section padding */
+  #gallery .max-w-7xl,
+  #villa-plans .max-w-7xl,
+  #master-plan .max-w-7xl,
+  #amenities .max-w-7xl,
+  #location .max-w-7xl,
+  #contact .max-w-7xl {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Mobile hero card — tighter insets on small screens */
+  .hero-mob-card {
+    left: 18px !important;
+    right: 18px !important;
+    bottom: calc(112px + env(safe-area-inset-bottom, 0px)) !important;
+    padding: 22px 18px !important;
+    border-radius: 14px !important;
+  }
+  .hero-mob-title {
+    font-size: clamp(30px, 9vw, 38px) !important;
+  }
+  .hero-mob-subtitle {
+    font-size: 13px !important;
+    margin-bottom: 18px !important;
+  }
+  .hero-mob-stats-strip {
+    padding: 10px 3px !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-mob-stat-val {
+    font-size: clamp(13px, 3.6vw, 16px) !important;
+  }
+  .hero-mob-dl-btn {
+    height: 48px !important;
+    font-size: 13px !important;
+  }
+
+  /* Floor plan — small phones */
+  .mob-fp-card { width: 112px; }
+  .mob-fp-card-thumb { height: 60px; }
+  .mob-fp-tab { font-size: 18px; padding: 12px 4px; }
+  .mob-fp-plan-title { font-size: 22px; }
+  .mob-fp-img { max-height: 380px; }
+
+  /* Location — small phones */
+  .location-map-wrap { height: 270px !important; }
+  .loc-metrics .font-stat { font-size: 19px !important; }
+  .loc-metrics p.text-sm,
+  .loc-metrics p.text-base { font-size: 12px !important; }
+  .loc-metrics { column-gap: 20px !important; row-gap: 36px !important; }
+
+  /* Floating CTA — small phones */
+  .floating-cta-bar {
+    left: 14px !important;
+    right: 14px !important;
+    border-radius: 6px !important;
+  }
+  .floating-cta-bar span {
+    font-size: 11px !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* Disclaimer — very small phones */
+  .disclaimer-content { padding: 18px 16px !important; }
+  .disclaimer-stat-value { font-size: 12px !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   380px — very narrow phones
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 380px) {
+
+  /* Section padding */
+  #gallery .max-w-7xl,
+  #villa-plans .max-w-7xl,
+  #master-plan .max-w-7xl,
+  #amenities .max-w-7xl,
+  #location .max-w-7xl,
+  #contact .max-w-7xl {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* Hero card — very tight */
+  .hero-mob-card {
+    left: 14px !important;
+    right: 14px !important;
+    padding: 20px 16px !important;
+  }
+  .hero-mob-title { font-size: 30px !important; }
+  .hero-mob-subtitle { display: none !important; } /* hide subtitle on very narrow */
+  .hero-mob-stats-strip { padding: 8px 2px !important; }
+  .hero-mob-stat-val { font-size: 13px !important; }
+  .hero-mob-stat-lbl { font-size: 9px !important; }
+
+  /* Location — very narrow */
+  .loc-metrics .font-stat { font-size: 17px !important; }
+  .loc-metrics p.text-sm,
+  .loc-metrics p.text-base { font-size: 11px !important; }
+  .location-map-wrap { height: 260px !important; }
+
+  /* Floating CTA — very narrow */
+  .floating-cta-bar span { font-size: 10px !important; }
+
+  /* Disclaimer — 380px */
+  .disclaimer-content { padding: 16px 14px !important; }
+  .disclaimer-title { font-size: 26px !important; }
+  .disclaimer-body { font-size: 11px !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   TABLET / iPAD  768px – 1023px
+   Desktop layout is hidden (lg:flex hidden below lg).
+   Mobile card is visible (lg:hidden) but has NO positioning CSS
+   because the mobile media query stops at 767px — this fixes that.
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Section fills full viewport */
+  .hero-section-wrap {
+    height: 100svh !important;
+    min-height: unset !important;
+  }
+
+  /* Background image — already positioned by Tailwind, ensure cover */
+  .hero-mob-bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  /* Card — anchored to bottom, clear of the floating CTA bar (~82px) */
+  .hero-mob-card {
+    position: absolute !important;
+    left: 48px !important;
+    right: 48px !important;
+    bottom: calc(100px + env(safe-area-inset-bottom, 0px)) !important;
+    padding: 32px 36px !important;
+    background: rgba(243, 240, 234, 0.92) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.48) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22) !important;
+    text-align: center !important;
+    z-index: 10 !important;
+    max-height: calc(100svh - 220px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Eyebrow */
+  .hero-mob-eyebrow {
+    display: block !important;
+    font-size: 11px !important;
+    letter-spacing: 0.26em !important;
+    text-transform: uppercase !important;
+    color: #7A7068 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Title */
+  .hero-mob-title {
+    font-size: clamp(44px, 7vw, 58px) !important;
+    line-height: 1.05 !important;
+    color: #1A1510 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Subtitle */
+  .hero-mob-subtitle {
+    display: block !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    color: #4A4340 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Stats strip */
+  .hero-mob-stats-strip {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    background: rgba(255, 255, 255, 0.84) !important;
+    border-radius: 10px !important;
+    padding: 12px 6px !important;
+    margin-bottom: 22px !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+  .hero-mob-stats-strip::-webkit-scrollbar { display: none !important; }
+
+  /* Stat cell */
+  .hero-mob-stat-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 6px 4px !important;
+  }
+
+  /* Stat value */
+  .hero-mob-stat-val {
+    font-family: var(--font-cormorant), Georgia, serif !important;
+    font-size: clamp(18px, 2.4vw, 24px) !important;
+    font-weight: 500 !important;
+    color: #1A1510 !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Stat label */
+  .hero-mob-stat-lbl {
+    font-size: clamp(9px, 1.1vw, 11px) !important;
+    color: #7A7068 !important;
+    letter-spacing: 0.01em !important;
+    text-transform: uppercase !important;
+    margin-top: 3px !important;
+  }
+
+  /* Download Brochure button */
+  .hero-mob-dl-btn {
+    width: 100% !important;
+    height: 56px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    letter-spacing: 0.13em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Bank logo section — tablet adjustments */
+  .bank-logo-cell {
+    padding: 22px 24px !important;
+  }
+  .bank-logo {
+    max-width: 140px !important;
+    max-height: 40px !important;
+  }
+  .bank-logo[alt="Kotak Mahindra Bank"] {
+    max-height: 110px !important;
+    max-width: 370px !important;
+  }
+  .bank-logo[alt="Karur Vysya Bank"] {
+    max-height: 110px !important;
+    max-width: 340px !important;
+  }
+  .bank-logo[alt="SBI"] {
+    max-height: 22px !important;
+    max-width: 65px !important;
+  }
+  .bank-logo[alt="ICICI Bank"] {
+    max-height: 44px !important;
+    max-width: 220px !important;
+  }
+  .bank-logo[alt="HDFC Bank"] {
+    max-height: 44px !important;
+    max-width: 264px !important;
+  }
+  .bank-logo[alt="Bajaj"] {
+    max-height: 44px !important;
+    max-width: 100px !important;
+  }
+
+  /* Villa Configurations — tablet grid tweaks */
+  #villa-plans .max-w-7xl {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+  /* Tighten the left column on tablet so floor plan gets more room */
+  .villa-grid {
+    grid-template-columns: 220px 1fr !important;
+  }
+  .villa-left .villa-selector button {
+    padding: 10px 12px !important;
+  }
+  .villa-left .villa-specs {
+    padding-top: 12px !important;
+  }
+}
