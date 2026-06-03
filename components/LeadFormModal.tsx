@@ -87,6 +87,13 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
         link.click();
         document.body.removeChild(link);
       }
+
+      // Redirect to location after enquiry submission
+      if (type === "enquire") {
+        setTimeout(() => {
+          window.open("https://maps.app.goo.gl/3gEbRXmKsENAkjXi7", "_blank");
+        }, 1500);
+      }
     } finally {
       setSubmitting(false);
     }

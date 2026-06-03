@@ -160,14 +160,22 @@ export default function SelectedVillaPanel({ villa, onEnquire }: SelectedVillaPa
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="p-6 pt-0">
+      {/* CTA Buttons */}
+      <div className="p-6 pt-0 space-y-3">
         <button
           onClick={onEnquire}
           className="btn-primary w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium"
         >
           Enquire for Villa {villa.id}
         </button>
+        <a
+          href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-get-location w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium text-center inline-block"
+        >
+          Get Location <span aria-hidden="true">→</span>
+        </a>
       </div>
 
       {/* Features */}
