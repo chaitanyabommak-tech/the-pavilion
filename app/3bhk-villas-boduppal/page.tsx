@@ -235,7 +235,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            30,000 SFT recreation zone for only 45 families = 670 SFT per family. Most projects offer 200 SFT per family. 3x more space for your family to enjoy.
+            30,000 SFT recreation zone for only 40 families = 670 SFT per family. Most projects offer 200 SFT per family. 3x more space for your family to enjoy.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -440,7 +440,7 @@ export default function ThreeBHKVillasBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">9. What are monthly maintenance charges?</h3>
-              <p className="text-sm">Estimated ₹4,000-5,000/month for 3 BHK villa (covers security, common area maintenance, landscaping). Much lower than apartments (₹8-10K) because only 45 families share costs.</p>
+              <p className="text-sm">Estimated ₹4,000-5,000/month for 3 BHK villa (covers security, common area maintenance, landscaping). Much lower than apartments (₹8-10K) because only 40 families share costs.</p>
             </div>
 
             <div>
@@ -460,7 +460,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-16 h-px mx-auto mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Only 45 villas. Limited 3 BHK units available. Starting ₹1.87 Cr. Early bird pricing. Book site visit now.
+            Only 40 villas. Limited 3 BHK units available. Starting ₹1.87 Cr. Early bird pricing. Book site visit now.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

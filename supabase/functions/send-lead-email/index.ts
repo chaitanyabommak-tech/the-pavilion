@@ -100,7 +100,7 @@ serve(async (req: Request) => {
           <p style="color:#7a7068;font-size:13px;margin-top:0;">From Bommak Constructions</p>
           <hr style="border:none;border-top:1px solid #e0d8ce;margin:20px 0;"/>
           <p style="color:#1a1510;font-size:15px;line-height:1.6;">Dear ${r.name},</p>
-          <p style="color:#1a1510;font-size:15px;line-height:1.6;">Thank you for your interest in <strong>The Pavillion</strong> — 45 exclusive G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad.</p>
+          <p style="color:#1a1510;font-size:15px;line-height:1.6;">Thank you for your interest in <strong>The Pavillion</strong> — 40 exclusive G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad.</p>
           <p style="color:#1a1510;font-size:15px;line-height:1.6;">Your brochure is ready to download:</p>
           <div style="margin:28px 0;text-align:center;">
             <a href="${brochureUrl}" style="background:#536878;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-size:15px;display:inline-block;">📄 Download Brochure</a>

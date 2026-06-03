@@ -15,7 +15,7 @@ const projectFacts = [
   { label: "Registration", value: "Registered HMDA Circle Project" },
   { label: "Location", value: "Surya Hills, Boduppal, East Hyderabad" },
   { label: "Total Site Area", value: "3 Acres" },
-  { label: "Total Villas", value: "45 Standalone Units" },
+  { label: "Total Villas", value: "40 Standalone Units" },
   { label: "Villa Type", value: "G+1+Penthouse Standalone" },
   { label: "Built-up Area", value: "2,200 – 2,500 SFT" },
   { label: "Plot Sizes", value: "150 | 165 | 167 | 183 | 222–250 Sq. Yards" },
@@ -55,7 +55,7 @@ export default function ProjectOverview() {
 
               <p className="text-warm-gray text-lg leading-relaxed mb-6">
                 The Pavillion is not mass housing. It is a limited standalone villa
-                community designed for 45 families who want privacy, control, and
+                community designed for 40 families who want privacy, control, and
                 the freedom to shape their own home.
               </p>
               <p className="text-warm-gray text-base leading-relaxed mb-6">
@@ -66,7 +66,7 @@ export default function ProjectOverview() {
               <p className="text-warm-gray text-base leading-relaxed mb-10">
                 After delivering R.N.S Dream Homes, Boduppal's first community living
                 destination for 120 families, Bommak Constructions now brings The
-                Pavilion: a smaller, more curated chapter. Limited to 45 families.
+                Pavilion: a smaller, more curated chapter. Limited to 40 families.
                 Limited by design.
               </p>
 

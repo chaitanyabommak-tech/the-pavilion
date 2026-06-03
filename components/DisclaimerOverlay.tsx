@@ -105,7 +105,7 @@ export default function DisclaimerOverlay() {
                 {/* Para 2 — hidden on mobile via CSS */}
                 <p className="disclaimer-p2">
                   The Pavillion is a proposed premium villa community in Boduppal, East Hyderabad —
-                  45 villas, G+1+Penthouse configuration, 3&nbsp;acres site area, 30,000&nbsp;SFT
+                  40 villas, G+1+Penthouse configuration, 3&nbsp;acres site area, 30,000&nbsp;SFT
                   recreation zone. All project details including approvals, pricing, availability,
                   and legal documentation must be verified directly with the company before any
                   purchase decision.

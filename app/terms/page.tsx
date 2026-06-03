@@ -35,7 +35,7 @@ export default function TermsPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">2. About the Project</h2>
             <p className="text-sm leading-relaxed">
-              The Pavillion is a residential villa development by Bommaku Constructions comprising 45 standalone G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad. All information on this Website is provided for general informational purposes and is subject to change without notice.
+              The Pavillion is a residential villa development by Bommaku Constructions comprising 40 standalone G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad. All information on this Website is provided for general informational purposes and is subject to change without notice.
             </p>
           </section>
 

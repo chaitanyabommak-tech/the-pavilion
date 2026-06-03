@@ -3,15 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Villas in Boduppal | The Pavillion - 45 Standalone Luxury Villas in Surya Hills",
+  title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas in Surya Hills",
   description:
-    "45 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 30,000 SFT recreation. ₹1.87 Cr onwards. HMDA registered. 8 min to Uppal Metro. Book site visit.",
+    "40 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 30,000 SFT recreation. ₹1.87 Cr onwards. HMDA registered. 8 min to Uppal Metro. Book site visit.",
   keywords:
     "villas in Boduppal, Boduppal villas, standalone villas Boduppal, luxury villas Boduppal, independent houses Boduppal, gated community Boduppal, villas for sale Boduppal, new villa projects Boduppal, 3BHK villas Boduppal, G+1 penthouse villas Boduppal, The Pavillion Boduppal",
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
-    title: "Villas in Boduppal | The Pavillion - 45 Standalone Luxury Villas",
-    description: "45 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
+    title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas",
+    description: "40 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
     type: "article",
     url: "https://bommakugroup.com/villas-in-boduppal",
   },
@@ -36,7 +36,7 @@ export default function VillasInBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Discover 45 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 30,000 SFT recreation zone for just 45 families. Starting ₹1.87 Cr.
+            Discover 40 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 30,000 SFT recreation zone for just 40 families. Starting ₹1.87 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -113,7 +113,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-6">
-            The Pavillion is Boduppal's most exclusive standalone villa community, limited to just 45 families. Unlike mass villa projects with 100-200 units, we've intentionally kept it small to offer true low-density living.
+            The Pavillion is Boduppal's most exclusive standalone villa community, limited to just 40 families. Unlike mass villa projects with 100-200 units, we've intentionally kept it small to offer true low-density living.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
@@ -151,7 +151,7 @@ export default function VillasInBodupalPage() {
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>Low Density:</strong> Only 45 families share 30,000 SFT recreation (670 SFT per family vs 200-300 typical).</span>
+              <span className="text-sm"><strong>Low Density:</strong> Only 40 families share 30,000 SFT recreation (670 SFT per family vs 200-300 typical).</span>
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
@@ -229,12 +229,12 @@ export default function VillasInBodupalPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            30,000 SFT Recreation Zone — For Just 45 Families
+            30,000 SFT Recreation Zone — For Just 40 Families
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 45 families share 30,000 SFT = <strong>670 SFT per family</strong>. That's 6-7X more space per family.
+            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 30,000 SFT = <strong>670 SFT per family</strong>. That's 6-7X more space per family.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -473,7 +473,7 @@ export default function VillasInBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">2. How many villas are available?</h3>
-              <p className="text-sm">The Pavillion has just 45 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit.</p>
+              <p className="text-sm">The Pavillion has just 40 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit.</p>
             </div>
 
             <div>

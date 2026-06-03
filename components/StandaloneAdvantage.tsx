@@ -23,7 +23,7 @@ const advantages = [
   {
     number: "04",
     title: "Low-Density Living",
-    body: "Only 45 families across 3 acres. The density is low by design for a calm, private lifestyle.",
+    body: "Only 40 families across 3 acres. The density is low by design for a calm, private lifestyle.",
   },
   {
     number: "05",
@@ -87,7 +87,7 @@ export default function StandaloneAdvantage() {
           >
             <div>
               <p className="text-stone-beige text-xs tracking-[0.3em] uppercase mb-4">
-                Only 45 Families
+                Only 40 Families
               </p>
               <h3 className="font-heading text-off-white text-2xl font-light leading-relaxed">
                 Limited by design. Unlimited by freedom.

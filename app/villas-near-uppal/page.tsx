@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Villas Near Uppal Metro | The Pavillion Boduppal - Just 8 Min Away",
   description:
-    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 45 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. HMDA registered. Easy commute to HITEC City, Gachibowli.",
+    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 40 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. HMDA registered. Easy commute to HITEC City, Gachibowli.",
   keywords:
     "villas near Uppal, villas near Uppal metro, Uppal villas, villas near Uppal metro station, luxury villas near Uppal, independent houses near Uppal, villas Boduppal Uppal, gated community near Uppal, standalone villas near Uppal metro",
   alternates: { canonical: "https://bommakugroup.com/villas-near-uppal" },
   openGraph: {
     title: "Villas Near Uppal Metro | The Pavillion - 8 Min Away",
-    description: "45 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹1.87 Cr. HMDA registered.",
+    description: "40 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹1.87 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/villas-near-uppal",
   },
@@ -35,7 +35,7 @@ export default function VillasNearUppalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Just 8 minutes from Uppal Metro Station. 45 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹1.87 Cr.
+            Just 8 minutes from Uppal Metro Station. 40 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹1.87 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -204,7 +204,7 @@ export default function VillasNearUppalPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            The Pavillion — 45 Standalone Villas Near Uppal Metro
+            The Pavillion — 40 Standalone Villas Near Uppal Metro
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
@@ -216,7 +216,7 @@ export default function VillasNearUppalPage() {
           <ul className="space-y-3 mb-8" style={{ color: "var(--ink-2)" }}>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>Only 45 Villas:</strong> Low-density living (most projects have 100-200 units)</span>
+              <span className="text-sm"><strong>Only 40 Villas:</strong> Low-density living (most projects have 100-200 units)</span>
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>

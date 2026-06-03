@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Independent Houses in Boduppal | The Pavillion - 45 Standalone Villas",
+  title: "Independent Houses in Boduppal | The Pavillion - 40 Standalone Villas",
   description:
-    "45 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. HMDA registered. Design freedom. Book site visit today.",
+    "40 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. HMDA registered. Design freedom. Book site visit today.",
   keywords:
     "independent houses in Boduppal, standalone houses Boduppal, independent villas Boduppal, Boduppal independent houses, villa for sale Boduppal, independent house projects Boduppal, gated community independent houses, luxury independent houses Hyderabad",
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
-    title: "Independent Houses in Boduppal | The Pavillion - 45 Villas",
-    description: "45 independent standalone houses in Boduppal. No shared walls, design freedom, ₹1.87 Cr. HMDA registered.",
+    title: "Independent Houses in Boduppal | The Pavillion - 40 Villas",
+    description: "40 independent standalone houses in Boduppal. No shared walls, design freedom, ₹1.87 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/independent-houses-boduppal",
   },
@@ -35,7 +35,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            45 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 150-228 Sq. Yds plots. From ₹1.87 Cr onwards.
+            40 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 150-228 Sq. Yds plots. From ₹1.87 Cr onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -167,7 +167,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-6">
-            The Pavillion in Surya Hills, Boduppal offers 45 TRUE independent houses (standalone villas) in a low-density gated community. Unlike most projects claiming to be "villas" but actually row houses, every home at The Pavillion is completely independent.
+            The Pavillion in Surya Hills, Boduppal offers 40 TRUE independent houses (standalone villas) in a low-density gated community. Unlike most projects claiming to be "villas" but actually row houses, every home at The Pavillion is completely independent.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -186,7 +186,7 @@ export default function IndependentHousesBodupalPage() {
             <div className="p-6" style={{ background: "var(--bg)", borderRadius: "8px", border: "1px solid var(--edge)" }}>
               <h3 style={{ color: "var(--accent)" }} className="text-lg font-semibold mb-3">Project Highlights</h3>
               <ul className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
-                <li>• Only 45 houses (low-density)</li>
+                <li>• Only 40 houses (low-density)</li>
                 <li>• G+1+Penthouse (3 levels)</li>
                 <li>• 3 BHK + Pooja Room</li>
                 <li>• 30,000 SFT recreation zone</li>
@@ -428,7 +428,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-16 h-px mx-auto mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Only 45 independent standalone houses. Early bird pricing. Book site visit today to reserve your villa.
+            Only 40 independent standalone houses. Early bird pricing. Book site visit today to reserve your villa.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

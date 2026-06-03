@@ -80,7 +80,7 @@ export default function Hero() {
             >
               {/* SEO Eyebrow */}
               <p style={{ color: "var(--accent)" }} className="text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 font-semibold">
-                45 Luxury Villas in Boduppal, Hyderabad
+                40 Luxury Villas in Boduppal, Hyderabad
               </p>
 
               <h1

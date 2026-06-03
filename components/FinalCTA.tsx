@@ -49,7 +49,7 @@ export default function FinalCTA() {
               The Final Word
             </p>
             <h2 className="font-heading text-off-white text-6xl md:text-8xl font-light leading-none mb-6">
-              Only 45 families.
+              Only 40 families.
             </h2>
             <p className="font-heading text-muted-gold text-3xl md:text-4xl italic mb-8">
               Limited by design.
@@ -60,7 +60,7 @@ export default function FinalCTA() {
             <p className="text-stone-beige/90 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
               The Pavillion is for families who want an independent villa, a private
               identity, and the comfort of community living. This is not for everyone.
-              It is for 45 families who understand what that means.
+              It is for 40 families who understand what that means.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "How many villas are there in The Pavillion?",
-    answer: "The Pavillion comprises 45 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
+    answer: "The Pavillion comprises 40 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
   },
   {
     question: "What is the price range of villas?",
