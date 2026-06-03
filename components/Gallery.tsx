@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const images = [
   { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavilion community living recreation zone, Boduppal", caption: "Community View" },
@@ -61,19 +62,24 @@ export default function Gallery() {
               <motion.div
                 className="flex"
                 animate={{ x: `-${current * 100}%` }}
-                transition={{ duration: 0.55, ease: [0.32, 0, 0.67, 0] }}
+                transition={{ duration: 0.4, ease: [0.32, 0, 0.67, 0] }}
+                style={{ willChange: "transform" }}
               >
-                {images.map((img) => (
+                {images.map((img, idx) => (
                   <div
                     key={img.src}
-                    className="w-full shrink-0 aspect-[16/9] relative cursor-zoom-in"
+                    className="w-full shrink-0 aspect-[16/9] relative cursor-zoom-in overflow-hidden"
                     onClick={() => setLightboxOpen(true)}
                   >
-                    <div
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url('${img.src}')`, background: `url('${img.src}') center/cover, var(--img-ph)` }}
-                      role="img"
-                      aria-label={img.alt}
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="100vw"
+                      quality={85}
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      priority={idx === 0}
                     />
                   </div>
                 ))}
@@ -117,16 +123,23 @@ export default function Gallery() {
                 key={img.src}
                 onClick={() => setCurrent(i)}
                 aria-label={`Go to ${img.caption}`}
-                className={`shrink-0 w-20 h-12 bg-cover bg-center transition-all duration-200 ${
+                className={`shrink-0 w-20 h-12 relative overflow-hidden transition-all duration-200 ${
                   i === current ? "ring-2 ring-offset-2" : "opacity-35 hover:opacity-70"
                 }`}
-                style={{
-                  backgroundImage: `url('${img.src}')`,
-                  ...(i === current
-                    ? { "--tw-ring-color": "var(--ring-c)", "--tw-ring-offset-color": "var(--ring-off)" } as React.CSSProperties
-                    : {}),
-                }}
-              />
+                style={i === current
+                  ? { "--tw-ring-color": "var(--ring-c)", "--tw-ring-offset-color": "var(--ring-off)" } as React.CSSProperties
+                  : {}}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.caption}
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                  quality={60}
+                  loading="lazy"
+                />
+              </button>
             ))}
           </div>
         </div>
@@ -157,19 +170,24 @@ export default function Gallery() {
 
             <motion.div
               key={current}
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.25 }}
               className="max-w-5xl w-full mx-auto text-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className="w-full aspect-video bg-cover bg-center bg-[#1A1A1A]"
-                style={{ backgroundImage: `url('${images[current].src}')` }}
-                role="img"
-                aria-label={images[current].alt}
-              />
+              <div className="w-full aspect-video relative bg-[#1A1A1A]">
+                <Image
+                  src={images[current].src}
+                  alt={images[current].alt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  quality={90}
+                  priority
+                />
+              </div>
               <p className="text-[#9A8F87] text-sm tracking-widest uppercase mt-4">
                 {images[current].caption}
               </p>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import LeadFormModal from "./LeadFormModal";
 
 /* Desktop stats bar — unchanged */
@@ -42,15 +43,14 @@ export default function Hero() {
             Hidden on lg+ via lg:hidden
             ══════════════════════════════════════════ */}
         <div className="hero-mob-bg absolute inset-0 z-0 lg:hidden" aria-hidden="true">
-          <img
+          <Image
             src="/images/pavilion-mobile-hero.png"
             alt=""
-            className="w-full h-full object-cover object-top"
-            loading="eager"
-            fetchPriority="high"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "/assets/community-aerial.jpeg";
-            }}
+            fill
+            className="object-cover object-top"
+            priority
+            quality={90}
+            sizes="100vw"
           />
           {/* Cinematic gradient: dark top (navbar contrast) → light mid → dark bottom (card contrast) */}
           <div
@@ -73,9 +73,9 @@ export default function Hero() {
             style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}
           >
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.2 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full"
             >
               <h1
@@ -131,17 +131,17 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="hero-image-panel lg:w-[55%] relative min-h-[55vw] lg:min-h-0"
           >
-            <img
+            <Image
               src="/assets/pavilion-hero.png"
               alt="The Pavilion community living aerial view, Surya Hills Boduppal East Hyderabad"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              loading="eager"
-              fetchPriority="high"
-              width={1440}
-              height={810}
+              fill
+              className="object-cover object-center"
+              priority
+              quality={90}
+              sizes="(max-width: 1024px) 100vw, 55vw"
             />
           </motion.div>
         </div>
@@ -151,9 +151,9 @@ export default function Hero() {
             Hidden on lg+ via lg:hidden
             ══════════════════════════════════════════ */}
         <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.38 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="hero-mob-card absolute lg:hidden"
           onClick={(e) => e.stopPropagation()}
         >

@@ -227,6 +227,9 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -1836,4 +1839,134 @@ header a span img:nth-child(2) { opacity: 1 !important; }
   .villa-left .villa-specs {
     padding-top: 12px !important;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   INTERACTIVE MASTER PLAN - IMAGE-BASED SELECTOR
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Master plan container */
+.master-plan-container {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Smooth transitions for villa selection */
+.master-plan-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile optimization - horizontal scroll for master plan */
+@media (max-width: 1023px) {
+  .master-plan-container {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+  }
+
+  .master-plan-container > div {
+    min-width: 700px;
+  }
+
+  /* Add scroll hint on mobile */
+  .master-plan-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
+    pointer-events: none;
+  }
+}
+
+/* Very small screens - allow even more horizontal scroll */
+@media (max-width: 640px) {
+  .master-plan-container > div {
+    min-width: 600px;
+  }
+}
+
+/* Villa selection animations */
+.master-plan-container svg rect {
+  transition: all 0.2s ease-out;
+}
+
+.master-plan-container svg rect:hover {
+  filter: brightness(1.1);
+}
+
+/* Ensure select dropdowns match theme */
+select {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+select:hover {
+  border-color: var(--accent) !important;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(83, 104, 120, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PERFORMANCE OPTIMIZATIONS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* GPU acceleration for transforms and animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Optimize image rendering */
+img, picture, video, canvas, svg {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Smooth animations with GPU acceleration */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  [data-framer-motion] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize scrolling performance */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Prevent layout shifts during image load */
+img[loading="lazy"] {
+  content-visibility: auto;
 }

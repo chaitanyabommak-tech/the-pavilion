@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import LeadFormModal from "./LeadFormModal";
+import SchematicMasterPlan from "./floorplan/SchematicMasterPlan";
+import SelectedVillaPanel from "./floorplan/SelectedVillaPanel";
+import FloorPlanViewer from "./floorplan/FloorPlanViewer";
+import { pavilionVillas, Villa } from "@/data/pavilionVillas";
 
 const types = [
   { id: "a", label: "Type A" },
@@ -29,10 +33,16 @@ const specs = [
 ];
 
 export default function VillaConfigurations() {
+  // Original floor plan state
   const [activeType, setActiveType] = useState("a");
   const [activeVilla, setActiveVilla] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Interactive master plan state
+  const [selectedVilla, setSelectedVilla] = useState<Villa | null>(null);
+  const [showMasterPlan, setShowMasterPlan] = useState(false);
+
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -43,6 +53,31 @@ export default function VillaConfigurations() {
     setActiveType(id);
     setActiveVilla(0);
   }
+
+  const handleVillaSelectFromMasterPlan = (villa: Villa) => {
+    setSelectedVilla(villa);
+
+    // Scroll to villa details panel
+    setTimeout(() => {
+      const villaDetailsPanel = document.getElementById("villa-details-panel");
+      if (villaDetailsPanel) {
+        villaDetailsPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 300);
+  };
+
+  // URL deep linking for master plan
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const villaParam = params.get("villa");
+    if (villaParam) {
+      const villa = pavilionVillas.find((v) => v.id.toLowerCase() === villaParam.toLowerCase());
+      if (villa) {
+        setSelectedVilla(villa);
+        setShowMasterPlan(true);
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -340,6 +375,100 @@ export default function VillaConfigurations() {
                 </div>
               ))}
             </div>
+          </motion.div>
+
+          {/* ══════════════════════════════════════════
+              INTERACTIVE MASTER PLAN SECTION - NEW!
+              ══════════════════════════════════════════ */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            style={{ borderTop: "1px solid var(--edge)" }}
+            className="pt-10 mt-10 md:mt-14"
+            id="interactive-master-plan-section"
+          >
+            {/* Header with toggle */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+              <div>
+                <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-3">
+                  Choose Your Villa
+                </p>
+                <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl lg:text-4xl font-light">
+                  Choose Your Villa From the Master Plan
+                </h3>
+                <p style={{ color: "var(--ink-2)" }} className="text-sm mt-2 max-w-2xl">
+                  Select a villa directly from the layout to view its plot size, facing, total built-up area, and floor plan.
+                </p>
+                <div className="w-12 h-px mt-4" style={{ background: "var(--accent)" }} />
+              </div>
+              <button
+                onClick={() => setShowMasterPlan(!showMasterPlan)}
+                className="btn-primary w-full md:w-auto px-6 py-3 text-xs tracking-[0.2em] uppercase"
+              >
+                {showMasterPlan ? "Hide Master Plan" : "View Master Plan"}
+              </button>
+            </div>
+
+            {/* Master Plan Expandable Section */}
+            <AnimatePresence>
+              {showMasterPlan && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="overflow-hidden"
+                >
+                  {/* Schematic Master Plan + Villa Details */}
+                  <div className="space-y-6">
+                    {/* Master Plan */}
+                    <div>
+                      <SchematicMasterPlan
+                        selectedVillaId={selectedVilla?.id || null}
+                        onVillaSelect={handleVillaSelectFromMasterPlan}
+                      />
+                    </div>
+
+                    {/* Floor Plan & Villa Details Panel (Appears When Selected) */}
+                    {selectedVilla && (
+                      <motion.div
+                        id="villa-details-panel"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+                      >
+                        {/* Floor Plan Viewer */}
+                        <div className="lg:col-span-2">
+                          <FloorPlanViewer villa={selectedVilla} />
+                        </div>
+
+                        {/* Villa Details Panel */}
+                        <div className="lg:col-span-1">
+                          <SelectedVillaPanel
+                            villa={selectedVilla}
+                            onEnquire={() => setModalOpen(true)}
+                          />
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+
+                  {/* Mobile Helper Text */}
+                  <div
+                    className="lg:hidden p-4 text-center text-xs rounded"
+                    style={{
+                      background: "var(--card)",
+                      border: "1px solid var(--edge)",
+                      color: "var(--ink-2)",
+                    }}
+                  >
+                    <span style={{ color: "var(--accent)" }} className="font-semibold">Tip:</span> Scroll horizontally to view all villa blocks. Tap any villa box to see details and floor plan.
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
         </div>
