@@ -345,7 +345,7 @@ export default function ThreeBHKVillasBodupalPage() {
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
-          <div className="grid md:grid-cols-2 gap-8" style={{ color: "var(--ink-2)" }}>
+          <div className="grid md:grid-cols-2 gap-8 mb-8" style={{ color: "var(--ink-2)" }}>
             <div>
               <h3 style={{ color: "var(--ink)" }} className="text-lg font-semibold mb-3">Why Boduppal for 3 BHK?</h3>
               <ul className="space-y-2 text-sm">
@@ -371,6 +371,20 @@ export default function ThreeBHKVillasBodupalPage() {
                 <li>• Nacharam: 10 min</li>
               </ul>
             </div>
+          </div>
+
+          {/* Map */}
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-lg" style={{ border: "1px solid var(--edge)" }}>
+            <iframe
+              src="https://www.google.com/maps?q=17.416403,78.575600&z=17&t=k&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The Pavillion location map"
+            />
           </div>
         </div>
       </section>

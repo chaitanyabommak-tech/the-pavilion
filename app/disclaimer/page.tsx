@@ -9,22 +9,22 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <main className="h-screen overflow-hidden py-8 px-6 flex items-center" style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}>
-      <div className="max-w-5xl mx-auto w-full">
+    <main className="h-screen overflow-hidden py-4 px-6 flex items-center" style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}>
+      <div className="max-w-6xl mx-auto w-full">
 
         <Link href="/" style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase hover:opacity-70 transition-opacity">
           ← Back to The Pavillion
         </Link>
 
-        <div className="mt-4 mb-6">
-          <h1 style={{ color: "var(--ink)" }} className="font-heading text-3xl font-light">Disclaimer</h1>
+        <div className="mt-3 mb-4">
+          <h1 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light">Disclaimer</h1>
           <div className="w-12 h-px mt-2" style={{ background: "var(--accent)" }} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4" style={{ color: "var(--ink-2)", fontSize: "11px", lineHeight: "1.5" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3" style={{ color: "var(--ink-2)", fontSize: "10px", lineHeight: "1.4" }}>
 
           <section
-            className="p-3 rounded-sm md:col-span-2"
+            className="p-2 rounded-sm md:col-span-2"
             style={{ background: "var(--surface)", border: "1px solid var(--edge)" }}
           >
             <p className="font-medium" style={{ color: "var(--ink)" }}>
@@ -92,7 +92,7 @@ export default function DisclaimerPage() {
 
         </div>
 
-        <div className="mt-6 pt-4 flex gap-4 flex-wrap text-xs" style={{ borderTop: "1px solid var(--edge)" }}>
+        <div className="mt-4 pt-3 flex gap-4 flex-wrap text-xs" style={{ borderTop: "1px solid var(--edge)" }}>
           <Link href="/privacy" style={{ color: "var(--accent)" }} className="tracking-[0.2em] uppercase hover:opacity-70 transition-opacity">Privacy</Link>
           <Link href="/terms" style={{ color: "var(--accent)" }} className="tracking-[0.2em] uppercase hover:opacity-70 transition-opacity">Terms</Link>
           <Link href="/" style={{ color: "var(--ink-3)" }} className="tracking-[0.2em] uppercase hover:opacity-70 transition-opacity">Home</Link>

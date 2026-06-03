@@ -372,6 +372,20 @@ export default function VillasNearUppalPage() {
           <p style={{ color: "var(--ink-2)" }} className="text-sm mt-6">
             <strong>Best Value:</strong> The Pavillion offers TRUE standalone villas (no shared walls) near Uppal Metro at competitive pricing. Others are row houses or farther from metro.
           </p>
+
+          {/* Map */}
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-lg mt-8" style={{ border: "1px solid var(--edge)" }}>
+            <iframe
+              src="https://www.google.com/maps?q=17.416403,78.575600&z=17&t=k&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The Pavillion location map"
+            />
+          </div>
         </div>
       </section>
 
