@@ -317,7 +317,7 @@ export default function SchematicMasterPlan({
               ? "0 2px 8px rgba(0,0,0,0.3)"
               : "0 1px 3px rgba(0,0,0,0.1)",
           }}>
-          THE PAVILION · MASTER PLAN
+          THE PAVILLION · MASTER PLAN
         </div>
 
         {/* Layout Container with Extended Road */}

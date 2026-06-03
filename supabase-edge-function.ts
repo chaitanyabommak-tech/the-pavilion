@@ -7,7 +7,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const TO_EMAIL = "groupbommaku@gmail.com";
-const FROM_EMAIL = "The Pavilion <onboarding@resend.dev>"; // change to noreply@bommakugroup.com after domain verification
+const FROM_EMAIL = "The Pavillion <onboarding@resend.dev>"; // change to noreply@bommakugroup.com after domain verification
 
 serve(async (req: Request) => {
   try {
@@ -34,7 +34,7 @@ serve(async (req: Request) => {
         contact_form: "Contact Page Form",
         modal_enquire: "Enquire Now Modal",
       };
-      subject = `🏠 New Enquiry — ${r.name} | The Pavilion`;
+      subject = `🏠 New Enquiry — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f6f2; border-radius: 8px;">
           <h2 style="color: #1a1510; margin-bottom: 4px;">New Enquiry Received</h2>
@@ -47,7 +47,7 @@ serve(async (req: Request) => {
             ${r.message ? `<tr><td style="padding: 8px 0; color: #7a7068; font-size: 13px; vertical-align: top;">Message</td><td style="padding: 8px 0; color: #1a1510;">${r.message}</td></tr>` : ""}
           </table>
           <div style="margin-top: 24px; padding: 14px 18px; background: #536878; border-radius: 6px; display: inline-block;">
-            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, this is Bommak Constructions regarding your enquiry about The Pavilion." style="color: #fff; text-decoration: none; font-size: 14px;">📲 Reply on WhatsApp</a>
+            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, this is Bommak Constructions regarding your enquiry about The Pavillion." style="color: #fff; text-decoration: none; font-size: 14px;">📲 Reply on WhatsApp</a>
           </div>
         </div>
       `;
@@ -55,7 +55,7 @@ serve(async (req: Request) => {
 
     // ── SITE VISITS ─────────────────────────────────────────
     else if (table === "site_visits") {
-      subject = `📅 Site Visit Request — ${r.name} | The Pavilion`;
+      subject = `📅 Site Visit Request — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f6f2; border-radius: 8px;">
           <h2 style="color: #1a1510; margin-bottom: 4px;">Site Visit Booking Request</h2>
@@ -69,7 +69,7 @@ serve(async (req: Request) => {
             ${r.message ? `<tr><td style="padding: 8px 0; color: #7a7068; font-size: 13px; vertical-align: top;">Notes</td><td style="padding: 8px 0; color: #1a1510;">${r.message}</td></tr>` : ""}
           </table>
           <div style="margin-top: 24px; padding: 14px 18px; background: #536878; border-radius: 6px; display: inline-block;">
-            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, confirming your site visit to The Pavilion." style="color: #fff; text-decoration: none; font-size: 14px;">📲 Confirm on WhatsApp</a>
+            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, confirming your site visit to The Pavillion." style="color: #fff; text-decoration: none; font-size: 14px;">📲 Confirm on WhatsApp</a>
           </div>
         </div>
       `;
@@ -77,7 +77,7 @@ serve(async (req: Request) => {
 
     // ── BROCHURE DOWNLOADS ──────────────────────────────────
     else if (table === "brochure_downloads") {
-      subject = `📄 Brochure Download — ${r.name} | The Pavilion`;
+      subject = `📄 Brochure Download — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f6f2; border-radius: 8px;">
           <h2 style="color: #1a1510; margin-bottom: 4px;">Brochure Downloaded</h2>
@@ -89,7 +89,7 @@ serve(async (req: Request) => {
             ${r.email ? `<tr><td style="padding: 8px 0; color: #7a7068; font-size: 13px;">Email</td><td style="padding: 8px 0; color: #1a1510;"><a href="mailto:${r.email}" style="color: #536878;">${r.email}</a></td></tr>` : ""}
           </table>
           <div style="margin-top: 24px; padding: 14px 18px; background: #536878; border-radius: 6px; display: inline-block;">
-            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, thanks for downloading The Pavilion brochure. Can I help you with anything?" style="color: #fff; text-decoration: none; font-size: 14px;">📲 Follow up on WhatsApp</a>
+            <a href="https://wa.me/919676077142?text=Hi ${encodeURIComponent(r.name)}, thanks for downloading The Pavillion brochure. Can I help you with anything?" style="color: #fff; text-decoration: none; font-size: 14px;">📲 Follow up on WhatsApp</a>
           </div>
         </div>
       `;

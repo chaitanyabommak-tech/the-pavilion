@@ -58,7 +58,7 @@ export default function FinalCTA() {
               <div className="w-16 h-px bg-muted-gold" />
             </div>
             <p className="text-stone-beige/90 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
-              The Pavilion is for families who want an independent villa, a private
+              The Pavillion is for families who want an independent villa, a private
               identity, and the comfort of community living. This is not for everyone.
               It is for 45 families who understand what that means.
             </p>

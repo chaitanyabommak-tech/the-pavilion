@@ -23,31 +23,31 @@ export const metadata: Metadata = {
     icon: "/tab-icon.png",
     apple: "/tab-icon.png",
   },
-  title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
+  title: "The Pavillion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
   description:
     "45 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse, 30,000 SFT recreation zone, 3BHK villas from ₹1.87 Cr. HMDA registered. Book site visit today.",
   keywords:
-    "villas in Boduppal, villas near Uppal, luxury villas Hyderabad, standalone villas Hyderabad, independent villas Hyderabad, The Pavilion Bommaku Group, premium villas East Hyderabad, G+1 penthouse villas, villas for sale Boduppal, gated community villas Boduppal, Vastu villas Hyderabad, buy villas 2cr Hyderabad",
+    "villas in Boduppal, villas near Uppal, luxury villas Hyderabad, standalone villas Hyderabad, independent villas Hyderabad, The Pavillion Bommaku Group, premium villas East Hyderabad, G+1 penthouse villas, villas for sale Boduppal, gated community villas Boduppal, Vastu villas Hyderabad, buy villas 2cr Hyderabad",
   openGraph: {
-    title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
+    title: "The Pavillion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
     description:
       "Discover 45 luxury standalone villas in Boduppal. G+1+Penthouse, 3BHK, 30,000 SFT clubhouse. HMDA registered. From ₹1.87 Cr. Book your site visit now.",
     type: "website",
     url: "https://bommakugroup.com",
-    siteName: "The Pavilion by Bommaku Group",
+    siteName: "The Pavillion by Bommaku Group",
     locale: "en_IN",
     images: [
       {
         url: "/assets/pavilion-hero.png",
         width: 1200,
         height: 630,
-        alt: "The Pavilion Luxury Villas in Boduppal, Hyderabad - Aerial View",
+        alt: "The Pavillion Luxury Villas in Boduppal, Hyderabad - Aerial View",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad",
+    title: "The Pavillion | Luxury Villas in Boduppal, Hyderabad",
     description:
       "45 luxury standalone villas in Boduppal. G+1+Penthouse, 30,000 SFT recreation zone. HMDA registered. From ₹1.87 Cr. Book site visit.",
     images: ["/assets/pavilion-hero.png"],
@@ -157,7 +157,7 @@ export default function RootLayout({
                 {
                   "@type": "Product",
                   "@id": "https://bommakugroup.com/#product",
-                  "name": "The Pavilion - Luxury Villas in Boduppal",
+                  "name": "The Pavillion - Luxury Villas in Boduppal",
                   "description": "45 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse configuration with 3BHK, 30,000 SFT recreation zone, HMDA registered.",
                   "brand": {
                     "@id": "https://bommakugroup.com/#organization"
@@ -196,7 +196,7 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": "https://bommakugroup.com/#website",
                   "url": "https://bommakugroup.com",
-                  "name": "The Pavilion by Bommaku Group",
+                  "name": "The Pavillion by Bommaku Group",
                   "publisher": {
                     "@id": "https://bommakugroup.com/#organization"
                   },

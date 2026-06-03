@@ -63,7 +63,7 @@ export default function ChairmanQuote() {
         >
           <p className="text-stone-beige text-base leading-relaxed max-w-2xl mx-auto">
             After delivering R.N.S Dream Homes, Boduppal's first community living project,
-            The Pavilion becomes the next chapter: limited, independent, and
+            The Pavillion becomes the next chapter: limited, independent, and
             intentionally designed.
           </p>
         </motion.div>

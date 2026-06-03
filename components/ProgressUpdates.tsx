@@ -69,7 +69,7 @@ export default function ProgressUpdates() {
             Construction Updates
           </p>
           <h2 className="font-heading text-charcoal text-5xl font-light leading-tight">
-            The Pavilion,
+            The Pavillion,
             <br />
             <span className="italic text-forest-green">as it unfolds.</span>
           </h2>

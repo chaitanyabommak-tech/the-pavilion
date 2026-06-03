@@ -5,10 +5,10 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavilion community living recreation zone, Boduppal", caption: "Community View" },
-  { src: "/assets/entry-gate-sunset.jpg",  alt: "The Pavilion entry gate at golden hour",                               caption: "Entry Gate"     },
+  { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavillion community living recreation zone, Boduppal", caption: "Community View" },
+  { src: "/assets/entry-gate-sunset.jpg",  alt: "The Pavillion entry gate at golden hour",                               caption: "Entry Gate"     },
   { src: "/assets/clubhouse-aerial.jpeg",  alt: "Clubhouse and recreation zone overhead view with pool, bridge, gym",  caption: "Clubhouse Zone" },
-  { src: "/assets/pool-deck.jpeg",         alt: "Infinity pool deck at dusk, The Pavilion",                            caption: "Infinity Pool"  },
+  { src: "/assets/pool-deck.jpeg",         alt: "Infinity pool deck at dusk, The Pavillion",                            caption: "Infinity Pool"  },
   { src: "/assets/rec-bridge.jpeg",        alt: "Rooftop recreation bridge connecting amenity blocks",                  caption: "Recreation Bridge" },
   { src: "/assets/rec-courts.jpg",         alt: "Recreation courts complex — pickleball, basketball, badminton",       caption: "Sports Courts"  },
   { src: "/assets/gallery-1.jpeg",         alt: "Villa street view with lush landscaping",                             caption: "Villa Street"   },
@@ -45,7 +45,7 @@ export default function Gallery() {
               Visual Gallery
             </p>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
-              The Pavilion,{" "}
+              The Pavillion,{" "}
               <span style={{ color: "var(--ink-3)" }} className="italic">in detail.</span>
             </h2>
             <div className="w-12 h-px mt-6" style={{ background: "var(--accent)" }} />

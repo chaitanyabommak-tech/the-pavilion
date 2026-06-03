@@ -87,7 +87,7 @@ export default function Hero() {
                 style={{ color: "var(--ink)" }}
                 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-4"
               >
-                THE PAVILION
+                THE PAVILLION
               </h1>
               <h2
                 style={{ color: "var(--ink-3)" }}
@@ -118,7 +118,7 @@ export default function Hero() {
                   style={{ border: "1px solid var(--out-bd)", color: "var(--out-tx)" }}
                   className="px-8 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center gap-2 hover:opacity-80"
                   data-track="brochure-download-intent"
-                  aria-label="Download The Pavilion brochure — enter your details to receive it"
+                  aria-label="Download The Pavillion brochure — enter your details to receive it"
                 >
                   Download Brochure
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -140,7 +140,7 @@ export default function Hero() {
           >
             <Image
               src="/assets/pavilion-hero.png"
-              alt="The Pavilion community living aerial view, Surya Hills Boduppal East Hyderabad"
+              alt="The Pavillion community living aerial view, Surya Hills Boduppal East Hyderabad"
               fill
               className="object-cover object-center"
               priority
@@ -165,7 +165,7 @@ export default function Hero() {
           <span className="hero-mob-eyebrow">Surya Hills, Boduppal · East Hyderabad</span>
 
           {/* Project title */}
-          <h1 className="hero-mob-title font-heading">The Pavilion</h1>
+          <h1 className="hero-mob-title font-heading">The Pavillion</h1>
 
           {/* One-liner */}
           <span className="hero-mob-subtitle">
@@ -190,7 +190,7 @@ export default function Hero() {
           <button
             onClick={() => openModal("brochure")}
             className="hero-mob-dl-btn btn-primary"
-            aria-label="Download The Pavilion brochure — enter your details to receive it"
+            aria-label="Download The Pavillion brochure — enter your details to receive it"
             data-track="brochure-download-intent"
           >
             Download Brochure

@@ -31,7 +31,7 @@ export default function ThemeAwareLogo() {
     <span
       className="relative inline-block bg-transparent h-[54px] sm:h-[66px] lg:h-[88px] xl:h-[96px]"
       role="img"
-      aria-label="The Pavilion — Bommak Group"
+      aria-label="The Pavillion — Bommak Group"
     >
       <img
         src="/assets/logo-pavilion-dark.png"

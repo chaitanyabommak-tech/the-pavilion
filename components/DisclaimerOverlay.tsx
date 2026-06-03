@@ -76,7 +76,7 @@ export default function DisclaimerOverlay() {
                     className="font-heading font-semibold"
                     style={{ color: "#1A1510", letterSpacing: "0.07em" }}
                   >
-                    THE PAVILION
+                    THE PAVILLION
                   </p>
                   <p style={{ color: "#7A7068" }}>Bommaku Group</p>
                   <p className="disclaimer-brand-location" style={{ color: "#9A928A" }}>
@@ -104,7 +104,7 @@ export default function DisclaimerOverlay() {
 
                 {/* Para 2 — hidden on mobile via CSS */}
                 <p className="disclaimer-p2">
-                  The Pavilion is a proposed premium villa community in Boduppal, East Hyderabad —
+                  The Pavillion is a proposed premium villa community in Boduppal, East Hyderabad —
                   45 villas, G+1+Penthouse configuration, 3&nbsp;acres site area, 30,000&nbsp;SFT
                   recreation zone. All project details including approvals, pricing, availability,
                   and legal documentation must be verified directly with the company before any

@@ -120,7 +120,7 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
             <div className="flex items-start justify-between mb-8">
               <div>
                 <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.3em] uppercase mb-1">
-                  The Pavilion
+                  The Pavillion
                 </p>
                 <h3 style={{ color: "var(--ink)" }} className="font-heading text-3xl font-light">
                   {titleMap[type]}

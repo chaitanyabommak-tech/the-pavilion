@@ -113,7 +113,7 @@ export default function Amenities() {
               className="w-full aspect-[4/3] bg-cover bg-center"
               style={{ backgroundImage: "url('/assets/clubhouse-aerial.jpeg')", background: "url('/assets/clubhouse-aerial.jpeg') center/cover, var(--img-ph)" }}
               role="img"
-              aria-label="Clubhouse and recreation zone at The Pavilion"
+              aria-label="Clubhouse and recreation zone at The Pavillion"
             />
             <div className="mt-4 grid grid-cols-3 gap-px" style={{ background: "var(--gap)" }}>
               {[

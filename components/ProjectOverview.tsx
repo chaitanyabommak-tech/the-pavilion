@@ -54,13 +54,13 @@ export default function ProjectOverview() {
               <div className="w-12 h-px bg-muted-gold mb-8" />
 
               <p className="text-warm-gray text-lg leading-relaxed mb-6">
-                The Pavilion is not mass housing. It is a limited standalone villa
+                The Pavillion is not mass housing. It is a limited standalone villa
                 community designed for 45 families who want privacy, control, and
                 the freedom to shape their own home.
               </p>
               <p className="text-warm-gray text-base leading-relaxed mb-6">
                 Positioned in Surya Hills, Boduppal — at the centre of East
-                Hyderabad's essential services and growth corridor — The Pavilion
+                Hyderabad's essential services and growth corridor — The Pavillion
                 combines independent living with community living infrastructure.
               </p>
               <p className="text-warm-gray text-base leading-relaxed mb-10">

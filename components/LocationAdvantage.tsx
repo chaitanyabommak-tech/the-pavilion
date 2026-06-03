@@ -87,7 +87,7 @@ export default function LocationAdvantage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="The Pavilion location map"
+              title="The Pavillion location map"
             />
           </motion.div>
 

@@ -6,28 +6,28 @@ import Script from "next/script";
 
 const faqs = [
   {
-    question: "Where is The Pavilion located?",
-    answer: "The Pavilion is located in Surya Hills, Boduppal, East Hyderabad. It's just 5 minutes from Uppal Main Road, 8 minutes from Uppal Metro Station, and 12 km from ORR Exit No. 9."
+    question: "Where is The Pavillion located?",
+    answer: "The Pavillion is located in Surya Hills, Boduppal, East Hyderabad. It's just 5 minutes from Uppal Main Road, 8 minutes from Uppal Metro Station, and 12 km from ORR Exit No. 9."
   },
   {
-    question: "How many villas are there in The Pavilion?",
-    answer: "The Pavilion comprises 45 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
+    question: "How many villas are there in The Pavillion?",
+    answer: "The Pavillion comprises 45 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
   },
   {
     question: "What is the price range of villas?",
-    answer: "Villas at The Pavilion start from ₹1.87 Cr onwards, varying based on plot size, configuration, and facing direction."
+    answer: "Villas at The Pavillion start from ₹1.87 Cr onwards, varying based on plot size, configuration, and facing direction."
   },
   {
     question: "What are the villa configurations available?",
     answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 150 to 250 Sq. Yds with built-up areas from 2,200 to 2,500 SFT."
   },
   {
-    question: "Is The Pavilion HMDA approved?",
-    answer: "Yes, The Pavilion is a registered HMDA Circle Project. All legal approvals and documentation are in place and available for verification."
+    question: "Is The Pavillion HMDA approved?",
+    answer: "Yes, The Pavillion is a registered HMDA Circle Project. All legal approvals and documentation are in place and available for verification."
   },
   {
     question: "What amenities are provided?",
-    answer: "The Pavilion features a 30,000 SFT recreation zone with clubhouse, swimming pool, gym, sports courts (pickleball, basketball), kids' play area, landscaped gardens, and more."
+    answer: "The Pavillion features a 30,000 SFT recreation zone with clubhouse, swimming pool, gym, sports courts (pickleball, basketball), kids' play area, landscaped gardens, and more."
   },
   {
     question: "Do you provide bank loan assistance?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: "Can I customize my villa?",
-    answer: "Yes! The Pavilion offers a 'clean slate' concept where you can customize your villa during construction - from layouts to finishes - before the first pour of concrete."
+    answer: "Yes! The Pavillion offers a 'clean slate' concept where you can customize your villa during construction - from layouts to finishes - before the first pour of concrete."
   },
   {
     question: "What is the possession timeline?",
@@ -95,7 +95,7 @@ export default function FAQ() {
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
               Everything you need to know
               <br />
-              <span style={{ color: "var(--ink-3)" }} className="italic">about The Pavilion</span>
+              <span style={{ color: "var(--ink-3)" }} className="italic">about The Pavillion</span>
             </h2>
             <div className="w-12 h-px mt-6 mx-auto" style={{ background: "var(--accent)" }} />
           </motion.div>

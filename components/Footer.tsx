@@ -37,7 +37,7 @@ function FooterLogo() {
   return (
     <img
       src={dark ? "/assets/logo-pavilion-light.png" : "/assets/logo-pavilion-dark.png"}
-      alt="The Pavilion — Bommaku Group"
+      alt="The Pavillion — Bommaku Group"
       className="footer-logo"
     />
   );

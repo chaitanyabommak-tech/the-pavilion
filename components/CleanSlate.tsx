@@ -70,7 +70,7 @@ export default function CleanSlate() {
                 decided. You accept someone else's layout.
               </p>
               <p className="text-stone-beige/80 text-base leading-relaxed mb-8">
-                At The Pavilion, we deliver the structural shell and help you design
+                At The Pavillion, we deliver the structural shell and help you design
                 every room, every wall, and your entire exterior elevation with our
                 in-house engineers. No two homes need to look the same.
               </p>

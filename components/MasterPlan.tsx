@@ -64,7 +64,7 @@ export default function MasterPlan() {
               className="w-full aspect-[16/9] md:aspect-[2/1] bg-cover bg-center relative md:max-h-[52vh]"
               style={{ backgroundImage: "url('/assets/master-plan.png')", background: "url('/assets/master-plan.png') center/cover, var(--img-ph)" }}
               role="img"
-              aria-label="Master plan layout of The Pavilion, Surya Hills Boduppal"
+              aria-label="Master plan layout of The Pavillion, Surya Hills Boduppal"
             >
               {labels.map((l) => (
                 <div key={l.label} className="absolute hidden md:flex" style={l.position}>
@@ -124,14 +124,14 @@ export default function MasterPlan() {
                 className="w-full aspect-[16/9] bg-cover bg-center relative bg-[#1A1A1A]"
                 style={{ backgroundImage: "url('/assets/master-plan.png')" }}
                 role="img"
-                aria-label="Master plan layout of The Pavilion"
+                aria-label="Master plan layout of The Pavillion"
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="font-heading text-4xl text-[#9A8F87] font-light">Master Plan</p>
                 </div>
               </div>
               <p className="text-[#8A7F78] text-xs text-center mt-4 tracking-widest uppercase">
-                The Pavilion — Surya Hills, Boduppal · GPS: 17°24&apos;59.1&quot;N, 78°34&apos;32.2&quot;E
+                The Pavillion — Surya Hills, Boduppal · GPS: 17°24&apos;59.1&quot;N, 78°34&apos;32.2&quot;E
               </p>
             </motion.div>
           </motion.div>

@@ -42,7 +42,7 @@ const floors = [
       "Open Terrace — garden, barbecue area, or open-air sitting",
       "Full Bathroom on every level",
     ],
-    special: "Most villa projects in this corridor do not offer a dedicated third level. At The Pavilion, every family gets one.",
+    special: "Most villa projects in this corridor do not offer a dedicated third level. At The Pavillion, every family gets one.",
   },
 ];
 

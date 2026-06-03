@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | The Pavilion — Bommaku Constructions",
-  description: "Disclaimer for The Pavilion by Bommaku Constructions. Important information for prospective buyers.",
+  title: "Disclaimer | The Pavillion — Bommaku Constructions",
+  description: "Disclaimer for The Pavillion by Bommaku Constructions. Important information for prospective buyers.",
   alternates: { canonical: "https://bommakugroup.com/disclaimer" },
 };
 
@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
       <div className="max-w-3xl mx-auto">
 
         <Link href="/" style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase hover:opacity-70 transition-opacity">
-          ← Back to The Pavilion
+          ← Back to The Pavillion
         </Link>
 
         <div className="mt-10 mb-12">
@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">Project Information</h2>
             <p className="text-sm leading-relaxed">
-              The Pavilion is a residential development by Bommaku Constructions located at Surya Hills, Boduppal, East Hyderabad, Telangana. All information provided on this Website — including project details, specifications, amenities, floor plans, pricing, and timelines — is indicative and subject to revision at any time without prior notice.
+              The Pavillion is a residential development by Bommaku Constructions located at Surya Hills, Boduppal, East Hyderabad, Telangana. All information provided on this Website — including project details, specifications, amenities, floor plans, pricing, and timelines — is indicative and subject to revision at any time without prior notice.
             </p>
           </section>
 
@@ -65,7 +65,7 @@ export default function DisclaimerPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">RERA Notice</h2>
             <p className="text-sm leading-relaxed">
-              The Pavilion is a project by Bommaku Constructions. RERA registration for this project is in process. Prospective buyers are strongly advised to verify all project details — including approvals, RERA registration, title, and encumbrances — independently through legal counsel before making any investment. [INSERT RERA NUMBER when available]
+              The Pavillion is a project by Bommaku Constructions. RERA registration for this project is in process. Prospective buyers are strongly advised to verify all project details — including approvals, RERA registration, title, and encumbrances — independently through legal counsel before making any investment. [INSERT RERA NUMBER when available]
             </p>
           </section>
 

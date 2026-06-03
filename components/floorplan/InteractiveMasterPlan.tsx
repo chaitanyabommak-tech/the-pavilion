@@ -107,7 +107,7 @@ export default function InteractiveMasterPlan({
       <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
         <img
           src="/assets/master-plan.png"
-          alt="The Pavilion Master Plan"
+          alt="The Pavillion Master Plan"
           className="w-full h-full object-cover"
           style={{ borderRadius: "4px" }}
         />

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | The Pavilion — Bommaku Constructions",
-  description: "Privacy Policy for The Pavilion by Bommaku Constructions. Learn how we collect, use, and protect your personal information.",
+  title: "Privacy Policy | The Pavillion — Bommaku Constructions",
+  description: "Privacy Policy for The Pavillion by Bommaku Constructions. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "https://bommakugroup.com/privacy" },
 };
 
@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-3xl mx-auto">
 
         <Link href="/" style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase hover:opacity-70 transition-opacity">
-          ← Back to The Pavilion
+          ← Back to The Pavillion
         </Link>
 
         <div className="mt-10 mb-12">
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">1. Who We Are</h2>
             <p className="text-sm leading-relaxed">
-              Bommaku Constructions ("we", "us", "our") operates The Pavilion, a residential villa community at Surya Hills, Boduppal, Hyderabad — 500039, Telangana, India. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit <strong>bommakugroup.com</strong> or submit an enquiry.
+              Bommaku Constructions ("we", "us", "our") operates The Pavillion, a residential villa community at Surya Hills, Boduppal, Hyderabad — 500039, Telangana, India. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit <strong>bommakugroup.com</strong> or submit an enquiry.
             </p>
           </section>
 
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">3. How We Use Your Information</h2>
             <ul className="text-sm leading-relaxed space-y-2 list-disc list-inside">
               <li>To respond to your enquiries and arrange site visits</li>
-              <li>To send you the project brochure and relevant updates about The Pavilion</li>
+              <li>To send you the project brochure and relevant updates about The Pavillion</li>
               <li>To contact you via phone, WhatsApp, or email regarding your interest</li>
               <li>To improve our website and understand visitor behaviour</li>
               <li>To comply with legal and regulatory obligations</li>

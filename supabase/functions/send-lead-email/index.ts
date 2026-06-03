@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const TO_EMAIL = "groupbommaku@gmail.com";
-const FROM_EMAIL = "The Pavilion <noreply@bommakugroup.com>";
+const FROM_EMAIL = "The Pavillion <noreply@bommakugroup.com>";
 
 serve(async (req: Request) => {
   try {
@@ -25,7 +25,7 @@ serve(async (req: Request) => {
         contact_form: "Contact Page Form",
         modal_enquire: "Enquire Now Modal",
       };
-      subject = `🏠 New Enquiry — ${r.name} | The Pavilion`;
+      subject = `🏠 New Enquiry — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;padding:32px;background:#f9f6f2;border-radius:8px;">
           <h2 style="color:#1a1510;margin-bottom:4px;">New Enquiry Received</h2>
@@ -42,7 +42,7 @@ serve(async (req: Request) => {
           </div>
         </div>`;
     } else if (table === "site_visits") {
-      subject = `📅 Site Visit Request — ${r.name} | The Pavilion`;
+      subject = `📅 Site Visit Request — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;padding:32px;background:#f9f6f2;border-radius:8px;">
           <h2 style="color:#1a1510;margin-bottom:4px;">Site Visit Booking Request</h2>
@@ -60,7 +60,7 @@ serve(async (req: Request) => {
           </div>
         </div>`;
     } else if (table === "brochure_downloads") {
-      subject = `📄 Brochure Download — ${r.name} | The Pavilion`;
+      subject = `📄 Brochure Download — ${r.name} | The Pavillion`;
       html = `
         <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;padding:32px;background:#f9f6f2;border-radius:8px;">
           <h2 style="color:#1a1510;margin-bottom:4px;">Brochure Downloaded</h2>
@@ -100,7 +100,7 @@ serve(async (req: Request) => {
           <p style="color:#7a7068;font-size:13px;margin-top:0;">From Bommak Constructions</p>
           <hr style="border:none;border-top:1px solid #e0d8ce;margin:20px 0;"/>
           <p style="color:#1a1510;font-size:15px;line-height:1.6;">Dear ${r.name},</p>
-          <p style="color:#1a1510;font-size:15px;line-height:1.6;">Thank you for your interest in <strong>The Pavilion</strong> — 45 exclusive G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad.</p>
+          <p style="color:#1a1510;font-size:15px;line-height:1.6;">Thank you for your interest in <strong>The Pavillion</strong> — 45 exclusive G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad.</p>
           <p style="color:#1a1510;font-size:15px;line-height:1.6;">Your brochure is ready to download:</p>
           <div style="margin:28px 0;text-align:center;">
             <a href="${brochureUrl}" style="background:#536878;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-size:15px;display:inline-block;">📄 Download Brochure</a>

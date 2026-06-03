@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Thank You | The Pavilion — Bommaku Constructions",
+  title: "Thank You | The Pavillion — Bommaku Constructions",
   robots: { index: false, follow: false },
 };
 
@@ -30,7 +30,7 @@ export default function ThankYouPage() {
         </div>
 
         <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
-          The Pavilion
+          The Pavillion
         </p>
 
         <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-4">
