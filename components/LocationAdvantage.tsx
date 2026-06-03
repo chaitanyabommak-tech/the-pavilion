@@ -38,20 +38,26 @@ export default function LocationAdvantage() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="loc-header flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16"
+          className="loc-header mb-10 md:mb-16"
         >
-          <div>
-            <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
-              Location
-            </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
-              Surya Hills, Boduppal.
-              <br />
-              <span style={{ color: "var(--ink-3)" }} className="italic">East Hyderabad.</span>
-            </h2>
-            <div className="w-12 h-px mt-6" style={{ background: "var(--accent)" }} />
-          </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-3 loc-get-location">
+          <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
+            Location
+          </p>
+          <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light mb-6">
+            Surya Hills, Boduppal.
+            <br />
+            <span style={{ color: "var(--ink-3)" }} className="italic">East Hyderabad.</span>
+          </h2>
+
+          <div className="flex flex-col sm:flex-row items-start gap-3 mt-6">
+            <a
+              href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-get-location"
+            >
+              Get Location <span aria-hidden="true">→</span>
+            </a>
             <a
               href="tel:+919182332244"
               className="btn-get-location flex items-center gap-2"
@@ -60,14 +66,6 @@ export default function LocationAdvantage() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
               Call Now
-            </a>
-            <a
-              href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-get-location"
-            >
-              Get Location <span aria-hidden="true">→</span>
             </a>
           </div>
         </motion.div>
