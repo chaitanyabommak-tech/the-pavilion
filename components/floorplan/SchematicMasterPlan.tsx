@@ -875,7 +875,7 @@ export default function SchematicMasterPlan({
         </div>
       </div>
 
-        {/* Tooltip - positioned beside hovered villa */}
+        {/* Tooltip - positioned beside hovered villa - Hidden on mobile */}
         <AnimatePresence>
           {hoveredVilla && (
             <motion.div
@@ -883,7 +883,7 @@ export default function SchematicMasterPlan({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.15 }}
-              className="fixed z-[100] pointer-events-none"
+              className="fixed z-[100] pointer-events-none hidden md:block"
               style={{
                 left: `${tooltipPosition.x}px`,
                 top: `${tooltipPosition.y}px`,
