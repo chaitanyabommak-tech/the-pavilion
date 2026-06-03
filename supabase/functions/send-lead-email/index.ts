@@ -106,7 +106,7 @@ serve(async (req: Request) => {
             <a href="${brochureUrl}" style="background:#536878;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-size:15px;display:inline-block;">📄 Download Brochure</a>
           </div>
           <p style="color:#7a7068;font-size:13px;line-height:1.6;">For enquiries or to book a site visit, reach us at:</p>
-          <p style="color:#1a1510;font-size:14px;">📞 +91 6302 807 142 &nbsp;|&nbsp; ✉️ bommakugroup@gmail.com</p>
+          <p style="color:#1a1510;font-size:14px;">📞 +91 96760 77142 &nbsp;|&nbsp; ✉️ bommakugroup@gmail.com</p>
           <hr style="border:none;border-top:1px solid #e0d8ce;margin:20px 0;"/>
           <p style="color:#7a7068;font-size:12px;margin:0;">Bommak Constructions · Surya Hills, Boduppal, East Hyderabad</p>
         </div>`;

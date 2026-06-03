@@ -59,7 +59,7 @@ export default function LocationAdvantage() {
               Get Location <span aria-hidden="true">→</span>
             </a>
             <a
-              href="tel:+919182332244"
+              href="tel:+919676077142"
               className="btn-get-location flex items-center gap-2"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
