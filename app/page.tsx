@@ -6,6 +6,7 @@ import VillaConfigurations from "@/components/VillaConfigurations";
 import MasterPlan from "@/components/MasterPlan";
 import Amenities from "@/components/Amenities";
 import LocationAdvantage from "@/components/LocationAdvantage";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -23,6 +24,7 @@ export default function Home() {
         <MasterPlan />
         <Amenities />
         <LocationAdvantage />
+        <FAQ />
         <Contact />
       </main>
 

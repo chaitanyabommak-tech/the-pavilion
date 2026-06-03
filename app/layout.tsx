@@ -23,32 +23,33 @@ export const metadata: Metadata = {
     icon: "/tab-icon.png",
     apple: "/tab-icon.png",
   },
-  title: "The Pavilion | Standalone Villas in Boduppal by Bommak Group",
+  title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
   description:
-    "The Pavilion — A Clean Slate. Most homes are built, then sold. Yours is built as you decide. 45 standalone G+1+Penthouse villas in Surya Hills, Boduppal, East Hyderabad by Bommak Constructions.",
+    "45 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse, 30,000 SFT recreation zone, 3BHK villas from ₹1.87 Cr. HMDA registered. Book site visit today.",
   keywords:
-    "standalone villas Boduppal, community living Hyderabad, The Pavilion Bommak Group, luxury villas East Hyderabad, G+1 penthouse villas, Surya Hills Boduppal",
+    "villas in Boduppal, villas near Uppal, luxury villas Hyderabad, standalone villas Hyderabad, independent villas Hyderabad, The Pavilion Bommaku Group, premium villas East Hyderabad, G+1 penthouse villas, villas for sale Boduppal, gated community villas Boduppal, Vastu villas Hyderabad, buy villas 2cr Hyderabad",
   openGraph: {
-    title: "The Pavilion | Standalone Villas in Boduppal by Bommak Group",
+    title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
     description:
-      "A Clean Slate. Most homes are built, then sold. Yours is built as you decide — a blank canvas handed to you before the first pour of concrete. 45 villas in Boduppal, East Hyderabad.",
+      "Discover 45 luxury standalone villas in Boduppal. G+1+Penthouse, 3BHK, 30,000 SFT clubhouse. HMDA registered. From ₹1.87 Cr. Book your site visit now.",
     type: "website",
     url: "https://bommakugroup.com",
-    siteName: "The Pavilion by Bommak Group",
+    siteName: "The Pavilion by Bommaku Group",
+    locale: "en_IN",
     images: [
       {
         url: "/assets/pavilion-hero.png",
         width: 1200,
         height: 630,
-        alt: "The Pavilion — Standalone Villas in Boduppal, East Hyderabad",
+        alt: "The Pavilion Luxury Villas in Boduppal, Hyderabad - Aerial View",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Pavilion | Standalone Villas in Boduppal by Bommak Group",
+    title: "The Pavilion | Luxury Villas in Boduppal, Hyderabad",
     description:
-      "45 standalone G+1+Penthouse villas in Surya Hills, Boduppal, East Hyderabad. A clean slate — yours to design.",
+      "45 luxury standalone villas in Boduppal. G+1+Penthouse, 30,000 SFT recreation zone. HMDA registered. From ₹1.87 Cr. Book site visit.",
     images: ["/assets/pavilion-hero.png"],
   },
   alternates: {
@@ -99,6 +100,114 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QGJ61SEN5Y');`,
+          }}
+        />
+        {/* Schema.org structured data */}
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://bommakugroup.com/#organization",
+                  "name": "Bommaku Group",
+                  "alternateName": "Bommaku Constructions",
+                  "url": "https://bommakugroup.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bommakugroup.com/tab-icon.png"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-9676077142",
+                    "contactType": "Sales",
+                    "areaServed": "IN",
+                    "availableLanguage": ["English", "Hindi", "Telugu"]
+                  },
+                  "sameAs": [
+                    "https://www.facebook.com/bommakugroup",
+                    "https://www.instagram.com/bommakugroup"
+                  ]
+                },
+                {
+                  "@type": "RealEstateAgent",
+                  "@id": "https://bommakugroup.com/#realestateagent",
+                  "name": "Bommaku Constructions",
+                  "description": "Premium villa developer in Hyderabad specializing in luxury standalone villa communities",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Surya Hills, Boduppal",
+                    "addressLocality": "Hyderabad",
+                    "addressRegion": "Telangana",
+                    "postalCode": "500039",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "17.416403",
+                    "longitude": "78.575600"
+                  },
+                  "telephone": "+91-9676077142",
+                  "email": "bommakugroup@gmail.com",
+                  "priceRange": "₹₹₹"
+                },
+                {
+                  "@type": "Product",
+                  "@id": "https://bommakugroup.com/#product",
+                  "name": "The Pavilion - Luxury Villas in Boduppal",
+                  "description": "45 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse configuration with 3BHK, 30,000 SFT recreation zone, HMDA registered.",
+                  "brand": {
+                    "@id": "https://bommakugroup.com/#organization"
+                  },
+                  "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "INR",
+                    "lowPrice": "18700000",
+                    "highPrice": "30000000",
+                    "offerCount": "45",
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                      "@id": "https://bommakugroup.com/#organization"
+                    }
+                  },
+                  "category": "Residential Villa",
+                  "additionalProperty": [
+                    {
+                      "@type": "PropertyValue",
+                      "name": "Villa Type",
+                      "value": "G+1+Penthouse"
+                    },
+                    {
+                      "@type": "PropertyValue",
+                      "name": "Configuration",
+                      "value": "3 BHK + Pooja Room"
+                    },
+                    {
+                      "@type": "PropertyValue",
+                      "name": "Total Units",
+                      "value": "45"
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://bommakugroup.com/#website",
+                  "url": "https://bommakugroup.com",
+                  "name": "The Pavilion by Bommaku Group",
+                  "publisher": {
+                    "@id": "https://bommakugroup.com/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://bommakugroup.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                }
+              ]
+            })
           }}
         />
       </head>

@@ -37,7 +37,7 @@ function FooterLogo() {
   return (
     <img
       src={dark ? "/assets/logo-pavilion-light.png" : "/assets/logo-pavilion-dark.png"}
-      alt="The Pavilion — Bommak Group"
+      alt="The Pavilion — Bommaku Group"
       className="footer-logo"
     />
   );
@@ -118,7 +118,10 @@ export default function Footer() {
               <a href="/disclaimer">Disclaimer</a>
             </div>
             <p className="footer-copy">
-              © 2026 Bommak Constructions. All rights reserved.
+              © 2025 Bommaku Constructions. All rights reserved.
+            </p>
+            <p className="footer-tagline" style={{ fontSize: '11px', marginTop: '8px', opacity: 0.7 }}>
+              A Bommaku Group Company | HMDA Registered Project
             </p>
           </div>
         </div>

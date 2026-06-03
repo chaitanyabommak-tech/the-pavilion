@@ -78,11 +78,16 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full"
             >
+              {/* SEO Eyebrow */}
+              <p style={{ color: "var(--accent)" }} className="text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 font-semibold">
+                45 Luxury Villas in Boduppal, Hyderabad
+              </p>
+
               <h1
                 style={{ color: "var(--ink)" }}
                 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-4"
               >
-                THE PAVILLION
+                THE PAVILION
               </h1>
               <h2
                 style={{ color: "var(--ink-3)" }}
@@ -96,10 +101,9 @@ export default function Hero() {
               <div className="w-12 h-px bg-muted-gold mb-6" />
 
               <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed mb-10">
-                A Clean Slate.<br />
-                Most homes are built, then sold.<br />
-                Yours is built as you decide — a blank canvas<br />
-                handed to you before the first pour of concrete.
+                Premium standalone villas in Surya Hills, Boduppal.<br />
+                G+1+Penthouse | 3BHK | 30,000 SFT Recreation Zone<br />
+                HMDA Registered | From ₹1.87 Cr onwards
               </p>
 
               <div className="hero-cta-row flex flex-wrap gap-4 pb-10 lg:pb-0">
