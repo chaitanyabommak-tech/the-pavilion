@@ -20,9 +20,6 @@ export default function SchematicMasterPlan({
   const [sftFilter, setSftFilter] = useState<number | null>(null);
   const [facingFilter, setFacingFilter] = useState<string | null>(null);
   const [isNightMode, setIsNightMode] = useState(false);
-  const [zoom, setZoom] = useState(0.5);
-  const [isMobile, setIsMobile] = useState(false);
-
   // Sync with navbar theme toggle
   useEffect(() => {
     // Read initial theme
@@ -54,36 +51,6 @@ export default function SchematicMasterPlan({
       observer.disconnect();
     };
   }, []);
-
-  // Mobile detection for zoom controls and initial zoom
-  useEffect(() => {
-    const checkMobile = () => {
-      const mobile = window.innerWidth <= 768;
-      setIsMobile(mobile);
-      // Set initial zoom based on device
-      if (mobile && zoom === 0.5) {
-        setZoom(0.5);
-      }
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Zoom handlers for mobile
-  const handleZoomIn = () => {
-    setZoom(prev => Math.min(prev + 0.2, 1.5));
-  };
-
-  const handleZoomOut = () => {
-    setZoom(prev => Math.max(prev - 0.2, 0.3));
-  };
-
-  const handleZoomReset = () => {
-    setZoom(0.5);
-  };
 
   // Professional Architectural Blueprint Theme
   const theme = {
@@ -317,67 +284,8 @@ export default function SchematicMasterPlan({
       </div>
 
       {/* Master Plan Container - Theme-aware modern design with responsive scaling */}
-      <div className="master-plan-responsive-wrapper relative">
-        {/* Zoom Controls - Mobile Only */}
-        {isMobile && (
-          <div className="absolute top-4 right-4 z-50 flex flex-col gap-2">
-            <button
-              onClick={handleZoomIn}
-              className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg transition-all duration-200 active:scale-95"
-              style={{
-                background: theme.badgeBackground,
-                color: theme.badgeText,
-                border: `1px solid ${theme.badgeBorder}`,
-              }}
-              aria-label="Zoom in"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="M21 21l-4.35-4.35"/>
-                <line x1="11" y1="8" x2="11" y2="14"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </button>
-            <button
-              onClick={handleZoomOut}
-              className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg transition-all duration-200 active:scale-95"
-              style={{
-                background: theme.badgeBackground,
-                color: theme.badgeText,
-                border: `1px solid ${theme.badgeBorder}`,
-              }}
-              aria-label="Zoom out"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="M21 21l-4.35-4.35"/>
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              </svg>
-            </button>
-            <button
-              onClick={handleZoomReset}
-              className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg transition-all duration-200 active:scale-95 text-[10px] font-semibold"
-              style={{
-                background: theme.badgeBackground,
-                color: theme.badgeText,
-                border: `1px solid ${theme.badgeBorder}`,
-              }}
-              aria-label="Reset zoom"
-            >
-              1:1
-            </button>
-          </div>
-        )}
-
-        <div
-          className="master-plan-scaler overflow-x-auto overflow-y-hidden"
-          style={{
-            WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'thin',
-            transform: isMobile ? `scale(${zoom})` : undefined,
-            transformOrigin: 'top left',
-          }}
-        >
+      <div className="master-plan-responsive-wrapper">
+        <div className="master-plan-scaler">
           <div
             className="relative rounded-2xl md:rounded-[24px] overflow-hidden shadow-2xl transition-all duration-300 min-w-[1100px]"
             style={{
