@@ -2035,8 +2035,8 @@ html {
   .master-plan-scaler {
     transform: scale(0.65);
     margin-top: 3rem;
-    margin-bottom: 2rem;
-    padding: 0 20px;
+    margin-bottom: 0;
+    padding: 0 20px 20px 20px;
   }
 }
 
@@ -2049,7 +2049,8 @@ html {
   .master-plan-scaler {
     transform: scale(0.75);
     margin-top: 4rem;
-    margin-bottom: -20%;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
   }
 }
 
@@ -2062,7 +2063,8 @@ html {
   .master-plan-scaler {
     transform: scale(0.9);
     margin-top: 4rem;
-    margin-bottom: -8%;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
   }
 }
 
@@ -2075,5 +2077,6 @@ html {
   .master-plan-scaler {
     transform: scale(1);
     margin-top: 4rem;
+    margin-bottom: 0;
   }
 }
