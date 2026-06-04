@@ -2001,29 +2001,18 @@ html {
 }
 
 .master-plan-scaler {
-  transform-origin: top center;
+  transform-origin: top left;
   transition: transform 0.3s ease;
 }
 
-/* Mobile: scale down significantly, add top margin for title */
-@media (max-width: 640px) {
+/* Mobile: Use JavaScript zoom controls - no CSS scaling */
+@media (max-width: 768px) {
   .master-plan-scaler {
-    transform: scale(0.4);
-    margin-bottom: -55%;
     margin-top: 3.5rem;
   }
 }
 
-/* Small tablets */
-@media (min-width: 641px) and (max-width: 768px) {
-  .master-plan-scaler {
-    transform: scale(0.55);
-    margin-bottom: -42%;
-    margin-top: 4rem;
-  }
-}
-
-/* Tablets */
+/* Tablets and up: Apply CSS scaling */
 @media (min-width: 769px) and (max-width: 1024px) {
   .master-plan-scaler {
     transform: scale(0.75);
