@@ -218,39 +218,38 @@ export default function RecreationZone() {
               </svg>
             </div>
 
-            {/* Logo Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="relative">
-                {/* Circular badge background */}
+            {/* Logo Badge - Centered */}
+            <div className="flex flex-col items-center justify-center mb-8">
+              {/* Circular badge */}
+              <div
+                className="w-24 h-24 rounded-full flex items-center justify-center relative mb-4"
+                style={{
+                  background: "linear-gradient(135deg, #7a6853 0%, #5a4d3f 100%)",
+                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
+                }}
+              >
+                {/* Inner white circle */}
                 <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center relative"
-                  style={{
-                    background: "linear-gradient(135deg, var(--accent) 0%, #8B7355 100%)",
-                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)"
-                  }}
+                  className="w-20 h-20 rounded-full flex items-center justify-center"
+                  style={{ background: "var(--card)" }}
                 >
-                  {/* Inner circle */}
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center"
-                    style={{ background: "var(--card)" }}
-                  >
-                    {/* Recreation Zone Icon */}
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: "var(--accent)" }}>
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                      <path d="M9 22V12h6v10" />
-                      <circle cx="12" cy="8" r="1.5" fill="currentColor" />
-                    </svg>
-                  </div>
+                  {/* Recreation Zone Icon */}
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7a6853" strokeWidth="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <path d="M9 22V12h6v10" />
+                    <circle cx="12" cy="7" r="1.5" fill="#7a6853" />
+                  </svg>
                 </div>
-                {/* Logo text */}
-                <div className="text-center mt-3">
-                  <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase font-semibold">
-                    Bommaku
-                  </p>
-                  <p style={{ color: "var(--ink-2)" }} className="text-[10px] tracking-[0.2em] uppercase">
-                    Recreation Zone
-                  </p>
-                </div>
+              </div>
+
+              {/* Logo text - centered below circle */}
+              <div className="text-center">
+                <p style={{ color: "#7a6853" }} className="text-sm tracking-[0.25em] uppercase font-semibold mb-0.5">
+                  BOMMAKU
+                </p>
+                <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.2em] uppercase">
+                  RECREATION ZONE
+                </p>
               </div>
             </div>
 
