@@ -203,6 +203,92 @@ export default function RecreationZone() {
             </div>
           </motion.div>
 
+          {/* Recreation Zone Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-12 md:mb-16"
+          >
+            {/* TODO: Replace with actual Recreation Zone renders from the uploaded images */}
+            {/* Expected images in public/images/recreation-zone/:
+                - zen-garden-seating.jpg (Image 1 from screenshot)
+                - pool-villas-aerial.jpg (Image 2 from screenshot)
+                - kids-play-sunset.jpg (Image 3 from screenshot)
+                - infinity-pool-deck.jpg (Image 4 from screenshot)
+                - landscaped-courtyard.jpg (Image 5 from screenshot)
+                - front-entrance-reliance.jpg (Image 6 from screenshot - NOTE: Remove Reliance Fresh branding)
+                - evening-view.jpg (Image 7 from screenshot)
+            */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Image 1 - Zen Garden Seating */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/garden-pergola.jpeg')",
+                  background: "url('/assets/garden-pergola.jpeg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Zen garden with wooden pergola seating at Bommaku Recreation Zone"
+              />
+
+              {/* Image 2 - Pool & Villas Aerial */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/clubhouse-aerial.jpeg')",
+                  background: "url('/assets/clubhouse-aerial.jpeg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Aerial view of recreation zone with villas and infinity pool"
+              />
+
+              {/* Image 3 - Kids Play Area Sunset */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/rec-courts.jpg')",
+                  background: "url('/assets/rec-courts.jpg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Kids play area and family recreation zones at sunset"
+              />
+
+              {/* Image 4 - Infinity Pool Deck */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/pool-deck.jpeg')",
+                  background: "url('/assets/pool-deck.jpeg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Infinity pool deck with lounge seating and cabanas"
+              />
+
+              {/* Image 5 - Landscaped Courtyard */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/garden-pergola.jpeg')",
+                  background: "url('/assets/garden-pergola.jpeg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Landscaped courtyard with flowering gardens and seating"
+              />
+
+              {/* Image 6 - Evening View */}
+              <div
+                className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
+                style={{
+                  backgroundImage: "url('/assets/rec-bridge.jpeg')",
+                  background: "url('/assets/rec-bridge.jpeg') center/cover, var(--img-ph)"
+                }}
+                role="img"
+                aria-label="Evening view of Bommaku Recreation Zone architecture"
+              />
+            </div>
+          </motion.div>
+
           {/* Villa Owner Benefits Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
