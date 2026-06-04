@@ -284,15 +284,17 @@ export default function SchematicMasterPlan({
         </div>
       </div>
 
-      {/* Master Plan Container - Theme-aware modern design */}
-      <div
-        className="relative rounded-2xl md:rounded-[24px] overflow-x-auto shadow-2xl transition-all duration-500"
-        style={{
-          background: theme.background,
-          border: `1px solid ${theme.border}`,
-          boxShadow: theme.shadow,
-        }}
-      >
+      {/* Master Plan Container - Theme-aware modern design with responsive scaling */}
+      <div className="master-plan-responsive-wrapper">
+        <div className="master-plan-scaler">
+          <div
+            className="relative rounded-2xl md:rounded-[24px] overflow-hidden shadow-2xl transition-all duration-500 min-w-[1100px]"
+            style={{
+              background: theme.background,
+              border: `1px solid ${theme.border}`,
+              boxShadow: theme.shadow,
+            }}
+          >
         {/* Elegant corner details */}
         <div className="absolute top-0 left-0 w-16 h-16 opacity-8 z-30 pointer-events-none">
           <div className="absolute top-4 left-4 w-8 h-8 border-l border-t rounded-tl-xl" style={{ borderColor: "var(--accent)" }} />
@@ -972,6 +974,8 @@ export default function SchematicMasterPlan({
           <span style={{ color: "var(--ink-2)" }}>Sold</span>
         </div>
       </div>
+    </div>
+    </div>
     </div>
     </div>
   );
