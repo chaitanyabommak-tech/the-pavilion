@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LeadFormModal from "./LeadFormModal";
+import { trackEvent } from "@/lib/tracking";
 
 /* Desktop stats bar — unchanged */
 const stats = [
@@ -108,13 +109,19 @@ export default function Hero() {
 
               <div className="hero-cta-row flex flex-wrap gap-4 pb-10 lg:pb-0">
                 <button
-                  onClick={() => openModal("visit")}
+                  onClick={() => {
+                    trackEvent('book_site_visit_click', { cta_location: 'hero_desktop' });
+                    openModal("visit");
+                  }}
                   className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase"
                 >
                   Book Site Visit
                 </button>
                 <button
-                  onClick={() => openModal("brochure")}
+                  onClick={() => {
+                    trackEvent('brochure_download_click', { cta_location: 'hero_desktop' });
+                    openModal("brochure");
+                  }}
                   style={{ border: "1px solid var(--out-bd)", color: "var(--out-tx)" }}
                   className="px-8 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center gap-2 hover:opacity-80"
                   data-track="brochure-download-intent"
@@ -188,7 +195,10 @@ export default function Hero() {
 
           {/* Download Brochure CTA */}
           <button
-            onClick={() => openModal("brochure")}
+            onClick={() => {
+              trackEvent('brochure_download_click', { cta_location: 'hero_mobile' });
+              openModal("brochure");
+            }}
             className="hero-mob-dl-btn btn-primary"
             aria-label="Download The Pavillion brochure — enter your details to receive it"
             data-track="brochure-download-intent"

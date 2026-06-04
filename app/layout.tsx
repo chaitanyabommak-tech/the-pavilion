@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
+import { Providers } from "./providers";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -167,7 +169,7 @@ export default function RootLayout({
                     "priceCurrency": "INR",
                     "lowPrice": "18700000",
                     "highPrice": "30000000",
-                    "offerCount": "45",
+                    "offerCount": "40",
                     "availability": "https://schema.org/InStock",
                     "seller": {
                       "@id": "https://bommakugroup.com/#organization"
@@ -188,7 +190,7 @@ export default function RootLayout({
                     {
                       "@type": "PropertyValue",
                       "name": "Total Units",
-                      "value": "45"
+                      "value": "40"
                     }
                   ]
                 },
@@ -220,7 +222,10 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:text-sm">
           Skip to main content
         </a>
-        {children}
+        <Providers>
+          {children}
+          <MobileStickyCTA />
+        </Providers>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { trackEvent, trackPhoneClick } from "@/lib/tracking";
 
 const highlights = [
   { time: "5 min",  label: "away from Uppal Main Road" },
@@ -54,12 +55,14 @@ export default function LocationAdvantage() {
               href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('get_directions_click', { cta_location: 'location_section' })}
               className="btn-get-location"
             >
               Get Location <span aria-hidden="true">→</span>
             </a>
             <a
               href="tel:+919676077142"
+              onClick={() => trackPhoneClick('+919676077142', 'location_section')}
               className="btn-get-location flex items-center gap-2"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

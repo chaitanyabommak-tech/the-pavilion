@@ -1,23 +1,37 @@
+'use client';
+
+import { useEffect } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { trackPageView, trackConversion } from "@/lib/tracking";
 
-export const metadata: Metadata = {
-  title: "Thank You | The Pavillion — Bommaku Constructions",
-  robots: { index: false, follow: false },
-};
+// Note: metadata export doesn't work in client components
+// Move to layout or use Next.js metadata API differently if needed
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    // Track thank you page view
+    trackPageView('Thank You - Form Submitted');
+
+    // Track Google Ads conversion
+    trackConversion();
+
+    // Also push to dataLayer for GTM
+    if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'form_submission_complete',
+        event_category: 'Lead',
+        event_label: 'Enquiry Form',
+        value: 1
+      });
+    }
+  }, []);
+
   return (
     <main
       className="min-h-screen flex items-center justify-center px-6 py-20"
       style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}
     >
-      {/* GTM conversion event */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submission_complete',event_category:'Lead',event_label:'Enquiry Form',value:1});`,
-        }}
-      />
 
       <div className="max-w-xl w-full text-center">
         <div
