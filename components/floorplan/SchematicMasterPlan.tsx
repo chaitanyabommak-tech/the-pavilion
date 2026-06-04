@@ -20,6 +20,7 @@ export default function SchematicMasterPlan({
   const [sftFilter, setSftFilter] = useState<number | null>(null);
   const [facingFilter, setFacingFilter] = useState<string | null>(null);
   const [isNightMode, setIsNightMode] = useState(false);
+
   // Sync with navbar theme toggle
   useEffect(() => {
     // Read initial theme
@@ -283,17 +284,15 @@ export default function SchematicMasterPlan({
         </div>
       </div>
 
-      {/* Master Plan Container - Theme-aware modern design with responsive scaling */}
-      <div className="master-plan-responsive-wrapper">
-        <div className="master-plan-scaler">
-          <div
-            className="relative rounded-2xl md:rounded-[24px] overflow-hidden shadow-2xl transition-all duration-300 min-w-[1100px]"
-            style={{
-              background: theme.background,
-              border: `1px solid ${theme.border}`,
-              boxShadow: theme.shadow,
-            }}
-          >
+      {/* Master Plan Container - Theme-aware modern design */}
+      <div
+        className="relative rounded-2xl md:rounded-[24px] overflow-x-auto shadow-2xl transition-all duration-500"
+        style={{
+          background: theme.background,
+          border: `1px solid ${theme.border}`,
+          boxShadow: theme.shadow,
+        }}
+      >
         {/* Elegant corner details */}
         <div className="absolute top-0 left-0 w-16 h-16 opacity-8 z-30 pointer-events-none">
           <div className="absolute top-4 left-4 w-8 h-8 border-l border-t rounded-tl-xl" style={{ borderColor: "var(--accent)" }} />
@@ -308,8 +307,8 @@ export default function SchematicMasterPlan({
           <div className="absolute bottom-4 right-4 w-8 h-8 border-r border-b rounded-br-xl" style={{ borderColor: "var(--accent)" }} />
         </div>
 
-        {/* Professional architectural title - moved up to avoid overlap */}
-        <div className="absolute -top-12 md:-top-14 left-1/2 -translate-x-1/2 px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-semibold tracking-wider uppercase z-30 whitespace-nowrap transition-all duration-300"
+        {/* Professional architectural title */}
+        <div className="absolute top-4 md:top-5 left-1/2 -translate-x-1/2 px-6 md:px-8 py-2.5 md:py-3 rounded-md text-xs md:text-sm font-semibold tracking-wider uppercase z-30 whitespace-nowrap transition-all duration-300"
           style={{
             color: theme.badgeText,
             background: theme.badgeBackground,
@@ -973,8 +972,6 @@ export default function SchematicMasterPlan({
           <span style={{ color: "var(--ink-2)" }}>Sold</span>
         </div>
       </div>
-    </div>
-    </div>
     </div>
     </div>
   );
