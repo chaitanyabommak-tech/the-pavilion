@@ -5,8 +5,17 @@ import { useRouter } from "next/navigation";
 import { motion, useInView } from "framer-motion";
 import { type LeadFormData } from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
+import { enrichFormData } from "@/lib/utm";
+import { trackFormSubmit, trackConversion, trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
 function track(type: "whatsapp" | "call", source: string) {
+  // Track with new tracking system
+  if (type === "whatsapp") {
+    trackWhatsAppClick(source);
+  } else if (type === "call") {
+    trackPhoneClick("+919676077142", source);
+  }
+  // Also track in Supabase
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
 }
 
@@ -47,7 +56,19 @@ export default function Contact() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await handleLeadSubmit(form);
+      // Enrich form data with UTM parameters
+      const enrichedData = enrichFormData(form);
+
+      // Submit to database with UTM params
+      await handleLeadSubmit(enrichedData as LeadFormData);
+
+      // Track form submission event
+      trackFormSubmit('enquiry', form.villaType);
+
+      // Track Google Ads conversion
+      trackConversion();
+
+      // Redirect to thank you page
       router.push("/thank-you");
     } finally {
       setSubmitting(false);
@@ -61,6 +82,8 @@ export default function Contact() {
       style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}
       ref={ref}
     >
+      {/* Secondary anchor for book-site-visit CTA links */}
+      <div id="book-site-visit" style={{ position: 'absolute', top: '-80px' }} />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left — info */}

@@ -1970,3 +1970,23 @@ img, picture, video, canvas, svg {
 img[loading="lazy"] {
   content-visibility: auto;
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANCHOR SCROLL OFFSET - For smooth scrolling to sections
+   Navbar is ~70px tall, so offset anchors to prevent content hiding
+   ═══════════════════════════════════════════════════════════════════ */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable smooth scroll in reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

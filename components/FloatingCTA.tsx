@@ -3,8 +3,16 @@
 import { useState } from "react";
 import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
+import { trackPhoneClick, trackWhatsAppClick, trackEvent } from "@/lib/tracking";
 
 function track(type: "whatsapp" | "call", source: string) {
+  // Track with new tracking system
+  if (type === "whatsapp") {
+    trackWhatsAppClick(source);
+  } else if (type === "call") {
+    trackPhoneClick("+919676077142", source);
+  }
+  // Also track in Supabase
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
 }
 
@@ -55,7 +63,10 @@ export default function FloatingCTA() {
 
         {/* Book Site Visit — centre, soft dividers on both sides */}
         <button
-          onClick={() => setModalOpen(true)}
+          onClick={() => {
+            trackEvent('book_site_visit_click', { cta_location: 'floating_cta_mobile' });
+            setModalOpen(true);
+          }}
           aria-label="Book a site visit"
           className="flex flex-col items-center justify-center py-[18px] gap-1.5 transition-all duration-200 active:scale-[0.95] w-full"
           style={{

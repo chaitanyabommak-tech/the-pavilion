@@ -82,7 +82,7 @@ export default function VillaConfigurations() {
   return (
     <>
       <section
-        id="villa-plans"
+        id="floor-plans"
         ref={ref}
         className="py-10 md:py-14"
         style={{ background: "var(--bg)", transition: "background-color 300ms ease" }}

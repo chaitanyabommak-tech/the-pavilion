@@ -36,6 +36,7 @@ export default function Hero() {
   return (
     <>
       <section
+        id="hero"
         className="hero-section-wrap relative min-h-screen flex flex-col"
         aria-label="Hero section"
       >

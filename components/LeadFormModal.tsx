@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getDb } from "@/lib/supabase";
+import { enrichFormData } from "@/lib/utm";
+import { trackFormSubmit, trackConversion } from "@/lib/tracking";
 
 type ModalType = "visit" | "brochure" | "enquire";
 
@@ -77,8 +79,24 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await handleLeadSubmit(form, type);
+      // Enrich form data with UTM parameters
+      const enrichedData = enrichFormData(form);
+
+      // Submit to database with UTM params
+      await handleLeadSubmit(enrichedData as LeadFormData, type);
+
+      // Track form submission event
+      if (type === "visit") {
+        trackFormSubmit('site_visit', form.villaType);
+      } else {
+        trackFormSubmit('enquiry', form.villaType);
+      }
+
+      // Track Google Ads conversion
+      trackConversion();
+
       setSuccess(true);
+
       if (type === "brochure") {
         const link = document.createElement("a");
         link.href = "/assets/pavilion-brochure.pdf";

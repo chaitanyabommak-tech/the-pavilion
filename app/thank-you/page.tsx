@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { trackPageView, trackConversion } from "@/lib/tracking";
+import { trackPageView, trackConversion, trackWhatsAppClick, trackPhoneClick } from "@/lib/tracking";
 
 // Note: metadata export doesn't work in client components
 // Move to layout or use Next.js metadata API differently if needed
@@ -66,6 +66,7 @@ export default function ThankYouPage() {
             href="https://wa.me/919676077142?text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20for%20The%20Pavilion.%20Can%20you%20help%20me%3F"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('thank_you_page')}
             className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-flex items-center justify-center gap-2"
           >
             WhatsApp Us for Faster Response
@@ -81,7 +82,13 @@ export default function ThankYouPage() {
 
         <p style={{ color: "var(--ink-3)" }} className="text-sm">
           Surya Hills, Boduppal, Hyderabad &nbsp;|&nbsp;{" "}
-          <a href="tel:+919676077142" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
+          <a
+            href="tel:+919676077142"
+            onClick={() => trackPhoneClick('+919676077142', 'thank_you_page')}
+            style={{ color: "var(--accent)" }}
+          >
+            +91 96760 77142
+          </a>
         </p>
       </div>
     </main>
