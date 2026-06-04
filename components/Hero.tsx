@@ -7,7 +7,7 @@ import LeadFormModal from "./LeadFormModal";
 
 /* Desktop stats bar — unchanged */
 const stats = [
-  { value: "45",            label: "Villas"           },
+  { value: "40",            label: "Villas"           },
   { value: "G+1+Penthouse", label: "Configuration"    },
   { value: "3 Acres",       label: "Site Area"         },
   { value: "30,000 SFT",   label: "Recreation Zone"  },
@@ -16,7 +16,7 @@ const stats = [
 
 /* Mobile card stats — compact for 5-col strip */
 const mobStats = [
-  { value: "45",    label: "Villas"    },
+  { value: "40",    label: "Villas"    },
   { value: "G+1",   label: "Penthouse" },
   { value: "3 Ac.", label: "Site Area" },
   { value: "30K",   label: "Rec Zone"  },

@@ -118,7 +118,7 @@ export default function VillasInBodupalPage() {
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-              <p style={{ color: "var(--accent)" }} className="text-4xl font-light mb-2">45</p>
+              <p style={{ color: "var(--accent)" }} className="text-4xl font-light mb-2">40</p>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">Total Villas Only</p>
             </div>
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
@@ -126,7 +126,7 @@ export default function VillasInBodupalPage() {
               <p style={{ color: "var(--ink-2)" }} className="text-sm">Acres of Land</p>
             </div>
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-              <p style={{ color: "var(--accent)" }} className="text-4xl font-light mb-2">670</p>
+              <p style={{ color: "var(--accent)" }} className="text-4xl font-light mb-2">750</p>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">SFT Recreation/Family</p>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function VillasInBodupalPage() {
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>Low Density:</strong> Only 40 families share 30,000 SFT recreation (670 SFT per family vs 200-300 typical).</span>
+              <span className="text-sm"><strong>Low Density:</strong> Only 40 families share 30,000 SFT recreation (750 SFT per family vs 200-300 typical).</span>
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
@@ -234,7 +234,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 30,000 SFT = <strong>670 SFT per family</strong>. That's 6-7X more space per family.
+            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 30,000 SFT = <strong>750 SFT per family</strong>. That's 7-8X more space per family.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const stats = [
-  { value: "45",            label: "Villas"        },
+  { value: "40",            label: "Villas"        },
   { value: "G+1+Penthouse", label: "Config"        },
   { value: "3 Acres",       label: "Site Area"     },
   { value: "30,000 SFT",   label: "Rec Zone"      },

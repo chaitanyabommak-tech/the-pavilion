@@ -236,7 +236,7 @@ export default function VillasNearUppalPage() {
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>30,000 SFT Recreation:</strong> 670 SFT per family (vs 200 typical)</span>
+              <span className="text-sm"><strong>30,000 SFT Recreation:</strong> 750 SFT per family (vs 200 typical)</span>
             </li>
           </ul>
 

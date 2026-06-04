@@ -97,7 +97,7 @@ export default function Amenities() {
             <div className="w-12 h-px mt-6" style={{ background: "var(--accent)" }} />
           </div>
           <p style={{ color: "var(--ink-2)" }} className="text-sm max-w-xs">
-            Exclusively for 45 families. Every amenity you need, within the community.
+            Exclusively for 40 families. Every amenity you need, within the community.
           </p>
         </motion.div>
 
@@ -118,7 +118,7 @@ export default function Amenities() {
             <div className="mt-4 grid grid-cols-3 gap-px" style={{ background: "var(--gap)" }}>
               {[
                 { value: "30,000", label: "Sq.Ft Zone" },
-                { value: "45", label: "Families Only" },
+                { value: "40", label: "Families Only" },
                 { value: "50+", label: "Amenities" },
               ].map((s) => (
                 <div key={s.label} className="py-5 text-center" style={{ background: "var(--stats)" }}>
