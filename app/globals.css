@@ -1993,65 +1993,85 @@ html {
 
 /* ═══════════════════════════════════════════════════════════════════
    MASTER PLAN RESPONSIVE SCALING
-   Complete layout fits on mobile without scrolling
+   Mobile: Full layout with horizontal scroll, Desktop: Auto-fit no scroll
    ═══════════════════════════════════════════════════════════════════ */
 .master-plan-responsive-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.master-plan-responsive-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.master-plan-responsive-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.master-plan-responsive-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
 .master-plan-scaler {
   transform-origin: top center;
   transition: transform 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
-/* Mobile portrait (smallest phones) */
-@media (max-width: 400px) {
+/* Mobile: Show complete layout with horizontal scroll */
+@media (max-width: 768px) {
+  .master-plan-responsive-wrapper {
+    overflow-x: auto;
+  }
+
   .master-plan-scaler {
-    transform: scale(0.28);
-    margin-bottom: -72%;
+    transform: scale(0.65);
     margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 20px;
   }
 }
 
-/* Mobile (standard phones) */
-@media (min-width: 401px) and (max-width: 640px) {
-  .master-plan-scaler {
-    transform: scale(0.32);
-    margin-bottom: -68%;
-    margin-top: 3.5rem;
-  }
-}
-
-/* Large phones / Small tablets */
-@media (min-width: 641px) and (max-width: 768px) {
-  .master-plan-scaler {
-    transform: scale(0.45);
-    margin-bottom: -55%;
-    margin-top: 3.5rem;
-  }
-}
-
-/* Tablets */
+/* Tablets: Balanced view */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .master-plan-responsive-wrapper {
+    overflow-x: hidden;
+  }
+
   .master-plan-scaler {
-    transform: scale(0.7);
-    margin-bottom: -30%;
+    transform: scale(0.75);
     margin-top: 4rem;
+    margin-bottom: -20%;
   }
 }
 
-/* Small desktop */
+/* Small desktop: Slightly reduced */
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .master-plan-responsive-wrapper {
+    overflow-x: hidden;
+  }
+
   .master-plan-scaler {
-    transform: scale(0.88);
-    margin-bottom: -12%;
+    transform: scale(0.9);
     margin-top: 4rem;
+    margin-bottom: -8%;
   }
 }
 
-/* Large desktop - full size */
+/* Large desktop: Full size, no scroll */
 @media (min-width: 1281px) {
+  .master-plan-responsive-wrapper {
+    overflow-x: hidden;
+  }
+
   .master-plan-scaler {
     transform: scale(1);
     margin-top: 4rem;
