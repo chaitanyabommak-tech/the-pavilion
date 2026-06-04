@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { trackEvent } from "@/lib/tracking";
 
 const amenityGroups = [
@@ -209,29 +208,94 @@ export default function RecreationZone() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mb-12 p-6 md:p-8 rounded-lg"
+            className="mb-12 p-8 md:p-10 rounded-lg relative overflow-hidden"
             style={{ background: "var(--card)", border: "1px solid var(--edge)" }}
           >
-            <div className="flex items-start gap-4">
-              <div
-                className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center"
-                style={{ background: "var(--accent)", opacity: 0.15 }}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
-              <div>
-                <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-4">
-                  Exclusive Benefits for Pavillion Villa Owners
-                </h3>
-                <div className="space-y-3" style={{ color: "var(--ink-2)" }}>
-                  <p className="text-sm sm:text-base leading-relaxed">
-                    <strong style={{ color: "var(--ink)" }}>First Year:</strong> Free access to the Recreation Zone for all Pavillion villa owners after the facility becomes operational.
+            {/* Decorative background element */}
+            <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
+              <svg viewBox="0 0 200 200" fill="currentColor" style={{ color: "var(--accent)" }}>
+                <path d="M100 20L180 60v80l-80 40-80-40V60z" />
+              </svg>
+            </div>
+
+            {/* Logo Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="relative">
+                {/* Circular badge background */}
+                <div
+                  className="w-20 h-20 rounded-full flex items-center justify-center relative"
+                  style={{
+                    background: "linear-gradient(135deg, var(--accent) 0%, #8B7355 100%)",
+                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)"
+                  }}
+                >
+                  {/* Inner circle */}
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center"
+                    style={{ background: "var(--card)" }}
+                  >
+                    {/* Recreation Zone Icon */}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: "var(--accent)" }}>
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      <path d="M9 22V12h6v10" />
+                      <circle cx="12" cy="8" r="1.5" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+                {/* Logo text */}
+                <div className="text-center mt-3">
+                  <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase font-semibold">
+                    Bommaku
                   </p>
-                  <p className="text-sm sm:text-base leading-relaxed">
-                    <strong style={{ color: "var(--ink)" }}>From Second Year:</strong> Special 35% member benefit on applicable membership or usage charges, subject to final membership terms.
+                  <p style={{ color: "var(--ink-2)" }} className="text-[10px] tracking-[0.2em] uppercase">
+                    Recreation Zone
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center max-w-2xl mx-auto">
+              <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light mb-6">
+                Exclusive Benefits for Pavillion Villa Owners
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                {/* First Year Card */}
+                <div
+                  className="p-5 rounded-lg"
+                  style={{ background: "var(--surface)", border: "1px solid var(--edge)" }}
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
+                      style={{ background: "var(--accent)", color: "white" }}
+                    >
+                      1
+                    </span>
+                    <strong style={{ color: "var(--ink)" }} className="text-base">First Year</strong>
+                  </div>
+                  <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
+                    Free access to the Recreation Zone for all Pavillion villa owners after the facility becomes operational.
+                  </p>
+                </div>
+
+                {/* Year 2+ Card */}
+                <div
+                  className="p-5 rounded-lg"
+                  style={{ background: "var(--surface)", border: "1px solid var(--edge)" }}
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
+                      style={{ background: "var(--accent)", color: "white" }}
+                    >
+                      2+
+                    </span>
+                    <strong style={{ color: "var(--ink)" }} className="text-base">From Second Year</strong>
+                  </div>
+                  <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
+                    Special <strong style={{ color: "var(--accent)" }}>35% member benefit</strong> on applicable membership or usage charges, subject to final membership terms.
                   </p>
                 </div>
               </div>
