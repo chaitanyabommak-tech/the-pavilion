@@ -101,9 +101,9 @@ G+1+Penthouse Villas
 Private Villa Community Boduppal
 Book a Private Site Visit Today
 Bommaku Group Premium Villas
-Villas With 30,000 SFT Recreation
+Villas With 30,000 SFT Recreation Zone
 Premium Villas Starting ₹1.87 Cr
-Clubhouse Amenities Included
+Bommaku Recreation Zone Included
 40 Exclusive Villa Plots
 Limited Villa Inventory
 HMDA Registered Project
@@ -114,13 +114,13 @@ View Floor Plans Online
 ### Descriptions (Use 4 variations)
 ```
 Description 1:
-Explore The Pavillion, a private villa community in Boduppal with 40 G+1+Penthouse villas, clubhouse amenities, and a 30,000 SFT recreation zone.
+Explore The Pavillion, a private villa community in Boduppal with 40 G+1+Penthouse villas and a 30,000 SFT Bommaku Recreation Zone.
 
 Description 2:
-Book a private site visit for The Pavillion by Bommaku Group. View floor plans, master plan, location details, and current availability.
+Book a private site visit for The Pavillion by Bommaku Group. View floor plans, master plan, recreation zone, location details, and current availability.
 
 Description 3:
-Premium villa living in East Hyderabad with private plots, internal roads, clubhouse amenities, and bank loan support.
+Premium villa living in East Hyderabad with private plots, internal roads, recreation zone amenities, and bank loan support.
 
 Description 4:
 Limited 40 villas. G+1+Penthouse configuration. 3BHK standalone homes. Book your site visit now.
@@ -140,7 +140,11 @@ URL: `https://bommakugroup.com/#master-plan`
 Description: Schedule a private visit to The Pavillion.  
 URL: `https://bommakugroup.com/#book-site-visit`
 
-### Sitelink 4: Location Advantage
+### Sitelink 4: Recreation Zone
+Description: Explore the 30,000 SFT Bommaku Recreation Zone with pool, gym, sports courts, and wellness facilities.  
+URL: `https://bommakugroup.com/#recreation-zone`
+
+### Sitelink 5: Location Advantage
 Description: See nearby metro, ORR, schools, hospitals, and city access.  
 URL: `https://bommakugroup.com/#location`
 
@@ -149,7 +153,8 @@ URL: `https://bommakugroup.com/#location`
 40 Private Villas
 G+1+Penthouse Homes
 30,000 SFT Recreation Zone
-Clubhouse & Pool
+Bommaku Recreation Zone
+Private Villa Community
 Bank Loan Support
 Boduppal Location
 Private Site Visits

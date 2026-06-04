@@ -38,7 +38,7 @@ const updates = [
     status: "Design Phase",
     statusColor: "bg-muted-gold",
     description:
-      "30,000 SFT recreation and clubhouse zone design finalized. Construction to begin alongside villa phase.",
+      "30,000 SFT Bommaku Recreation Zone design finalized. Construction to begin alongside villa phase.",
     date: "Q4 2025",
   },
   {

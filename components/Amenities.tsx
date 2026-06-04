@@ -87,7 +87,7 @@ export default function Amenities() {
         >
           <div>
             <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
-              Clubhouse &amp; Recreation
+              Lifestyle &amp; Recreation
             </p>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
               30,000 SFT
@@ -97,7 +97,7 @@ export default function Amenities() {
             <div className="w-12 h-px mt-6" style={{ background: "var(--accent)" }} />
           </div>
           <p style={{ color: "var(--ink-2)" }} className="text-sm max-w-xs">
-            Exclusively for 40 families. Every amenity you need, within the community.
+            A villa community with dedicated recreation infrastructure. Every amenity you need, within the community.
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export default function Amenities() {
               className="w-full aspect-[4/3] bg-cover bg-center"
               style={{ backgroundImage: "url('/assets/clubhouse-aerial.jpeg')", background: "url('/assets/clubhouse-aerial.jpeg') center/cover, var(--img-ph)" }}
               role="img"
-              aria-label="Clubhouse and recreation zone at The Pavillion"
+              aria-label="Bommaku Recreation Zone at The Pavillion villa community"
             />
             <div className="mt-4 grid grid-cols-3 gap-px" style={{ background: "var(--gap)" }}>
               {[

@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   },
   title: "The Pavillion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
   description:
-    "40 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse, 30,000 SFT recreation zone, 3BHK villas from ₹1.87 Cr. HMDA registered. Book site visit today.",
+    "40 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse, 30,000 SFT Bommaku Recreation Zone, 3BHK villas from ₹1.87 Cr. HMDA registered. Book site visit today.",
   keywords:
-    "villas in Boduppal, villas near Uppal, luxury villas Hyderabad, standalone villas Hyderabad, independent villas Hyderabad, The Pavillion Bommaku Group, premium villas East Hyderabad, G+1 penthouse villas, villas for sale Boduppal, gated community villas Boduppal, Vastu villas Hyderabad, buy villas 2cr Hyderabad",
+    "villas in Boduppal, villas near Uppal, villa community Boduppal, luxury villas Hyderabad, standalone villas Hyderabad, independent villas Hyderabad, The Pavillion Bommaku Group, Bommaku Recreation Zone, premium villas East Hyderabad, G+1 penthouse villas, villas for sale Boduppal, private villa community Hyderabad, Vastu villas Hyderabad, buy villas 2cr Hyderabad",
   openGraph: {
     title: "The Pavillion | Luxury Villas in Boduppal, Hyderabad | Bommaku Group",
     description:
-      "Discover 40 luxury standalone villas in Boduppal. G+1+Penthouse, 3BHK, 30,000 SFT clubhouse. HMDA registered. From ₹1.87 Cr. Book your site visit now.",
+      "Discover 40 luxury standalone villas in Boduppal. G+1+Penthouse, 3BHK, 30,000 SFT Bommaku Recreation Zone. HMDA registered. From ₹1.87 Cr. Book your site visit now.",
     type: "website",
     url: "https://bommakugroup.com",
     siteName: "The Pavillion by Bommaku Group",

@@ -253,7 +253,7 @@ export default function ThreeBHKVillasBodupalPage() {
             <div className="p-4" style={{ background: "var(--surface)", borderRadius: "8px" }}>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-3">Convenience</h3>
               <ul className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
-                <li>✓ Clubhouse (5,000 SFT)</li>
+                <li>✓ Recreation Zone (30,000 SFT)</li>
                 <li>✓ Visitor Parking</li>
                 <li>✓ 24/7 Security (CCTV)</li>
                 <li>✓ Power Backup</li>

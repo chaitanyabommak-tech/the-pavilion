@@ -2,6 +2,7 @@ import DisclaimerOverlay from "@/components/DisclaimerOverlay";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
+import RecreationZone from "@/components/RecreationZone";
 import VillaConfigurations from "@/components/VillaConfigurations";
 import MasterPlan from "@/components/MasterPlan";
 import Amenities from "@/components/Amenities";
@@ -20,6 +21,7 @@ export default function Home() {
       <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
         <Hero />
         <Gallery />
+        <RecreationZone />
         <VillaConfigurations />
         <MasterPlan />
         <Amenities />

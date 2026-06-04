@@ -241,7 +241,7 @@ export default function VillasInBodupalPage() {
             <ul className="space-y-3" style={{ color: "var(--ink-2)" }}>
               <li className="flex items-start gap-3">
                 <span style={{ color: "var(--accent)" }}>✓</span>
-                <span className="text-sm">Clubhouse with AC (party hall, lounge, indoor games)</span>
+                <span className="text-sm">Bommaku Recreation Zone (party hall, lounge, restaurant, cafe)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span style={{ color: "var(--accent)" }}>✓</span>
@@ -493,7 +493,7 @@ export default function VillasInBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">6. What amenities are included?</h3>
-              <p className="text-sm">30,000 SFT recreation zone with clubhouse, swimming pool, gym, sports courts (pickleball, basketball, badminton), kids play area, landscaped gardens, 24x7 security.</p>
+              <p className="text-sm">30,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga room, sauna, sports courts (football, pickleball, cricket), restaurant, cafe, kids play area, landscaped gardens, 24x7 security.</p>
             </div>
 
             <div>

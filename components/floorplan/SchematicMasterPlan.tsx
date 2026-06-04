@@ -663,7 +663,7 @@ export default function SchematicMasterPlan({
                 </div>
               ))}
 
-              {/* Final 25 feet road before clubhouse - Connected to 30 ft road */}
+              {/* Final 25 feet road before Recreation Zone - Connected to 30 ft road */}
               <div className="flex flex-col items-center justify-start mx-2">
                 <div
                   className="w-12 relative overflow-hidden transition-all duration-300"
@@ -713,7 +713,7 @@ export default function SchematicMasterPlan({
                 </div>
               </div>
 
-              {/* Clubhouse & Recreation Zone - Simplified Park */}
+              {/* Bommaku Recreation Zone - Private Lifestyle Complex */}
               <div className="flex flex-col min-w-[200px] md:min-w-[220px]">
                 {/* Decorative greenery at top */}
                 <div className="flex justify-center gap-2 mb-3 opacity-30">
@@ -806,7 +806,7 @@ export default function SchematicMasterPlan({
                     </>
                   )}
 
-                  {/* Clubhouse icon - glowing in dark mode */}
+                  {/* Recreation Zone icon - glowing in dark mode */}
                   <div className="mb-6 relative z-10">
                     <div className="absolute inset-0 blur-2xl transition-opacity duration-500"
                       style={{
@@ -836,10 +836,10 @@ export default function SchematicMasterPlan({
                   </div>
 
                   <h4 className="font-heading text-lg md:text-xl font-light mb-1 tracking-tight transition-colors duration-300" style={{ color: theme.textPrimary }}>
-                    Clubhouse &
+                    Bommaku
                   </h4>
                   <h4 className="font-heading text-lg md:text-xl font-light mb-6 tracking-tight transition-colors duration-300" style={{ color: theme.textPrimary }}>
-                    Recreation Park
+                    Recreation Zone
                   </h4>
 
                   <div className="space-y-2.5 text-xs md:text-[13px] transition-colors duration-300" style={{ color: theme.textSecondary }}>

@@ -5,9 +5,9 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavillion community living recreation zone, Boduppal", caption: "Community View" },
+  { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavillion villa community living recreation zone, Boduppal", caption: "Community View" },
   { src: "/assets/entry-gate-sunset.jpg",  alt: "The Pavillion entry gate at golden hour",                               caption: "Entry Gate"     },
-  { src: "/assets/clubhouse-aerial.jpeg",  alt: "Clubhouse and recreation zone overhead view with pool, bridge, gym",  caption: "Clubhouse Zone" },
+  { src: "/assets/clubhouse-aerial.jpeg",  alt: "Bommaku Recreation Zone overhead view with pool, bridge, and wellness facilities",  caption: "Recreation Zone" },
   { src: "/assets/pool-deck.jpeg",         alt: "Infinity pool deck at dusk, The Pavillion",                            caption: "Infinity Pool"  },
   { src: "/assets/rec-bridge.jpeg",        alt: "Rooftop recreation bridge connecting amenity blocks",                  caption: "Recreation Bridge" },
   { src: "/assets/rec-courts.jpg",         alt: "Recreation courts complex — pickleball, basketball, badminton",       caption: "Sports Courts"  },

@@ -11,7 +11,7 @@ const labels = [
   { label: "Recreational Space",     position: { top: "60%", right: "20%" } },
   { label: "Pool & Cabanas",         position: { bottom: "30%", right: "22%" } },
   { label: "Pickleball Court",       position: { top: "25%", right: "15%" } },
-  { label: "Clubhouse Zone",         position: { bottom: "22%", right: "18%" } },
+  { label: "Recreation Zone",        position: { bottom: "22%", right: "18%" } },
 ];
 
 export default function MasterPlan() {

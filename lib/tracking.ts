@@ -21,7 +21,11 @@ export type TrackingEventName =
   | 'brochure_download_click'
   | 'enquiry_form_submit'
   | 'site_visit_form_submit'
-  | 'thank_you_page_view';
+  | 'thank_you_page_view'
+  | 'recreation_zone_view'
+  | 'recreation_zone_gallery_click'
+  | 'recreation_zone_cta_click'
+  | 'recreation_zone_member_benefits_click';
 
 export interface TrackingEventParams {
   villa_id?: string;
