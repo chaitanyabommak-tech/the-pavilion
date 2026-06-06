@@ -899,10 +899,20 @@ export default function SchematicMasterPlan({
                 }}
               >
                 <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/10">
-                  <div className="w-2 h-2 rounded-full" style={{ background: "var(--accent)" }} />
+                  <div className="w-2 h-2 rounded-full" style={{
+                    background: hoveredVilla.status === "sold" ? "#DC2626" : "var(--accent)"
+                  }} />
                   <p className="text-white font-bold text-base tracking-wide">
                     Villa {hoveredVilla.id}
                   </p>
+                  {hoveredVilla.status === "sold" && (
+                    <span className="ml-auto text-xs font-bold px-2 py-0.5 rounded" style={{
+                      background: "#DC2626",
+                      color: "#FFFFFF"
+                    }}>
+                      SOLD OUT
+                    </span>
+                  )}
                 </div>
                 <div className="space-y-1.5 text-sm" style={{ color: "#E8E3DA" }}>
                   <p className="flex justify-between">
@@ -917,9 +927,18 @@ export default function SchematicMasterPlan({
                     <span className="opacity-70">Facing:</span>
                     <span className="font-semibold">{hoveredVilla.facing}</span>
                   </p>
+                  {hoveredVilla.status === "sold" && (
+                    <p className="flex justify-between">
+                      <span className="opacity-70">Status:</span>
+                      <span className="font-semibold text-red-400">Sold Out</span>
+                    </p>
+                  )}
                 </div>
                 <div className="mt-3 pt-3 border-t border-white/10">
-                  <p className="text-sm font-bold tracking-wide" style={{ color: "#D4AF37" }}>
+                  <p className="text-sm font-bold tracking-wide" style={{
+                    color: hoveredVilla.status === "sold" ? "#9CA3AF" : "#D4AF37",
+                    textDecoration: hoveredVilla.status === "sold" ? "line-through" : "none"
+                  }}>
                     {hoveredVilla.price}
                   </p>
                 </div>
@@ -963,13 +982,14 @@ export default function SchematicMasterPlan({
         </div>
         <div className="flex items-center gap-1.5 md:gap-2">
           <div
-            className="w-5 h-5 md:w-6 md:h-6 rounded opacity-40"
+            className="w-5 h-5 md:w-6 md:h-6 rounded"
             style={{
-              background: "rgba(0, 0, 0, 0.15)",
-              border: "1px solid rgba(0, 0, 0, 0.2)",
+              background: "linear-gradient(135deg, #B91C1C 0%, #991B1B 50%, #7F1D1D 100%)",
+              border: "2px solid #DC2626",
+              boxShadow: "0 2px 6px rgba(185, 28, 28, 0.3)",
             }}
           />
-          <span style={{ color: "var(--ink-2)" }}>Sold</span>
+          <span style={{ color: "var(--ink-2)" }}>Sold Out</span>
         </div>
       </div>
     </div>

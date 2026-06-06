@@ -70,20 +70,20 @@ export default function SelectedVillaPanel({ villa, onEnquire }: SelectedVillaPa
           <div
             className="px-3 py-1.5 text-xs font-semibold tracking-wide shrink-0"
             style={{
-              background: villa.status === "available"
-                ? "rgba(83, 104, 120, 0.12)"
-                : villa.status === "reserved"
-                  ? "rgba(201, 168, 76, 0.12)"
-                  : "rgba(0, 0, 0, 0.08)",
-              color: villa.status === "available"
-                ? "var(--accent)"
-                : villa.status === "reserved"
-                  ? "#C9A84C"
-                  : "var(--ink-2)",
+              background: villa.status === "sold"
+                ? "#DC2626"
+                : villa.status === "available"
+                  ? "rgba(83, 104, 120, 0.12)"
+                  : "rgba(201, 168, 76, 0.12)",
+              color: villa.status === "sold"
+                ? "#FFFFFF"
+                : villa.status === "available"
+                  ? "var(--accent)"
+                  : "#C9A84C",
               borderRadius: "3px",
             }}
           >
-            {villa.status.charAt(0).toUpperCase() + villa.status.slice(1)}
+            {villa.status === "sold" ? "SOLD OUT" : villa.status.charAt(0).toUpperCase() + villa.status.slice(1)}
           </div>
         </div>
       </div>
@@ -151,10 +151,13 @@ export default function SelectedVillaPanel({ villa, onEnquire }: SelectedVillaPa
           </div>
           <div>
             <p className="text-xs tracking-wider uppercase mb-1.5" style={{ color: "var(--ink-2)" }}>
-              Price
+              {villa.status === "sold" ? "Status" : "Price"}
             </p>
-            <p className="text-base font-bold" style={{ color: "var(--accent)" }}>
-              {villa.price}
+            <p className="text-base font-bold" style={{
+              color: villa.status === "sold" ? "#DC2626" : "var(--accent)",
+              textDecoration: villa.status === "sold" ? "none" : "none"
+            }}>
+              {villa.status === "sold" ? "Sold Out" : villa.price}
             </p>
           </div>
         </div>
@@ -162,20 +165,44 @@ export default function SelectedVillaPanel({ villa, onEnquire }: SelectedVillaPa
 
       {/* CTA Buttons */}
       <div className="p-6 pt-0 space-y-3">
-        <button
-          onClick={onEnquire}
-          className="btn-primary w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium"
-        >
-          Enquire for Villa {villa.id}
-        </button>
-        <a
-          href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-get-location w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium text-center inline-block"
-        >
-          Get Location <span aria-hidden="true">→</span>
-        </a>
+        {villa.status === "sold" ? (
+          <>
+            <button
+              disabled
+              className="w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium rounded cursor-not-allowed"
+              style={{
+                background: "#DC2626",
+                color: "#FFFFFF",
+                opacity: 0.9,
+              }}
+            >
+              Villa {villa.id} Sold Out
+            </button>
+            <button
+              onClick={onEnquire}
+              className="btn-primary w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium"
+            >
+              Enquire for Similar Villas
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={onEnquire}
+              className="btn-primary w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium"
+            >
+              Enquire for Villa {villa.id}
+            </button>
+            <a
+              href="https://maps.app.goo.gl/3gEbRXmKsENAkjXi7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-get-location w-full py-3.5 text-xs tracking-[0.2em] uppercase font-medium text-center inline-block"
+            >
+              Get Location <span aria-hidden="true">→</span>
+            </a>
+          </>
+        )}
       </div>
 
       {/* Features */}

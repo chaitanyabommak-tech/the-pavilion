@@ -23,11 +23,11 @@ export default function VillaBox({
   const getBoxStyle = () => {
     if (villa.status === "sold") {
       return {
-        background: "linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.12) 100%)",
-        border: "1.5px solid rgba(0, 0, 0, 0.15)",
-        color: "rgba(0, 0, 0, 0.25)",
-        cursor: "not-allowed",
-        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1)",
+        background: "linear-gradient(135deg, #B91C1C 0%, #991B1B 50%, #7F1D1D 100%)",
+        border: "2px solid #DC2626",
+        color: "#FFFFFF",
+        cursor: "pointer",
+        boxShadow: "0 4px 12px rgba(185, 28, 28, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15)",
       };
     }
 
@@ -67,24 +67,23 @@ export default function VillaBox({
   };
 
   const style = getBoxStyle();
-  const isDisabled = villa.status === "sold";
+  const isSold = villa.status === "sold";
 
   return (
     <motion.button
-      onClick={!isDisabled ? onClick : undefined}
-      onMouseEnter={!isDisabled ? onHoverStart : undefined}
-      onMouseLeave={!isDisabled ? onHoverEnd : undefined}
-      onTouchStart={!isDisabled ? onHoverStart : undefined}
-      onTouchEnd={!isDisabled ? onHoverEnd : undefined}
-      whileHover={!isDisabled ? { scale: 1.06, y: -2 } : {}}
-      whileTap={!isDisabled ? { scale: 0.97 } : {}}
+      onClick={onClick}
+      onMouseEnter={onHoverStart}
+      onMouseLeave={onHoverEnd}
+      onTouchStart={onHoverStart}
+      onTouchEnd={onHoverEnd}
+      whileHover={{ scale: 1.06, y: -2 }}
+      whileTap={{ scale: 0.97 }}
       style={style}
       className="relative w-full aspect-square rounded-xl transition-all duration-300 flex items-center justify-center font-medium text-sm tracking-wide overflow-hidden"
-      disabled={isDisabled}
-      aria-label={`Villa ${villa.id}, ${villa.plotSizeLabel}, ${villa.facing} facing, ${villa.status}`}
+      aria-label={isSold ? `View details for Villa ${villa.id}, ${villa.plotSizeLabel}, sold out` : `Villa ${villa.id}, ${villa.plotSizeLabel}, ${villa.facing} facing, ${villa.status}`}
     >
       {/* Subtle shine effect */}
-      {!isDisabled && (
+      {!isSold && (
         <div className="absolute inset-0 opacity-30 pointer-events-none"
           style={{
             background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 70%)"
@@ -96,13 +95,17 @@ export default function VillaBox({
         {villa.id}
       </span>
 
-      {/* Status indicators with glow */}
+      {/* Status badge for sold villas */}
       {villa.status === "sold" && (
-        <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-400 opacity-60"
+        <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded"
           style={{
-            boxShadow: "0 0 6px rgba(248, 113, 113, 0.6)"
+            background: "rgba(0, 0, 0, 0.3)",
+            color: "#FFFFFF",
+            textShadow: "0 1px 2px rgba(0,0,0,0.5)"
           }}
-        />
+        >
+          SOLD
+        </span>
       )}
       {villa.status === "reserved" && (
         <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-amber-400"
