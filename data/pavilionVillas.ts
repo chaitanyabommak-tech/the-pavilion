@@ -52,7 +52,10 @@ export const pavilionVillas: Villa[] = [
     unitType: "Type-B",
     status: "sold",
     price: "₹2.28 Cr onwards",
-    floorPlanImages: { east: "/assets/floorplan-165ne.png" },
+    floorPlanImages: {
+      east: "/assets/floorplan-165ne.png",
+      northEast: "/assets/floorplan-165ne.png"
+    },
     mapPosition: { x: 83, y: 22, width: 6.5, height: 8 },
   },
   {
