@@ -25,7 +25,7 @@ export default function Navbar() {
           scrolled ? "nav-glass-scrolled" : "nav-glass"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[80px] sm:h-[96px] lg:h-[120px] xl:h-[128px] flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[80px] sm:h-[96px] lg:h-[90px] xl:h-[96px] flex items-center justify-between">
 
           {/* Logo */}
           <a href="#" className="flex-shrink-0 bg-transparent">
