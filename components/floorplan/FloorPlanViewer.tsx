@@ -68,21 +68,21 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
               Villa {villa.id}
             </h3>
             <span
-              className="text-xs tracking-wider uppercase px-2.5 py-1"
+              className="text-xs tracking-wider uppercase px-2.5 py-1 font-semibold"
               style={{
-                background: villa.status === "available"
-                  ? "rgba(83, 104, 120, 0.12)"
-                  : villa.status === "reserved"
-                    ? "rgba(201, 168, 76, 0.12)"
-                    : "rgba(0, 0, 0, 0.08)",
-                color: villa.status === "available"
-                  ? "var(--accent)"
-                  : villa.status === "reserved"
-                    ? "#C9A84C"
-                    : "var(--ink-2)",
+                background: villa.status === "sold"
+                  ? "#DC2626"
+                  : villa.status === "available"
+                    ? "rgba(83, 104, 120, 0.12)"
+                    : "rgba(201, 168, 76, 0.12)",
+                color: villa.status === "sold"
+                  ? "#FFFFFF"
+                  : villa.status === "available"
+                    ? "var(--accent)"
+                    : "#C9A84C",
               }}
             >
-              {villa.status.charAt(0).toUpperCase() + villa.status.slice(1)}
+              {villa.status === "sold" ? "SOLD OUT" : villa.status.charAt(0).toUpperCase() + villa.status.slice(1)}
             </span>
           </div>
           <p className="text-sm tracking-wide" style={{ color: "var(--ink-2)" }}>
