@@ -98,7 +98,7 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
             border: "1px solid var(--edge)",
             borderRadius: "4px",
           }}
-          onClick={() => setLightboxOpen(true)}
+          onDoubleClick={() => setLightboxOpen(true)}
         >
           {floorPlanImage ? (
             <>
@@ -128,7 +128,7 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
                   <line x1="21" y1="3" x2="14" y2="10" />
                   <line x1="3" y1="21" x2="10" y2="14" />
                 </svg>
-                Click to expand
+                Double-click to expand
               </div>
             </>
           ) : (
@@ -141,14 +141,14 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
         </div>
       </motion.div>
 
-      {/* Lightbox */}
+      {/* Lightbox - Single click anywhere to close */}
       <AnimatePresence>
         {lightboxOpen && floorPlanImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[8000] bg-black/97 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[8000] bg-black/97 flex items-center justify-center p-4 cursor-zoom-out"
             onClick={() => setLightboxOpen(false)}
           >
             <button
@@ -158,13 +158,15 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
             >
               ×
             </button>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/80 text-white text-sm px-4 py-2 rounded pointer-events-none">
+              Click anywhere to close
+            </div>
             <Image
               src={floorPlanImage}
               alt={`Villa ${villa.id} floor plan`}
               width={1200}
               height={900}
-              className="max-w-6xl max-h-[90vh] w-auto h-auto object-contain"
-              onClick={(e) => e.stopPropagation()}
+              className="max-w-6xl max-h-[90vh] w-auto h-auto object-contain cursor-zoom-out"
               quality={90}
               priority
             />
