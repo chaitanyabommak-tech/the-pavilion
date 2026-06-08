@@ -161,7 +161,7 @@ export default function DisclaimerOverlay() {
                 <button
                   onClick={() => setVisible(false)}
                   className="disclaimer-accept-btn"
-                  style={{ background: "#5B4766" }}
+                  style={{ background: "#0A0A0A" }}
                 >
                   Accept &amp; Continue
                 </button>
