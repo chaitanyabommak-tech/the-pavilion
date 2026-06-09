@@ -1,18 +1,18 @@
 import DisclaimerOverlay from "@/components/DisclaimerOverlay";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import HeroDB from "@/components/HeroDB";
 import GalleryDB from "@/components/GalleryDB";
-import RecreationZone from "@/components/RecreationZone";
+import RecreationZoneDB from "@/components/RecreationZoneDB";
 import VillaConfigurations from "@/components/VillaConfigurations";
-import MasterPlan from "@/components/MasterPlan";
-import CleanSlate from "@/components/CleanSlate";
-import EastFacingSection from "@/components/EastFacingSection";
-import WestFacingSection from "@/components/WestFacingSection";
-import LocationAdvantage from "@/components/LocationAdvantage";
+import MasterPlanDB from "@/components/MasterPlanDB";
+import CleanSlateDB from "@/components/CleanSlateDB";
+import EastFacingSectionDB from "@/components/EastFacingSectionDB";
+import WestFacingSectionDB from "@/components/WestFacingSectionDB";
+import LocationAdvantageDB from "@/components/LocationAdvantageDB";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import FloatingCTA from "@/components/FloatingCTA";
+import FooterDB from "@/components/FooterDB";
+import FloatingCTADB from "@/components/FloatingCTADB";
 
 export default function Home() {
   return (
@@ -21,21 +21,21 @@ export default function Home() {
       <Navbar />
 
       <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
-        <Hero />
+        <HeroDB />
         <GalleryDB />
         <VillaConfigurations />
-        <MasterPlan />
-        <CleanSlate />
-        <EastFacingSection />
-        <WestFacingSection />
-        <RecreationZone />
-        <LocationAdvantage />
+        <MasterPlanDB />
+        <CleanSlateDB />
+        <EastFacingSectionDB />
+        <WestFacingSectionDB />
+        <RecreationZoneDB />
+        <LocationAdvantageDB />
         <FAQ />
         <Contact />
       </main>
 
-      <Footer />
-      <FloatingCTA />
+      <FooterDB />
+      <FloatingCTADB />
     </>
   );
 }
