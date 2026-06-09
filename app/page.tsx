@@ -1,7 +1,7 @@
 import DisclaimerOverlay from "@/components/DisclaimerOverlay";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Gallery from "@/components/Gallery";
+import GalleryDB from "@/components/GalleryDB";
 import RecreationZone from "@/components/RecreationZone";
 import VillaConfigurations from "@/components/VillaConfigurations";
 import MasterPlan from "@/components/MasterPlan";
@@ -22,7 +22,7 @@ export default function Home() {
 
       <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
         <Hero />
-        <Gallery />
+        <GalleryDB />
         <VillaConfigurations />
         <MasterPlan />
         <CleanSlate />
