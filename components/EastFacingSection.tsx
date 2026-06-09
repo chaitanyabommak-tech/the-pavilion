@@ -24,19 +24,19 @@ const eastFacingVillas = {
   ],
   interiors: [
     {
-      src: "/images/pavilion/interiors/living-room-01.jpg",
-      alt: "East Facing villa interior living space with natural morning light",
-      caption: "Living Space"
-    },
-    {
-      src: "/images/pavilion/interiors/kitchen-01.jpg",
-      alt: "East Facing villa premium kitchen interior",
-      caption: "Gourmet Kitchen"
+      src: "/images/pavilion/interiors/dining-kitchen.jpg",
+      alt: "East Facing villa dining and kitchen space with family setting",
+      caption: "Dining & Kitchen"
     },
     {
       src: "/images/pavilion/interiors/master-bedroom-01.jpg",
-      alt: "East Facing villa master bedroom with balcony access",
+      alt: "East Facing villa master bedroom with contemporary design",
       caption: "Master Bedroom"
+    },
+    {
+      src: "/images/pavilion/interiors/living-room-01.jpg",
+      alt: "East Facing villa living space with natural morning light",
+      caption: "Living Space"
     }
   ]
 };
