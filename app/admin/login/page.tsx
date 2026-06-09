@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
         .eq('id', data.user.id)
 
       toast.success('Login successful!')
-      router.push('/admin/dashboard')
+      router.push('/admin/cms')
       router.refresh()
     } catch (error: any) {
       toast.error(error.message || 'Login failed')
