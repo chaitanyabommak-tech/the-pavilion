@@ -5,7 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/images/pavilion/entrance/grand-entrance-daytime.jpg",  alt: "The Pavilion grand entrance with premium architecture and security gate", caption: "Grand Entrance" },
+  { src: "/images/pavilion/entrance/grand-entrance-clean.jpg",  alt: "The Pavilion villa community grand entrance gate by Bommaku Group", caption: "Grand Entrance" },
   { src: "/images/pavilion/recreation-zone/aerial-view-01.jpg",  alt: "Bommaku Recreation Zone aerial with infinity pool and sports facilities",  caption: "Recreation Zone" },
   { src: "/images/pavilion/exteriors/villa-street-view-02.jpg",  alt: "The Pavilion villa community with contemporary design language", caption: "Villa Community" },
   { src: "/images/pavilion/recreation-zone/sports-courts-aerial.jpg",  alt: "Sports courts and wellness facilities aerial view", caption: "Sports & Wellness" },
