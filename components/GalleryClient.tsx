@@ -119,8 +119,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
               <button
                 key={idx}
                 onClick={() => setCurrent(idx)}
-                className={`relative aspect-square overflow-hidden transition-all ${idx === current ? "ring-2 ring-offset-2" : "opacity-60 hover:opacity-100"}`}
-                style={{ ringColor: idx === current ? "var(--accent)" : "transparent" }}
+                className={`relative aspect-square overflow-hidden transition-all ${idx === current ? "ring-2 ring-offset-2 ring-[var(--accent)]" : "opacity-60 hover:opacity-100"}`}
               >
                 <Image
                   src={img.src}
