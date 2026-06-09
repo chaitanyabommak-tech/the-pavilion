@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroDB from "@/components/HeroDB";
 import GalleryDB from "@/components/GalleryDB";
 import RecreationZoneDB from "@/components/RecreationZoneDB";
-import VillaConfigurations from "@/components/VillaConfigurations";
+import VillaConfigurationsDB from "@/components/VillaConfigurationsDB";
 import MasterPlanDB from "@/components/MasterPlanDB";
 import CleanSlateDB from "@/components/CleanSlateDB";
 import EastFacingSectionDB from "@/components/EastFacingSectionDB";
@@ -23,7 +23,7 @@ export default function Home() {
       <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
         <HeroDB />
         <GalleryDB />
-        <VillaConfigurations />
+        <VillaConfigurationsDB />
         <MasterPlanDB />
         <CleanSlateDB />
         <EastFacingSectionDB />

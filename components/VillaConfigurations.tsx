@@ -6,7 +6,7 @@ import LeadFormModal from "./LeadFormModal";
 import SchematicMasterPlan from "./floorplan/SchematicMasterPlan";
 import SelectedVillaPanel from "./floorplan/SelectedVillaPanel";
 import FloorPlanViewer from "./floorplan/FloorPlanViewer";
-import { pavilionVillas, Villa } from "@/data/pavilionVillas";
+import { pavilionVillas as fallbackPavilionVillas, Villa } from "@/data/pavilionVillas";
 
 const types = [
   { id: "a", label: "Type A" },
@@ -32,7 +32,13 @@ const specs = [
   "100% Vastu layout",
 ];
 
-export default function VillaConfigurations() {
+interface VillaConfigurationsProps {
+  villas?: Villa[]; // Database villas prop
+}
+
+export default function VillaConfigurations({ villas: dbVillas }: VillaConfigurationsProps = {}) {
+  // Use database villas if provided, fallback to hardcoded
+  const pavilionVillas = dbVillas || fallbackPavilionVillas;
   // Original floor plan state
   const [activeType, setActiveType] = useState("a");
   const [activeVilla, setActiveVilla] = useState(0);
@@ -427,6 +433,7 @@ export default function VillaConfigurations() {
                       <SchematicMasterPlan
                         selectedVillaId={selectedVilla?.id || null}
                         onVillaSelect={handleVillaSelectFromMasterPlan}
+                        villas={pavilionVillas}
                       />
                     </div>
 

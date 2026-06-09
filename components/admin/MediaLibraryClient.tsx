@@ -279,7 +279,7 @@ export default function MediaLibraryClient({ initialMedia }: MediaLibraryClientP
                     Copy URL
                   </button>
                   <button
-                    onClick={() => handleDeleteMedia(item.id, item.file_path)}
+                    onClick={() => handleDeleteMedia(item.id, item.file_url)}
                     className="px-3 py-1 text-xs bg-red-600 hover:bg-red-700 text-white rounded"
                   >
                     Delete

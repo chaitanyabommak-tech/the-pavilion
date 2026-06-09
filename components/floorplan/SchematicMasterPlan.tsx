@@ -3,17 +3,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import VillaBox from "./VillaBox";
-import { Villa, pavilionVillas } from "@/data/pavilionVillas";
+import { Villa, pavilionVillas as fallbackVillas } from "@/data/pavilionVillas";
 
 interface SchematicMasterPlanProps {
   selectedVillaId: string | null;
   onVillaSelect: (villa: Villa) => void;
+  villas?: Villa[]; // Accept villas from database
 }
 
 export default function SchematicMasterPlan({
   selectedVillaId,
   onVillaSelect,
+  villas,
 }: SchematicMasterPlanProps) {
+  // Use database villas if provided, fallback to hardcoded
+  const pavilionVillas = villas || fallbackVillas;
   const [hoveredVillaId, setHoveredVillaId] = useState<string | null>(null);
   const [tooltipVilla, setTooltipVilla] = useState<Villa | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
