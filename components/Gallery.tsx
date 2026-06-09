@@ -21,6 +21,7 @@ export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  // Updated: Clean entrance image now showing
 
   const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
   const next = () => setCurrent((i) => (i + 1) % images.length);
