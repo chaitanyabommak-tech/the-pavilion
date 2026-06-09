@@ -266,15 +266,15 @@ export default function RecreationZone() {
                 aria-label="Villa cluster and recreation zone integrated layout"
               />
 
-              {/* Image 6 - Main Entrance */}
+              {/* Image 6 - Grand Entrance */}
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-lg overflow-hidden"
                 style={{
-                  backgroundImage: "url('/images/pavilion/entrance/entry-gate-evening.jpg')",
-                  background: "url('/images/pavilion/entrance/entry-gate-evening.jpg') center/cover, var(--img-ph)"
+                  backgroundImage: "url('/images/pavilion/entrance/grand-entrance-sunset.jpg')",
+                  background: "url('/images/pavilion/entrance/grand-entrance-sunset.jpg') center/cover, var(--img-ph)"
                 }}
                 role="img"
-                aria-label="The Pavilion main entrance and recreation zone entry at evening"
+                aria-label="The Pavilion grand entrance at sunset with recreation zone visible"
               />
             </div>
           </motion.div>

@@ -79,7 +79,7 @@ export default function CleanSlate() {
           >
             <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-lg">
               <Image
-                src="/images/pavilion/exteriors/villa-front-elevation-01.jpg"
+                src="/images/pavilion/exteriors/villa-front-elevation-02.jpg"
                 alt="The Pavilion villa showcasing The Clean Slate customization possibilities"
                 fill
                 className="object-cover"

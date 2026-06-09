@@ -5,15 +5,15 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/images/pavilion/exteriors/villa-street-view-01.jpg",  alt: "The Pavilion villa community living - premium street view at golden hour", caption: "Community Living" },
-  { src: "/images/pavilion/entrance/main-gate-01.jpg",  alt: "The Pavilion main entrance with modern architecture",                               caption: "Grand Entrance"     },
+  { src: "/images/pavilion/entrance/grand-entrance-evening.jpg",  alt: "The Pavilion grand entrance at golden hour with premium architecture", caption: "Grand Entrance" },
   { src: "/images/pavilion/recreation-zone/aerial-view-01.jpg",  alt: "Bommaku Recreation Zone aerial with infinity pool and sports facilities",  caption: "Recreation Zone" },
-  { src: "/images/pavilion/recreation-zone/sports-courts-aerial.jpg",         alt: "Sports courts and wellness facilities aerial view",                            caption: "Sports & Wellness"  },
-  { src: "/images/pavilion/exteriors/villa-front-elevation-01.jpg",        alt: "Premium villa facade with contemporary architecture",                  caption: "Villa Facade" },
-  { src: "/images/pavilion/exteriors/villa-elevation-sunset.jpg",         alt: "Villa elevation showcasing architectural excellence at sunset",       caption: "Sunset Elevation"  },
-  { src: "/images/pavilion/exteriors/villa-street-view-02.jpg",         alt: "Villa street with landscaping and modern design language",                             caption: "Villa Street"   },
-  { src: "/images/pavilion/interiors/living-room-01.jpg",    alt: "Spacious living room interior with premium finishes",            caption: "Living Space" },
-  { src: "/images/pavilion/interiors/kitchen-01.jpg",         alt: "Modern kitchen with luxury fittings and island",                           caption: "Gourmet Kitchen" },
+  { src: "/images/pavilion/exteriors/villa-street-view-02.jpg",  alt: "The Pavilion villa community with contemporary design language", caption: "Villa Community" },
+  { src: "/images/pavilion/recreation-zone/sports-courts-aerial.jpg",  alt: "Sports courts and wellness facilities aerial view", caption: "Sports & Wellness" },
+  { src: "/images/pavilion/exteriors/corner-villa-view.jpg",  alt: "Premium corner villa with landscaping and architectural lighting", caption: "Corner Villa" },
+  { src: "/images/pavilion/exteriors/villa-street-view-03.jpg",  alt: "Villa row at evening with warm interior lighting", caption: "Evening View" },
+  { src: "/images/pavilion/interiors/living-room-02.jpg",  alt: "Contemporary living room interior with premium furnishings", caption: "Living Space" },
+  { src: "/images/pavilion/interiors/kitchen-02.jpg",  alt: "Luxury kitchen with wooden cabinetry and premium fittings", caption: "Gourmet Kitchen" },
+  { src: "/images/pavilion/interiors/master-bedroom-02.jpg",  alt: "Spacious master bedroom with modern design", caption: "Master Suite" },
 ];
 
 export default function Gallery() {
