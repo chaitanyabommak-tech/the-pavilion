@@ -5,6 +5,9 @@ import Gallery from "@/components/Gallery";
 import RecreationZone from "@/components/RecreationZone";
 import VillaConfigurations from "@/components/VillaConfigurations";
 import MasterPlan from "@/components/MasterPlan";
+import CleanSlate from "@/components/CleanSlate";
+import EastFacingSection from "@/components/EastFacingSection";
+import WestFacingSection from "@/components/WestFacingSection";
 import LocationAdvantage from "@/components/LocationAdvantage";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -22,6 +25,9 @@ export default function Home() {
         <Gallery />
         <VillaConfigurations />
         <MasterPlan />
+        <CleanSlate />
+        <EastFacingSection />
+        <WestFacingSection />
         <RecreationZone />
         <LocationAdvantage />
         <FAQ />

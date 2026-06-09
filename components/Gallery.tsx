@@ -5,15 +5,15 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/assets/community-aerial.jpeg",  alt: "Aerial view of The Pavillion villa community living recreation zone, Boduppal", caption: "Community View" },
-  { src: "/assets/entry-gate-sunset.jpg",  alt: "The Pavillion entry gate at golden hour",                               caption: "Entry Gate"     },
-  { src: "/assets/clubhouse-aerial.jpeg",  alt: "Bommaku Recreation Zone overhead view with pool, bridge, and wellness facilities",  caption: "Recreation Zone" },
-  { src: "/assets/pool-deck.jpeg",         alt: "Infinity pool deck at dusk, The Pavillion",                            caption: "Infinity Pool"  },
-  { src: "/assets/rec-bridge.jpeg",        alt: "Rooftop recreation bridge connecting amenity blocks",                  caption: "Recreation Bridge" },
-  { src: "/assets/rec-courts.jpg",         alt: "Recreation courts complex — pickleball, basketball, badminton",       caption: "Sports Courts"  },
-  { src: "/assets/gallery-1.jpeg",         alt: "Villa street view with lush landscaping",                             caption: "Villa Street"   },
-  { src: "/assets/garden-pergola.jpeg",    alt: "Garden pergola with flowering rose bushes at golden hour",            caption: "Garden Pergola" },
-  { src: "/assets/gallery-2.jpeg",         alt: "Villa exterior with private compound gate",                           caption: "Villa Exterior" },
+  { src: "/images/pavilion/exteriors/villa-street-view-01.jpg",  alt: "The Pavilion villa community living - premium street view at golden hour", caption: "Community Living" },
+  { src: "/images/pavilion/entrance/main-gate-01.jpg",  alt: "The Pavilion main entrance with modern architecture",                               caption: "Grand Entrance"     },
+  { src: "/images/pavilion/recreation-zone/aerial-view-01.jpg",  alt: "Bommaku Recreation Zone aerial with infinity pool and sports facilities",  caption: "Recreation Zone" },
+  { src: "/images/pavilion/recreation-zone/sports-courts-aerial.jpg",         alt: "Sports courts and wellness facilities aerial view",                            caption: "Sports & Wellness"  },
+  { src: "/images/pavilion/exteriors/villa-front-elevation-01.jpg",        alt: "Premium villa facade with contemporary architecture",                  caption: "Villa Facade" },
+  { src: "/images/pavilion/exteriors/villa-elevation-sunset.jpg",         alt: "Villa elevation showcasing architectural excellence at sunset",       caption: "Sunset Elevation"  },
+  { src: "/images/pavilion/exteriors/villa-street-view-02.jpg",         alt: "Villa street with landscaping and modern design language",                             caption: "Villa Street"   },
+  { src: "/images/pavilion/interiors/living-room-01.jpg",    alt: "Spacious living room interior with premium finishes",            caption: "Living Space" },
+  { src: "/images/pavilion/interiors/kitchen-01.jpg",         alt: "Modern kitchen with luxury fittings and island",                           caption: "Gourmet Kitchen" },
 ];
 
 export default function Gallery() {
