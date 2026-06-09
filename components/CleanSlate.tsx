@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import LeadFormModal from "./LeadFormModal";
 
-const steps = [
+const fallbackSteps = [
   {
     step: "01",
     title: "Initial Understanding",
@@ -31,7 +31,19 @@ const steps = [
   },
 ];
 
-export default function CleanSlate() {
+interface CleanSlateStep {
+  step: string;
+  title: string;
+  body: string;
+  features?: string[];
+}
+
+interface CleanSlateProps {
+  steps?: CleanSlateStep[];
+}
+
+export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
+  const steps = dbSteps || fallbackSteps;
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [modalOpen, setModalOpen] = useState(false);

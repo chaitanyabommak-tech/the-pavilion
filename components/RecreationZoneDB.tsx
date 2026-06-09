@@ -4,12 +4,26 @@ import RecreationZone from './RecreationZone'
 export default async function RecreationZoneDB() {
   const supabase = await createClient()
 
-  const { data: section } = await supabase
-    .from('website_sections')
+  // Fetch recreation zone features from database
+  const { data: features } = await supabase
+    .from('recreation_zone_features')
     .select('*')
-    .eq('section_key', 'recreation_zone')
-    .eq('is_published', true)
-    .single()
+    .eq('is_active', true)
+    .order('display_order', { ascending: true })
 
-  return <RecreationZone />
+  // Group features by category
+  const amenityGroups = features?.reduce((acc: any[], feature) => {
+    const existingGroup = acc.find(g => g.label === feature.category)
+    if (existingGroup) {
+      existingGroup.items.push(feature.feature_name)
+    } else {
+      acc.push({
+        label: feature.category,
+        items: [feature.feature_name]
+      })
+    }
+    return acc
+  }, [])
+
+  return <RecreationZone amenityGroups={amenityGroups?.length ? amenityGroups : undefined} />
 }

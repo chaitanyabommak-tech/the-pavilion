@@ -5,25 +5,33 @@ import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
 import { trackPhoneClick, trackWhatsAppClick, trackEvent } from "@/lib/tracking";
 
-function track(type: "whatsapp" | "call", source: string) {
-  // Track with new tracking system
-  if (type === "whatsapp") {
-    trackWhatsAppClick(source);
-  } else if (type === "call") {
-    trackPhoneClick("+919676077142", source);
-  }
-  // Also track in Supabase
-  getDb()?.from("interactions").insert({ type, source }).then(() => {});
+interface FloatingCTAProps {
+  phoneNumber?: string;
+  whatsappNumber?: string;
 }
 
-export default function FloatingCTA() {
+export default function FloatingCTA({
+  phoneNumber = "+919676077142",
+  whatsappNumber = "919676077142"
+}: FloatingCTAProps = {}) {
   const [modalOpen, setModalOpen] = useState(false);
+
+  function track(type: "whatsapp" | "call", source: string) {
+    // Track with new tracking system
+    if (type === "whatsapp") {
+      trackWhatsAppClick(source);
+    } else if (type === "call") {
+      trackPhoneClick(phoneNumber, source);
+    }
+    // Also track in Supabase
+    getDb()?.from("interactions").insert({ type, source }).then(() => {});
+  }
 
   return (
     <>
       {/* Floating WhatsApp — desktop only (lg+) */}
       <a
-        href="https://wa.me/919676077142"
+        href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => track("whatsapp", "floating_desktop")}
@@ -46,7 +54,7 @@ export default function FloatingCTA() {
       >
         {/* Speak to Sales */}
         <a
-          href="tel:+919676077142"
+          href={`tel:${phoneNumber}`}
           aria-label="Call now"
           onClick={() => track("call", "floating_cta")}
           className="flex flex-col items-center justify-center py-[18px] gap-1.5 transition-all duration-200 active:scale-[0.95]"
@@ -86,7 +94,7 @@ export default function FloatingCTA() {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919676077142"
+          href={`https://wa.me/${whatsappNumber}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open WhatsApp"

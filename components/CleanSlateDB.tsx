@@ -4,14 +4,20 @@ import CleanSlate from './CleanSlate'
 export default async function CleanSlateDB() {
   const supabase = await createClient()
 
-  const { data: section } = await supabase
-    .from('website_sections')
+  // Fetch clean slate steps from database
+  const { data: dbSteps } = await supabase
+    .from('clean_slate_steps')
     .select('*')
-    .eq('section_key', 'clean_slate')
-    .eq('is_published', true)
-    .single()
+    .eq('is_active', true)
+    .order('display_order', { ascending: true })
 
-  // Component will use its existing hardcoded content as fallback
-  // or we can pass the data as props if we modify CleanSlate component
-  return <CleanSlate />
+  // Convert database format to component format
+  const steps = dbSteps?.map(step => ({
+    step: step.step_number,
+    title: step.title,
+    body: step.body,
+    features: step.features as string[] | undefined
+  }))
+
+  return <CleanSlate steps={steps?.length ? steps : undefined} />
 }

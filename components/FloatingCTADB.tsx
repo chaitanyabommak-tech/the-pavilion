@@ -14,7 +14,8 @@ export default async function FloatingCTADB() {
     return acc
   }, {} as Record<string, string>) || {}
 
-  // FloatingCTA will use its existing implementation
-  // CTA settings are now available in database for future use
-  return <FloatingCTA />
+  return <FloatingCTA
+    phoneNumber={settings.primary_phone}
+    whatsappNumber={settings.whatsapp_number}
+  />
 }

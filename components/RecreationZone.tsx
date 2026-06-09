@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { trackEvent } from "@/lib/tracking";
 
-const amenityGroups = [
+const fallbackAmenityGroups = [
   {
     label: "Recreation",
     items: [
@@ -67,7 +67,18 @@ const amenityGroups = [
   },
 ];
 
-export default function RecreationZone() {
+interface AmenityGroup {
+  label: string;
+  items: string[];
+}
+
+interface RecreationZoneProps {
+  amenityGroups?: AmenityGroup[];
+}
+
+export default function RecreationZone({ amenityGroups }: RecreationZoneProps = {}) {
+  // Use database amenities if provided, fallback to hardcoded
+  const groups = amenityGroups || fallbackAmenityGroups;
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -145,7 +156,7 @@ export default function RecreationZone() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="amenity-groups-grid grid grid-cols-1 sm:grid-cols-2 gap-8"
             >
-              {amenityGroups.map((group, i) => (
+              {groups.map((group, i) => (
                 <motion.div
                   key={group.label}
                   initial={{ opacity: 0, y: 10 }}
