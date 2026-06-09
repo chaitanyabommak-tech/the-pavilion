@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { Toaster } from 'react-hot-toast'
+import AuthCheck from '@/components/admin/AuthCheck'
 
 export default async function AdminDashboard() {
   const supabase = await createClient()
@@ -45,11 +46,12 @@ export default async function AdminDashboard() {
   ]
 
   return (
-    <div>
-      <Toaster position="top-right" />
+    <AuthCheck>
+      <div>
+        <Toaster position="top-right" />
 
-      {/* Header */}
-      <div className="mb-8">
+        {/* Header */}
+        <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
         <p className="text-gray-600 mt-2">Welcome to The Pavilion Admin Dashboard</p>
       </div>
@@ -181,6 +183,7 @@ export default async function AdminDashboard() {
           </a>
         </div>
       </div>
-    </div>
+      </div>
+    </AuthCheck>
   )
 }
