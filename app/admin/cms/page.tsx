@@ -44,6 +44,8 @@ export default async function CMSOverviewPage() {
     { name: 'Section Editor', desc: 'Edit website text and content sections', icon: '📝', href: '/admin/cms/sections', color: 'bg-yellow-500' },
     { name: 'Recreation Zone', desc: 'Manage amenities and features', icon: '🏊', href: '/admin/cms/recreation-zone', color: 'bg-cyan-500' },
     { name: 'Clean Slate', desc: 'Edit customization process steps', icon: '✏️', href: '/admin/cms/clean-slate', color: 'bg-teal-500' },
+    { name: 'East Facing', desc: 'Manage East Facing section and images', icon: '🌅', href: '/admin/cms/east-facing', color: 'bg-orange-500' },
+    { name: 'West Facing', desc: 'Manage West Facing section and images', icon: '🌆', href: '/admin/cms/west-facing', color: 'bg-pink-500' },
     { name: 'CTA Settings', desc: 'Update phone, WhatsApp, and CTAs', icon: '📞', href: '/admin/cms/cta', color: 'bg-red-500' },
     { name: 'SEO Manager', desc: 'Manage meta tags and SEO settings', icon: '🔍', href: '/admin/cms/seo', color: 'bg-indigo-500' },
   ]
