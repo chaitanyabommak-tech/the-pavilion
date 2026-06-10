@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { useDropzone } from 'react-dropzone'
 
 interface MediaAsset {
   id: string
@@ -35,6 +36,9 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
   const [gallery, setGallery] = useState<GalleryItem[]>(initialGallery)
   const [editingItem, setEditingItem] = useState<GalleryItem | null>(null)
   const [selectingImage, setSelectingImage] = useState(false)
+  const [uploading, setUploading] = useState(false)
+  const [uploadProgress, setUploadProgress] = useState(0)
+  const [previewFile, setPreviewFile] = useState<{ file: File; preview: string } | null>(null)
   const router = useRouter()
 
   const handleUpdateGalleryItem = async (id: string, updates: Partial<GalleryItem>) => {
@@ -139,6 +143,99 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
       toast.error(error.message || 'Failed to update')
     }
   }
+
+  const handleUploadAndReplace = async (file: File, galleryItemId: string) => {
+    try {
+      setUploading(true)
+      setUploadProgress(0)
+      const supabase = createClient()
+
+      // Generate unique filename
+      const timestamp = Date.now()
+      const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
+      const fileName = `gallery/${timestamp}-${sanitizedName}`
+
+      // Upload to Supabase Storage
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('website-media')
+        .upload(fileName, file, {
+          cacheControl: '3600',
+          upsert: false
+        })
+
+      if (uploadError) throw uploadError
+
+      setUploadProgress(50)
+
+      // Get public URL
+      const { data: { publicUrl } } = supabase.storage
+        .from('website-media')
+        .getPublicUrl(fileName)
+
+      // Create media_assets record
+      const { data: mediaAsset, error: mediaError } = await supabase
+        .from('media_assets')
+        .insert({
+          filename: sanitizedName,
+          file_url: publicUrl,
+          storage_path: fileName,
+          file_type: file.type,
+          file_size: file.size,
+          category: 'Gallery',
+          alt_text: editingItem?.alt_text || '',
+          caption: editingItem?.caption || ''
+        })
+        .select()
+        .single()
+
+      if (mediaError) throw mediaError
+
+      setUploadProgress(75)
+
+      // Update gallery_items to use new image
+      const { error: updateError } = await supabase
+        .from('gallery_items')
+        .update({
+          image_id: mediaAsset.id,
+          thumbnail_id: mediaAsset.id
+        })
+        .eq('id', galleryItemId)
+
+      if (updateError) throw updateError
+
+      setUploadProgress(100)
+      toast.success('Image uploaded and replaced! Refresh website to see changes.')
+      setPreviewFile(null)
+      setUploading(false)
+      router.refresh()
+
+    } catch (error: any) {
+      setUploading(false)
+      setUploadProgress(0)
+      toast.error(error.message || 'Upload failed')
+    }
+  }
+
+  const onDrop = (acceptedFiles: File[]) => {
+    if (acceptedFiles.length > 0 && editingItem) {
+      const file = acceptedFiles[0]
+      setPreviewFile({
+        file,
+        preview: URL.createObjectURL(file)
+      })
+    }
+  }
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      'image/jpeg': ['.jpg', '.jpeg'],
+      'image/png': ['.png'],
+      'image/webp': ['.webp']
+    },
+    maxFiles: 1,
+    disabled: uploading
+  })
 
   return (
     <div>
@@ -282,8 +379,21 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
 
             {/* Current Image Preview */}
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Current Image</label>
-              {editingItem.image?.file_url ? (
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {previewFile ? 'New Image Preview' : 'Current Image'}
+              </label>
+              {previewFile ? (
+                <div className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3">
+                  <img
+                    src={previewFile.preview}
+                    alt="Preview"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    New Image Selected
+                  </div>
+                </div>
+              ) : editingItem.image?.file_url ? (
                 <div className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3">
                   <Image
                     src={editingItem.image.file_url}
@@ -298,22 +408,88 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
                 </div>
               )}
 
+              {/* Drag and Drop Upload Zone */}
+              {!previewFile && (
+                <div
+                  {...getRootProps()}
+                  className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors mb-3 ${
+                    isDragActive
+                      ? 'border-blue-500 bg-blue-50'
+                      : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'
+                  } ${uploading ? 'opacity-50 pointer-events-none' : ''}`}
+                >
+                  <input {...getInputProps()} />
+                  <div className="text-5xl mb-3">📸</div>
+                  {isDragActive ? (
+                    <p className="text-blue-600 font-semibold">Drop the image here...</p>
+                  ) : (
+                    <>
+                      <p className="text-gray-700 font-semibold mb-2">
+                        Drag and drop an image here, or click to upload
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Supports: JPG, PNG, WEBP (max 10MB)
+                      </p>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Upload Progress */}
+              {uploading && (
+                <div className="mb-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-700">Uploading...</span>
+                    <span className="text-sm font-medium text-gray-700">{uploadProgress}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${uploadProgress}%` }}
+                    ></div>
+                  </div>
+                </div>
+              )}
+
+              {/* Preview Actions */}
+              {previewFile && !uploading && (
+                <div className="grid grid-cols-2 gap-3 mb-3">
+                  <button
+                    onClick={() => handleUploadAndReplace(previewFile.file, editingItem.id)}
+                    className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold"
+                  >
+                    ✓ Upload & Replace
+                  </button>
+                  <button
+                    onClick={() => {
+                      setPreviewFile(null)
+                      URL.revokeObjectURL(previewFile.preview)
+                    }}
+                    className="px-4 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold"
+                  >
+                    ✗ Remove Selected
+                  </button>
+                </div>
+              )}
+
               {/* Replace/Upload Buttons */}
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => setSelectingImage(true)}
-                  className="px-4 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold"
-                >
-                  🔄 Replace Image
-                </button>
-                <a
-                  href="/admin/cms/media"
-                  target="_blank"
-                  className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold text-center"
-                >
-                  📤 Upload New Image
-                </a>
-              </div>
+              {!previewFile && !uploading && (
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => setSelectingImage(true)}
+                    className="px-4 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold"
+                  >
+                    🔄 Replace from Library
+                  </button>
+                  <a
+                    href="/admin/cms/media"
+                    target="_blank"
+                    className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold text-center"
+                  >
+                    📁 Go to Media Library
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="space-y-4">
