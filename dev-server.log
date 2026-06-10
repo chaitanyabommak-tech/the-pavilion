@@ -164,3 +164,5 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
  GET / 200 in 1490ms (next.js: 118ms, application-code: 1372ms)
  GET /admin/login 200 in 1328ms (next.js: 4ms, proxy.ts: 840ms, application-code: 484ms)
 ✓ Compiled in 250ms
+✓ Compiled in 123ms
+  Reload env: .env.local
