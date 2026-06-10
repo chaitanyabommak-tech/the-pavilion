@@ -230,3 +230,4 @@ Image with src "/images/pavilion/interiors/living-room-01.jpg" is using quality 
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
  GET / 200 in 1381ms (next.js: 95ms, application-code: 1286ms)
 ✓ Compiled in 130ms
+✓ Compiled in 111ms

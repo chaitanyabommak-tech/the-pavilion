@@ -28,8 +28,9 @@ export default async function GalleryDB() {
 
   // Fallback to hardcoded if database is empty
   const fallbackImages = [
-    { src: "/images/pavilion/entrance/NEW-CLEAN-ENTRANCE.jpg", alt: "The Pavilion villa community grand entrance gate by Bommaku Group", caption: "Grand Entrance" },
+    { src: "/images/gallery/pavilion-grand-entrance-main.jpg", alt: "Grand Entrance of The Pavilion villa community in Boduppal", caption: "Grand Entrance" },
     { src: "/images/pavilion/recreation-zone/aerial-view-01.jpg", alt: "Convenience Store at The Pavilion by Bommaku Group", caption: "Convenience Store" },
+    { src: "/images/pavilion/entrance/NEW-CLEAN-ENTRANCE.jpg", alt: "Recreation Zone at The Pavilion villa community in Boduppal", caption: "Recreation Zone" },
     { src: "/images/pavilion/exteriors/villa-street-view-02.jpg", alt: "The Pavilion villa community with contemporary design language", caption: "Villa Community" },
     { src: "/images/pavilion/recreation-zone/sports-courts-aerial.jpg", alt: "Sports courts and wellness facilities aerial view", caption: "Sports & Wellness" },
     { src: "/images/pavilion/exteriors/corner-villa-view.jpg", alt: "Premium corner villa with landscaping and architectural lighting", caption: "Corner Villa" },
