@@ -49,6 +49,26 @@ export default function MediaLibraryClient({ initialMedia }: MediaLibraryClientP
     'Miscellaneous',
   ]
 
+  // Map display names to database values (lowercase with underscores)
+  const categoryToDbValue = (displayName: string) => {
+    const mapping: Record<string, string> = {
+      'Hero': 'hero',
+      'Gallery': 'gallery',
+      'Grand Entrance': 'grand_entrance',
+      'Recreation Zone': 'recreation_zone',
+      'East Facing': 'east_facing_exteriors',
+      'West Facing': 'west_facing_exteriors',
+      'Interiors': 'interiors',
+      'Floor Plans': 'floor_plans',
+      'Master Plan': 'master_plan',
+      'Location': 'location',
+      'Brochure': 'brochure',
+      'Logos': 'logos',
+      'Miscellaneous': 'misc',
+    }
+    return mapping[displayName] || 'misc'
+  }
+
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
@@ -58,7 +78,8 @@ export default function MediaLibraryClient({ initialMedia }: MediaLibraryClientP
     try {
       const formData = new FormData()
       formData.append('file', file)
-      formData.append('category', selectedCategory === 'All' ? 'Miscellaneous' : selectedCategory)
+      const dbCategory = categoryToDbValue(selectedCategory === 'All' ? 'Miscellaneous' : selectedCategory)
+      formData.append('category', dbCategory)
       formData.append('alt_text', file.name)
       formData.append('caption', '')
 
@@ -93,9 +114,15 @@ export default function MediaLibraryClient({ initialMedia }: MediaLibraryClientP
     try {
       const supabase = createClient()
 
+      // Convert category display name to database value
+      const dbUpdates = { ...updates }
+      if (dbUpdates.category) {
+        dbUpdates.category = categoryToDbValue(dbUpdates.category)
+      }
+
       const { error } = await supabase
         .from('media_assets')
-        .update(updates)
+        .update(dbUpdates)
         .eq('id', id)
 
       if (error) throw error

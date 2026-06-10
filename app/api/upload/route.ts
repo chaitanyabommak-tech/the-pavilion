@@ -1,5 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+import { createClient } from '@/lib/supabase/server'
 import { NextRequest, NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,12 +21,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid file type' }, { status: 400 })
     }
 
-    // Create Supabase client with service role (fallback to anon key if service key format is wrong)
-    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      serviceKey!
-    )
+    // Use authenticated user's session
+    const supabase = await createClient()
+
+    // Check if user is authenticated
+    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    if (authError || !user) {
+      return NextResponse.json({ error: 'Unauthorized - please login again' }, { status: 401 })
+    }
 
     // Generate unique filename
     const timestamp = Date.now()
@@ -54,6 +58,10 @@ export async function POST(request: NextRequest) {
       .getPublicUrl(filePath)
 
     // Save to media_assets table
+    // Valid categories from database constraint (lowercase):
+    // hero, gallery, grand_entrance, recreation_zone, east_facing_exteriors,
+    // west_facing_exteriors, interiors, floor_plans, master_plan, location, brochure, logos, misc
+    const validCategory = (category || 'gallery').toLowerCase()
     const { data: mediaAsset, error: dbError } = await supabase
       .from('media_assets')
       .insert({
@@ -65,7 +73,7 @@ export async function POST(request: NextRequest) {
         file_size: file.size,
         alt_text: altText || file.name,
         caption: caption || null,
-        category: category || 'Miscellaneous',
+        category: validCategory,
         is_active: true,
       })
       .select()

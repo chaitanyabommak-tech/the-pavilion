@@ -103,7 +103,7 @@ export default function GalleryManager({
       if (newImageFile) {
         const formData = new FormData()
         formData.append('file', newImageFile)
-        formData.append('category', 'Gallery')
+        formData.append('category', 'gallery')
         formData.append('alt_text', editingItem.alt_text || editingItem.title)
         formData.append('caption', editingItem.caption || '')
 
