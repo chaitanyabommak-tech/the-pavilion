@@ -4,6 +4,18 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import toast from 'react-hot-toast'
+import {
+  LayoutDashboard,
+  Image as ImageIcon,
+  Palette,
+  Home,
+  Layers,
+  FileText,
+  Users,
+  Search,
+  Settings,
+  LogOut
+} from 'lucide-react'
 
 interface AdminSidebarProps {
   user: {
@@ -30,15 +42,15 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
   }
 
   const navItems = [
-    { href: '/admin/dashboard', label: 'Dashboard', icon: '📊' },
-    { href: '/admin/media', label: 'Media Library', icon: '🖼️' },
-    { href: '/admin/gallery', label: 'Gallery Manager', icon: '🎨' },
-    { href: '/admin/villas', label: 'Villa Inventory', icon: '🏘️' },
-    { href: '/admin/floor-plans', label: 'Floor Plans', icon: '📐' },
-    { href: '/admin/sections', label: 'Website Sections', icon: '📝' },
-    { href: '/admin/leads', label: 'Leads', icon: '👥' },
-    { href: '/admin/seo', label: 'SEO & Metadata', icon: '🔍' },
-    { href: '/admin/settings', label: 'Settings', icon: '⚙️' },
+    { href: '/admin/dashboard', label: 'Dashboard', Icon: LayoutDashboard },
+    { href: '/admin/media', label: 'Media Library', Icon: ImageIcon },
+    { href: '/admin/gallery', label: 'Gallery Manager', Icon: Palette },
+    { href: '/admin/villas', label: 'Villa Inventory', Icon: Home },
+    { href: '/admin/floor-plans', label: 'Floor Plans', Icon: Layers },
+    { href: '/admin/sections', label: 'Website Sections', Icon: FileText },
+    { href: '/admin/leads', label: 'Leads', Icon: Users },
+    { href: '/admin/seo', label: 'SEO & Metadata', Icon: Search },
+    { href: '/admin/settings', label: 'Settings', Icon: Settings },
   ]
 
   return (
@@ -68,6 +80,7 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
       <nav className="flex-1 overflow-y-auto py-4">
         {navItems.map((item) => {
           const isActive = pathname === item.href
+          const Icon = item.Icon
           return (
             <Link
               key={item.href}
@@ -78,7 +91,7 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
                   : 'text-gray-300 hover:bg-gray-800 hover:text-white'
               }`}
             >
-              <span className="text-xl">{item.icon}</span>
+              <Icon size={18} />
               <span className="text-sm font-medium">{item.label}</span>
             </Link>
           )
@@ -91,7 +104,7 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
           onClick={handleLogout}
           className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-red-600 hover:bg-red-700 rounded-lg transition-colors"
         >
-          <span>🚪</span>
+          <LogOut size={18} />
           <span className="text-sm font-medium">Logout</span>
         </button>
       </div>

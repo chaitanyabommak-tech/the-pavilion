@@ -8,13 +8,12 @@ export const revalidate = 0
 export default async function MasterPlanDB() {
   const supabase = await createClient()
 
-  // Fetch all villas with status - this data is ready for MasterPlan integration
+  // Fetch all villas with status
   const { data: villas } = await supabase
     .from('villas')
     .select('*')
     .order('villa_id', { ascending: true })
 
-  // For now, MasterPlan uses hardcoded layout
-  // In future: Pass villas data to show real status on the plan
-  return <MasterPlan />
+  // Pass villa data to MasterPlan for status-based color coding
+  return <MasterPlan villas={villas || []} />
 }

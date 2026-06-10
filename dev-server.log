@@ -1,0 +1,165 @@
+
+> the-pavilion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.20.10.7:3000
+- Environments: .env.local
+✓ Ready in 613ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+- Experiments (use with caution):
+  · optimizePackageImports
+
+Image with src "/images/pavilion/exteriors/villa-front-elevation-02.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion-mobile-hero.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/assets/pavilion-hero.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-street-view-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-front-elevation-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-elevation-sunset.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/dining-kitchen.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/master-bedroom-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/living-room-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-street-view-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-front-elevation-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/corner-villa-view.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/living-room-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/kitchen-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/master-bedroom-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 2.6s (next.js: 218ms, application-code: 2.4s)
+ GET /admin/login 200 in 118ms (next.js: 30ms, proxy.ts: 5ms, application-code: 83ms)
+ GET / 200 in 927ms (next.js: 4ms, application-code: 923ms)
+ GET / 200 in 994ms (next.js: 4ms, application-code: 990ms)
+ GET /admin/login 200 in 1125ms (next.js: 6ms, proxy.ts: 1065ms, application-code: 54ms)
+ GET /admin/login 200 in 531ms (next.js: 73ms, proxy.ts: 405ms, application-code: 53ms)
+ GET /admin/login 200 in 592ms (next.js: 70ms, proxy.ts: 463ms, application-code: 59ms)
+ GET /admin/login 200 in 682ms (next.js: 64ms, proxy.ts: 563ms, application-code: 56ms)
+ GET /admin/login 200 in 619ms (next.js: 66ms, proxy.ts: 502ms, application-code: 51ms)
+ GET /admin/login 200 in 809ms (next.js: 59ms, proxy.ts: 696ms, application-code: 54ms)
+ GET /admin/login 200 in 546ms (next.js: 64ms, proxy.ts: 431ms, application-code: 51ms)
+✓ Compiled in 104ms
+ GET /admin/login 200 in 915ms (next.js: 65ms, proxy.ts: 726ms, application-code: 123ms)
+ GET /admin/login 200 in 1000ms (next.js: 3ms, proxy.ts: 966ms, application-code: 31ms)
+ GET /admin/login 200 in 792ms (next.js: 63ms, proxy.ts: 668ms, application-code: 62ms)
+ GET /admin/login 200 in 533ms (next.js: 65ms, proxy.ts: 424ms, application-code: 43ms)
+ GET /admin/login 200 in 498ms (next.js: 65ms, proxy.ts: 390ms, application-code: 43ms)
+ GET /admin/login 200 in 498ms (next.js: 65ms, proxy.ts: 378ms, application-code: 55ms)
+✓ Compiled in 99ms
+ GET /admin/login 200 in 615ms (next.js: 65ms, proxy.ts: 498ms, application-code: 52ms)
+ GET /admin/login 200 in 383ms (next.js: 5ms, proxy.ts: 346ms, application-code: 32ms)
+ GET /admin/login 200 in 713ms (next.js: 66ms, proxy.ts: 591ms, application-code: 56ms)
+ GET /admin/login 200 in 636ms (next.js: 63ms, proxy.ts: 528ms, application-code: 45ms)
+ GET /admin/login 200 in 788ms (next.js: 70ms, proxy.ts: 656ms, application-code: 62ms)
+ GET /admin/login 200 in 802ms (next.js: 80ms, proxy.ts: 659ms, application-code: 63ms)
+✓ Compiled in 404ms
+ GET /admin/login 200 in 1155ms (next.js: 97ms, proxy.ts: 882ms, application-code: 175ms)
+ GET /admin/login 200 in 473ms (next.js: 4ms, proxy.ts: 434ms, application-code: 35ms)
+ GET /admin/login 200 in 491ms (next.js: 9ms, proxy.ts: 422ms, application-code: 60ms)
+ GET /admin/login 200 in 383ms (next.js: 3ms, proxy.ts: 347ms, application-code: 33ms)
+ GET /admin/login 200 in 545ms (next.js: 3ms, proxy.ts: 505ms, application-code: 37ms)
+ GET /admin/login 200 in 448ms (next.js: 3ms, proxy.ts: 416ms, application-code: 29ms)
+✓ Compiled in 216ms
+ GET /admin/login 200 in 638ms (next.js: 77ms, proxy.ts: 485ms, application-code: 75ms)
+ GET /admin/login 200 in 458ms (next.js: 4ms, proxy.ts: 419ms, application-code: 35ms)
+ GET /admin/login 200 in 1383ms (next.js: 5ms, proxy.ts: 1339ms, application-code: 39ms)
+ GET /admin/login 200 in 447ms (next.js: 3ms, proxy.ts: 410ms, application-code: 34ms)
+ GET /admin/login 200 in 479ms (next.js: 3ms, proxy.ts: 434ms, application-code: 43ms)
+ GET /admin/login 200 in 471ms (next.js: 3ms, proxy.ts: 443ms, application-code: 26ms)
+ GET /admin/login 200 in 748ms (next.js: 131ms, proxy.ts: 522ms, application-code: 95ms)
+✓ Compiled in 138ms
+ GET /admin/login 200 in 969ms (next.js: 131ms, proxy.ts: 757ms, application-code: 80ms)
+ GET /admin/login 200 in 378ms (next.js: 3ms, proxy.ts: 339ms, application-code: 36ms)
+ GET /admin/login 200 in 421ms (next.js: 4ms, proxy.ts: 382ms, application-code: 35ms)
+✓ Compiled in 493ms
+ GET /admin/login 200 in 2.7s (next.js: 115ms, proxy.ts: 2.0s, application-code: 612ms)
+ GET /admin/login 200 in 918ms (next.js: 5ms, proxy.ts: 519ms, application-code: 395ms)
+ GET /admin/login 200 in 815ms (next.js: 3ms, proxy.ts: 402ms, application-code: 411ms)
+ GET /admin/login 200 in 928ms (next.js: 4ms, proxy.ts: 470ms, application-code: 453ms)
+ GET /admin/login 200 in 931ms (next.js: 7ms, proxy.ts: 509ms, application-code: 416ms)
+ GET /admin/login 200 in 962ms (next.js: 57ms, proxy.ts: 507ms, application-code: 398ms)
+ GET /admin/login 200 in 967ms (next.js: 36ms, proxy.ts: 508ms, application-code: 423ms)
+ GET /admin/login 200 in 760ms (next.js: 4ms, proxy.ts: 377ms, application-code: 379ms)
+ GET /admin/login 200 in 740ms (next.js: 4ms, proxy.ts: 324ms, application-code: 412ms)
+ GET /admin/login 200 in 793ms (next.js: 5ms, proxy.ts: 353ms, application-code: 436ms)
+ GET /admin/login 200 in 787ms (next.js: 45ms, proxy.ts: 345ms, application-code: 397ms)
+ GET /admin/login 200 in 789ms (next.js: 7ms, proxy.ts: 385ms, application-code: 397ms)
+ GET /admin/login 200 in 799ms (next.js: 28ms, proxy.ts: 393ms, application-code: 379ms)
+ GET /admin/login 200 in 739ms (next.js: 3ms, proxy.ts: 337ms, application-code: 399ms)
+ GET /admin/login 200 in 706ms (next.js: 4ms, proxy.ts: 330ms, application-code: 372ms)
+ GET /admin/login 200 in 695ms (next.js: 4ms, proxy.ts: 332ms, application-code: 359ms)
+ GET /admin/login 200 in 771ms (next.js: 6ms, proxy.ts: 360ms, application-code: 406ms)
+ GET /admin/login 200 in 740ms (next.js: 27ms, proxy.ts: 326ms, application-code: 387ms)
+ GET /admin/login 200 in 712ms (next.js: 5ms, proxy.ts: 344ms, application-code: 363ms)
+ GET /admin/login 200 in 814ms (next.js: 4ms, proxy.ts: 385ms, application-code: 425ms)
+ GET /admin/login 200 in 756ms (next.js: 4ms, proxy.ts: 340ms, application-code: 412ms)
+ GET /admin/login 200 in 794ms (next.js: 4ms, proxy.ts: 420ms, application-code: 370ms)
+ GET /admin/login 200 in 742ms (next.js: 4ms, proxy.ts: 371ms, application-code: 367ms)
+ GET /admin/login 200 in 768ms (next.js: 34ms, proxy.ts: 365ms, application-code: 369ms)
+ GET /admin/login 200 in 779ms (next.js: 44ms, proxy.ts: 356ms, application-code: 380ms)
+ GET /admin/login 200 in 820ms (next.js: 6ms, proxy.ts: 369ms, application-code: 445ms)
+ GET /admin/login 200 in 768ms (next.js: 3ms, proxy.ts: 379ms, application-code: 386ms)
+ GET /admin/login 200 in 700ms (next.js: 3ms, proxy.ts: 321ms, application-code: 376ms)
+ GET /admin/login 200 in 670ms (next.js: 4ms, proxy.ts: 328ms, application-code: 338ms)
+ GET /admin/login 200 in 765ms (next.js: 4ms, proxy.ts: 327ms, application-code: 434ms)
+ GET /admin/login 200 in 733ms (next.js: 4ms, proxy.ts: 332ms, application-code: 397ms)
+ GET /admin/login 200 in 1116ms (next.js: 84ms, proxy.ts: 511ms, application-code: 520ms)
+ GET /admin/login 200 in 1181ms (next.js: 83ms, proxy.ts: 555ms, application-code: 543ms)
+✓ Compiled in 112ms
+ GET /admin/login 200 in 1037ms (next.js: 83ms, proxy.ts: 548ms, application-code: 405ms)
+ GET /admin/login 200 in 1305ms (next.js: 3ms, proxy.ts: 412ms, application-code: 890ms)
+ GET /admin/login 200 in 1105ms (next.js: 88ms, proxy.ts: 476ms, application-code: 541ms)
+ GET /admin/login 200 in 1249ms (next.js: 101ms, proxy.ts: 613ms, application-code: 534ms)
+ GET /admin/login 200 in 987ms (next.js: 6ms, proxy.ts: 477ms, application-code: 504ms)
+ GET /admin/login 200 in 923ms (next.js: 12ms, proxy.ts: 431ms, application-code: 479ms)
+ GET /admin/login 200 in 961ms (next.js: 87ms, proxy.ts: 379ms, application-code: 496ms)
+ GET /admin/login 200 in 1036ms (next.js: 79ms, proxy.ts: 471ms, application-code: 486ms)
+ GET /admin/login 200 in 913ms (next.js: 4ms, proxy.ts: 450ms, application-code: 459ms)
+ GET /admin/login 200 in 1385ms (next.js: 7ms, proxy.ts: 429ms, application-code: 949ms)
+ GET /admin/login 200 in 823ms (next.js: 6ms, proxy.ts: 7ms, application-code: 810ms)
+Image with src "/images/pavilion-mobile-hero.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/assets/pavilion-hero.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-front-elevation-02.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-street-view-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-front-elevation-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/corner-villa-view.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/living-room-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/kitchen-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/master-bedroom-02.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-street-view-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-front-elevation-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/exteriors/villa-elevation-sunset.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/dining-kitchen.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/master-bedroom-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/images/pavilion/interiors/living-room-01.jpg" is using quality "85" which is not configured in images.qualities [75]. Please update your config to [75, 85].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 1490ms (next.js: 118ms, application-code: 1372ms)
+ GET /admin/login 200 in 1328ms (next.js: 4ms, proxy.ts: 840ms, application-code: 484ms)

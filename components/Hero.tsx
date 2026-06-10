@@ -6,6 +6,19 @@ import Image from "next/image";
 import LeadFormModal from "./LeadFormModal";
 import { trackEvent } from "@/lib/tracking";
 
+interface HeroSection {
+  eyebrow?: string | null
+  headline?: string | null
+  subheadline?: string | null
+  body_copy?: string | null
+  cta_primary_label?: string | null
+  cta_secondary_label?: string | null
+}
+
+interface HeroProps {
+  heroData?: HeroSection | null
+}
+
 /* Desktop stats bar — unchanged */
 const stats = [
   { value: "40",            label: "Villas"           },
@@ -24,9 +37,17 @@ const mobStats = [
   { value: "Bodu.", label: "E. Hyd."   },
 ];
 
-export default function Hero() {
+export default function Hero({ heroData }: HeroProps = {}) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"visit" | "brochure">("visit");
+
+  // Use database values with fallbacks to current hardcoded text
+  const eyebrow = heroData?.eyebrow || "40 Luxury Villas in Boduppal, Hyderabad"
+  const headline = heroData?.headline || "THE PAVILLION"
+  const subheadline = heroData?.subheadline || "Your parents dreamed of a home like this.\nYou're buying it."
+  const bodyCopy = heroData?.body_copy || "Premium standalone villas in Surya Hills, Boduppal.\nG+1+Penthouse | 3BHK | 30,000 SFT Recreation Zone\nHMDA Registered | From ₹1.87 Cr onwards"
+  const ctaPrimary = heroData?.cta_primary_label || "Book Site Visit"
+  const ctaSecondary = heroData?.cta_secondary_label || "Download Brochure"
 
   function openModal(type: "visit" | "brochure") {
     setModalType(type);
@@ -82,30 +103,36 @@ export default function Hero() {
             >
               {/* SEO Eyebrow */}
               <p style={{ color: "var(--accent)" }} className="text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 font-semibold">
-                40 Luxury Villas in Boduppal, Hyderabad
+                {eyebrow}
               </p>
 
               <h1
                 style={{ color: "var(--ink)" }}
                 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-4"
               >
-                THE PAVILLION
+                {headline}
               </h1>
               <h2
                 style={{ color: "var(--ink-3)" }}
                 className="font-heading text-3xl lg:text-4xl xl:text-5xl font-light italic leading-snug mb-6"
               >
-                Your parents dreamed of a home like this.
-                <br />
-                You're buying it.
+                {subheadline.split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < subheadline.split('\n').length - 1 && <br />}
+                  </span>
+                ))}
               </h2>
 
               <div className="w-12 h-px bg-muted-gold mb-6" />
 
               <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed mb-10">
-                Premium standalone villas in Surya Hills, Boduppal.<br />
-                G+1+Penthouse | 3BHK | 30,000 SFT Recreation Zone<br />
-                HMDA Registered | From ₹1.87 Cr onwards
+                {bodyCopy.split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < bodyCopy.split('\n').length - 1 && <br />}
+                  </span>
+                ))}
               </p>
 
               <div className="hero-cta-row flex flex-wrap gap-4 pb-10 lg:pb-0">
@@ -116,7 +143,7 @@ export default function Hero() {
                   }}
                   className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase"
                 >
-                  Book Site Visit
+                  {ctaPrimary}
                 </button>
                 <button
                   onClick={() => {
@@ -128,7 +155,7 @@ export default function Hero() {
                   data-track="brochure-download-intent"
                   aria-label="Download The Pavillion brochure — enter your details to receive it"
                 >
-                  Download Brochure
+                  {ctaSecondary}
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
                     <polyline points="7 10 12 15 17 10" />
@@ -170,14 +197,19 @@ export default function Hero() {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Eyebrow */}
-          <span className="hero-mob-eyebrow">Surya Hills, Boduppal · East Hyderabad</span>
+          <span className="hero-mob-eyebrow">{eyebrow}</span>
 
           {/* Project title */}
-          <h1 className="hero-mob-title font-heading">The Pavillion</h1>
+          <h1 className="hero-mob-title font-heading">{headline}</h1>
 
           {/* One-liner */}
           <span className="hero-mob-subtitle">
-            A blank canvas handed to you before the first pour of concrete.
+            {subheadline.split('\n').map((line, i) => (
+              <span key={`mob-sub-${i}`}>
+                {line}
+                {i < subheadline.split('\n').length - 1 && ' '}
+              </span>
+            ))}
           </span>
 
           {/* Stats strip — 5 compact columns */}
@@ -204,7 +236,7 @@ export default function Hero() {
             aria-label="Download The Pavillion brochure — enter your details to receive it"
             data-track="brochure-download-intent"
           >
-            Download Brochure
+            {ctaSecondary}
             <svg
               width="14"
               height="14"

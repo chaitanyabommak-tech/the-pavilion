@@ -10,7 +10,7 @@ import EastFacingSectionDB from "@/components/EastFacingSectionDB";
 import WestFacingSectionDB from "@/components/WestFacingSectionDB";
 import LocationAdvantageDB from "@/components/LocationAdvantageDB";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
+import ContactDB from "@/components/ContactDB";
 import FooterDB from "@/components/FooterDB";
 import FloatingCTADB from "@/components/FloatingCTADB";
 
@@ -35,7 +35,7 @@ export default function Home() {
         <RecreationZoneDB />
         <LocationAdvantageDB />
         <FAQ />
-        <Contact />
+        <ContactDB />
       </main>
 
       <FooterDB />

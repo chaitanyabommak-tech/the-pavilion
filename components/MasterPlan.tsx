@@ -3,6 +3,17 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
+interface Villa {
+  id: string
+  villa_id: string
+  plot_area_sqyd: number | null
+  status: string
+}
+
+interface MasterPlanProps {
+  villas?: Villa[]
+}
+
 const labels = [
   { label: "30 ft Wide Road",       position: { top: "8%", left: "28%" }  },
   { label: "33 ft Entry Road",       position: { top: "10%", right: "12%" } },
@@ -14,10 +25,22 @@ const labels = [
   { label: "Recreation Zone",        position: { bottom: "22%", right: "18%" } },
 ];
 
-export default function MasterPlan() {
+export default function MasterPlan({ villas = [] }: MasterPlanProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Create villa status map for color coding (A1 = sold = red, etc.)
+  const villaStatusMap = villas.reduce((acc, villa) => {
+    acc[villa.villa_id] = villa.status
+    return acc
+  }, {} as Record<string, string>)
+
+  // Check if a villa is sold
+  const isVillaSold = (villaId: string) => {
+    const status = villaStatusMap[villaId]
+    return status === 'sold' || status === 'Sold' || status === 'SOLD'
+  }
 
   return (
     <>

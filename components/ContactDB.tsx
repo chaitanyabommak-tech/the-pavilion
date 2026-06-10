@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
-import Footer from './Footer'
+import Contact from './Contact'
 
-export default async function FooterDB() {
+export default async function ContactDB() {
   const supabase = await createClient()
 
   const { data: ctaSettings } = await supabase
@@ -13,6 +13,5 @@ export default async function FooterDB() {
     return acc
   }, {} as Record<string, string>) || {}
 
-  // Pass settings to Footer component
-  return <Footer settings={settings} />
+  return <Contact settings={settings} />
 }

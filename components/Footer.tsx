@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 
+interface FooterProps {
+  settings?: Record<string, string>
+}
+
 const bankRows = [
   [
     { src: "/assets/banks/sbi.svg",    alt: "SBI"         },
@@ -43,7 +47,14 @@ function FooterLogo() {
   );
 }
 
-export default function Footer() {
+export default function Footer({ settings = {} }: FooterProps) {
+  // Use database settings with fallbacks
+  const facebookUrl = settings.facebook_url || 'https://facebook.com'
+  const instagramUrl = settings.instagram_url || 'https://instagram.com'
+  const youtubeUrl = settings.youtube_url || 'https://youtube.com'
+  const companyName = settings.company_name || 'Bommaku Constructions'
+  const projectName = settings.project_name || 'The Pavillion'
+
   return (
     <>
       {/* ── Bank Approval Section ──────────────────────────────────── */}
@@ -81,7 +92,7 @@ export default function Footer() {
 
           <nav className="footer-socials" aria-label="Social links">
             <a
-              href="https://facebook.com"
+              href={facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-link"
@@ -90,7 +101,7 @@ export default function Footer() {
               Facebook
             </a>
             <a
-              href="https://instagram.com"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-link"
@@ -99,7 +110,7 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://youtube.com"
+              href={youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-link"
@@ -118,7 +129,7 @@ export default function Footer() {
               <a href="/disclaimer">Disclaimer</a>
             </div>
             <p className="footer-copy">
-              © 2025 Bommaku Constructions. All rights reserved.
+              © 2025 {companyName}. All rights reserved.
             </p>
             <p className="footer-tagline" style={{ fontSize: '11px', marginTop: '8px', opacity: 0.7 }}>
               A Bommaku Group Company | HMDA Registered Project

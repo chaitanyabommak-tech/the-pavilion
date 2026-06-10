@@ -8,15 +8,21 @@ import { getDb } from "@/lib/supabase";
 import { enrichFormData } from "@/lib/utm";
 import { trackFormSubmit, trackConversion, trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
-function track(type: "whatsapp" | "call", source: string) {
-  // Track with new tracking system
-  if (type === "whatsapp") {
-    trackWhatsAppClick(source);
-  } else if (type === "call") {
-    trackPhoneClick("+919676077142", source);
+interface ContactProps {
+  settings?: Record<string, string>
+}
+
+function createTrackFunction(phone: string) {
+  return function track(type: "whatsapp" | "call", source: string) {
+    // Track with new tracking system
+    if (type === "whatsapp") {
+      trackWhatsAppClick(source);
+    } else if (type === "call") {
+      trackPhoneClick(phone, source);
+    }
+    // Also track in Supabase
+    getDb()?.from("interactions").insert({ type, source }).then(() => {});
   }
-  // Also track in Supabase
-  getDb()?.from("interactions").insert({ type, source }).then(() => {});
 }
 
 const initialForm: LeadFormData = {
@@ -38,13 +44,21 @@ async function handleLeadSubmit(data: LeadFormData) {
   });
 }
 
-export default function Contact() {
+export default function Contact({ settings = {} }: ContactProps) {
   const [form, setForm] = useState<LeadFormData>(initialForm);
   const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
 
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Use database settings with fallbacks
+  const phone = settings.primary_phone || '+919676077142'
+  const whatsappNumber = settings.whatsapp_number || '919676077142'
+  const whatsappMessage = settings.whatsapp_default_message || 'Hi! I am interested in The Pavilion villas in Boduppal.'
+  const companyName = settings.company_name || 'Bommak Constructions'
+
+  const track = createTrackFunction(phone)
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -115,16 +129,16 @@ export default function Contact() {
                   Developer
                 </p>
                 <h3 style={{ color: "var(--ink)" }} className="font-heading text-xl font-medium mb-4">
-                  Bommak Constructions
+                  {companyName}
                 </h3>
                 <div className="space-y-2">
                   <a
-                    href="tel:+919676077142"
+                    href={`tel:${phone}`}
                     onClick={() => track("call", "contact")}
                     className="flex items-center gap-3 text-sm transition-opacity hover:opacity-70"
                     style={{ color: "var(--lnk)" }}
                   >
-                    <PhoneIcon /> +91 96760 77142
+                    <PhoneIcon /> {phone.replace('+91', '+91 ').replace(/(\d{5})(\d{5})/, '$1 $2')}
                   </a>
                   <a
                     href="mailto:bommakugroup@gmail.com"
@@ -138,7 +152,7 @@ export default function Contact() {
                     Surya Hills, Boduppal, Hyderabad
                   </p>
                   <a
-                    href="https://wa.me/919676077142"
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => track("whatsapp", "contact")}

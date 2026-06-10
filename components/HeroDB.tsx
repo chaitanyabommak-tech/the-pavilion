@@ -4,7 +4,7 @@ import Hero from './Hero'
 export default async function HeroDB() {
   const supabase = await createClient()
 
-  // Fetch hero section data from CMS (for future use)
+  // Fetch hero section data from CMS
   const { data: heroSection } = await supabase
     .from('website_sections')
     .select('*')
@@ -12,6 +12,6 @@ export default async function HeroDB() {
     .eq('is_visible', true)
     .single()
 
-  // TODO: Pass heroSection data to Hero component once Hero accepts props
-  return <Hero />
+  // Pass hero data to Hero component (uses fallback if DB is empty)
+  return <Hero heroData={heroSection} />
 }

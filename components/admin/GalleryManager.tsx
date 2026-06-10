@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import toast from 'react-hot-toast'
 import Image from 'next/image'
+import { useDropzone } from 'react-dropzone'
 
 interface GalleryItem {
   id: string
@@ -37,18 +38,92 @@ export default function GalleryManager({
   const [galleryItems, setGalleryItems] = useState(initialGalleryItems)
   const [editingItem, setEditingItem] = useState<GalleryItem | null>(null)
   const [showEditModal, setShowEditModal] = useState(false)
+  const [uploadingImage, setUploadingImage] = useState(false)
+  const [newImagePreview, setNewImagePreview] = useState<string | null>(null)
+  const [newImageFile, setNewImageFile] = useState<File | null>(null)
 
   const supabase = createClient()
 
   const handleEdit = (item: GalleryItem) => {
     setEditingItem(item)
     setShowEditModal(true)
+    setNewImagePreview(null)
+    setNewImageFile(null)
   }
 
-  const handleSave = async () => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0]
+    if (file) {
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        toast.error('Please upload an image file (JPG, PNG, WebP)')
+        return
+      }
+
+      // Validate file size (max 10MB)
+      if (file.size > 10 * 1024 * 1024) {
+        toast.error('Image must be less than 10MB')
+        return
+      }
+
+      setNewImageFile(file)
+      setNewImagePreview(URL.createObjectURL(file))
+      toast.success('Image selected. Click Save to upload.')
+    }
+  }, [])
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      'image/jpeg': ['.jpg', '.jpeg'],
+      'image/png': ['.png'],
+      'image/webp': ['.webp'],
+    },
+    maxFiles: 1,
+    multiple: false,
+  })
+
+  const handleRemoveNewImage = () => {
+    if (newImagePreview) {
+      URL.revokeObjectURL(newImagePreview)
+    }
+    setNewImagePreview(null)
+    setNewImageFile(null)
+  }
+
+  const handleUploadAndSave = async () => {
     if (!editingItem) return
 
     try {
+      setUploadingImage(true)
+
+      // If there's a new image, upload it first
+      let newImageId = editingItem.image?.id
+
+      if (newImageFile) {
+        const formData = new FormData()
+        formData.append('file', newImageFile)
+        formData.append('category', 'Gallery')
+        formData.append('alt_text', editingItem.alt_text || editingItem.title)
+        formData.append('caption', editingItem.caption || '')
+
+        const uploadResponse = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData,
+        })
+
+        if (!uploadResponse.ok) {
+          const errorData = await uploadResponse.json()
+          throw new Error(errorData.error || 'Upload failed')
+        }
+
+        const uploadResult = await uploadResponse.json()
+        newImageId = uploadResult.media.id
+
+        toast.success('Image uploaded successfully!')
+      }
+
+      // Update gallery item
       const { error } = await supabase
         .from('gallery_items')
         .update({
@@ -57,26 +132,24 @@ export default function GalleryManager({
           alt_text: editingItem.alt_text,
           is_active: editingItem.is_active,
           is_published: editingItem.is_published,
+          image_id: newImageId,
           updated_at: new Date().toISOString(),
         })
         .eq('id', editingItem.id)
 
       if (error) throw error
 
-      // Update local state
-      setGalleryItems(
-        galleryItems.map((item) =>
-          item.id === editingItem.id ? editingItem : item
-        )
-      )
+      toast.success('Gallery item updated and live on website!')
 
-      toast.success('Gallery item updated successfully')
-      setShowEditModal(false)
-      setEditingItem(null)
+      // Refresh the page to show updated data
+      window.location.reload()
     } catch (error: any) {
       toast.error(error.message || 'Failed to update gallery item')
+    } finally {
+      setUploadingImage(false)
     }
   }
+
 
   const handleTogglePublish = async (item: GalleryItem) => {
     try {
@@ -334,12 +407,13 @@ export default function GalleryManager({
                   </label>
                 </div>
 
-                {editingItem.image?.file_url && (
+                {/* Current Image */}
+                {editingItem.image?.file_url && !newImagePreview && (
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Current Image
                     </label>
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden mb-3">
                       <Image
                         src={editingItem.image.file_url}
                         alt={editingItem.alt_text}
@@ -349,6 +423,77 @@ export default function GalleryManager({
                     </div>
                   </div>
                 )}
+
+                {/* New Image Preview */}
+                {newImagePreview && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      New Image Preview
+                    </label>
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden mb-3">
+                      <Image
+                        src={newImagePreview}
+                        alt="Preview"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <button
+                      onClick={handleRemoveNewImage}
+                      className="text-sm text-red-600 hover:text-red-800 font-medium"
+                    >
+                      ✕ Remove selected image
+                    </button>
+                  </div>
+                )}
+
+                {/* Upload / Replace Image */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {editingItem.image?.file_url ? 'Replace Image' : 'Upload Image'}
+                  </label>
+                  <div
+                    {...getRootProps()}
+                    className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
+                      isDragActive
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 hover:border-gray-400 bg-gray-50'
+                    }`}
+                  >
+                    <input {...getInputProps()} />
+                    <div className="space-y-2">
+                      <svg
+                        className="mx-auto h-12 w-12 text-gray-400"
+                        stroke="currentColor"
+                        fill="none"
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      {isDragActive ? (
+                        <p className="text-sm text-gray-600">Drop the image here...</p>
+                      ) : (
+                        <>
+                          <p className="text-sm text-gray-600">
+                            <span className="font-medium text-blue-600 hover:text-blue-500">
+                              Click to upload
+                            </span>
+                            {' or drag and drop'}
+                          </p>
+                          <p className="text-xs text-gray-500">
+                            JPG, PNG, or WebP up to 10MB
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="flex justify-end space-x-3 mt-6 pt-6 border-t">
@@ -356,16 +501,41 @@ export default function GalleryManager({
                   onClick={() => {
                     setShowEditModal(false)
                     setEditingItem(null)
+                    handleRemoveNewImage()
                   }}
-                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                  disabled={uploadingImage}
+                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={handleSave}
-                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                  onClick={handleUploadAndSave}
+                  disabled={uploadingImage}
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                 >
-                  Save Changes
+                  {uploadingImage ? (
+                    <>
+                      <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      Uploading...
+                    </>
+                  ) : (
+                    'Save Changes'
+                  )}
                 </button>
               </div>
             </div>
