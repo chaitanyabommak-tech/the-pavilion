@@ -276,9 +276,45 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
 
       {/* Edit Modal */}
       {editingItem && !selectingImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <h3 className="text-xl font-bold mb-4">Edit Gallery Item</h3>
+
+            {/* Current Image Preview */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Current Image</label>
+              {editingItem.image?.file_url ? (
+                <div className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3">
+                  <Image
+                    src={editingItem.image.file_url}
+                    alt={editingItem.alt_text || editingItem.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-4xl">🖼️</span>
+                </div>
+              )}
+
+              {/* Replace/Upload Buttons */}
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  onClick={() => setSelectingImage(true)}
+                  className="px-4 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold"
+                >
+                  🔄 Replace Image
+                </button>
+                <a
+                  href="/admin/cms/media"
+                  target="_blank"
+                  className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold text-center"
+                >
+                  📤 Upload New Image
+                </a>
+              </div>
+            </div>
 
             <div className="space-y-4">
               <div>
