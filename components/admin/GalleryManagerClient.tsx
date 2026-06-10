@@ -144,6 +144,22 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
     <div>
       <Toaster position="top-right" />
 
+      {/* Upload Button */}
+      <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg shadow-lg p-6 mb-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-white mb-2">📸 Upload New Images</h2>
+            <p className="text-green-50">Upload images to cloud storage, then replace gallery items below</p>
+          </div>
+          <a
+            href="/admin/cms/media"
+            className="px-8 py-4 bg-white hover:bg-gray-100 text-green-600 rounded-lg text-lg font-bold shadow-lg transition-all hover:scale-105"
+          >
+            ↗ Go to Media Library
+          </a>
+        </div>
+      </div>
+
       {/* Gallery Items Grid */}
       <div className="bg-white rounded-lg shadow p-6">
         <div className="flex items-center justify-between mb-6">
@@ -332,11 +348,38 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
 
       {/* Image Selection Modal */}
       {editingItem && selectingImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <h3 className="text-xl font-bold mb-4">Select New Image for "{editingItem.title}"</h3>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-6 max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Select New Image for "{editingItem.title}"</h3>
+              <button
+                onClick={() => setSelectingImage(false)}
+                className="text-gray-500 hover:text-gray-700 text-3xl leading-none"
+              >
+                ×
+              </button>
+            </div>
 
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-4 mb-4">
+            {/* Upload Button - Prominent */}
+            <div className="bg-green-50 border-2 border-green-500 border-dashed rounded-lg p-6 mb-6 text-center">
+              <p className="text-lg font-semibold text-gray-900 mb-3">
+                📸 Don't see your image? Upload it first!
+              </p>
+              <a
+                href="/admin/cms/media"
+                target="_blank"
+                className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg text-lg font-bold shadow-lg transition-all hover:scale-105"
+              >
+                ↗ Upload New Image to Media Library
+              </a>
+              <p className="text-sm text-gray-600 mt-3">
+                After uploading, refresh this page to see your new images
+              </p>
+            </div>
+
+            <p className="text-sm font-medium text-gray-700 mb-3">Or select from existing images:</p>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
               {mediaAssets.map((asset) => (
                 <button
                   key={asset.id}
@@ -354,19 +397,13 @@ export default function GalleryManagerClient({ initialGallery, mediaAssets }: Ga
               ))}
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex justify-center pt-4">
               <button
                 onClick={() => setSelectingImage(false)}
-                className="flex-1 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg"
+                className="px-8 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold"
               >
                 Cancel
               </button>
-              <a
-                href="/admin/cms/media"
-                className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center"
-              >
-                Upload New Image
-              </a>
             </div>
           </div>
         </div>
