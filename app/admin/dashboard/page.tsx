@@ -152,34 +152,48 @@ export default async function AdminDashboard() {
       {/* Quick Actions */}
       <div className="mt-8 bg-white rounded-lg shadow-md p-6 border border-gray-200">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <a
-            href="/admin/media"
+            href="/admin/cms/media"
             className="flex flex-col items-center justify-center p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
           >
-            <span className="text-3xl mb-2">🖼️</span>
-            <span className="text-sm font-medium text-gray-900">Upload Media</span>
+            <span className="text-3xl mb-2">📁</span>
+            <span className="text-sm font-medium text-gray-900">Media Library</span>
           </a>
           <a
-            href="/admin/gallery"
+            href="/admin/cms/gallery"
             className="flex flex-col items-center justify-center p-4 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
           >
             <span className="text-3xl mb-2">🎨</span>
-            <span className="text-sm font-medium text-gray-900">Edit Gallery</span>
+            <span className="text-sm font-medium text-gray-900">Gallery</span>
           </a>
           <a
-            href="/admin/villas"
+            href="/admin/cms/villas"
             className="flex flex-col items-center justify-center p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors"
           >
             <span className="text-3xl mb-2">🏘️</span>
-            <span className="text-sm font-medium text-gray-900">Manage Villas</span>
+            <span className="text-sm font-medium text-gray-900">Villas</span>
           </a>
           <a
-            href="/admin/leads"
+            href="/admin/crm"
             className="flex flex-col items-center justify-center p-4 bg-yellow-50 hover:bg-yellow-100 rounded-lg transition-colors"
           >
             <span className="text-3xl mb-2">👥</span>
-            <span className="text-sm font-medium text-gray-900">View Leads</span>
+            <span className="text-sm font-medium text-gray-900">CRM</span>
+          </a>
+          <a
+            href="/admin/cms/sections"
+            className="flex flex-col items-center justify-center p-4 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors"
+          >
+            <span className="text-3xl mb-2">📝</span>
+            <span className="text-sm font-medium text-gray-900">Sections</span>
+          </a>
+          <a
+            href="/admin/cms"
+            className="flex flex-col items-center justify-center p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            <span className="text-3xl mb-2">⚙️</span>
+            <span className="text-sm font-medium text-gray-900">CMS</span>
           </a>
         </div>
       </div>
