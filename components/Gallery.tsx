@@ -79,7 +79,7 @@ export default function Gallery() {
                       fill
                       className="object-cover"
                       sizes="100vw"
-                      quality={85}
+                      quality={100}
                       loading={idx === 0 ? "eager" : "lazy"}
                       priority={idx === 0}
                     />
@@ -138,7 +138,7 @@ export default function Gallery() {
                   fill
                   className="object-cover"
                   sizes="80px"
-                  quality={60}
+                  quality={100}
                   loading="lazy"
                 />
               </button>
@@ -186,7 +186,7 @@ export default function Gallery() {
                   fill
                   className="object-contain"
                   sizes="(max-width: 1280px) 100vw, 1280px"
-                  quality={90}
+                  quality={100}
                   priority
                 />
               </div>

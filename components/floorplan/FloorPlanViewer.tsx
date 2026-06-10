@@ -111,7 +111,7 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
                   className="w-full h-auto object-contain"
                   style={{ maxHeight: "500px" }}
                   loading="lazy"
-                  quality={85}
+                  quality={100}
                 />
               </div>
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/80 text-white text-xs px-3 py-2 flex items-center gap-2 rounded">
@@ -167,7 +167,7 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
               width={1200}
               height={900}
               className="max-w-6xl max-h-[90vh] w-auto h-auto object-contain cursor-zoom-out"
-              quality={90}
+              quality={100}
               priority
             />
           </motion.div>

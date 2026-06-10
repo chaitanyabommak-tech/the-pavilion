@@ -72,7 +72,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             fill
             className="object-cover object-top"
             priority
-            quality={90}
+            quality={100}
             sizes="100vw"
           />
           {/* Cinematic gradient: dark top (navbar contrast) → light mid → dark bottom (card contrast) */}
@@ -179,7 +179,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
               fill
               className="object-cover object-center"
               priority
-              quality={90}
+              quality={100}
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
           </motion.div>

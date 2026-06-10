@@ -124,7 +124,7 @@ export default function WestFacingSection() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    quality={85}
+                    quality={100}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -164,7 +164,7 @@ export default function WestFacingSection() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    quality={85}
+                    quality={100}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -237,7 +237,7 @@ export default function WestFacingSection() {
                   fill
                   className="object-contain"
                   sizes="(max-width: 1280px) 100vw, 1280px"
-                  quality={90}
+                  quality={100}
                   priority
                 />
               </div>

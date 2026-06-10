@@ -96,7 +96,7 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
                 fill
                 className="object-cover"
                 sizes="(max-width: 1280px) 100vw, 1280px"
-                quality={90}
+                quality={100}
                 priority
               />
             </div>
