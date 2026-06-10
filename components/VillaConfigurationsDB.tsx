@@ -2,6 +2,10 @@ import { createClient } from '@/lib/supabase/server'
 import VillaConfigurations from './VillaConfigurations'
 import { Villa } from '@/data/pavilionVillas'
 
+// Force fresh data on every request
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 // Convert database villa to Villa type
 function convertDBVilla(dbVilla: any): Villa {
   return {

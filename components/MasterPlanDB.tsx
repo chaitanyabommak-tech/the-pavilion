@@ -1,6 +1,10 @@
 import { createClient } from '@/lib/supabase/server'
 import MasterPlan from './MasterPlan'
 
+// Force fresh data on every request
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default async function MasterPlanDB() {
   const supabase = await createClient()
 

@@ -1,6 +1,10 @@
 import { createClient } from '@/lib/supabase/server'
 import FloatingCTA from './FloatingCTA'
 
+// Force fresh data on every request
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default async function FloatingCTADB() {
   const supabase = await createClient()
 
