@@ -42,6 +42,8 @@ export default async function CMSOverviewPage() {
     { name: 'Gallery Manager', desc: 'Edit gallery carousel images and order', icon: '🎨', href: '/admin/cms/gallery', color: 'bg-purple-500' },
     { name: 'Villa Inventory', desc: 'Manage villa data, status, and floor plans', icon: '🏘️', href: '/admin/cms/villas', color: 'bg-green-500' },
     { name: 'Section Editor', desc: 'Edit website text and content sections', icon: '📝', href: '/admin/cms/sections', color: 'bg-yellow-500' },
+    { name: 'Recreation Zone', desc: 'Manage amenities and features', icon: '🏊', href: '/admin/cms/recreation-zone', color: 'bg-cyan-500' },
+    { name: 'Clean Slate', desc: 'Edit customization process steps', icon: '✏️', href: '/admin/cms/clean-slate', color: 'bg-teal-500' },
     { name: 'CTA Settings', desc: 'Update phone, WhatsApp, and CTAs', icon: '📞', href: '/admin/cms/cta', color: 'bg-red-500' },
     { name: 'SEO Manager', desc: 'Manage meta tags and SEO settings', icon: '🔍', href: '/admin/cms/seo', color: 'bg-indigo-500' },
   ]
