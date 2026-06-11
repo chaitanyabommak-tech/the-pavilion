@@ -71,7 +71,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
                     alt={images[current].alt}
                     fill
                     className="object-cover"
-                    priority={current === 0}
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                   />
                 </motion.div>
@@ -108,29 +108,7 @@ export default function GalleryClient({ images }: GalleryClientProps) {
             </div>
           </motion.div>
 
-          {/* Thumbnail Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="grid grid-cols-3 md:grid-cols-9 gap-3 md:gap-4"
-          >
-            {images.map((img, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`relative aspect-square overflow-hidden transition-all ${idx === current ? "ring-2 ring-offset-2 ring-[var(--accent)]" : "opacity-60 hover:opacity-100"}`}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 33vw, 11vw"
-                />
-              </button>
-            ))}
-          </motion.div>
+          {/* Thumbnail Row - REMOVED for seamless gallery */}
         </div>
       </section>
 
