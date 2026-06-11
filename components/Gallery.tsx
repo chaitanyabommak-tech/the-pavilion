@@ -118,32 +118,7 @@ export default function Gallery() {
             </p>
           </div>
 
-          {/* Thumbnail strip - Clean horizontal layout */}
-          <div className="mt-4 flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'thin' }}>
-            {images.map((img, i) => (
-              <button
-                key={img.src}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to ${img.caption}`}
-                className={`shrink-0 w-20 h-12 relative overflow-hidden transition-all duration-200 ${
-                  i === current ? "ring-2 ring-offset-2" : "opacity-35 hover:opacity-70"
-                }`}
-                style={i === current
-                  ? { "--tw-ring-color": "var(--ring-c)", "--tw-ring-offset-color": "var(--ring-off)" } as React.CSSProperties
-                  : {}}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.caption}
-                  fill
-                  className="object-cover"
-                  sizes="80px"
-                  quality={100}
-                  loading="lazy"
-                />
-              </button>
-            ))}
-          </div>
+          {/* Thumbnail strip - REMOVED for seamless minimal gallery */}
         </div>
       </section>
 
