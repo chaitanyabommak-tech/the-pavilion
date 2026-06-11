@@ -80,8 +80,7 @@ export default function Gallery() {
                       className="object-cover"
                       sizes="100vw"
                       quality={100}
-                      loading={idx === 0 ? "eager" : "lazy"}
-                      priority={idx === 0}
+                      loading="lazy"
                     />
                   </div>
                 ))}
