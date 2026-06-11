@@ -67,7 +67,7 @@ export default function Gallery() {
                 transition={{ duration: 0.4, ease: [0.32, 0, 0.67, 0] }}
                 style={{ willChange: "transform" }}
               >
-                {images.map((img, idx) => (
+                {images.map((img) => (
                   <div
                     key={img.src}
                     className="w-full shrink-0 aspect-[16/9] relative cursor-zoom-in overflow-hidden"
