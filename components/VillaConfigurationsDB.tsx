@@ -29,17 +29,11 @@ function convertDBVilla(dbVilla: any): Villa {
 }
 
 export default async function VillaConfigurationsDB() {
-  const supabase = await createClient()
+  // FORCE USE OF FALLBACK DATA
+  // Database has incomplete villa data (missing units A5, B4-B5, C4-C5, etc.)
+  // Fallback data in pavilionVillas.ts has all 40 units complete
+  // By passing undefined, VillaConfigurations will use complete fallback data
 
-  // Fetch villas from database
-  const { data: dbVillas } = await supabase
-    .from('villas')
-    .select('*')
-    .order('villa_id', { ascending: true })
-
-  // Convert to Villa type
-  const villas: Villa[] = dbVillas ? dbVillas.map(convertDBVilla) : []
-
-  // Pass to client component
-  return <VillaConfigurations villas={villas.length > 0 ? villas : undefined} />
+  // Pass undefined to force fallback usage
+  return <VillaConfigurations villas={undefined} />
 }
