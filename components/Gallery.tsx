@@ -161,7 +161,7 @@ export default function Gallery() {
                   className="object-contain"
                   sizes="(max-width: 1280px) 100vw, 1280px"
                   quality={100}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <p className="text-[#9A8F87] text-sm tracking-widest uppercase mt-4">
