@@ -118,8 +118,8 @@ export default function Gallery() {
             </p>
           </div>
 
-          {/* Thumbnail strip - HIDDEN for seamless gallery */}
-          {/* <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
+          {/* Thumbnail strip - Clean horizontal layout */}
+          <div className="mt-4 flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'thin' }}>
             {images.map((img, i) => (
               <button
                 key={img.src}
@@ -143,7 +143,7 @@ export default function Gallery() {
                 />
               </button>
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
 
