@@ -25,18 +25,18 @@ const westFacingVillas = {
   interiors: [
     {
       src: "/images/pavilion/interiors/living-room-02.jpg",
-      alt: "West Facing villa interior with warm afternoon light",
-      caption: "Living Space"
-    },
-    {
-      src: "/images/pavilion/interiors/kitchen-02.jpg",
-      alt: "West Facing villa luxury kitchen with island and premium fittings",
+      alt: "Premium kitchen interior in West Facing villa at The Pavilion",
       caption: "Premium Kitchen"
     },
     {
+      src: "/images/pavilion/interiors/kitchen-02.jpg",
+      alt: "Master bedroom interior in West Facing villa at The Pavilion",
+      caption: "Master Bedroom"
+    },
+    {
       src: "/images/pavilion/interiors/master-bedroom-02.jpg",
-      alt: "West Facing villa master bedroom with contemporary design",
-      caption: "Master Suite"
+      alt: "Private bedroom suite interior in West Facing villa at The Pavilion",
+      caption: "Private Bedroom Suite"
     }
   ]
 };

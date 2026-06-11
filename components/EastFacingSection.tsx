@@ -25,18 +25,18 @@ const eastFacingVillas = {
   interiors: [
     {
       src: "/images/pavilion/interiors/dining-kitchen.jpg",
-      alt: "East Facing villa dining and kitchen space with family setting",
-      caption: "Dining & Kitchen"
+      alt: "Premium kitchen interior in East Facing villa at The Pavilion",
+      caption: "Premium Kitchen"
     },
     {
       src: "/images/pavilion/interiors/master-bedroom-01.jpg",
-      alt: "East Facing villa master bedroom with contemporary design",
-      caption: "Master Bedroom"
+      alt: "Living lounge interior in East Facing villa at The Pavilion",
+      caption: "Living Lounge"
     },
     {
       src: "/images/pavilion/interiors/living-room-01.jpg",
-      alt: "East Facing villa living space with natural morning light",
-      caption: "Living Space"
+      alt: "Family dining interior in East Facing villa at The Pavilion",
+      caption: "Family Dining"
     }
   ]
 };
