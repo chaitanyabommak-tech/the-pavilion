@@ -129,7 +129,7 @@ export default function Footer({ settings = {} }: FooterProps) {
               <a href="/disclaimer">Disclaimer</a>
             </div>
             <p className="footer-copy">
-              © 2025 {companyName}. All rights reserved.
+              © 2026 {companyName}. All rights reserved.
             </p>
             <p className="footer-tagline" style={{ fontSize: '11px', marginTop: '8px', opacity: 0.7 }}>
               A Bommaku Group Company | HMDA Registered Project

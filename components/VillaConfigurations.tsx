@@ -15,8 +15,8 @@ const types = [
 ];
 
 const villas = [
-  { typeId:"a", label:"Type A — East Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-150e.png",  price:"₹1.7 Cr onwards"  },
-  { typeId:"a", label:"Type A — West Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-150w.png",  price:"₹1.7 Cr onwards"  },
+  { typeId:"a", label:"Type A — East Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-150e.png",  price:"₹1.87 Cr onwards"  },
+  { typeId:"a", label:"Type A — West Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-150w.png",  price:"₹1.87 Cr onwards"  },
   { typeId:"b", label:"Type B — 165 NE Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North East", floorplan:"/assets/floorplan-165ne.png", price:"₹1.9 Cr onwards"  },
   { typeId:"b", label:"Type B — 165 NW Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North West", floorplan:"/assets/floorplan-165nw.png", price:"₹1.9 Cr onwards"  },
   { typeId:"b", label:"Type B — 167 East Facing",plot:"167 Sq. Yds", dimensions:"30 × 50 ft", builtup:"Ground: 866 | First: 866 | Second: 603 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-167e.png",  price:"₹2.1 Cr onwards"  },

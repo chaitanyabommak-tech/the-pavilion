@@ -24,7 +24,7 @@ const pricingCards = [
     plot: "150 Sq. Yds (30×45)",
     builtup: "2,200 SFT",
     facing: "West Facing",
-    price: "₹1.7 Cr – ₹1.9 Cr",
+    price: "₹1.87 Cr – ₹1.9 Cr",
     priceNote: "Warm evening light",
     highlight: false,
   },

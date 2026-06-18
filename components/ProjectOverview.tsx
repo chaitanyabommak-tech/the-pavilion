@@ -11,7 +11,7 @@ function track(type: "whatsapp" | "call", source: string) {
 import LeadFormModal from "./LeadFormModal";
 
 const projectFacts = [
-  { label: "Developer", value: "Bommak Constructions" },
+  { label: "Developer", value: "Bommaku Group" },
   { label: "Registration", value: "Registered HMDA Circle Project" },
   { label: "Location", value: "Surya Hills, Boduppal, East Hyderabad" },
   { label: "Total Site Area", value: "3 Acres" },
@@ -65,7 +65,7 @@ export default function ProjectOverview() {
               </p>
               <p className="text-warm-gray text-base leading-relaxed mb-10">
                 After delivering R.N.S Dream Homes, Boduppal's first community living
-                destination for 120 families, Bommak Constructions now brings The
+                destination for 120 families, Bommaku Group now brings The
                 Pavillion: a smaller, more curated chapter. Limited to 40 families.
                 Limited by design.
               </p>

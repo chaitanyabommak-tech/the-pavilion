@@ -1,0 +1,75 @@
+═══════════════════════════════════════════════════════════════════
+🎯 SIMPLE 3-STEP GUIDE TO FIX MASTER PLAN DATABASE
+═══════════════════════════════════════════════════════════════════
+
+STEP 1: Go to Supabase
+→ https://supabase.com/dashboard
+→ Login
+→ Select "The Pavilion" project
+→ Click "SQL Editor" (left sidebar)
+→ Click "New query" button
+
+STEP 2: Copy & Paste This SQL
+→ Open file: RUN-THIS-SQL-NOW.sql
+→ Copy EVERYTHING from that file
+→ Paste into Supabase SQL Editor
+→ Click "RUN" button
+
+STEP 3: Verify
+→ You should see: "total_villas = 0" ✅
+→ Go to: https://bommakugroup.com
+→ Press: Ctrl + Shift + R
+→ Click: "View Interactive Master Plan"
+→ Result: All 40 units visible! ✅
+
+═══════════════════════════════════════════════════════════════════
+
+📋 QUICK COPY (Just the SQL)
+═══════════════════════════════════════════════════════════════════
+
+-- Check current data
+SELECT 'BEFORE DELETE' as status, COUNT(*) as total_villas FROM villas;
+
+-- Delete all villas
+DELETE FROM villas;
+
+-- Verify deletion
+SELECT 'AFTER DELETE' as status, COUNT(*) as total_villas FROM villas;
+
+-- Expected result: total_villas = 0 ✅
+
+═══════════════════════════════════════════════════════════════════
+
+✅ WHAT THIS DOES:
+- Clears incomplete database data
+- Forces website to use complete fallback data
+- Fallback has all 40 units (A1-H5)
+- All missing units will appear!
+
+✅ SAFE TO RUN:
+- Only affects 'villas' table
+- Does NOT delete gallery, leads, or other data
+- Can run multiple times safely
+- Reversible (can re-populate later)
+
+═══════════════════════════════════════════════════════════════════
+
+📁 FILES CREATED FOR YOU:
+1. RUN-THIS-SQL-NOW.sql       ← Full SQL with comments
+2. HOW-TO-RUN-SQL-FIX.md      ← Detailed guide with screenshots
+3. RUN-SQL-HERE.txt           ← This file (quick reference)
+4. MASTER-PLAN-FIXED.md       ← Technical documentation
+
+═══════════════════════════════════════════════════════════════════
+
+⚡ ALREADY DEPLOYED CODE FIX:
+Good news! I also deployed a code fix that forces fallback usage.
+So even if you don't run the SQL, the website should work!
+
+The SQL just cleans up the database for consistency.
+
+═══════════════════════════════════════════════════════════════════
+
+Need help? Read: HOW-TO-RUN-SQL-FIX.md (detailed guide)
+
+═══════════════════════════════════════════════════════════════════

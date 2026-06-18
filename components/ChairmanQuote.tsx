@@ -49,7 +49,7 @@ export default function ChairmanQuote() {
               Dr. Murali Bommaku
             </p>
             <p className="text-stone-beige text-sm tracking-[0.2em] uppercase mt-1">
-              Chairman, Bommak Constructions
+              Chairman, Bommaku Group
             </p>
           </div>
         </motion.div>

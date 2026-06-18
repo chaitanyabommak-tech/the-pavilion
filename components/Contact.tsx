@@ -56,7 +56,7 @@ export default function Contact({ settings = {} }: ContactProps) {
   const phone = settings.primary_phone || '+919676077142'
   const whatsappNumber = settings.whatsapp_number || '919676077142'
   const whatsappMessage = settings.whatsapp_default_message || 'Hi! I am interested in The Pavillion villas in Boduppal.'
-  const companyName = settings.company_name || 'Bommak Constructions'
+  const companyName = settings.company_name || 'Bommaku Group'
 
   const track = createTrackFunction(phone)
 

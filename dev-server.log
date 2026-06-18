@@ -232,3 +232,6 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 ✓ Compiled in 130ms
 ✓ Compiled in 111ms
 ✓ Compiled in 298ms
+✓ Compiled in 181ms
+ GET /health 404 in 1859ms (next.js: 467ms, application-code: 1392ms)
+✓ Compiled in 139ms
