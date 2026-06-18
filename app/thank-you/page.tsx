@@ -63,7 +63,7 @@ export default function ThankYouPage() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <a
-            href="https://wa.me/919676077142?text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20for%20The%20Pavilion.%20Can%20you%20help%20me%3F"
+            href="https://wa.me/919676077142?text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20for%20The%20Pavillion.%20Can%20you%20help%20me%3F"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('thank_you_page')}

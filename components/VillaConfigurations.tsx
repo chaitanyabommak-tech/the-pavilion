@@ -6,7 +6,7 @@ import LeadFormModal from "./LeadFormModal";
 import SchematicMasterPlan from "./floorplan/SchematicMasterPlan";
 import SelectedVillaPanel from "./floorplan/SelectedVillaPanel";
 import FloorPlanViewer from "./floorplan/FloorPlanViewer";
-import { pavilionVillas as fallbackPavilionVillas, Villa } from "@/data/pavilionVillas";
+import { pavilionVillas as fallbackPavillionVillas, Villa } from "@/data/pavilionVillas";
 
 const types = [
   { id: "a", label: "Type A" },
@@ -38,7 +38,7 @@ interface VillaConfigurationsProps {
 
 export default function VillaConfigurations({ villas: dbVillas }: VillaConfigurationsProps = {}) {
   // Use database villas if provided, fallback to hardcoded
-  const pavilionVillas = dbVillas || fallbackPavilionVillas;
+  const pavilionVillas = dbVillas || fallbackPavillionVillas;
   // Original floor plan state
   const [activeType, setActiveType] = useState("a");
   const [activeVilla, setActiveVilla] = useState(0);

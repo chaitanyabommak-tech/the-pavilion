@@ -8,7 +8,7 @@ const westFacingVillas = {
   exteriors: [
     {
       src: "/images/pavilion/exteriors/villa-street-view-02.jpg",
-      alt: "West Facing villa facade at The Pavilion with contemporary architectural expression",
+      alt: "West Facing villa facade at The Pavillion with contemporary architectural expression",
       caption: "West Facing Variation 01"
     },
     {
@@ -25,17 +25,17 @@ const westFacingVillas = {
   interiors: [
     {
       src: "/images/pavilion/interiors/living-room-02.jpg",
-      alt: "Premium kitchen interior in West Facing villa at The Pavilion",
+      alt: "Premium kitchen interior in West Facing villa at The Pavillion",
       caption: "Premium Kitchen"
     },
     {
       src: "/images/pavilion/interiors/kitchen-02.jpg",
-      alt: "Master bedroom interior in West Facing villa at The Pavilion",
+      alt: "Master bedroom interior in West Facing villa at The Pavillion",
       caption: "Master Bedroom"
     },
     {
       src: "/images/pavilion/interiors/master-bedroom-02.jpg",
-      alt: "Private bedroom suite interior in West Facing villa at The Pavilion",
+      alt: "Private bedroom suite interior in West Facing villa at The Pavillion",
       caption: "Private Bedroom Suite"
     }
   ]
@@ -92,7 +92,7 @@ export default function WestFacingSection() {
             <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
             <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed max-w-3xl mb-6">
-              The West Facing villas at The Pavilion bring together bold facade expression, strong architectural presence, and adaptable interior possibilities. Through The Clean Slate process, these homes can be shaped around the buyer's priorities while preserving the premium design language of the community.
+              The West Facing villas at The Pavillion bring together bold facade expression, strong architectural presence, and adaptable interior possibilities. Through The Clean Slate process, these homes can be shaped around the buyer's priorities while preserving the premium design language of the community.
             </p>
           </motion.div>
 

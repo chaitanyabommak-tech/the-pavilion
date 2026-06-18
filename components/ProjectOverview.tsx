@@ -66,7 +66,7 @@ export default function ProjectOverview() {
               <p className="text-warm-gray text-base leading-relaxed mb-10">
                 After delivering R.N.S Dream Homes, Boduppal's first community living
                 destination for 120 families, Bommak Constructions now brings The
-                Pavilion: a smaller, more curated chapter. Limited to 40 families.
+                Pavillion: a smaller, more curated chapter. Limited to 40 families.
                 Limited by design.
               </p>
 

@@ -8,7 +8,7 @@ const eastFacingVillas = {
   exteriors: [
     {
       src: "/images/pavilion/exteriors/villa-street-view-01.jpg",
-      alt: "East Facing villa facade at The Pavilion with premium architectural detailing",
+      alt: "East Facing villa facade at The Pavillion with premium architectural detailing",
       caption: "East Facing Variation 01"
     },
     {
@@ -25,17 +25,17 @@ const eastFacingVillas = {
   interiors: [
     {
       src: "/images/pavilion/interiors/dining-kitchen.jpg",
-      alt: "Premium kitchen interior in East Facing villa at The Pavilion",
+      alt: "Premium kitchen interior in East Facing villa at The Pavillion",
       caption: "Premium Kitchen"
     },
     {
       src: "/images/pavilion/interiors/master-bedroom-01.jpg",
-      alt: "Living lounge interior in East Facing villa at The Pavilion",
+      alt: "Living lounge interior in East Facing villa at The Pavillion",
       caption: "Living Lounge"
     },
     {
       src: "/images/pavilion/interiors/living-room-01.jpg",
-      alt: "Family dining interior in East Facing villa at The Pavilion",
+      alt: "Family dining interior in East Facing villa at The Pavillion",
       caption: "Family Dining"
     }
   ]
@@ -92,7 +92,7 @@ export default function EastFacingSection() {
             <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
             <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed max-w-3xl mb-6">
-              The East Facing villas at The Pavilion are designed to combine premium facade language with spacious internal planning. Each home can reflect a refined exterior identity while also supporting personalized interior choices through The Clean Slate process.
+              The East Facing villas at The Pavillion are designed to combine premium facade language with spacious internal planning. Each home can reflect a refined exterior identity while also supporting personalized interior choices through The Clean Slate process.
             </p>
           </motion.div>
 

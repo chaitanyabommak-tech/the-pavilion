@@ -78,7 +78,7 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
               A villa community where your home is not forced into a cookie-cutter layout.
             </p>
             <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed max-w-3xl mx-auto">
-              At The Pavilion, we believe a home should reflect the people who live in it. The Clean Slate is our buyer-personalization approach, where the structural framework remains strong, while the internal planning and lifestyle choices are shaped around your vision.
+              At The Pavillion, we believe a home should reflect the people who live in it. The Clean Slate is our buyer-personalization approach, where the structural framework remains strong, while the internal planning and lifestyle choices are shaped around your vision.
             </p>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
             <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-lg">
               <Image
                 src="/images/pavilion/exteriors/villa-front-elevation-02.jpg"
-                alt="The Pavilion villa showcasing The Clean Slate customization possibilities"
+                alt="The Pavillion villa showcasing The Clean Slate customization possibilities"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1280px) 100vw, 1280px"

@@ -100,7 +100,7 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
       if (type === "brochure") {
         const link = document.createElement("a");
         link.href = "/assets/pavilion-brochure.pdf";
-        link.download = "The-Pavilion-Brochure.pdf";
+        link.download = "The-Pavillion-Brochure.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

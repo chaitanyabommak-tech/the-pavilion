@@ -133,7 +133,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
                 className="w-full aspect-[4/3] bg-cover bg-center"
                 style={{ backgroundImage: "url('/images/pavilion/recreation-zone/aerial-view-01.jpg')", background: "url('/images/pavilion/recreation-zone/aerial-view-01.jpg') center/cover, var(--img-ph)" }}
                 role="img"
-                aria-label="Bommaku Recreation Zone at The Pavilion villa community"
+                aria-label="Bommaku Recreation Zone at The Pavillion villa community"
               />
               <div className="mt-4 grid grid-cols-3 gap-px" style={{ background: "var(--gap)" }}>
                 {[
@@ -285,7 +285,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
                   background: "url('/images/pavilion/entrance/grand-entrance-sunset.jpg') center/cover, var(--img-ph)"
                 }}
                 role="img"
-                aria-label="The Pavilion grand entrance at sunset with recreation zone visible"
+                aria-label="The Pavillion grand entrance at sunset with recreation zone visible"
               />
             </div>
           </motion.div>
