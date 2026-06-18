@@ -1,6 +1,6 @@
 /**
- * The Pavilion Media Asset Configuration
- * Centralized media management for The Pavilion villa community
+ * The Pavillion Media Asset Configuration
+ * Centralized media management for The Pavillion villa community
  */
 
 export const pavilionMedia = {
@@ -9,7 +9,7 @@ export const pavilionMedia = {
     community: [
       {
         src: "/images/pavilion/exteriors/villa-street-view-01.jpg",
-        alt: "The Pavilion villa community street view with luxury duplex houses at golden hour",
+        alt: "The Pavillion villa community street view with luxury duplex houses at golden hour",
         caption: "Villa Community Street View",
         category: "community"
       },
@@ -21,7 +21,7 @@ export const pavilionMedia = {
       },
       {
         src: "/images/pavilion/exteriors/villa-street-view-03.jpg",
-        alt: "Evening view of The Pavilion villas with warm interior lighting",
+        alt: "Evening view of The Pavillion villas with warm interior lighting",
         caption: "Evening Villa View",
         category: "community"
       },
@@ -144,12 +144,12 @@ export const pavilionMedia = {
   entrance: [
     {
       src: "/images/pavilion/entrance/main-gate-01.jpg",
-      alt: "The Pavilion main entrance gate with Bommaku Group branding",
+      alt: "The Pavillion main entrance gate with Bommaku Group branding",
       caption: "Main Entrance"
     },
     {
       src: "/images/pavilion/entrance/entry-gate-evening.jpg",
-      alt: "Evening view of The Pavilion entry gate with architectural lighting",
+      alt: "Evening view of The Pavillion entry gate with architectural lighting",
       caption: "Entry Gate Evening"
     }
   ],
@@ -165,12 +165,12 @@ export const pavilionMedia = {
 export const galleryImages = [
   {
     src: "/images/pavilion/exteriors/villa-street-view-01.jpg",
-    alt: "The Pavilion villa community living - premium street view at golden hour",
+    alt: "The Pavillion villa community living - premium street view at golden hour",
     caption: "Community Living"
   },
   {
     src: "/images/pavilion/entrance/main-gate-01.jpg",
-    alt: "The Pavilion main entrance with modern architecture",
+    alt: "The Pavillion main entrance with modern architecture",
     caption: "Grand Entrance"
   },
   {

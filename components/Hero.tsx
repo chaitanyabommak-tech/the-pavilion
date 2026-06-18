@@ -43,7 +43,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
 
   // Use database values with fallbacks to current hardcoded text
   const eyebrow = heroData?.eyebrow || "40 Luxury Villas in Boduppal, Hyderabad"
-  const headline = heroData?.headline || "THE PAVILLION"
+  const headline = heroData?.headline || "The Pavillion"
   const subheadline = heroData?.subheadline || "Your parents dreamed of a home like this.\nYou're buying it."
   const bodyCopy = heroData?.body_copy || "Premium standalone villas in Surya Hills, Boduppal.\nG+1+Penthouse | 3BHK | 30,000 SFT Recreation Zone\nHMDA Registered | From ₹1.87 Cr onwards"
   const ctaPrimary = heroData?.cta_primary_label || "Book Site Visit"
