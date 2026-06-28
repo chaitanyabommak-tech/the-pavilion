@@ -40,7 +40,7 @@ async function seedSections() {
       title: 'Bommaku Recreation Zone',
       eyebrow: 'AMENITIES',
       headline: 'Bommaku Recreation Zone',
-      subheadline: '30,000 SFT of World-Class Amenities',
+      subheadline: '24,000 SFT of World-Class Amenities',
       body_copy: 'Infinity pool, sports courts, fitness center, and more. Exclusively for villa owners.',
       cta_label: 'Explore Amenities',
       cta_url: '#recreation',

@@ -8,7 +8,7 @@ const amenityGroups = [
     label: "Recreation",
     items: [
       "Infinity Pool with Sunset View",
-      "30,000 SFT Recreation Zone",
+      "24,000 SFT Recreation Zone",
       "Beach Deck & Cabana Pods",
       "Rooftop Lawn & Function Deck",
       "In-house Coffee Shop (Rooftop)",
@@ -90,7 +90,7 @@ export default function Amenities() {
               Lifestyle &amp; Recreation
             </p>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
-              30,000 SFT
+              24,000 SFT
               <br />
               <span style={{ color: "var(--ink-3)" }} className="italic">Recreation Zone.</span>
             </h2>

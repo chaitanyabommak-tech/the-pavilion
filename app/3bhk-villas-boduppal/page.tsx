@@ -235,7 +235,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            30,000 SFT recreation zone for only 40 families = 750 SFT per family. Most projects offer 200 SFT per family. 3-4x more space for your family to enjoy.
+            24,000 SFT recreation zone for only 40 families = 750 SFT per family. Most projects offer 200 SFT per family. 3-4x more space for your family to enjoy.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -253,7 +253,7 @@ export default function ThreeBHKVillasBodupalPage() {
             <div className="p-4" style={{ background: "var(--surface)", borderRadius: "8px" }}>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-3">Convenience</h3>
               <ul className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
-                <li>✓ Recreation Zone (30,000 SFT)</li>
+                <li>✓ Recreation Zone (24,000 SFT)</li>
                 <li>✓ Visitor Parking</li>
                 <li>✓ 24/7 Security (CCTV)</li>
                 <li>✓ Power Backup</li>

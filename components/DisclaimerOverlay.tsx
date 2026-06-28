@@ -7,7 +7,7 @@ const stats = [
   { value: "40",            label: "Villas"        },
   { value: "G+1+Penthouse", label: "Config"        },
   { value: "3 Acres",       label: "Site Area"     },
-  { value: "30,000 SFT",   label: "Rec Zone"      },
+  { value: "24,000 SFT",   label: "Rec Zone"      },
   { value: "Boduppal",      label: "East Hyd."     },
 ];
 

@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "What amenities are provided?",
-    answer: "The Pavillion features a 30,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga room, sauna, sports courts (football, pickleball, cricket), restaurant, cafe, Zen garden, kids' play area, and professionally managed wellness and lifestyle facilities."
+    answer: "The Pavillion features a 24,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga room, sauna, sports courts (football, pickleball, cricket), restaurant, cafe, Zen garden, kids' play area, and professionally managed wellness and lifestyle facilities."
   },
   {
     question: "Do you provide bank loan assistance?",

@@ -24,7 +24,7 @@ const stats = [
   { value: "40",            label: "Villas"           },
   { value: "G+1+Penthouse", label: "Configuration"    },
   { value: "3 Acres",       label: "Site Area"         },
-  { value: "30,000 SFT",   label: "Recreation Zone"  },
+  { value: "24,000 SFT",   label: "Recreation Zone"  },
   { value: "Boduppal",      label: "East Hyderabad"   },
 ];
 
@@ -33,7 +33,7 @@ const mobStats = [
   { value: "40",    label: "Villas"    },
   { value: "G+1",   label: "Penthouse" },
   { value: "3 Ac.", label: "Site Area" },
-  { value: "30K",   label: "Rec Zone"  },
+  { value: "24K",   label: "Rec Zone"  },
   { value: "Bodu.", label: "E. Hyd."   },
 ];
 
@@ -45,7 +45,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
   const eyebrow = heroData?.eyebrow || "40 Luxury Villas in Boduppal, Hyderabad"
   const headline = heroData?.headline || "The Pavillion"
   const subheadline = heroData?.subheadline || "Your parents dreamed of a home like this.\nYou're buying it."
-  const bodyCopy = heroData?.body_copy || "Premium standalone villas in Surya Hills, Boduppal.\nG+1+Penthouse | 3BHK | 30,000 SFT Recreation Zone\nHMDA Registered | From ₹1.87 Cr onwards"
+  const bodyCopy = heroData?.body_copy || "Premium standalone villas in Surya Hills, Boduppal.\nG+1+Penthouse | 3BHK | 24,000 SFT Recreation Zone\nHMDA Registered | From ₹1.87 Cr onwards"
   const ctaPrimary = heroData?.cta_primary_label || "Book Site Visit"
   const ctaSecondary = heroData?.cta_secondary_label || "Download Brochure"
 

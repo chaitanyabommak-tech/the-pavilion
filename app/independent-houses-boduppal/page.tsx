@@ -189,7 +189,7 @@ export default function IndependentHousesBodupalPage() {
                 <li>• Only 40 houses (low-density)</li>
                 <li>• G+1+Penthouse (3 levels)</li>
                 <li>• 3 BHK + Pooja Room</li>
-                <li>• 30,000 SFT recreation zone</li>
+                <li>• 24,000 SFT recreation zone</li>
                 <li>• HMDA registered project</li>
                 <li>• Starting ₹1.87 Cr onwards</li>
               </ul>
