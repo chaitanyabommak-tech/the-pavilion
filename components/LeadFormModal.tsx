@@ -14,51 +14,40 @@ interface LeadFormModalProps {
 }
 
 export interface LeadFormData {
-  name: string;
   phone: string;
-  email: string;
-  villaType: string;
-  visitDate: string;
-  message: string;
 }
 
 const initialForm: LeadFormData = {
-  name: "",
   phone: "",
-  email: "",
-  villaType: "",
-  visitDate: "",
-  message: "",
 };
 
 const titleMap: Record<ModalType, string> = {
-  visit: "Book a Site Visit",
+  visit: "Book Site Visit",
   brochure: "Download Brochure",
   enquire: "Enquire Now",
+};
+
+const buttonMap: Record<ModalType, string> = {
+  visit: "Book Visit",
+  brochure: "Send Brochure",
+  enquire: "Submit",
 };
 
 async function handleLeadSubmit(data: LeadFormData, type: ModalType) {
   const db = getDb();
   if (type === "visit") {
     await db?.from("site_visits").insert({
-      name: data.name,
       phone: data.phone,
-      email: data.email || null,
-      preferred_date: data.visitDate || null,
-      message: data.villaType ? `Villa preference: ${data.villaType}${data.message ? `. ${data.message}` : ""}` : data.message || null,
+      source: "site_visit_modal",
     });
   } else if (type === "brochure") {
     await db?.from("brochure_downloads").insert({
-      name: data.name,
       phone: data.phone,
-      email: data.email || null,
+      source: "brochure_modal",
     });
   } else {
     await db?.from("leads").insert({
-      name: data.name,
       phone: data.phone,
-      email: data.email || null,
-      message: data.villaType ? `Villa preference: ${data.villaType}${data.message ? `. ${data.message}` : ""}` : data.message || null,
       source: "modal_enquire",
     });
   }
@@ -69,10 +58,12 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const value = e.target.value;
+    // Allow only numbers and + symbol
+    if (value === "" || /^[+0-9]*$/.test(value)) {
+      setForm({ phone: value });
+    }
   }
 
   async function handleSubmit(e: { preventDefault(): void }) {
@@ -87,9 +78,9 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
 
       // Track form submission event
       if (type === "visit") {
-        trackFormSubmit('site_visit', form.villaType);
+        trackFormSubmit('site_visit', '');
       } else {
-        trackFormSubmit('enquiry', form.villaType);
+        trackFormSubmit('enquiry', '');
       }
 
       // Track Google Ads conversion
@@ -106,12 +97,10 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
         document.body.removeChild(link);
       }
 
-      // Redirect to location after enquiry submission
-      if (type === "enquire") {
-        setTimeout(() => {
-          window.open("https://maps.app.goo.gl/3gEbRXmKsENAkjXi7", "_blank");
-        }, 1500);
-      }
+      // Auto-close after 2 seconds
+      setTimeout(() => {
+        onClose();
+      }, 2000);
     } finally {
       setSubmitting(false);
     }
@@ -127,180 +116,89 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
         onClick={(e) => e.target === e.currentTarget && onClose()}
       >
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          className="w-full max-w-lg max-h-[90vh] overflow-y-auto"
-          style={{ background: "var(--card)", border: "1px solid var(--edge)" }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          className="w-full max-w-md"
+          style={{ background: "var(--card)", border: "1px solid var(--edge)", borderRadius: "2px" }}
         >
-          <div className="p-5 sm:p-8">
+          <div className="p-8 sm:p-10">
             {/* Header */}
-            <div className="flex items-start justify-between mb-8">
-              <div>
-                <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.3em] uppercase mb-1">
-                  The Pavillion
-                </p>
-                <h3 style={{ color: "var(--ink)" }} className="font-heading text-3xl font-light">
-                  {titleMap[type]}
-                </h3>
-                <div className="w-10 h-px mt-3" style={{ background: "var(--accent)" }} />
-              </div>
-              <button
-                onClick={onClose}
-                className="text-2xl leading-none mt-1 transition-opacity hover:opacity-60"
-                style={{ color: "var(--ink-2)" }}
-                aria-label="Close"
-              >
-                ×
-              </button>
+            <div className="text-center mb-8">
+              <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.3em] uppercase mb-2">
+                The Pavillion
+              </p>
+              <h3 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-3">
+                {titleMap[type]}
+              </h3>
+              <div className="w-12 h-px mx-auto" style={{ background: "var(--accent)" }} />
             </div>
 
             {success ? (
-              <div className="text-center py-10">
-                <div className="w-16 h-16 border-2 rounded-full flex items-center justify-center mx-auto mb-6" style={{ borderColor: "var(--accent)" }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-8"
+              >
+                <div className="w-20 h-20 border-2 rounded-full flex items-center justify-center mx-auto mb-6" style={{ borderColor: "var(--accent)" }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
                 <h4 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">
-                  Thank you.
+                  Thank You!
                 </h4>
                 <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
                   {type === "brochure"
-                    ? <>Your brochure download has started.{form.email ? <> A copy has also been sent to <strong>{form.email}</strong>.</> : ""}</>
-                    : type === "visit"
-                    ? "Our team will contact you shortly to assist with your site visit booking."
-                    : "Our team will contact you shortly to assist with your enquiry."}
+                    ? "Your brochure download has started."
+                    : "We'll call you shortly."}
                 </p>
-                <button
-                  onClick={onClose}
-                  className="btn-primary mt-8 px-8 py-3 text-sm tracking-[0.15em] uppercase"
-                >
-                  Close
-                </button>
-              </div>
+              </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5" data-track="enquiry-form" data-form-id="main-enquiry">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div>
-                    <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      aria-required="true"
-                      autoComplete="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      className="input-field"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      aria-required="true"
-                      autoComplete="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      className="input-field"
-                      placeholder="+91"
-                    />
-                  </div>
-                </div>
-
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Email Address {type === "brochure" ? "*" : ""}
+                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.2em] uppercase mb-3 text-center">
+                    Phone Number
                   </label>
                   <input
-                    type="email"
-                    name="email"
-                    required={type === "brochure"}
-                    autoComplete="email"
-                    value={form.email}
+                    type="tel"
+                    name="phone"
+                    required
+                    aria-required="true"
+                    autoComplete="tel"
+                    value={form.phone}
                     onChange={handleChange}
-                    className="input-field"
-                    placeholder={type === "brochure" ? "Brochure will be sent here" : "you@email.com"}
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div>
-                    <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                      Preferred Villa Type
-                    </label>
-                    <select
-                      name="villaType"
-                      value={form.villaType}
-                      onChange={handleChange}
-                      className="input-field"
-                      style={{ background: "var(--in-sel)" }}
-                    >
-                      <option value="">Select type</option>
-                      <option value="Type A East (150 Sq.Yds)">Type A East – 150 Sq.Yds</option>
-                      <option value="Type A West (150 Sq.Yds)">Type A West – 150 Sq.Yds</option>
-                      <option value="Type B NE/NW (165 Sq.Yds)">Type B NE/NW – 165 Sq.Yds</option>
-                      <option value="Type B East (167 Sq.Yds)">Type B East – 167 Sq.Yds</option>
-                      <option value="Type C (222-250 Sq.Yds)">Type C – 222–250 Sq.Yds</option>
-                    </select>
-                  </div>
-                  {type === "visit" && (
-                    <div>
-                      <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                        Preferred Visit Date
-                      </label>
-                      <input
-                        type="date"
-                        name="visitDate"
-                        value={form.visitDate}
-                        onChange={handleChange}
-                        className="input-field"
-                      />
-                    </div>
-                  )}
-                </div>
-
-                <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    rows={3}
-                    className="input-field resize-none"
-                    placeholder="Any specific requirements or questions..."
+                    className="input-field text-center text-lg"
+                    placeholder="+91 00000 00000"
+                    style={{ fontSize: "18px", padding: "16px" }}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="btn-primary w-full py-4 text-sm tracking-[0.2em] uppercase font-medium mt-2"
+                  disabled={submitting || form.phone.length < 10}
+                  className="btn-primary w-full py-4 text-sm tracking-[0.2em] uppercase font-medium"
                 >
-                  {submitting
-                    ? "Please wait..."
-                    : type === "brochure"
-                    ? "Send Me the Brochure"
-                    : type === "visit"
-                    ? "Book Site Visit"
-                    : "Submit Enquiry"}
+                  {submitting ? "Please wait..." : buttonMap[type]}
                 </button>
 
                 <p style={{ color: "var(--ink-3)" }} className="text-xs text-center leading-relaxed">
-                  Complimentary site visit. No obligations. Our team will call within 2 hours.
+                  {type === "brochure"
+                    ? "Get instant access to villa details, floor plans & pricing."
+                    : "Our team will call you within 2 hours."}
                 </p>
               </form>
             )}
+
+            {/* Close button */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-2xl leading-none transition-opacity hover:opacity-60"
+              style={{ color: "var(--ink-2)" }}
+              aria-label="Close"
+            >
+              ×
+            </button>
           </div>
         </motion.div>
       </motion.div>
