@@ -26,20 +26,12 @@ function createTrackFunction(phone: string) {
 }
 
 const initialForm: LeadFormData = {
-  name: "",
   phone: "",
-  email: "",
-  villaType: "",
-  visitDate: "",
-  message: "",
 };
 
 async function handleLeadSubmit(data: LeadFormData) {
   await getDb()?.from("leads").insert({
-    name: data.name,
     phone: data.phone,
-    email: data.email || null,
-    message: data.villaType ? `Villa preference: ${data.villaType}${data.message ? `. ${data.message}` : ""}` : data.message || null,
     source: "contact_form",
   });
 }
@@ -77,7 +69,7 @@ export default function Contact({ settings = {} }: ContactProps) {
       await handleLeadSubmit(enrichedData as LeadFormData);
 
       // Track form submission event
-      trackFormSubmit('enquiry', form.villaType);
+      trackFormSubmit('enquiry', '');
 
       // Track Google Ads conversion
       trackConversion();
@@ -185,102 +177,34 @@ export default function Contact({ settings = {} }: ContactProps) {
                 data-track="enquiry-form"
                 data-form-id="main-enquiry"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      aria-required="true"
-                      autoComplete="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      className="input-field"
-                    />
-                  </div>
-                  <div>
-                    <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      aria-required="true"
-                      autoComplete="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="+91"
-                      className="input-field"
-                    />
-                  </div>
-                </div>
-
                 <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Preferred Villa Type *
-                  </label>
-                  <select
-                    name="villaType"
-                    required
-                    aria-required="true"
-                    value={form.villaType}
-                    onChange={handleChange}
-                    className="input-field"
-                    style={{ background: "var(--in-sel)" }}
-                  >
-                    <option value="">Select type</option>
-                    <option value="Type A East">Type A East — 150 Sq.Yds</option>
-                    <option value="Type A West">Type A West — 150 Sq.Yds</option>
-                    <option value="Type B NE/NW">Type B NE/NW — 165 Sq.Yds</option>
-                    <option value="Type B East">Type B East — 167 Sq.Yds</option>
-                    <option value="Type C">Type C — 222–250 Sq.Yds</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Email Address
+                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.2em] uppercase mb-3 text-center">
+                    Phone Number
                   </label>
                   <input
-                    type="email"
-                    name="email"
-                    autoComplete="email"
-                    value={form.email}
+                    type="tel"
+                    name="phone"
+                    required
+                    aria-required="true"
+                    autoComplete="tel"
+                    value={form.phone}
                     onChange={handleChange}
-                    placeholder="you@email.com"
-                    className="input-field"
-                  />
-                </div>
-
-                <div>
-                  <label style={{ color: "var(--ink)" }} className="block text-xs tracking-[0.15em] uppercase mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    rows={4}
-                    placeholder="Any specific requirements or questions..."
-                    className="input-field resize-none"
+                    placeholder="+91 00000 00000"
+                    className="input-field text-center text-lg"
+                    style={{ fontSize: "18px", padding: "16px" }}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  disabled={submitting}
+                  disabled={submitting || form.phone.length < 10}
                   className="btn-primary w-full py-4 text-sm tracking-[0.2em] uppercase font-medium"
                 >
                   {submitting ? "Submitting..." : "Submit Enquiry"}
                 </button>
 
                 <p style={{ color: "var(--ink-3)" }} className="text-xs text-center leading-relaxed">
-                  Complimentary site visit. No obligations. Our team will call within 2 hours.
+                  Our team will call you within 2 hours.
                 </p>
               </form>
           </motion.div>
