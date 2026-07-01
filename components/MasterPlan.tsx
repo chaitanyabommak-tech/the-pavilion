@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface Villa {
   id: string
@@ -84,11 +85,18 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
             onClick={() => setModalOpen(true)}
           >
             <div
-              className="w-full aspect-[16/9] md:aspect-[2/1] bg-cover bg-center relative md:max-h-[52vh]"
-              style={{ backgroundImage: "url('/assets/master-plan.png')", background: "url('/assets/master-plan.png') center/cover, var(--img-ph)" }}
-              role="img"
-              aria-label="Master plan layout of The Pavillion, Surya Hills Boduppal"
+              className="w-full aspect-[16/9] md:aspect-[2/1] relative md:max-h-[52vh] overflow-hidden"
+              style={{ background: "var(--img-ph)", borderRadius: "8px" }}
             >
+              <Image
+                src="/assets/master-plan.jpg"
+                alt="Master plan layout of The Pavillion, Surya Hills Boduppal"
+                fill
+                className="object-cover"
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1920px) 90vw, 1920px"
+                priority
+              />
               {labels.map((l) => (
                 <div key={l.label} className="absolute hidden md:flex" style={l.position}>
                   <div className="bg-black/80 text-[#EDE8E3] text-[10px] px-3 py-1.5 tracking-wide whitespace-nowrap backdrop-blur-sm">
@@ -144,11 +152,17 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
               onClick={(e) => e.stopPropagation()}
             >
               <div
-                className="w-full aspect-[16/9] bg-cover bg-center relative bg-[#1A1A1A]"
-                style={{ backgroundImage: "url('/assets/master-plan.png')" }}
-                role="img"
-                aria-label="Master plan layout of The Pavillion"
+                className="w-full aspect-[16/9] relative bg-[#1A1A1A] overflow-hidden"
+                style={{ borderRadius: "8px" }}
               >
+                <Image
+                  src="/assets/master-plan.jpg"
+                  alt="Master plan layout of The Pavillion"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                  sizes="(max-width: 1920px) 95vw, 1920px"
+                />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="font-heading text-4xl text-[#9A8F87] font-light">Master Plan</p>
                 </div>

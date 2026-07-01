@@ -106,7 +106,7 @@ export default function InteractiveMasterPlan({
       {/* Master Plan Image Base */}
       <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
         <img
-          src="/assets/master-plan.png"
+          src="/assets/master-plan.jpg"
           alt="The Pavillion Master Plan"
           className="w-full h-full object-cover"
           style={{ borderRadius: "4px" }}
