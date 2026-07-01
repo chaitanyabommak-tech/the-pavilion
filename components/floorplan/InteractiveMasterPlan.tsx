@@ -104,12 +104,12 @@ export default function InteractiveMasterPlan({
   return (
     <div className="master-plan-container relative w-full">
       {/* Master Plan Image Base */}
-      <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+      <div className="relative w-full" style={{ minHeight: "400px" }}>
         <img
           src="/assets/master-plan.jpg"
           alt="The Pavillion Master Plan"
-          className="w-full h-full object-cover"
-          style={{ borderRadius: "4px" }}
+          className="w-full h-auto object-contain"
+          style={{ borderRadius: "4px", display: "block" }}
         />
 
         {/* Interactive SVG Overlay */}

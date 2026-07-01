@@ -76,17 +76,19 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
             onClick={() => setModalOpen(true)}
           >
             <div
-              className="w-full aspect-[16/9] md:aspect-[2/1] relative md:max-h-[52vh] overflow-hidden"
-              style={{ background: "var(--img-ph)", borderRadius: "8px" }}
+              className="w-full relative overflow-hidden"
+              style={{ background: "var(--img-ph)", borderRadius: "8px", minHeight: "400px" }}
             >
               <Image
                 src="/assets/master-plan.jpg"
                 alt="Master plan layout of The Pavillion, Surya Hills Boduppal"
-                fill
-                className="object-cover"
+                width={3840}
+                height={2160}
+                className="w-full h-auto object-contain"
                 quality={100}
-                sizes="(max-width: 768px) 100vw, (max-width: 1920px) 90vw, 1920px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1920px) 90vw, 3840px"
                 priority
+                style={{ display: 'block' }}
               />
               <div className="absolute bottom-4 right-4 bg-black/60 text-[#EDE8E3] text-xs px-3 py-2 flex items-center gap-2 hover:bg-black/80 transition-colors">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -123,16 +125,18 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
               onClick={(e) => e.stopPropagation()}
             >
               <div
-                className="w-full aspect-[16/9] relative bg-[#1A1A1A] overflow-hidden"
-                style={{ borderRadius: "8px" }}
+                className="w-full relative bg-[#1A1A1A] overflow-hidden flex items-center justify-center"
+                style={{ borderRadius: "8px", minHeight: "70vh" }}
               >
                 <Image
                   src="/assets/master-plan.jpg"
                   alt="Master plan layout of The Pavillion"
-                  fill
-                  className="object-contain"
+                  width={3840}
+                  height={2160}
+                  className="w-full h-auto object-contain max-h-[85vh]"
                   quality={100}
-                  sizes="(max-width: 1920px) 95vw, 1920px"
+                  sizes="(max-width: 1920px) 95vw, 3840px"
+                  style={{ display: 'block' }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="font-heading text-4xl text-[#9A8F87] font-light">Master Plan</p>
