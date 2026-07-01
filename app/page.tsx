@@ -13,9 +13,10 @@ import ContactDB from "@/components/ContactDB";
 import FooterDB from "@/components/FooterDB";
 import FloatingCTADB from "@/components/FloatingCTADB";
 
-// Force dynamic rendering - no caching!
+// Force dynamic rendering - no caching
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
+export const fetchCache = 'force-no-store'
 
 export default function Home() {
   return (
