@@ -12,12 +12,32 @@ const stats = [
 ];
 
 export default function DisclaimerOverlay() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(() => {
+    // Always show on first visit or if not yet acknowledged
+    if (typeof window !== 'undefined') {
+      const acknowledged = sessionStorage.getItem('disclaimer-acknowledged');
+      return !acknowledged;
+    }
+    return true;
+  });
 
   useEffect(() => {
-    if (visible) document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
+    if (visible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [visible]);
+
+  const handleAccept = () => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('disclaimer-acknowledged', 'true');
+    }
+    setVisible(false);
+  };
 
   return (
     <AnimatePresence>
@@ -159,9 +179,10 @@ export default function DisclaimerOverlay() {
               {/* ── Footer ── */}
               <div className="disclaimer-footer">
                 <button
-                  onClick={() => setVisible(false)}
+                  onClick={handleAccept}
                   className="disclaimer-accept-btn"
                   style={{ background: "#0A0A0A" }}
+                  type="button"
                 >
                   Accept &amp; Continue
                 </button>
