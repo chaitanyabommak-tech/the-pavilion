@@ -12,14 +12,15 @@ const stats = [
 ];
 
 export default function DisclaimerOverlay() {
-  const [visible, setVisible] = useState(() => {
-    // Always show on first visit or if not yet acknowledged
-    if (typeof window !== 'undefined') {
-      const acknowledged = sessionStorage.getItem('disclaimer-acknowledged');
-      return !acknowledged;
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    // Check sessionStorage only on client after mount
+    const acknowledged = sessionStorage.getItem('disclaimer-acknowledged');
+    if (acknowledged) {
+      setVisible(false);
     }
-    return true;
-  });
+  }, []);
 
   useEffect(() => {
     if (visible) {
