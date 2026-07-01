@@ -9,7 +9,7 @@ const stats = [
   { value: "40", unit: "Villas", label: "Standalone Families" },
   { value: "G+1+PH", unit: "", label: "Villa Configuration" },
   { value: "2,200–2,500", unit: "SFT", label: "Built-up Per Villa" },
-  { value: "30,000", unit: "SFT", label: "Recreation Zone" },
+  { value: "24,000", unit: "SFT", label: "Recreation Zone" },
   { value: "100%", unit: "", label: "Vastu Compliant" },
 ];
 

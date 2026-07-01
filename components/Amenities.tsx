@@ -117,7 +117,7 @@ export default function Amenities() {
             />
             <div className="mt-4 grid grid-cols-3 gap-px" style={{ background: "var(--gap)" }}>
               {[
-                { value: "30,000", label: "Sq.Ft Zone" },
+                { value: "24,000", label: "Sq.Ft Zone" },
                 { value: "40", label: "Families Only" },
                 { value: "50+", label: "Amenities" },
               ].map((s) => (
