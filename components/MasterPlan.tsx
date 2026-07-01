@@ -15,16 +15,7 @@ interface MasterPlanProps {
   villas?: Villa[]
 }
 
-const labels = [
-  { label: "30 ft Wide Road",       position: { top: "8%", left: "28%" }  },
-  { label: "33 ft Entry Road",       position: { top: "10%", right: "12%" } },
-  { label: "25 ft Internal Roads",   position: { top: "45%", left: "28%" }  },
-  { label: "Villa Clusters A–I",     position: { top: "40%", left: "45%" }  },
-  { label: "Recreational Space",     position: { top: "60%", right: "20%" } },
-  { label: "Pool & Cabanas",         position: { bottom: "30%", right: "22%" } },
-  { label: "Pickleball Court",       position: { top: "25%", right: "15%" } },
-  { label: "Recreation Zone",        position: { bottom: "22%", right: "18%" } },
-];
+// Labels removed - clean master plan view
 
 export default function MasterPlan({ villas = [] }: MasterPlanProps) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -97,13 +88,6 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1920px) 90vw, 1920px"
                 priority
               />
-              {labels.map((l) => (
-                <div key={l.label} className="absolute hidden md:flex" style={l.position}>
-                  <div className="bg-black/80 text-[#EDE8E3] text-[10px] px-3 py-1.5 tracking-wide whitespace-nowrap backdrop-blur-sm">
-                    {l.label}
-                  </div>
-                </div>
-              ))}
               <div className="absolute bottom-4 right-4 bg-black/60 text-[#EDE8E3] text-xs px-3 py-2 flex items-center gap-2 hover:bg-black/80 transition-colors">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
@@ -113,19 +97,6 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
               </div>
             </div>
           </motion.div>
-
-          {/* Mobile quick labels */}
-          <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2.5 md:hidden">
-            {labels.slice(0, 4).map((l) => (
-              <div
-                key={l.label}
-                style={{ background: "var(--card)", border: "1px solid var(--edge)" }}
-                className="px-3 py-2"
-              >
-                <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-wide">{l.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
