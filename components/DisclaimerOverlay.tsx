@@ -15,14 +15,6 @@ export default function DisclaimerOverlay() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Check sessionStorage only on client after mount
-    const acknowledged = sessionStorage.getItem('disclaimer-acknowledged');
-    if (acknowledged) {
-      setVisible(false);
-    }
-  }, []);
-
-  useEffect(() => {
     if (visible) {
       document.body.style.overflow = "hidden";
     } else {
@@ -34,9 +26,6 @@ export default function DisclaimerOverlay() {
   }, [visible]);
 
   const handleAccept = () => {
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('disclaimer-acknowledged', 'true');
-    }
     setVisible(false);
   };
 
