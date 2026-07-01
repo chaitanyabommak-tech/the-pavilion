@@ -37,12 +37,18 @@ export default function DisclaimerOverlay() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.32 }}
-          className="disclaimer-overlay fixed inset-0 z-[9999] flex items-center justify-center"
+          className="disclaimer-overlay fixed inset-0 flex items-center justify-center"
           style={{
-            background: "rgba(8, 6, 4, 0.78)",
+            background: "rgba(8, 6, 4, 0.95)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
             padding: "16px",
+            zIndex: 99999,
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
           } as React.CSSProperties}
           role="dialog"
           aria-modal="true"
