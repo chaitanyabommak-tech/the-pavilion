@@ -256,3 +256,59 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 - Experiments (use with caution):
   · optimizePackageImports
 
+Persisting failed: Unable to write SST file 00004051.sst
+
+Caused by:
+    The system cannot find the path specified. (os error 3)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (14192) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 4 tasks
+
+Caused by:
+    0: Looking up typed data for 4 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003902.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003902.sst
+    4: The system cannot find the path specified. (os error 3)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (30500) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 1036)
+
+Caused by:
+    0: Looking up task storage for TaskId 1036 from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003900.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003900.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (29932) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003900.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003900.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (29932) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003900.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003900.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (30500) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003900.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003900.sst
+    4: The system cannot find the path specified. (os error 3)
