@@ -235,3 +235,24 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 ✓ Compiled in 181ms
  GET /health 404 in 1859ms (next.js: 467ms, application-code: 1392ms)
 ✓ Compiled in 139ms
+✓ Compiled in 241ms
+✓ Compiled in 181ms
+✓ Compiled in 86ms
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.219.120.75:3000
+- Environments: .env.local
+✓ Ready in 1267ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.24.81.75:3000
+- Environments: .env.local
+✓ Ready in 732ms
+- Experiments (use with caution):
+  · optimizePackageImports
+

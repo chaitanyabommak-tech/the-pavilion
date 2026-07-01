@@ -230,21 +230,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  /* Ultra HD optimizations */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
-/* Ultra HD image quality for high-DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  html {
-    image-rendering: -webkit-optimize-contrast;
-  }
-
-  img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
 }
 
 body {
@@ -257,10 +242,6 @@ body {
   text-rendering:           optimizeLegibility;
   font-variant-ligatures:   common-ligatures;
   transition:               background-color 300ms ease, color 300ms ease;
-  /* Ultra smooth rendering */
-  transform:                translateZ(0);
-  backface-visibility:      hidden;
-  perspective:              1000px;
 }
 
 /* Smooth theme transitions on structural elements */
@@ -1950,22 +1931,10 @@ select:focus {
   will-change: opacity;
 }
 
-/* Optimize image rendering */
-img, picture, video, canvas, svg {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
-/* Smooth animations with GPU acceleration */
+/* Smooth scrolling */
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
-  }
-
-  [data-framer-motion] {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
   }
 }
 
@@ -2012,89 +1981,3 @@ html {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   ULTRA HD DESKTOP OPTIMIZATIONS
-   ═══════════════════════════════════════════════════════════════════ */
-
-/* High-quality image rendering for desktop */
-@media (min-width: 1024px) {
-  img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: high-quality;
-    will-change: transform;
-    transform: translateZ(0);
-  }
-
-  /* Background images - higher quality */
-  [style*="background-image"],
-  [class*="bg-cover"],
-  [class*="bg-center"] {
-    background-size: cover;
-    background-position: center;
-    image-rendering: -webkit-optimize-contrast;
-    will-change: transform;
-    transform: translateZ(0);
-  }
-
-  /* Smooth animations with hardware acceleration */
-  .motion-safe\:animate-pulse,
-  [class*="animate-"],
-  [class*="transition-"] {
-    will-change: transform, opacity;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-}
-
-/* Ultra HD 4K+ displays */
-@media (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2),
-       (min-width: 1920px) and (min-resolution: 192dpi) {
-
-  /* Maximum quality rendering */
-  * {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-  }
-
-  img,
-  picture,
-  video {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: high-quality;
-  }
-
-  /* Sharper text on large displays */
-  body {
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-optical-sizing: auto;
-    font-synthesis: none;
-  }
-
-  /* Enhanced border rendering */
-  * {
-    outline-offset: 0.5px;
-  }
-}
-
-/* Hardware acceleration for smooth scrolling and animations */
-* {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-}
-
-/* GPU acceleration for images */
-img,
-picture,
-video,
-canvas {
-  transform: translate3d(0, 0, 0);
-  will-change: auto;
-}
-
-/* Crisp SVG rendering */
-svg {
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
-}
