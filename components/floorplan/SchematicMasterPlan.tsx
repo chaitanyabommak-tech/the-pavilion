@@ -555,7 +555,7 @@ export default function SchematicMasterPlan({
                     {getBlockVillas(pair.left).map((villa) => {
                       const isHighlighted = isVillaHighlighted(villa);
                       const isSoldToHighlight = showSoldHighlight && soldVillasToHighlight.includes(villa.id);
-                      const highlightColor = Math.random() > 0.5 ? '#EF4444' : '#FBBF24'; // Red or Yellow
+                      const highlightColor = Math.random() > 0.5 ? '#DC2626' : '#FBBF24'; // Sold red or Yellow
                       return (
                         <div key={villa.id} className="relative">
                           <VillaBox
@@ -612,7 +612,7 @@ export default function SchematicMasterPlan({
                     {getBlockVillas(pair.right).map((villa) => {
                       const isHighlighted = isVillaHighlighted(villa);
                       const isSoldToHighlight = showSoldHighlight && soldVillasToHighlight.includes(villa.id);
-                      const highlightColor = Math.random() > 0.5 ? '#EF4444' : '#FBBF24'; // Red or Yellow
+                      const highlightColor = Math.random() > 0.5 ? '#DC2626' : '#FBBF24'; // Sold red or Yellow
                       return (
                         <div key={villa.id} className="relative">
                           <VillaBox
