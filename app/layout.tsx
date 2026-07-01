@@ -42,7 +42,7 @@ export default function RootLayout({
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('pavilion-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
+            __html: `(function(){try{document.documentElement.setAttribute('data-theme','light');localStorage.setItem('pavilion-theme','light');}catch(e){}})();`,
           }}
         />
         {/* Google Tag Manager */}
