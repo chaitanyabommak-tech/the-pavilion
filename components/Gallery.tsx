@@ -159,7 +159,7 @@ export default function Gallery() {
                   alt={images[current].alt}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  sizes="(max-width: 1280px) 100vw, (max-width: 2560px) 1920px, 3840px"
                   quality={100}
                   loading="lazy"
                 />

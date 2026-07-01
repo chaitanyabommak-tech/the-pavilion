@@ -1981,3 +1981,70 @@ html {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   ULTRA HD DESKTOP OPTIMIZATIONS - Images only, no transforms on body
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* High quality image rendering for desktop and high-DPI displays */
+@media (min-width: 1024px) {
+  img,
+  picture,
+  video {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+  }
+}
+
+/* Ultra HD 4K+ displays - maximum quality */
+@media (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 1920px) and (min-resolution: 192dpi) {
+
+  /* Subpixel antialiasing for crisp text on large displays */
+  html,
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+
+  /* Maximum quality for images */
+  img,
+  picture,
+  video {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+  }
+}
+
+/* GPU acceleration for smooth scrolling - applied only to specific elements */
+@media (min-width: 1024px) {
+  /* Smooth animations for framer motion elements */
+  [data-framer-motion] {
+    will-change: transform, opacity;
+  }
+
+  /* Optimize large images */
+  img[width],
+  img[height] {
+    will-change: auto;
+  }
+
+  /* Crisp edges for all images on desktop */
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* Additional smoothness for animations and transitions */
+@media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  /* Smooth opacity transitions */
+  img,
+  picture,
+  video {
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+

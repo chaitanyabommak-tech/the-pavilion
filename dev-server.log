@@ -312,3 +312,82 @@ Caused by:
     2: Unable to open static sorted file 00003900.sst
     3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003900.sst
     4: The system cannot find the path specified. (os error 3)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (30500) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 99 tasks
+
+Caused by:
+    0: Looking up typed data for 99 tasks from database failed
+    1: Unable to open static sorted file referenced from 00004031.meta
+    2: Unable to open static sorted file 00004025.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00004025.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (30500) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 99 tasks
+
+Caused by:
+    0: Looking up typed data for 99 tasks from database failed
+    1: Unable to open static sorted file referenced from 00004031.meta
+    2: Unable to open static sorted file 00004025.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00004025.sst
+    4: The system cannot find the path specified. (os error 3)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (6948) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 13 tasks
+
+Caused by:
+    0: Looking up typed data for 13 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003902.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003902.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (6948) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 13 tasks
+
+Caused by:
+    0: Looking up typed data for 13 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003902.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003902.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (15708) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003901.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003901.sst
+    4: The system cannot find the path specified. (os error 3)
+
+thread 'tokio-runtime-worker' (15708) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:197:17:
+Failed to restore task data (corrupted database or bug): Data for TaskId 744)
+
+Caused by:
+    0: Looking up task storage for TaskId 744 from database failed
+    1: Unable to open static sorted file referenced from 00003903.meta
+    2: Unable to open static sorted file 00003901.sst
+    3: Failed to open SST file C:\Users\Himamala Bommaku\the-pavilion\.next\dev\cache/turbopack\ee6e79b1\00003901.sst
+    4: The system cannot find the path specified. (os error 3)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.24.81.75:3000
+- Environments: .env.local
+✓ Ready in 629ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
