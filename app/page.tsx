@@ -1,4 +1,3 @@
-import DisclaimerOverlay from "@/components/DisclaimerOverlay";
 import Navbar from "@/components/Navbar";
 import HeroDB from "@/components/HeroDB";
 import GalleryDB from "@/components/GalleryDB";
@@ -21,7 +20,6 @@ export const revalidate = 0
 export default function Home() {
   return (
     <>
-      <DisclaimerOverlay />
       <Navbar />
 
       <main id="main-content" role="main" className="pb-[130px] lg:pb-0">
