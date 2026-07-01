@@ -180,7 +180,8 @@ export default function Hero({ heroData }: HeroProps = {}) {
               className="object-cover object-center"
               priority
               quality={100}
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="(max-width: 1024px) 100vw, (max-width: 1920px) 55vw, 2048px"
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </motion.div>
         </div>
