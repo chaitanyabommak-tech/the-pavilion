@@ -67,7 +67,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             ══════════════════════════════════════════ */}
         <div className="hero-mob-bg absolute inset-0 z-0 lg:hidden" aria-hidden="true">
           <Image
-            src="/images/pavilion-mobile-hero.png"
+            src="/images/pavilion-mobile-hero.jpg"
             alt=""
             fill
             className="object-cover object-top"
@@ -174,7 +174,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             className="hero-image-panel lg:w-[55%] relative min-h-[55vw] lg:min-h-0"
           >
             <Image
-              src="/assets/pavilion-hero.png"
+              src="/assets/pavilion-hero.jpg"
               alt="The Pavillion community living aerial view, Surya Hills Boduppal East Hyderabad"
               fill
               className="object-cover object-center"

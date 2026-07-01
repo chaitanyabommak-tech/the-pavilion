@@ -37,7 +37,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Preload hero image */}
-        <link rel="preload" as="image" href="/assets/pavilion-hero.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/pavilion-hero.jpg" fetchPriority="high" />
         <Script
           id="theme-init"
           strategy="beforeInteractive"
