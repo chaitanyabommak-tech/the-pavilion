@@ -24,6 +24,25 @@ export default function SchematicMasterPlan({
   const [sftFilter, setSftFilter] = useState<number | null>(null);
   const [facingFilter, setFacingFilter] = useState<string | null>(null);
   const [isNightMode, setIsNightMode] = useState(false);
+  const [showSoldHighlight, setShowSoldHighlight] = useState(true);
+
+  // Sold villas to highlight
+  const soldVillasToHighlight = [
+    'H1', 'H2', 'H5', 'G1', 'G3', 'G5', 'F5', 'F2',
+    'D3', 'C1', 'C2', 'C5', 'B1', 'B2', 'B3', 'B4', 'B5', 'A3'
+  ];
+
+  // Keyboard shortcut: Ctrl+Shift+H to toggle sold villa highlighting
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'H') {
+        e.preventDefault();
+        setShowSoldHighlight(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
   // Sync with navbar theme toggle
   useEffect(() => {
@@ -535,6 +554,8 @@ export default function SchematicMasterPlan({
                     </div>
                     {getBlockVillas(pair.left).map((villa) => {
                       const isHighlighted = isVillaHighlighted(villa);
+                      const isSoldToHighlight = showSoldHighlight && soldVillasToHighlight.includes(villa.id);
+                      const highlightColor = Math.random() > 0.5 ? '#EF4444' : '#FBBF24'; // Red or Yellow
                       return (
                         <div key={villa.id} className="relative">
                           <VillaBox
@@ -545,8 +566,18 @@ export default function SchematicMasterPlan({
                             onHoverStart={(e: React.MouseEvent | React.TouchEvent) => handleVillaHover(villa, e)}
                             onHoverEnd={() => handleVillaHover(null)}
                           />
+                          {/* Sold villa highlighting overlay */}
+                          {isSoldToHighlight && (
+                            <div className="absolute inset-0 rounded-xl pointer-events-none animate-pulse"
+                              style={{
+                                background: `${highlightColor}40`,
+                                border: `3px solid ${highlightColor}`,
+                                boxShadow: `0 0 20px ${highlightColor}80, inset 0 0 15px ${highlightColor}40`,
+                              }}
+                            />
+                          )}
                           {/* Dim overlay for non-matching villas */}
-                          {!isHighlighted && (
+                          {!isHighlighted && !isSoldToHighlight && (
                             <div className="absolute inset-0 rounded-xl pointer-events-none"
                               style={{
                                 background: "rgba(0, 0, 0, 0.6)",
@@ -555,7 +586,7 @@ export default function SchematicMasterPlan({
                             />
                           )}
                           {/* Highlight glow for matching villas */}
-                          {isHighlighted && (sftFilter || facingFilter) && (
+                          {isHighlighted && (sftFilter || facingFilter) && !isSoldToHighlight && (
                             <div className="absolute inset-0 rounded-xl pointer-events-none animate-pulse"
                               style={{
                                 boxShadow: "0 0 20px rgba(74, 144, 226, 0.6), inset 0 0 20px rgba(74, 144, 226, 0.2)",
@@ -580,6 +611,8 @@ export default function SchematicMasterPlan({
                     </div>
                     {getBlockVillas(pair.right).map((villa) => {
                       const isHighlighted = isVillaHighlighted(villa);
+                      const isSoldToHighlight = showSoldHighlight && soldVillasToHighlight.includes(villa.id);
+                      const highlightColor = Math.random() > 0.5 ? '#EF4444' : '#FBBF24'; // Red or Yellow
                       return (
                         <div key={villa.id} className="relative">
                           <VillaBox
@@ -590,8 +623,18 @@ export default function SchematicMasterPlan({
                             onHoverStart={(e: React.MouseEvent | React.TouchEvent) => handleVillaHover(villa, e)}
                             onHoverEnd={() => handleVillaHover(null)}
                           />
+                          {/* Sold villa highlighting overlay */}
+                          {isSoldToHighlight && (
+                            <div className="absolute inset-0 rounded-xl pointer-events-none animate-pulse"
+                              style={{
+                                background: `${highlightColor}40`,
+                                border: `3px solid ${highlightColor}`,
+                                boxShadow: `0 0 20px ${highlightColor}80, inset 0 0 15px ${highlightColor}40`,
+                              }}
+                            />
+                          )}
                           {/* Dim overlay for non-matching villas */}
-                          {!isHighlighted && (
+                          {!isHighlighted && !isSoldToHighlight && (
                             <div className="absolute inset-0 rounded-xl pointer-events-none"
                               style={{
                                 background: "rgba(0, 0, 0, 0.6)",
@@ -600,7 +643,7 @@ export default function SchematicMasterPlan({
                             />
                           )}
                           {/* Highlight glow for matching villas */}
-                          {isHighlighted && (sftFilter || facingFilter) && (
+                          {isHighlighted && (sftFilter || facingFilter) && !isSoldToHighlight && (
                             <div className="absolute inset-0 rounded-xl pointer-events-none animate-pulse"
                               style={{
                                 boxShadow: "0 0 20px rgba(74, 144, 226, 0.6), inset 0 0 20px rgba(74, 144, 226, 0.2)",
