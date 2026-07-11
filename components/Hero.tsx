@@ -166,7 +166,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             </motion.div>
           </div>
 
-          {/* Right — image */}
+          {/* Right — image (optimized WebP) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -174,13 +174,13 @@ export default function Hero({ heroData }: HeroProps = {}) {
             className="hero-image-panel lg:w-[55%] relative min-h-[55vw] lg:min-h-0"
           >
             <Image
-              src="/assets/pavilion-hero.jpg"
+              src="/assets/pavilion-hero.webp"
               alt="The Pavillion community living aerial view, Surya Hills Boduppal East Hyderabad"
               fill
               className="object-cover object-center"
               priority
               quality={100}
-              sizes="(max-width: 1024px) 100vw, (max-width: 1920px) 55vw, (max-width: 3840px) 55vw, 3840px"
+              sizes="(max-width: 1024px) 100vw, (max-width: 1920px) 55vw, 1920px"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </motion.div>
