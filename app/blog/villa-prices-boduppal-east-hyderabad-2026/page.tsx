@@ -61,9 +61,14 @@ export default function BlogPost() {
       <article className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase mb-4">
-            Pricing Guide
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase">
+              Pricing Guide
+            </p>
+            <span style={{ color: "var(--ink-3)", background: "var(--surface)", padding: "4px 12px", borderRadius: "4px" }} className="text-xs">
+              Last Updated: July 2026
+            </span>
+          </div>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-6">
             Villa Prices in Boduppal & East Hyderabad: Complete 2026 Guide
           </h1>
@@ -222,6 +227,33 @@ export default function BlogPost() {
                 If a project is priced above ₹2.2 Cr for this spec, it should offer something exceptional — ultra-premium finishes, larger recreation zone, or prime location (within 5 min of metro). If it's priced below ₹1.6 Cr, verify legal approvals and construction quality — low price often signals corners cut.
               </p>
             </section>
+          </div>
+
+          {/* Related Posts */}
+          <div className="mt-16 pt-8" style={{ borderTop: "1px solid var(--edge)" }}>
+            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-6">Related Articles</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/is-boduppal-good-place-to-buy-villa-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Location Analysis</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Is Boduppal Good for Villas?</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Metro, infrastructure, appreciation potential</p>
+              </Link>
+              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved vs Unapproved</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Verify before you buy</p>
+              </Link>
+              <Link href="/3bhk-villas-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">3 BHK Villas</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">3 BHK Villas in Boduppal</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">2,200-2,500 SFT configurations</p>
+              </Link>
+              <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">The Pavillion - from ₹1.87 Cr</p>
+              </Link>
+            </div>
           </div>
 
           {/* CTA */}

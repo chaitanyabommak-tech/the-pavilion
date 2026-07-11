@@ -61,9 +61,14 @@ export default function BlogPost() {
       <article className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase mb-4">
-            NRI Investment
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase">
+              NRI Investment
+            </p>
+            <span style={{ color: "var(--ink-3)", background: "var(--surface)", padding: "4px 12px", borderRadius: "4px" }} className="text-xs">
+              Last Updated: July 2026
+            </span>
+          </div>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-6">
             NRI's Step-by-Step Guide to Buying a Villa in Hyderabad
           </h1>
@@ -312,6 +317,33 @@ export default function BlogPost() {
                 <li className="leading-relaxed">✓ Schedule 1-2 India visits (optional but recommended) — one for site inspection, one for possession</li>
               </ul>
             </section>
+          </div>
+
+          {/* Related Posts */}
+          <div className="mt-16 pt-8" style={{ borderTop: "1px solid var(--edge)" }}>
+            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-6">Related Articles</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved Projects</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">What to verify before buying</p>
+              </Link>
+              <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Pricing</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villa Prices in Boduppal</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">2026 pricing guide</p>
+              </Link>
+              <Link href="/blog/is-boduppal-good-place-to-buy-villa-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Location</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Is Boduppal Good Investment?</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Location analysis for NRIs</p>
+              </Link>
+              <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">NRI-Friendly Villa Project</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">The Pavillion - Power of Attorney accepted</p>
+              </Link>
+            </div>
           </div>
 
           {/* CTA */}

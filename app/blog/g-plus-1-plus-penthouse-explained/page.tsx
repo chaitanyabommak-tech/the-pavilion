@@ -61,9 +61,14 @@ export default function BlogPost() {
       <article className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase mb-4">
-            Architecture
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase">
+              Architecture
+            </p>
+            <span style={{ color: "var(--ink-3)", background: "var(--surface)", padding: "4px 12px", borderRadius: "4px" }} className="text-xs">
+              Last Updated: July 2026
+            </span>
+          </div>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-6">
             G+1+Penthouse Explained: Why This Configuration Wins for Families
           </h1>
@@ -277,6 +282,33 @@ export default function BlogPost() {
                 For most nuclear families (4-5 members) on 150-250 sq. yard plots, G+1+Penthouse is the sweet spot: enough space to live comfortably, not so much that you're maintaining unused rooms or climbing stairs unnecessarily.
               </p>
             </section>
+          </div>
+
+          {/* Related Posts */}
+          <div className="mt-16 pt-8" style={{ borderTop: "1px solid var(--edge)" }}>
+            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-6">Related Articles</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/villa-vs-apartment-east-hyderabad-honest-comparison" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Comparison</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villa vs Apartment</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Which is better for families?</p>
+              </Link>
+              <Link href="/blog/is-boduppal-good-place-to-buy-villa-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Location</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Is Boduppal Good for Villas?</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Complete location analysis</p>
+              </Link>
+              <Link href="/3bhk-villas-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">3 BHK</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">3 BHK G+1+Penthouse Villas</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Configurations at The Pavillion</p>
+              </Link>
+              <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">G+1+Penthouse at The Pavillion</p>
+              </Link>
+            </div>
           </div>
 
           {/* CTA */}
