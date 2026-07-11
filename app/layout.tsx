@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${cormorant.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         {/* Performance: preconnect for fonts already handled by next/font */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -97,7 +97,7 @@ export default function RootLayout({
                   ]
                 },
                 {
-                  "@type": "RealEstateAgent",
+                  "@type": ["RealEstateAgent", "LocalBusiness"],
                   "@id": "https://bommakugroup.com/#realestateagent",
                   "name": "Bommaku Constructions",
                   "description": "Premium villa developer in Hyderabad specializing in luxury standalone villa communities",
@@ -114,9 +114,25 @@ export default function RootLayout({
                     "latitude": "17.416403",
                     "longitude": "78.575600"
                   },
+                  "hasMap": "https://maps.app.goo.gl/3gEbRXmKsENAkjXi7",
                   "telephone": "+91-9676077142",
                   "email": "bommakugroup@gmail.com",
-                  "priceRange": "₹₹₹"
+                  "priceRange": "₹₹₹",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                      "opens": "10:00",
+                      "closes": "18:00"
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": "Sunday",
+                      "opens": "10:00",
+                      "closes": "17:00"
+                    }
+                  ],
+                  "areaServed": ["Boduppal", "Uppal", "Ghatkesar", "Pocharam", "Peerzadiguda", "Medipally", "East Hyderabad"]
                 },
                 {
                   "@type": "Product",

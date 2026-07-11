@@ -4,9 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Villas Near Uppal Metro | The Pavillion Boduppal - Just 8 Min Away",
   description:
-    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 40 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. HMDA registered. Easy commute to HITEC City, Gachibowli.",
-  keywords:
-    "villas near Uppal, villas near Uppal metro, Uppal villas, villas near Uppal metro station, luxury villas near Uppal, independent houses near Uppal, villas Boduppal Uppal, gated community near Uppal, standalone villas near Uppal metro",
+    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 40 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. Easy commute to HITEC City, Gachibowli.",
   alternates: { canonical: "https://bommakugroup.com/villas-near-uppal" },
   openGraph: {
     title: "Villas Near Uppal Metro | The Pavillion - 8 Min Away",

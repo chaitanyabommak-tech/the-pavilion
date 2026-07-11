@@ -5,9 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas in Surya Hills",
   description:
-    "40 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. HMDA registered. 8 min to Uppal Metro. Book site visit.",
-  keywords:
-    "villas in Boduppal, Boduppal villas, standalone villas Boduppal, luxury villas Boduppal, independent houses Boduppal, gated community Boduppal, villas for sale Boduppal, new villa projects Boduppal, 3BHK villas Boduppal, G+1 penthouse villas Boduppal, The Pavillion Boduppal",
+    "40 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. 8 min to Uppal Metro. Book site visit.",
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
     title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas",

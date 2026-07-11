@@ -4,9 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Independent Houses in Boduppal | The Pavillion - 40 Standalone Villas",
   description:
-    "40 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. HMDA registered. Design freedom. Book site visit today.",
-  keywords:
-    "independent houses in Boduppal, standalone houses Boduppal, independent villas Boduppal, Boduppal independent houses, villa for sale Boduppal, independent house projects Boduppal, gated community independent houses, luxury independent houses Hyderabad",
+    "40 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. Design freedom. Book site visit today.",
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
     title: "Independent Houses in Boduppal | The Pavillion - 40 Villas",
