@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
@@ -17,8 +18,102 @@ export const metadata: Metadata = {
 
 export default function VillasInBodupalPage() {
   return (
-    <main className="min-h-screen" style={{ background: "var(--bg)" }}>
-      <Breadcrumbs items={[{ label: "Villas in Boduppal", href: "/villas-in-boduppal" }]} />
+    <>
+      {/* FAQ Schema for SEO */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why choose Boduppal for villas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Boduppal offers 40% better value than Gachibowli, excellent metro connectivity (8 min to Uppal Metro), proximity to IT hubs (HITEC City 12 km, Gachibowli 15 km), and strong appreciation potential with Regional Ring Road (RRR) development."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many villas are available at The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Pavillion has just 40 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the price range for villas in Boduppal at The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Villa prices start from ₹1.87 Cr for 150 Sq. Yds East/West facing villas, up to ₹3.0 Cr for larger premium plots. Early bird discount: 2% (save ₹3.74L+)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I customize my villa at The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! The Pavillion offers complete design freedom. Choose your elevation style, modify floor plans, and select finishes — all before construction. In-house architects support your vision throughout the customization process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is The Pavillion HMDA approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The Pavillion is HMDA registered (Circle Project). All approvals are in place, with clear land title and 30-year EC available. The project has bank approvals from SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What amenities are included at The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Pavillion features a 24,000 SFT Bommaku Recreation Zone with swimming pool (25m lap pool + kids pool), fully equipped gym, pickleball court, basketball court, badminton court, kids play area, landscaped gardens, jogging track (500m loop), yoga lawn, 24x7 security with CCTV, power backup, and rainwater harvesting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is The Pavillion different from row houses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Pavillion offers TRUE standalone villas with no shared walls, unlike row houses. Features include four-side open plots, complete privacy, independent modifications allowed, higher resale value (15-20% premium), and maximum privacy with compound wall all around."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is home loan available for The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The project is approved by 6 major banks: SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank. The home loan process is smooth and pre-approved for The Pavillion."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How far is The Pavillion from Uppal Metro?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Pavillion in Surya Hills, Boduppal is located just 8 minutes drive from Uppal Metro Station on the Blue Line. This provides easy access to Ameerpet (25 min), Secunderabad (30 min), and the entire Hyderabad metro network."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I book a site visit for The Pavillion?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can book a site visit by calling +91 96760 77142, sending a WhatsApp message to +91 96760 77142, or filling the enquiry form on bommakugroup.com. Site visits are available Monday-Sunday, 10 AM - 6 PM. Cab pickup from nearby locations is provided."
+                }
+              }
+            ]
+          })
+        }}
+      />
+      <main className="min-h-screen" style={{ background: "var(--bg)" }}>
+        <Breadcrumbs items={[{ label: "Villas in Boduppal", href: "/villas-in-boduppal" }]} />
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 px-6">
@@ -655,5 +750,6 @@ export default function VillasInBodupalPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
