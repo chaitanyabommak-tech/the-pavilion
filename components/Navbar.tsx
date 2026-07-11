@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import LeadFormModal from "./LeadFormModal";
 import ThemeToggle from "./ThemeToggle";
 import ThemeAwareLogo from "./ThemeAwareLogo";
@@ -28,9 +29,25 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[80px] sm:h-[96px] lg:h-[90px] xl:h-[96px] flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 bg-transparent">
+          <a href="/" className="flex-shrink-0 bg-transparent">
             <ThemeAwareLogo />
           </a>
+
+          {/* Navigation Links - hidden on mobile, visible on lg+ */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <Link href="/the-pavillion" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+              The Project
+            </Link>
+            <Link href="/about" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+              About
+            </Link>
+            <Link href="/blog" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+              Blog
+            </Link>
+            <Link href="/contact" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+              Contact
+            </Link>
+          </nav>
 
           {/* Right side: ThemeToggle + CTAs */}
           <div className="flex items-center gap-2 sm:gap-3">

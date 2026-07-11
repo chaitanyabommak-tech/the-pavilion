@@ -36,7 +36,7 @@ export default function NRIPage() {
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed max-w-3xl">
-            The Pavillion is designed for NRI families investing in Hyderabad real estate. We handle the process remotely — you don't need to fly down for every signature.
+            The Pavillion is designed for NRI families investing in Hyderabad real estate. We handle the process remotely — you don't need to fly down for every signature. <Link href="/blog/nri-step-by-step-guide-buying-villa-hyderabad" className="underline" style={{ color: "var(--accent)" }}>Read the complete NRI step-by-step guide →</Link>
           </p>
         </div>
       </section>

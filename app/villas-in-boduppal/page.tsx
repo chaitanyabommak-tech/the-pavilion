@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
@@ -60,7 +59,7 @@ export default function VillasInBodupalPage() {
             <div>
               <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">🚇 Metro Connectivity</h3>
               <p className="text-sm leading-relaxed">
-                Just 8 minutes from Uppal Metro Station (Blue Line). Reach Ameerpet in 25 minutes, Secunderabad in 30 minutes. Metro Phase 2 extension to Ghatkesar will pass through Boduppal area.
+                Just 8 minutes from Uppal Metro Station (Blue Line). Reach Ameerpet in 25 minutes, Secunderabad in 30 minutes. Metro Phase 2 extension to Ghatkesar will pass through Boduppal area. <Link href="/blog/is-boduppal-good-place-to-buy-villa-2026" className="underline" style={{ color: "var(--accent)" }}>Read detailed location analysis →</Link>
               </p>
             </div>
 
@@ -74,7 +73,7 @@ export default function VillasInBodupalPage() {
             <div>
               <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">💰 Value Pricing</h3>
               <p className="text-sm leading-relaxed">
-                40% cheaper than Gachibowli for same villa quality. Boduppal villas: ₹1.87 Cr vs Gachibowli: ₹3.5+ Cr. Better value, same lifestyle.
+                40% cheaper than Gachibowli for same villa quality. Boduppal villas: ₹1.87 Cr vs Gachibowli: ₹3.5+ Cr. Better value, same lifestyle. <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="underline" style={{ color: "var(--accent)" }}>See complete pricing guide →</Link>
               </p>
             </div>
 
@@ -232,7 +231,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 24,000 SFT = <strong>750 SFT per family</strong>. That's 7-8X more space per family.
+            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 24,000 SFT = <strong>750 SFT per family</strong>. That's 7-8X more space per family. <Link href="/bommaku-recreation-zone" className="underline" style={{ color: "var(--accent)" }}>See full amenity breakdown →</Link>
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -356,7 +355,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Unlike most villa projects where every home looks identical, The Pavillion offers complete design freedom. We deliver the structural shell, you design the rest.
+            Unlike most villa projects where every home looks identical, The Pavillion offers complete design freedom. We deliver the structural shell, you design the rest. <Link href="/the-clean-slate" className="underline" style={{ color: "var(--accent)" }}>Learn about our customization process →</Link>
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -446,7 +445,7 @@ export default function VillasInBodupalPage() {
           </div>
 
           <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed mb-6">
-            <strong>Bank Approvals:</strong> SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur Vysya Bank have completed full due diligence and approved home loans for The Pavillion.
+            <strong>Bank Approvals:</strong> SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur Vysya Bank have completed full due diligence and approved home loans for The Pavillion. <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="underline" style={{ color: "var(--accent)" }}>Understand legal due diligence →</Link>
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
@@ -549,6 +548,10 @@ export default function VillasInBodupalPage() {
           <div className="flex flex-wrap gap-4 text-xs">
             <Link href="/villas-near-uppal" style={{ color: "var(--accent)" }}>Villas Near Uppal</Link>
             <Link href="/independent-houses-boduppal" style={{ color: "var(--accent)" }}>Independent Houses Boduppal</Link>
+            <Link href="/3bhk-villas-boduppal" style={{ color: "var(--accent)" }}>3 BHK Villas Boduppal</Link>
+            <Link href="/blog/is-boduppal-good-place-to-buy-villa-2026" style={{ color: "var(--accent)" }}>Is Boduppal Good for Villas?</Link>
+            <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" style={{ color: "var(--accent)" }}>Villa Pricing Guide</Link>
+            <Link href="/the-clean-slate" style={{ color: "var(--accent)" }}>Villa Customization</Link>
             <Link href="/" style={{ color: "var(--accent)" }}>The Pavillion Homepage</Link>
           </div>
         </div>
