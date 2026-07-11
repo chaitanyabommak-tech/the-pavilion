@@ -588,8 +588,6 @@ async function main() {
   console.log(`5. Monitor Core Web Vitals & rankings\n`);
 }
 
-main().catch(console.error);
-
 const blogPosts = [
   'app/blog/is-boduppal-good-place-to-buy-villa-2026/page.tsx',
   'app/blog/villa-prices-boduppal-east-hyderabad-2026/page.tsx',
@@ -598,3 +596,5 @@ const blogPosts = [
   'app/blog/nri-step-by-step-guide-buying-villa-hyderabad/page.tsx',
   'app/blog/villa-vs-apartment-east-hyderabad-honest-comparison/page.tsx',
 ];
+
+main().catch(console.error);
