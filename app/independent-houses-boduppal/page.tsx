@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Independent Houses in Boduppal | The Pavillion - 40 Standalone Villas",
@@ -17,12 +18,11 @@ export const metadata: Metadata = {
 export default function IndependentHousesBodupalPage() {
   return (
     <main className="min-h-screen" style={{ background: "var(--bg)" }}>
+      <Breadcrumbs items={[{ label: "Independent Houses in Boduppal", href: "/independent-houses-boduppal" }]} />
+
       {/* Hero */}
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <Link href="/" style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase hover:opacity-70 transition-opacity mb-6 inline-block">
-            ← Back to Home
-          </Link>
 
           <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
             INDEPENDENT HOUSES BODUPPAL
