@@ -32,6 +32,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // USP & Feature pages
+    {
+      url: `${baseUrl}/bommaku-recreation-zone`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/the-clean-slate`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/nri-villa-investment-hyderabad`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Money pages — high priority SEO landing pages
     {
       url: `${baseUrl}/villas-in-boduppal`,
