@@ -61,9 +61,14 @@ export default function BlogPost() {
       <article className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase mb-4">
-            Location Analysis
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase">
+              Location Analysis
+            </p>
+            <span style={{ color: "var(--ink-3)", background: "var(--surface)", padding: "4px 12px", borderRadius: "4px" }} className="text-xs">
+              Last Updated: July 2026
+            </span>
+          </div>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-6">
             Is Boduppal a Good Place to Buy a Villa in 2026?
           </h1>
@@ -122,7 +127,7 @@ export default function BlogPost() {
                 Boduppal has seen 8-12% annual price appreciation over the past 5 years, driven by metro completion (2019), ORR expansion, and residential demand from IT professionals. Standalone villas appreciate faster than apartments due to land ownership.
               </p>
               <p className="leading-relaxed">
-                Current pricing: Villas in Boduppal range from ₹1.5 Cr to ₹2.5 Cr depending on plot size, construction quality, and proximity to metro/ORR. Per-sq-ft rates for villas: ₹5,500-7,500 (construction + land). Land-only plots: ₹20,000-35,000 per sq. yard.
+                Current pricing: <Link href="/villas-in-boduppal" className="underline" style={{ color: "var(--accent)" }}>Villas in Boduppal</Link> range from ₹1.5 Cr to ₹2.5 Cr depending on plot size, construction quality, and proximity to metro/ORR. Per-sq-ft rates for villas: ₹5,500-7,500 (construction + land). Land-only plots: ₹20,000-35,000 per sq. yard.
               </p>
             </section>
 
@@ -167,6 +172,33 @@ export default function BlogPost() {
                 For most families, Boduppal in 2026 is a smart buy — established enough to live comfortably today, growing enough to appreciate over the next decade.
               </p>
             </section>
+          </div>
+
+          {/* Related Posts */}
+          <div className="mt-16 pt-8" style={{ borderTop: "1px solid var(--edge)" }}>
+            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-6">Related Articles</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Pricing Guide</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villa Prices in Boduppal 2026</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Complete pricing breakdown by location</p>
+              </Link>
+              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved vs Unapproved</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">What buyers must check before buying</p>
+              </Link>
+              <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">40 luxury villas at The Pavillion</p>
+              </Link>
+              <Link href="/villas-near-uppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Nearby</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villas Near Uppal Metro</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Just 8 minutes from metro station</p>
+              </Link>
+            </div>
           </div>
 
           {/* CTA */}
