@@ -76,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/villas-in-ghatkesar-pocharam`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
     // Legal pages
     {
       url: `${baseUrl}/privacy`,
