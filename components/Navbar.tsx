@@ -31,15 +31,18 @@ export default function Navbar() {
           }`}
           style={{ pointerEvents: "auto" }}
         >
-          <div className="flex items-center justify-between h-full">
+          {/* Three-zone professional layout */}
 
-          {/* Logo */}
-          <a href="/" className="flex-shrink-0 bg-transparent">
-            <ThemeAwareLogo />
-          </a>
 
-          {/* Navigation Links - hidden on mobile, visible on lg+ */}
-          <nav className="hidden lg:flex items-center gap-10">
+          {/* LEFT ZONE: Brand */}
+          <div className="navbar__brand">
+            <a href="/" className="navbar__logo-link">
+              <ThemeAwareLogo />
+            </a>
+          </div>
+
+          {/* CENTRE ZONE: Navigation - hidden on mobile, visible on lg+ */}
+          <nav className="navbar__navigation hidden lg:flex">
             <Link href="/the-pavillion" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
               The Project
             </Link>
@@ -54,9 +57,8 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Right side: ThemeToggle + CTAs */}
-          <div className="flex items-center gap-2 sm:gap-3">
-
+          {/* RIGHT ZONE: Actions (Theme Toggle + CTAs) */}
+          <div className="navbar__actions">
             {/* Premium theme toggle */}
             <ThemeToggle />
 
@@ -72,7 +74,6 @@ export default function Navbar() {
             <a href="#contact" className="btn-nav-enquire">
               Enquire Now
             </a>
-          </div>
           </div>
         </nav>
       </header>

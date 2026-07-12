@@ -22,9 +22,9 @@ export default function ThemeAwareLogo() {
   if (!mounted) {
     return (
       <div
-        className="bg-transparent"
+        className="navbar__logo"
         style={{
-          width: "clamp(110px, 30vw, 140px)",
+          width: "clamp(128px, 10.5vw, 168px)",
           height: "auto"
         }}
       />
@@ -35,12 +35,13 @@ export default function ThemeAwareLogo() {
     <img
       src="/images/logo-bommaku.svg"
       alt="Bommaku Group"
-      className="block"
+      className="navbar__logo block"
       style={{
-        width: "clamp(110px, 30vw, 140px)",
+        width: "clamp(128px, 10.5vw, 168px)",
         height: "auto",
-        maxHeight: "48px",
+        maxHeight: "46px",
         objectFit: "contain",
+        objectPosition: "left center",
         filter: dark ? "invert(1) brightness(2)" : "none",
         transition: "filter 300ms ease",
         flexShrink: 0,

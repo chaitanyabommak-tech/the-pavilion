@@ -293,15 +293,17 @@ header {
    ═══════════════════════════════════════════════════════════════════ */
 .navbar-floating {
   width: calc(100% - 64px);
-  max-width: 1280px;
-  min-height: 64px;
-  margin: 20px auto 0;
-  padding: 10px 16px 10px 20px;
+  max-width: 1320px;
+  min-height: 68px;
+  margin: 18px auto 0;
+  padding: 10px 12px 10px 22px;
 
-  display: flex;
+  /* Three-zone grid for desktop */
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
   align-items: center;
 
-  border-radius: 22px;
+  border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.38);
 
   background: rgba(255, 255, 255, 0.20);
@@ -313,6 +315,43 @@ header {
     inset 0 1px 0 rgba(255, 255, 255, 0.32);
 
   transition: all 300ms ease;
+}
+
+/* LEFT ZONE: Brand */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  padding-left: 2px;
+}
+
+.navbar__logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* CENTRE ZONE: Navigation */
+.navbar__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 2.4vw, 44px);
+  white-space: nowrap;
+}
+
+/* RIGHT ZONE: Actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navbar__actions > * {
+  flex-shrink: 0;
 }
 
 /* Dark mode glass */
@@ -341,14 +380,40 @@ header {
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-/* Mobile adjustments */
+/* Tablet adjustments */
+@media (max-width: 1100px) {
+  .navbar-floating {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 18px;
+    grid-template-columns: minmax(150px, 1fr) auto minmax(150px, 1fr);
+  }
+
+  .navbar__navigation {
+    gap: clamp(16px, 2vw, 28px);
+  }
+
+  .navbar__actions {
+    gap: 8px;
+  }
+}
+
+/* Mobile: switch to flex layout */
 @media (max-width: 767px) {
   .navbar-floating {
     width: calc(100% - 24px);
-    min-height: 56px;
+    min-height: 58px;
     margin-top: 12px;
-    padding: 8px 12px 8px 16px;
+    padding: 8px 10px 8px 14px;
     border-radius: 18px;
+
+    /* Switch from grid to flex on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__actions {
+    gap: 7px;
   }
 }
 
@@ -356,8 +421,12 @@ header {
 @media (max-width: 360px) {
   .navbar-floating {
     width: calc(100% - 16px);
-    padding: 8px 10px 8px 14px;
+    padding: 7px 8px 7px 12px;
     border-radius: 16px;
+  }
+
+  .navbar__actions {
+    gap: 6px;
   }
 }
 
@@ -2096,12 +2165,37 @@ html {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DESKTOP NAVBAR LOGO (preserve desktop sizing)
+   RESPONSIVE NAVBAR LOGO SIZING
    ═══════════════════════════════════════════════════════════════════ */
-@media (min-width: 768px) {
-  header a img {
-    width: 140px !important;
-    max-height: 48px !important;
+.navbar__logo {
+  display: block;
+  width: clamp(128px, 10.5vw, 168px);
+  height: auto;
+  max-height: 46px;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+
+/* Tablet logo sizing */
+@media (max-width: 1100px) {
+  .navbar__logo {
+    width: clamp(118px, 14vw, 148px);
+  }
+}
+
+/* Mobile logo sizing */
+@media (max-width: 767px) {
+  .navbar__logo {
+    width: clamp(100px, 28vw, 132px);
+    max-height: 38px;
+  }
+}
+
+/* Very narrow screens */
+@media (max-width: 360px) {
+  .navbar__logo {
+    width: clamp(92px, 27vw, 108px);
   }
 }
 
