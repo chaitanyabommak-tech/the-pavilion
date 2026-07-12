@@ -1,0 +1,67 @@
+name: Weekly Performance Tests
+
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM IST (3:30 AM UTC)
+    - cron: '30 3 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run performance tests
+        run: node scripts/performance-test.js
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-report
+          path: performance-reports/*.html
+          retention-days: 90
+
+      - name: Upload JSON data
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-data
+          path: performance-reports/*.json
+          retention-days: 90
+
+      - name: Comment PR with results (if PR exists)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const reportFiles = fs.readdirSync('performance-reports').filter(f => f.endsWith('.json'));
+            const latestReport = reportFiles.sort().reverse()[0];
+            const data = JSON.parse(fs.readFileSync(`performance-reports/${latestReport}`, 'utf8'));
+
+            let comment = '## ⚡ Performance Test Results\n\n';
+            comment += '| Page | Device | Performance | Accessibility | Best Practices | SEO |\n';
+            comment += '|------|--------|-------------|---------------|----------------|-----|\n';
+
+            data.results.forEach(result => {
+              const page = result.url.replace('https://bommakugroup.com', '') || '/';
+              const getEmoji = (score) => score >= 90 ? '🟢' : score >= 50 ? '🟡' : '🔴';
+
+              comment += `| ${page} | ${result.strategy} | ${getEmoji(result.scores.performance)} ${result.scores.performance} | ${getEmoji(result.scores.accessibility)} ${result.scores.accessibility} | ${getEmoji(result.scores.bestPractices)} ${result.scores.bestPractices} | ${getEmoji(result.scores.seo)} ${result.scores.seo} |\n`;
+            });
+
+            comment += '\n📊 Full report available in artifacts.';
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
