@@ -34,7 +34,7 @@ export default function ThemeAwareLogo() {
       aria-label="The Pavillion — Bommak Group"
     >
       <img
-        src="/assets/logo-pavilion-dark.png"
+        src="/images/logo-dark.jpg"
         alt=""
         className="block h-full w-auto object-contain"
         style={{
@@ -44,7 +44,7 @@ export default function ThemeAwareLogo() {
         }}
       />
       <img
-        src="/assets/logo-pavilion-light.png"
+        src="/images/logo-light.jpg"
         alt=""
         className="block h-full w-auto object-contain absolute top-0 left-0"
         style={{
