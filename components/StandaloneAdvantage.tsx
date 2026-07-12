@@ -23,7 +23,7 @@ const advantages = [
   {
     number: "04",
     title: "Low-Density Living",
-    body: "Only 40 families across 3 acres. The density is low by design for a calm, private lifestyle.",
+    body: "Only 33 families across 3 acres. The density is low by design for a calm, private lifestyle.",
   },
   {
     number: "05",

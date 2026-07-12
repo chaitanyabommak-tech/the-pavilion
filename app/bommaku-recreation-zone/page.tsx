@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Bommaku Recreation Zone | 24,000 SFT for 40 Families | The Pavillion",
   description:
-    "24,000 SFT recreation zone exclusively for 40 families = 750 SFT per family. Swimming pool, gym, sports courts, restaurant. First year free. The Pavillion, Boduppal.",
+    "24,000 SFT recreation zone exclusively for 33 families = 750 SFT per family. Swimming pool, gym, sports courts, restaurant. First year free. The Pavillion, Boduppal.",
   alternates: { canonical: "https://bommakugroup.com/bommaku-recreation-zone" },
   openGraph: {
     title: "Bommaku Recreation Zone | 24,000 SFT Private Amenities",
-    description: "24,000 SFT for just 40 families. 750 SFT per family vs 200 typical. Swimming pool, gym, sports, wellness.",
+    description: "24,000 SFT for just 33 families. 750 SFT per family vs 200 typical. Swimming pool, gym, sports, wellness.",
     type: "website",
     url: "https://bommakugroup.com/bommaku-recreation-zone",
   },
@@ -32,11 +32,11 @@ export default function RecreationZonePage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-2xl md:text-3xl leading-relaxed mb-6 font-light">
-            24,000 SFT for 40 families
+            24,000 SFT for 33 families
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed max-w-3xl">
-            Not a conventional clubhouse. A private recreation zone designed exclusively for 40 families — giving you <strong style={{ color: "var(--ink)" }}>750 SFT per family</strong> when most projects offer 200 SFT.
+            Not a conventional clubhouse. A private recreation zone designed exclusively for 33 families — giving you <strong style={{ color: "var(--ink)" }}>750 SFT per family</strong> when most projects offer 200 SFT.
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default function RecreationZonePage() {
             <div className="border-l-2 pl-6" style={{ borderColor: "var(--accent)" }}>
               <p style={{ color: "var(--accent)" }} className="text-4xl font-light mb-2">750 SFT</p>
               <p style={{ color: "var(--ink)" }} className="text-lg mb-2">Per Family at The Pavillion</p>
-              <p style={{ color: "var(--ink-2)" }} className="text-sm">24,000 SFT ÷ 40 families</p>
+              <p style={{ color: "var(--ink-2)" }} className="text-sm">24,000 SFT ÷ 33 families</p>
             </div>
 
             <div className="border-l-2 pl-6" style={{ borderColor: "var(--ink-3)" }}>
@@ -172,7 +172,7 @@ export default function RecreationZonePage() {
             </p>
 
             <p className="text-lg leading-relaxed">
-              At The Pavillion, 40 families share 24,000 SFT. That's <strong style={{ color: "var(--ink)" }}>3-4× more space per family</strong>. The difference isn't subtle — it's the difference between an amenity you use and an amenity you avoid.
+              At The Pavillion, 33 families share 24,000 SFT. That's <strong style={{ color: "var(--ink)" }}>3-4× more space per family</strong>. The difference isn't subtle — it's the difference between an amenity you use and an amenity you avoid.
             </p>
 
             <p className="text-lg leading-relaxed">

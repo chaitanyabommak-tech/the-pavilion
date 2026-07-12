@@ -42,7 +42,7 @@
   - Phone: +91 96760 77142
   - Email: bommakugroup@gmail.com
   - Website: https://bommakugroup.com
-  - Description: 40 standalone luxury villas in Boduppal. G+1+Penthouse, 3BHK, 24,000 SFT recreation zone. HMDA registered. From ₹1.87 Cr.
+  - Description: 33 standalone luxury villas in Boduppal. G+1+Penthouse, 3BHK, 24,000 SFT recreation zone. HMDA registered. From ₹1.87 Cr.
   - Photos: Upload 5-10 project photos
   - Hours: Mon-Sat 10AM-6PM, Sun 10AM-5PM
 
@@ -268,7 +268,7 @@ Book by July 31, 2026:
 ✅ Free Vastu Consultation (Worth ₹25,000)
 ✅ Priority Villa Selection
 
-40 standalone villas | G+1+Penthouse | From ₹1.87 Cr
+33 standalone villas | G+1+Penthouse | From ₹1.87 Cr
 
 📞 Call: +91 96760 77142
 🌐 bommakugroup.com
@@ -325,8 +325,8 @@ Experience it yourself — Book your site visit:
 **Script Outline:**
 1. Aerial opening (0-15s): "Welcome to The Pavillion, Boduppal"
 2. Location highlight (15-30s): "Just 8 min from Uppal Metro"
-3. Villa exterior (30-50s): "40 standalone villas, no shared walls"
-4. Recreation zone (50-70s): "24,000 SFT recreation for just 40 families"
+3. Villa exterior (30-50s): "33 standalone villas, no shared walls"
+4. Recreation zone (50-70s): "24,000 SFT recreation for just 33 families"
 5. Villa interior (70-100s): "G+1+Penthouse, design freedom"
 6. Closing CTA (100-120s): "Book your site visit: +91 96760 77142"
 

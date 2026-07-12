@@ -140,8 +140,8 @@ export default function RootLayout({
                   "@type": "Product",
                   "@id": "https://bommakugroup.com/#product",
                   "name": "The Pavillion - Luxury Villas in Boduppal",
-                  "description": "40 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse configuration with 3BHK, 24,000 SFT recreation zone.",
-                  "dateModified": "2026-07-11",
+                  "description": "33 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse configuration with 3BHK, 24,000 SFT recreation zone.",
+                  "dateModified": "2026-07-12",
                   "brand": {
                     "@id": "https://bommakugroup.com/#organization"
                   },
@@ -150,7 +150,7 @@ export default function RootLayout({
                     "priceCurrency": "INR",
                     "lowPrice": "18700000",
                     "highPrice": "24000000",
-                    "offerCount": "40",
+                    "offerCount": "33",
                     "availability": "https://schema.org/InStock",
                     "seller": {
                       "@id": "https://bommakugroup.com/#organization"
@@ -171,7 +171,7 @@ export default function RootLayout({
                     {
                       "@type": "PropertyValue",
                       "name": "Total Units",
-                      "value": "40"
+                      "value": "33"
                     }
                   ]
                 },

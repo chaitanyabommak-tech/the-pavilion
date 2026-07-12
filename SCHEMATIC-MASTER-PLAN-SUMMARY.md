@@ -220,7 +220,7 @@ const getBlockVillas = (block: string) => {
 1. User scrolls to "Interactive Master Plan" section
 2. Clicks "View Master Plan" button
 3. Master plan expands showing schematic layout
-4. User sees all 40 villas in organized blocks
+4. User sees all 33 villas in organized blocks
 5. User hovers over villa → Tooltip appears
 6. User clicks villa box → Villa highlights
 7. Detail panel updates below with full villa info

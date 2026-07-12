@@ -191,7 +191,7 @@ export default function BlogPost() {
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">40 luxury villas at The Pavillion</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">33 luxury villas at The Pavillion</p>
               </Link>
               <Link href="/villas-near-uppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Nearby</p>
@@ -207,7 +207,7 @@ export default function BlogPost() {
               Explore The Pavillion in Boduppal
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
-              40 standalone villas, 8 min to Uppal Metro, 24,000 SFT recreation zone. From ₹1.87 Cr.
+              33 standalone villas, 8 min to Uppal Metro, 24,000 SFT recreation zone. From ₹1.87 Cr.
             </p>
             <Link href="/the-pavillion" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block">
               View Project Details

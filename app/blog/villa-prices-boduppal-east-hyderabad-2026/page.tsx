@@ -132,7 +132,7 @@ export default function BlogPost() {
                 A 3 BHK villa (1,800-2,200 sq. ft built-up) on a 150-200 sq. yard plot costs ₹1.5-2 Cr in Boduppal. Premium projects with clubhouses and gated security are at the higher end (₹1.87-2.2 Cr).
               </p>
               <p className="leading-relaxed">
-                <strong style={{ color: "var(--ink)" }}>What you get for ₹1.87 Cr at The Pavillion:</strong> 200 sq. yard plot, G+1+Penthouse villa (~2,000 sq. ft built-up), 3 BHK + pooja room, 24,000 SFT recreation zone for 40 families, HMDA-compliant GP layout, metro proximity (8 min to Uppal station).
+                <strong style={{ color: "var(--ink)" }}>What you get for ₹1.87 Cr at The Pavillion:</strong> 200 sq. yard plot, G+1+Penthouse villa (~2,000 sq. ft built-up), 3 BHK + pooja room, 24,000 SFT recreation zone for 33 families, HMDA-compliant GP layout, metro proximity (8 min to Uppal station).
               </p>
             </section>
 

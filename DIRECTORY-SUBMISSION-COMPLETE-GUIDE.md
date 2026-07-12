@@ -52,13 +52,13 @@ HMDA Registered, 6 Bank Approvals (SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur
 ## 📝 **BUSINESS DESCRIPTION (150 words - Copy-Paste Ready)**
 
 ```
-The Pavillion by Bommaku Group offers 40 standalone luxury villas in Boduppal, East Hyderabad. Each villa features G+1+Penthouse configuration with 3 BHK + Pooja Room layout on plots ranging from 150-228 Sq. Yds. 
+The Pavillion by Bommaku Group offers 33 standalone luxury villas in Boduppal, East Hyderabad. Each villa features G+1+Penthouse configuration with 3 BHK + Pooja Room layout on plots ranging from 150-228 Sq. Yds. 
 
-What makes us unique: 24,000 SFT recreation zone exclusively for just 40 families - that's 600 SFT of amenities per villa! Our project is HMDA registered with approvals from 6 major banks including SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank.
+What makes us unique: 24,000 SFT recreation zone exclusively for just 33 families - that's 600 SFT of amenities per villa! Our project is HMDA registered with approvals from 6 major banks including SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank.
 
 Location advantage: Just 8 minutes drive from Uppal Metro station via Uppal-Ghatkesar Road. Perfect for IT professionals working in Uppal, ECIL, and Nagole tech corridors.
 
-Starting from ₹1.87 Cr onwards. Every villa is standalone (zero shared walls), offering complete privacy and design freedom. Visit our experience center or book a site visit to see why 40 families chose independence over apartments.
+Starting from ₹1.87 Cr onwards. Every villa is standalone (zero shared walls), offering complete privacy and design freedom. Visit our experience center or book a site visit to see why 33 families chose independence over apartments.
 
 Schedule your site visit: +91 96760 77142
 ```
@@ -68,7 +68,7 @@ Schedule your site visit: +91 96760 77142
 ## 📝 **SHORT DESCRIPTION (50 words - For SMS/Short Forms)**
 
 ```
-40 standalone luxury villas in Boduppal, Hyderabad. G+1+Penthouse, 3 BHK + Pooja Room, 150-228 Sq. Yds plots. HMDA registered, 6 bank approvals. 8 min to Uppal Metro. Zero shared walls. From ₹1.87 Cr onwards. Call +91 96760 77142 for site visit.
+33 standalone luxury villas in Boduppal, Hyderabad. G+1+Penthouse, 3 BHK + Pooja Room, 150-228 Sq. Yds plots. HMDA registered, 6 bank approvals. 8 min to Uppal Metro. Zero shared walls. From ₹1.87 Cr onwards. Call +91 96760 77142 for site visit.
 ```
 
 ---

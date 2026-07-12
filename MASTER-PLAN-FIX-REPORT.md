@@ -30,7 +30,7 @@ Database: villas table (INCOMPLETE DATA ❌)
     ↓ If empty/incomplete
 VillaConfigurations.tsx (Client Component)
     ↓ Falls back to
-data/pavilionVillas.ts (COMPLETE DATA ✅ - 40 villas)
+data/pavilionVillas.ts (COMPLETE DATA ✅ - 33 villas)
     ↓ Passes to
 SchematicMasterPlan.tsx (Renders the layout)
 ```

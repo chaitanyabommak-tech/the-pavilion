@@ -337,7 +337,7 @@ export default function BlogPost() {
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">The Pavillion Villas</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">40 standalone villas, from ₹1.87 Cr</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">33 standalone villas, from ₹1.87 Cr</p>
               </Link>
             </div>
           </div>

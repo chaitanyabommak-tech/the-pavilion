@@ -328,7 +328,7 @@
 **Address:** Surya Hills, Boduppal, Hyderabad 500039
 
 **Project Details:**
-- 40 standalone luxury villas
+- 33 standalone luxury villas
 - G+1+Penthouse configuration
 - 3 BHK + Pooja Room
 - 150-228 Sq. Yds plots

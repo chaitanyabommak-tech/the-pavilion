@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Villas Near Uppal Metro | The Pavillion Boduppal - Just 8 Min Away",
   description:
-    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 40 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. Easy commute to HITEC City, Gachibowli.",
+    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 33 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. Easy commute to HITEC City, Gachibowli.",
   alternates: { canonical: "https://bommakugroup.com/villas-near-uppal" },
   openGraph: {
     title: "Villas Near Uppal Metro | The Pavillion - 8 Min Away",
-    description: "40 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹1.87 Cr. HMDA registered.",
+    description: "33 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹1.87 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/villas-near-uppal",
   },
@@ -33,7 +33,7 @@ export default function VillasNearUppalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Just 8 minutes from Uppal Metro Station. 40 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹1.87 Cr.
+            Just 8 minutes from Uppal Metro Station. 33 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹1.87 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -74,7 +74,7 @@ export default function VillasNearUppalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Villas</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>40 standalone villas (limited inventory)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 standalone villas (limited inventory)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Villa Type</td>

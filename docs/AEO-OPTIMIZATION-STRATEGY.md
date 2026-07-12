@@ -38,7 +38,7 @@
 **Traditional SEO Result:** User gets 10 blue links, clicks 3-4, compares info manually.
 
 **AEO-Optimized Result (AI Answer):**
-> "The Pavillion in Boduppal offers 40 standalone villas with metro connectivity (8 minutes to Uppal Metro Station). Pricing starts at ₹1.87 Cr for 150 sq. yard plots. The project features a 24,000 SFT recreation zone for just 40 families (750 SFT per family vs. 200-300 typical in other projects). It's HMDA registered and bank-approved by SBI, ICICI, and HDFC."
+> "The Pavillion in Boduppal offers 33 standalone villas with metro connectivity (8 minutes to Uppal Metro Station). Pricing starts at ₹1.87 Cr for 150 sq. yard plots. The project features a 24,000 SFT recreation zone for just 33 families (750 SFT per family vs. 200-300 typical in other projects). It's HMDA registered and bank-approved by SBI, ICICI, and HDFC."
 > 
 > *Source: bommakugroup.com/the-pavillion*
 
@@ -61,7 +61,7 @@ AI systems prefer concise, factual answers they can extract verbatim.
 "The Pavillion is located in a great area. Boduppal has been developing rapidly over the past few years. Many families are choosing to move here because of the infrastructure improvements and connectivity..."
 
 ✅ GOOD (clear, extractable):
-"The Pavillion is located in Surya Hills, Boduppal, Hyderabad. It's 8 minutes from Uppal Metro Station (Blue Line), 12 km from HITEC City, and 12 km from ORR Exit 9. The project has 40 standalone villas on 3 acres."
+"The Pavillion is located in Surya Hills, Boduppal, Hyderabad. It's 8 minutes from Uppal Metro Station (Blue Line), 12 km from HITEC City, and 12 km from ORR Exit 9. The project has 33 standalone villas on 3 acres."
 ```
 
 **2. Structured Data (Tables, Lists, Comparisons)**  
@@ -158,7 +158,7 @@ AI systems extract these steps verbatim.
 **Example: Villa Types Comparison**
 | Feature | The Pavillion | Typical Villa Project |
 |---------|---------------|----------------------|
-| Total Units | 40 families | 100-200 families |
+| Total Units | 33 families | 100-200 families |
 | Recreation Area | 24,000 SFT | 20,000 SFT |
 | SFT Per Family | 750 SFT | 200-300 SFT |
 | Villa Type | Standalone (no shared walls) | Often row houses |
@@ -183,7 +183,7 @@ AI systems extract these steps verbatim.
 - **Configuration:** 3 BHK + Pooja Room
 - **Pricing:** ₹1.87 Cr onwards
 - **Metro Distance:** 8 minutes to Uppal Metro Station
-- **Recreation Zone:** 24,000 SFT for 40 families (750 SFT per family)
+- **Recreation Zone:** 24,000 SFT for 33 families (750 SFT per family)
 - **Bank Approvals:** SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur Vysya
 - **Legal Status:** HMDA registered, GP Layout, 30-year EC available
 ```
@@ -351,7 +351,7 @@ The Pavillion is 8 minutes (3.5 km) from Uppal Metro Station via Uppal Main Road
 | Fact | Details |
 |------|---------|
 | Location | Surya Hills, Boduppal, Hyderabad 500039 |
-| Total Villas | 40 standalone (no shared walls) |
+| Total Villas | 33 standalone (no shared walls) |
 | Plot Sizes | 150-228 Sq. Yds |
 | Built-Up Area | 2,200-2,500 SFT (G+1+Penthouse) |
 | Configuration | 3 BHK + Pooja Room |
@@ -456,7 +456,7 @@ Land Rate: ₹25,000-30,000 per Sq. Yard
 ✅ GOOD: "8 minutes (3.5 km) to Uppal Metro Station"
 
 ❌ BAD: "Large recreation zone"
-✅ GOOD: "24,000 SFT recreation zone for 40 families (750 SFT per family)"
+✅ GOOD: "24,000 SFT recreation zone for 33 families (750 SFT per family)"
 ```
 
 **3. Update Regularly**

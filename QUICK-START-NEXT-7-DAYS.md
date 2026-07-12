@@ -47,7 +47,7 @@ Email: bommakugroup@gmail.com
 Website: https://bommakugroup.com
 
 Description:
-40 standalone luxury villas in Boduppal, East Hyderabad. G+1+Penthouse configuration, 3 BHK + Pooja Room, 150-228 Sq. Yds plots. 24,000 SFT recreation zone for just 40 families. HMDA registered, 6 bank approvals (SBI, ICICI, HDFC, Kotak, Bajaj, Karur Vysya). Metro connectivity: 8 min to Uppal Metro. From ₹1.87 Cr onwards.
+33 standalone luxury villas in Boduppal, East Hyderabad. G+1+Penthouse configuration, 3 BHK + Pooja Room, 150-228 Sq. Yds plots. 24,000 SFT recreation zone for just 33 families. HMDA registered, 6 bank approvals (SBI, ICICI, HDFC, Kotak, Bajaj, Karur Vysya). Metro connectivity: 8 min to Uppal Metro. From ₹1.87 Cr onwards.
 
 Hours: Mon-Sat 10AM-6PM, Sun 10AM-5PM
 Category: Real Estate Developer / Property Developer

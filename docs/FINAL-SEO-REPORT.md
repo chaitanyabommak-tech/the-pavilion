@@ -117,7 +117,7 @@
 4. `/independent-houses-boduppal` — Synonym targeting (independent houses = villas)
 
 **USP & Audience Pages (3) — Differentiation & Targeting:**
-5. `/bommaku-recreation-zone` — Recreation USP (24,000 SFT for 40 families = 750 SFT per family vs 200 typical)
+5. `/bommaku-recreation-zone` — Recreation USP (24,000 SFT for 33 families = 750 SFT per family vs 200 typical)
 6. `/the-clean-slate` — Customization USP (3-step process, "Mera Ghar Mera Marzi" philosophy)
 7. `/nri-villa-investment-hyderabad` — NRI targeting (FEMA rules, PoA process, NRI loans, repatriation)
 
@@ -487,10 +487,10 @@ Structuring content so AI systems can easily extract, understand, and cite it wh
 > "The Pavillion offers luxury villas in Boduppal with world-class amenities and beautiful designs."
 
 **✅ Citation-Worthy (Structured, Quantified):**
-> "The Pavillion has 40 standalone villas in Boduppal, 8 minutes from Uppal Metro. Pricing: ₹1.87-3.0 Cr. Recreation zone: 24,000 SFT for 40 families (750 SFT per family vs 200-300 typical). HMDA registered, bank-approved by SBI, ICICI, HDFC."
+> "The Pavillion has 33 standalone villas in Boduppal, 8 minutes from Uppal Metro. Pricing: ₹1.87-3.0 Cr. Recreation zone: 24,000 SFT for 33 families (750 SFT per family vs 200-300 typical). HMDA registered, bank-approved by SBI, ICICI, HDFC."
 
 **Why 2nd version gets cited:**
-- Specific numbers (40 villas, 8 minutes, ₹1.87 Cr)
+- Specific numbers (33 villas, 8 minutes, ₹1.87 Cr)
 - Comparison (750 vs 200-300 SFT per family)
 - Quantified USP (3-4× more space)
 - Trust signals (HMDA, bank approvals)

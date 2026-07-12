@@ -60,7 +60,7 @@ Sunday: 10:00 AM - 4:00 PM
 
 #### Business Description (750 characters max)
 ```
-The Pavillion by Bommaku Group offers 40 exclusive G+1+Penthouse villas in Boduppal, East Hyderabad. Each standalone villa features private plots ranging from 150-228 sq yards with no shared walls, complete design freedom, and access to a 30,000 SFT recreation zone with clubhouse, swimming pool, sports courts, and premium amenities. Located 8 minutes from Uppal Metro with easy access to HITEC City, Gachibowli, ORR, and top schools and hospitals. HMDA registered project with bank loan support. Book your private site visit to explore floor plans, master plan, and villa options. Limited 40 villas available.
+The Pavillion by Bommaku Group offers 40 exclusive G+1+Penthouse villas in Boduppal, East Hyderabad. Each standalone villa features private plots ranging from 150-228 sq yards with no shared walls, complete design freedom, and access to a 30,000 SFT recreation zone with clubhouse, swimming pool, sports courts, and premium amenities. Located 8 minutes from Uppal Metro with easy access to HITEC City, Gachibowli, ORR, and top schools and hospitals. HMDA registered project with bank loan support. Book your private site visit to explore floor plans, master plan, and villa options. Limited 33 villas available.
 ```
 
 ### Step 4: Add High-Quality Photos
@@ -209,7 +209,7 @@ Metro connectivity + IT hub access = Ideal for families
 ```
 ⏰ Only 40 Villas - Limited Availability
 
-Unlike mass villa projects with 200+ units, The Pavillion is limited to just 40 families.
+Unlike mass villa projects with 200+ units, The Pavillion is limited to just 33 families.
 
 Low-density living = More privacy, more space, more exclusivity
 

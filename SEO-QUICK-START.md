@@ -160,7 +160,7 @@ Add after hero section, before "Why Boduppal" section:
           </tr>
           <tr>
             <td className="border p-3 font-medium" style={{ borderColor: "var(--ink-4)" }}>Total Villas</td>
-            <td className="border p-3" style={{ borderColor: "var(--ink-4)" }}>40 standalone (no shared walls)</td>
+            <td className="border p-3" style={{ borderColor: "var(--ink-4)" }}>33 standalone (no shared walls)</td>
           </tr>
           <tr>
             <td className="border p-3 font-medium" style={{ borderColor: "var(--ink-4)" }}>Plot Sizes</td>

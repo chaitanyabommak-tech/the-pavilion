@@ -322,7 +322,7 @@ If you encounter issues:
 
 ### **This Week**
 
-1. **Populate villa inventory** - Add all 40 villas with accurate status
+1. **Populate villa inventory** - Add all 33 villas with accurate status
 2. **Update gallery** - Replace with high-quality villa photos
 3. **Review SEO** - Ensure meta tags are optimized
 4. **Test all forms** - Contact, site visit, brochure download

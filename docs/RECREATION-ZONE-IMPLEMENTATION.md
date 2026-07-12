@@ -334,7 +334,7 @@ All other sitelinks remain functional:
 
 ### The Pavillion Project
 - **Type:** Villa community (not "gated community" as primary term)
-- **Units:** 40 standalone villas
+- **Units:** 33 standalone villas
 - **Configuration:** G+1+Penthouse
 - **Developer:** Bommaku Constructions
 - **Parent:** Bommaku Group

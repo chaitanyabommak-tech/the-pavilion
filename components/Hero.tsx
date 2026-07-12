@@ -21,7 +21,7 @@ interface HeroProps {
 
 /* Desktop stats bar — unchanged */
 const stats = [
-  { value: "40",            label: "Villas"           },
+  { value: "33", label: "Villas"           },
   { value: "G+1+Penthouse", label: "Configuration"    },
   { value: "3 Acres",       label: "Site Area"         },
   { value: "24,000 SFT",   label: "Recreation Zone"  },
@@ -30,7 +30,7 @@ const stats = [
 
 /* Mobile card stats — compact for 5-col strip */
 const mobStats = [
-  { value: "40",    label: "Villas"    },
+  { value: "33", label: "Villas"    },
   { value: "G+1",   label: "Penthouse" },
   { value: "3 Ac.", label: "Site Area" },
   { value: "24K",   label: "Rec Zone"  },

@@ -193,7 +193,7 @@ This SQL command:
 
 ### Why Not Fix Database Instead?
 
-You COULD populate the database with all 40 villas, but:
+You COULD populate the database with all 33 villas, but:
 - ❌ Requires 40 INSERT statements
 - ❌ Need to match exact data structure
 - ❌ Need to create foreign keys

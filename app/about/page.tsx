@@ -115,7 +115,7 @@ export default function AboutPage() {
           </h2>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-6">
-            Our current flagship: 40 standalone luxury villas in Surya Hills, Boduppal. 3 acres, GP Layout, with a 24,000 SFT recreation zone exclusively for 40 families.
+            Our current flagship: 33 standalone luxury villas in Surya Hills, Boduppal. 3 acres, GP Layout, with a 24,000 SFT recreation zone exclusively for 33 families.
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8">

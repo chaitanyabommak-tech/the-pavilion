@@ -144,7 +144,7 @@ Your business must ACTUALLY provide the service of the category. Don't add categ
 
 **Optimized Description:**  
 ```
-The Pavillion is Boduppal's premier luxury villa community by Bommaku Group. 40 standalone G+1+Penthouse villas in Surya Hills with 24,000 SFT recreation zone. 8 minutes from Uppal Metro. Starting ₹1.87 Cr. HMDA registered. Bank-approved by SBI, ICICI, HDFC. Complete customization freedom. Visit our show villa to experience true standalone living.
+The Pavillion is Boduppal's premier luxury villa community by Bommaku Group. 33 standalone G+1+Penthouse villas in Surya Hills with 24,000 SFT recreation zone. 8 minutes from Uppal Metro. Starting ₹1.87 Cr. HMDA registered. Bank-approved by SBI, ICICI, HDFC. Complete customization freedom. Visit our show villa to experience true standalone living.
 ```
 
 **Keyword Placement (Natural):**  
@@ -155,7 +155,7 @@ The Pavillion is Boduppal's premier luxury villa community by Bommaku Group. 40 
 - HMDA registered (trust signal)
 
 **First 160 characters** (shown in Map Pack):  
-> "The Pavillion is Boduppal's premier luxury villa community by Bommaku Group. 40 standalone G+1+Penthouse villas in Surya Hills with 24,000 SFT recreation..."
+> "The Pavillion is Boduppal's premier luxury villa community by Bommaku Group. 33 standalone G+1+Penthouse villas in Surya Hills with 24,000 SFT recreation..."
 
 Make it compelling — this is the snippet buyers see before clicking.
 
@@ -320,7 +320,7 @@ These 5 actions drive 80% of Map Pack ranking improvement:
    **A:** Villas start from ₹1.87 Cr for 150 Sq. Yds (East/West facing). Larger plots up to ₹3 Cr. Early bird discount available. Call +91 96760 77142 for current pricing.
 
 2. **Q:** How many villas are available?  
-   **A:** The Pavillion has only 40 villas total. Currently 12 units remaining in Phase 1. Limited inventory.
+   **A:** The Pavillion has only 33 villas total. Currently 12 units remaining in Phase 1. Limited inventory.
 
 3. **Q:** Is home loan available?  
    **A:** Yes! The project is approved by SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank. Our team assists with loan processing.
@@ -489,13 +489,13 @@ We'd love to understand more and resolve this. Please call us directly at +91 96
 
 **Week 1: Construction Update**  
 - **Title:** "Phase 1 Villas — Construction Milestone!"
-- **Body:** "Foundation work completed for all 40 villas. Slab work in progress. 12 premium villas still available for booking. Visit site to see progress."
+- **Body:** "Foundation work completed for all 33 villas. Slab work in progress. 12 premium villas still available for booking. Visit site to see progress."
 - **Photo:** Construction progress photo
 - **CTA:** "Book Site Visit" → /contact
 
 **Week 2: Amenity Highlight**  
 - **Title:** "24,000 SFT Recreation Zone — 750 SFT Per Family!"
-- **Body:** "Unlike projects with 200 families sharing 20,000 SFT, The Pavillion offers 3-4× more space per family. Swimming pool, gym, sports courts, party hall — exclusively for 40 families."
+- **Body:** "Unlike projects with 200 families sharing 20,000 SFT, The Pavillion offers 3-4× more space per family. Swimming pool, gym, sports courts, party hall — exclusively for 33 families."
 - **Photo:** Recreation zone render or under-construction photo
 - **CTA:** "Learn More" → /bommaku-recreation-zone
 
@@ -677,7 +677,7 @@ Track in a spreadsheet:
 - 99acres, MagicBricks, Housing.com editorial features
 
 **Pitch Angle:**  
-"Boduppal's first luxury low-density villa community — only 40 families, 24,000 SFT recreation zone."
+"Boduppal's first luxury low-density villa community — only 33 families, 24,000 SFT recreation zone."
 
 **SEO Impact:** Backlinks from local news sites boost "prominence" signal.
 

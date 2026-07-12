@@ -77,7 +77,7 @@ export default function GhatkesarPochalamPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Villas</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>40 standalone luxury villas (limited inventory)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 standalone luxury villas (limited inventory)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Villa Type</td>
@@ -225,7 +225,7 @@ export default function GhatkesarPochalamPage() {
           </h2>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-6">
-            40 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, no shared walls, 24,000 SFT recreation zone for just 40 families. GP Layout project.
+            33 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, no shared walls, 24,000 SFT recreation zone for just 33 families. GP Layout project.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">

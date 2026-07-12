@@ -33,7 +33,7 @@ After adding the Quick Facts table to `/villas-in-boduppal`, we want to verify:
 
 **What to Look For:**
 - ✅ Cites bommakugroup.com as source
-- ✅ Mentions 40 villas, G+1+Penthouse, ₹1.87 Cr starting price
+- ✅ Mentions 33 villas, G+1+Penthouse, ₹1.87 Cr starting price
 - ✅ Includes recreation zone (24,000 SFT)
 - ✅ Mentions HMDA approval, bank approvals
 
@@ -63,7 +63,7 @@ After adding the Quick Facts table to `/villas-in-boduppal`, we want to verify:
 
 ```
 8. "How many villas are in The Pavillion Boduppal?"
-   Expected: 40 villas
+   Expected: 33 villas
 
 9. "What is the recreation zone size in The Pavillion?"
    Expected: 24,000 SFT (750 SFT per family)

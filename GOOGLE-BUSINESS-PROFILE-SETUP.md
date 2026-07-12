@@ -234,9 +234,9 @@ Sunday: 10:00 AM - 5:00 PM
 
 **Copy-Paste This (750 characters):**
 ```
-The Pavillion by Bommaku Group offers 40 standalone luxury villas in Boduppal, East Hyderabad. Each villa features G+1+Penthouse configuration with 3 BHK + Pooja Room on plots ranging from 150-228 Sq. Yds.
+The Pavillion by Bommaku Group offers 33 standalone luxury villas in Boduppal, East Hyderabad. Each villa features G+1+Penthouse configuration with 3 BHK + Pooja Room on plots ranging from 150-228 Sq. Yds.
 
-Our USP: 24,000 SFT recreation zone exclusively for just 40 families - that's 600 SFT of amenities per villa! Zero shared walls mean complete privacy and design freedom.
+Our USP: 24,000 SFT recreation zone exclusively for just 33 families - that's 600 SFT of amenities per villa! Zero shared walls mean complete privacy and design freedom.
 
 HMDA registered project with approvals from 6 major banks: SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank. Home loans available with attractive interest rates.
 
@@ -405,7 +405,7 @@ Starting from ₹1.87 Cr onwards. Schedule your site visit today!
 ```
 The Pavillion is NOW OPEN for bookings! 
 
-✅ 40 standalone luxury villas
+✅ 33 standalone luxury villas
 ✅ G+1+Penthouse configuration
 ✅ 3 BHK + Pooja Room
 ✅ 150-228 Sq. Yds plots
@@ -551,7 +551,7 @@ Did you know?
 
 The Pavillion offers 600 SFT of amenities per villa - 5X more than typical projects!
 
-24,000 SFT recreation zone ÷ 40 families = Luxury redefined ✨
+24,000 SFT recreation zone ÷ 33 families = Luxury redefined ✨
 
 Explore our amenities: Book site visit
 📞 +91 96760 77142

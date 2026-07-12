@@ -123,7 +123,7 @@ Description 3:
 Premium villa living in East Hyderabad with private plots, internal roads, recreation zone amenities, and bank loan support.
 
 Description 4:
-Limited 40 villas. G+1+Penthouse configuration. 3BHK standalone homes. Book your site visit now.
+Limited 33 villas. G+1+Penthouse configuration. 3BHK standalone homes. Book your site visit now.
 ```
 
 ## Sitelink Assets (MUST ADD)

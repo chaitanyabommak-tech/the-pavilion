@@ -6,11 +6,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas in Surya Hills",
   description:
-    "40 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. 8 min to Uppal Metro. Book site visit.",
+    "33 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. 8 min to Uppal Metro. Book site visit.",
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
     title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas",
-    description: "40 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
+    description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
     type: "article",
     url: "https://bommakugroup.com/villas-in-boduppal",
   },
@@ -41,7 +41,7 @@ export default function VillasInBodupalPage() {
                 "name": "How many villas are available at The Pavillion?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The Pavillion has just 40 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit."
+                  "text": "The Pavillion has just 33 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit."
                 }
               },
               {
@@ -128,7 +128,7 @@ export default function VillasInBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Discover 40 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 40 families. Starting ₹1.87 Cr.
+            Discover 40 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 33 families. Starting ₹1.87 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -161,7 +161,7 @@ export default function VillasInBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Villas</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>40 standalone villas (limited inventory)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 standalone villas (limited inventory)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Villa Type</td>
@@ -303,7 +303,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-6">
-            The Pavillion is Boduppal's most exclusive standalone villa community, limited to just 40 families. Unlike mass villa projects with 100-200 units, we've intentionally kept it small to offer true low-density living.
+            The Pavillion is Boduppal's most exclusive standalone villa community, limited to just 33 families. Unlike mass villa projects with 100-200 units, we've intentionally kept it small to offer true low-density living.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
@@ -341,7 +341,7 @@ export default function VillasInBodupalPage() {
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>Low Density:</strong> Only 40 families share 24,000 SFT recreation (750 SFT per family vs 200-300 typical).</span>
+              <span className="text-sm"><strong>Low Density:</strong> Only 33 families share 24,000 SFT recreation (750 SFT per family vs 200-300 typical).</span>
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
@@ -424,7 +424,7 @@ export default function VillasInBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 40 families share 24,000 SFT = <strong>750 SFT per family</strong>. That's 7-8X more space per family. <Link href="/bommaku-recreation-zone" className="underline" style={{ color: "var(--accent)" }}>See full amenity breakdown →</Link>
+            Most villa projects cram 200 families into 20,000 SFT recreation (100 SFT per family). At The Pavillion, 33 families share 24,000 SFT = <strong>750 SFT per family</strong>. That's 7-8X more space per family. <Link href="/bommaku-recreation-zone" className="underline" style={{ color: "var(--accent)" }}>See full amenity breakdown →</Link>
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -663,7 +663,7 @@ export default function VillasInBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">2. How many villas are available?</h3>
-              <p className="text-sm">The Pavillion has just 40 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit.</p>
+              <p className="text-sm">The Pavillion has just 33 villas total. Currently 12 villas remain in Phase 1. East-facing: 5 units, West-facing: 4 units, Corner plots: 2 units, NE facing: 1 unit.</p>
             </div>
 
             <div>

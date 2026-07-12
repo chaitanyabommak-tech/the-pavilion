@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "The Pavillion Boduppal | 40 Luxury Villas by Bommaku Group",
   description:
-    "The Pavillion - 40 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, 24,000 SFT recreation zone, 3 BHK + Pooja Room. GP Layout. From ₹1.87 Cr. Bommaku Group.",
+    "The Pavillion - 33 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, 24,000 SFT recreation zone, 3 BHK + Pooja Room. GP Layout. From ₹1.87 Cr. Bommaku Group.",
   alternates: { canonical: "https://bommakugroup.com/the-pavillion" },
   openGraph: {
     title: "The Pavillion Boduppal | 40 Luxury Villas by Bommaku Group",
-    description: "40 standalone luxury villas in Boduppal. G+1+Penthouse, 24,000 SFT recreation zone. GP Layout. From ₹1.87 Cr.",
+    description: "33 standalone luxury villas in Boduppal. G+1+Penthouse, 24,000 SFT recreation zone. GP Layout. From ₹1.87 Cr.",
     type: "website",
     url: "https://bommakugroup.com/the-pavillion",
   },
@@ -32,7 +32,7 @@ export default function ThePavillionPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-xl md:text-2xl leading-relaxed mb-12 max-w-3xl font-light">
-            40 standalone luxury villas in Surya Hills, Boduppal. Where architecture meets autonomy.
+            33 standalone luxury villas in Surya Hills, Boduppal. Where architecture meets autonomy.
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function ThePavillionPage() {
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Total Units</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>40 standalone villas</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>33 standalone villas</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Configuration</td>
@@ -131,7 +131,7 @@ export default function ThePavillionPage() {
                 LOW DENSITY
               </h3>
               <p style={{ color: "var(--ink-2)" }} className="leading-relaxed">
-                40 families across 3 acres = 750 SFT of recreation per family. Most projects offer 200 SFT per family. You get 3-4X more space, fewer crowds, more privacy.
+                33 families across 3 acres = 750 SFT of recreation per family. Most projects offer 200 SFT per family. You get 3-4X more space, fewer crowds, more privacy.
               </p>
             </div>
 

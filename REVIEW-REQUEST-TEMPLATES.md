@@ -348,7 +348,7 @@ If someone says "I don't know what to write," share these examples:
 > "Perfect location for IT professionals. Just 8 min from Uppal Metro, 20 min to HITEC City. Boduppal has good schools and hospitals nearby. The Pavillion offers luxury villas at much better prices than Gachibowli."
 
 **Example 3: Amenities Focus**
-> "Impressed by the recreation zone — 24,000 SFT for just 40 families. That's way more space than typical gated communities. Swimming pool, gym, sports courts, everything in one place. Kids will love it!"
+> "Impressed by the recreation zone — 24,000 SFT for just 33 families. That's way more space than typical gated communities. Swimming pool, gym, sports courts, everything in one place. Kids will love it!"
 
 **Example 4: Design Freedom Focus**
 > "The best part is full customization — you can design your own elevation, modify floor plans, choose finishes. In-house architects help you through the process. This is what I wanted — not a cookie-cutter villa."

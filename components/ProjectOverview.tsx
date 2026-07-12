@@ -55,7 +55,7 @@ export default function ProjectOverview() {
 
               <p className="text-warm-gray text-lg leading-relaxed mb-6">
                 The Pavillion is not mass housing. It is a limited standalone villa
-                community designed for 40 families who want privacy, control, and
+                community designed for 33 families who want privacy, control, and
                 the freedom to shape their own home.
               </p>
               <p className="text-warm-gray text-base leading-relaxed mb-6">
@@ -66,7 +66,7 @@ export default function ProjectOverview() {
               <p className="text-warm-gray text-base leading-relaxed mb-10">
                 After delivering R.N.S Dream Homes, Boduppal's first community living
                 destination for 120 families, Bommaku Group now brings The
-                Pavillion: a smaller, more curated chapter. Limited to 40 families.
+                Pavillion: a smaller, more curated chapter. Limited to 33 families.
                 Limited by design.
               </p>
 
