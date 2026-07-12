@@ -36,9 +36,10 @@ export default function RootLayout({
         {/* Performance: preconnect for fonts already handled by next/font */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Preload optimized hero image (WebP) */}
-        <link rel="preload" as="image" href="/assets/pavilion-hero.webp" fetchPriority="high" type="image/webp" />
-        <link rel="preload" as="image" href="/assets/pavilion-hero.jpg" fetchPriority="low" />
+        {/* Preload critical LCP image - Desktop hero background */}
+        <link rel="preload" as="image" href="/images/pavilion-desktop-hero.webp" fetchPriority="high" type="image/webp" media="(min-width: 1024px)" />
+        {/* Preload critical LCP image - Mobile hero background */}
+        <link rel="preload" as="image" href="/images/pavilion-mobile-hero.jpg" fetchPriority="high" type="image/jpeg" media="(max-width: 1023px)" />
         <Script
           id="theme-init"
           strategy="beforeInteractive"

@@ -34,17 +34,17 @@ export default function Navbar() {
           </a>
 
           {/* Navigation Links - hidden on mobile, visible on lg+ */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/the-pavillion" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+          <nav className="hidden lg:flex items-center gap-10">
+            <Link href="/the-pavillion" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
               The Project
             </Link>
-            <Link href="/about" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+            <Link href="/about" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
               About
             </Link>
-            <Link href="/blog" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+            <Link href="/blog" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
               Blog
             </Link>
-            <Link href="/contact" className="text-sm tracking-wide transition-opacity hover:opacity-70" style={{ color: "var(--ink)" }}>
+            <Link href="/contact" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
               Contact
             </Link>
           </nav>
