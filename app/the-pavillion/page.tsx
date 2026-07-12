@@ -3,12 +3,12 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "The Pavillion Boduppal | 40 Luxury Villas by Bommaku Group",
+  title: "The Pavillion Boduppal | 33 Luxury Villas by Bommaku Group",
   description:
     "The Pavillion - 33 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, 24,000 SFT recreation zone, 3 BHK + Pooja Room. GP Layout. From ₹1.87 Cr. Bommaku Group.",
   alternates: { canonical: "https://bommakugroup.com/the-pavillion" },
   openGraph: {
-    title: "The Pavillion Boduppal | 40 Luxury Villas by Bommaku Group",
+    title: "The Pavillion Boduppal | 33 Luxury Villas by Bommaku Group",
     description: "33 standalone luxury villas in Boduppal. G+1+Penthouse, 24,000 SFT recreation zone. GP Layout. From ₹1.87 Cr.",
     type: "website",
     url: "https://bommakugroup.com/the-pavillion",

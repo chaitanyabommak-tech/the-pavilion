@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "About Bommaku Group | Luxury Villa Developers in Hyderabad",
   description:
-    "Bommaku Group - Premium real estate developers in East Hyderabad. Creators of The Pavillion, 40 luxury standalone villas in Boduppal. GP Layout specialists. Quality construction since inception.",
+    "Bommaku Group - Premium real estate developers in East Hyderabad. Creators of The Pavillion, 33 luxury standalone villas in Boduppal. GP Layout specialists. Quality construction since inception.",
   alternates: { canonical: "https://bommakugroup.com/about" },
   openGraph: {
     title: "About Bommaku Group | Luxury Villa Developers",
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 LOW DENSITY BY DESIGN
               </h3>
               <p style={{ color: "var(--ink-2)" }} className="leading-relaxed">
-                We cap projects at 40-50 families. This isn't marketing — it's a design constraint. Fewer families = larger recreation zones per capita, less congestion, genuine community formation.
+                We cap projects at 30-50 families. This isn't marketing — it's a design constraint. Fewer families = larger recreation zones per capita, less congestion, genuine community formation.
               </p>
             </div>
 

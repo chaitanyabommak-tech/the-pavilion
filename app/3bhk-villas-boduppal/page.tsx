@@ -86,7 +86,7 @@ export default function ThreeBHKVillasBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Units</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>40 luxury 3 BHK villas (limited inventory)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 luxury 3 BHK villas (limited inventory)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Villa Type</td>
