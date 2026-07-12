@@ -292,25 +292,30 @@ header {
    NAVBAR — glass overlay (theme-aware via CSS vars)
    ═══════════════════════════════════════════════════════════════════ */
 .nav-glass {
-  background: linear-gradient(
-    to bottom,
-    var(--nav-a)  0%,
-    var(--nav-b) 65%,
-    transparent 100%
-  );
+  /* Mobile: solid background for better visibility */
+  background: var(--bg);
   backdrop-filter:         blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
 }
 
+/* Desktop: gradient glass effect */
+@media (min-width: 768px) {
+  .nav-glass {
+    background: linear-gradient(
+      to bottom,
+      var(--nav-a)  0%,
+      var(--nav-b) 65%,
+      transparent 100%
+    );
+  }
+}
+
 .nav-glass-scrolled {
-  background: linear-gradient(
-    to bottom,
-    var(--nav-sa)  0%,
-    var(--nav-sb) 70%,
-    var(--nav-sc) 100%
-  );
+  background: var(--bg);
+  border-bottom: 1px solid var(--edge);
   backdrop-filter:         blur(20px) saturate(1.6);
   -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 /* ═══════════════════════════════════════════════════════════════════

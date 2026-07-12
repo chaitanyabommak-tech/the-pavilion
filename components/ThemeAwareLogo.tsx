@@ -22,7 +22,7 @@ export default function ThemeAwareLogo() {
   if (!mounted) {
     return (
       <div
-        className="bg-transparent h-[32px] sm:h-[40px] lg:h-[48px] xl:h-[52px]"
+        className="bg-transparent h-[28px] sm:h-[36px] lg:h-[44px] xl:h-[48px]"
       />
     );
   }
@@ -31,7 +31,7 @@ export default function ThemeAwareLogo() {
     <img
       src="/images/logo-bommaku.svg"
       alt="Bommaku Group"
-      className="h-[32px] sm:h-[40px] lg:h-[48px] xl:h-[52px] w-auto"
+      className="h-[28px] sm:h-[36px] lg:h-[44px] xl:h-[48px] w-auto"
       style={{
         filter: dark ? "invert(1) brightness(2)" : "none",
         transition: "filter 300ms ease",
