@@ -158,7 +158,7 @@ export default function ContactPage() {
               <h3 style={{ color: "var(--accent)" }} className="text-xs tracking-[0.3em] uppercase mb-4">
                 NEARBY LANDMARKS
               </h3>
-              <div className="space-y-2" style={{ color: "var(--ink-2)" }} className="text-sm">
+              <div className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
                 <p>• RBM Hospital — 700 meters</p>
                 <p>• Uppal Main Road — 5 minutes</p>
                 <p>• Uppal Metro Station — 8 minutes</p>
