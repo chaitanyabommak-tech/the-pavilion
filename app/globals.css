@@ -829,25 +829,11 @@ header a span img:nth-child(2) { opacity: 1 !important; }
   /* Book Site Visit hidden on mobile — only logo + toggle + Enquire Now shown */
   .btn-nav-visit { display: none !important; }
 
-  /* Increase nav bar height to accommodate larger logo */
+  /* Mobile navbar height */
   header > div {
-    height: 88px !important;
-  }
-
-  /*
-   * FIX: globals.css unlayered rule "img { height: auto }" overrides Tailwind's
-   * h-full utility (which sits inside @layer utilities and therefore loses the
-   * cascade). The logo PNG rendered at natural size can be 1000px+ wide, pushing
-   * ThemeToggle + Enquire Now off the right edge and hidden by overflow-x:hidden.
-   * Explicit max-height + max-width here re-constrains the logo correctly.
-   */
-  header a span img {
-    max-height: 64px !important;
-    height: auto !important;
-    width: auto !important;
-    max-width: 150px !important;
-    object-fit: contain !important;
-    object-position: left center !important;
+    height: 70px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
   }
 
   /* ─── 4. HERO — full-screen overlay card (Elena-style) ──────── */
@@ -2050,6 +2036,16 @@ html {
   picture,
   video {
     transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DESKTOP NAVBAR LOGO (preserve desktop sizing)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+  header a img {
+    width: 140px !important;
+    max-height: 48px !important;
   }
 }
 
