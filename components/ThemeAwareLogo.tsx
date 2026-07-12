@@ -31,18 +31,22 @@ export default function ThemeAwareLogo() {
     <span
       className="relative inline-block bg-transparent h-[54px] sm:h-[66px] lg:h-[88px] xl:h-[96px]"
       role="img"
-      aria-label="The Pavillion — Bommak Group"
+      aria-label="The Pavillion — Bommaku Group"
     >
+      {/* Light mode: Black logo (invert white logo) */}
       <img
-        src="/images/logo-dark.jpg"
+        src="/images/logo-light.jpg"
         alt=""
         className="block h-full w-auto object-contain"
         style={{
           opacity: dark ? 0 : 1,
           transition: "opacity 300ms ease",
           pointerEvents: dark ? "none" : "auto",
+          filter: "invert(1)",
+          mixBlendMode: "multiply",
         }}
       />
+      {/* Dark mode: White logo (remove black background) */}
       <img
         src="/images/logo-light.jpg"
         alt=""
@@ -51,6 +55,7 @@ export default function ThemeAwareLogo() {
           opacity: dark ? 1 : 0,
           transition: "opacity 300ms ease",
           pointerEvents: dark ? "auto" : "none",
+          mixBlendMode: "screen",
         }}
       />
     </span>
