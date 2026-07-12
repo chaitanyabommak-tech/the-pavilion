@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const stats = [
   { value: "3", unit: "Acres", label: "Total Site Area" },
-  { value: "33", label: "Villas", label: "Standalone Families" },
+  { value: "33", unit: "", label: "Standalone Villas" },
   { value: "G+1+PH", unit: "", label: "Villa Configuration" },
   { value: "2,200–2,500", unit: "SFT", label: "Built-up Per Villa" },
   { value: "24,000", unit: "SFT", label: "Recreation Zone" },
