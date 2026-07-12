@@ -398,38 +398,43 @@ header {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   MOBILE-ONLY PREMIUM GLASS NAVBAR
+   MOBILE-ONLY GLASS NAVBAR — RESTORED
+   Values recovered from commit ee11784 (REDESIGN: Floating glass pill navbar)
    ═══════════════════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
-  /* Mobile: refined floating pill container */
+  /* Mobile: translucent glass container — RESTORED */
   .navbar-floating {
     width: calc(100% - 24px);
     max-width: 520px;
-    min-height: 62px;
+    min-height: 56px;
     margin: 12px auto 0;
-    padding: 7px 7px 7px 16px;
+    padding: 8px 12px 8px 16px;
 
-    /* Switch from grid to flex on mobile */
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    /* Darker translucent glass material */
-    background: rgba(10, 11, 13, 0.70);
-    -webkit-backdrop-filter: blur(18px) saturate(125%);
-    backdrop-filter: blur(18px) saturate(125%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 999px;
+    /* RESTORED: Light translucent glass (both themes) */
+    background: rgba(255, 255, 255, 0.20);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 18px;
 
     box-shadow:
-      0 10px 28px rgba(0, 0, 0, 0.22),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      0 10px 35px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.32);
+
+    transition: all 300ms ease;
   }
 
-  /* Light theme glass (keep dark for consistency) */
-  [data-theme="light"] .navbar-floating {
-    background: rgba(10, 11, 13, 0.70);
-    border-color: rgba(255, 255, 255, 0.12);
+  /* RESTORED: Dark theme glass */
+  [data-theme="dark"] .navbar-floating {
+    background: rgba(15, 15, 18, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   /* Hide desktop navigation links on mobile */
@@ -437,7 +442,7 @@ header {
     display: none !important;
   }
 
-  /* Brand zone - logo is locked and approved */
+  /* Brand zone - LOCKED (logo untouched) */
   .navbar__brand {
     display: flex;
     align-items: center;
@@ -447,7 +452,7 @@ header {
     overflow: visible;
   }
 
-  /* Actions zone - pushed to right */
+  /* Actions zone - flush right positioning */
   .navbar__actions {
     margin-left: auto;
     display: flex;
@@ -457,6 +462,7 @@ header {
     flex: 0 0 auto;
     flex-shrink: 0;
     min-width: max-content;
+    padding-right: 3px;
   }
 
   .navbar__actions > * {
@@ -468,7 +474,7 @@ header {
     display: none !important;
   }
 
-  /* Refined mobile theme toggle - proper capsule shape */
+  /* Theme toggle - LOCKED (untouched) */
   .navbar__actions > button:first-child,
   .navbar__actions > div:first-child {
     width: 62px !important;
@@ -483,7 +489,7 @@ header {
     justify-content: center !important;
   }
 
-  /* Refined toggle thumb - perfect circle */
+  /* Toggle thumb - LOCKED (untouched) */
   .navbar__actions > button:first-child > span:first-child,
   .navbar__actions > div:first-child > span:first-child {
     width: 30px !important;
@@ -492,9 +498,68 @@ header {
     left: 2px !important;
   }
 
-  /* Mobile Enquire Now button - capsule shape only */
+  /* ORANGE CAPSULE CTA — flush right, near-full height */
   .btn-nav-enquire {
+    width: auto !important;
+    min-width: max-content !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    padding: 0 16px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    box-sizing: border-box !important;
+
+    background: #FF7043 !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
     border-radius: 999px !important;
+
+    font: inherit !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.06em !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    text-transform: none !important;
+
+    box-shadow:
+      0 4px 12px rgba(255, 112, 67, 0.20),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+
+    transition:
+      background-color 160ms ease,
+      box-shadow 160ms ease,
+      transform 100ms ease !important;
+  }
+
+  .btn-nav-enquire:hover {
+    background: #F76539 !important;
+  }
+
+  .btn-nav-enquire:active {
+    transform: translateY(1px) !important;
+  }
+
+  .btn-nav-enquire:focus-visible {
+    box-shadow:
+      0 0 0 2px rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(255, 112, 67, 0.20),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-nav-enquire {
+      transition: none !important;
+    }
+    .btn-nav-enquire:active {
+      transform: none !important;
+    }
   }
 }
 
@@ -504,14 +569,16 @@ header {
     width: calc(100% - 16px);
     min-height: 56px;
     margin-top: 8px;
-    padding: 6px 5px 6px 11px;
+    padding: 8px 10px 8px 14px;
+    border-radius: 16px;
   }
 
   .navbar__actions {
     gap: 4px;
+    padding-right: 2px;
   }
 
-  /* Narrow screen theme toggle - smaller capsule */
+  /* Narrow screen theme toggle - LOCKED (untouched) */
   .navbar__actions > button:first-child,
   .navbar__actions > div:first-child {
     width: 56px !important;
@@ -521,17 +588,20 @@ header {
     padding: 3px !important;
   }
 
-  /* Narrow screen toggle thumb */
+  /* Narrow screen toggle thumb - LOCKED (untouched) */
   .navbar__actions > button:first-child > span:first-child,
   .navbar__actions > div:first-child > span:first-child {
     width: 28px !important;
     height: 28px !important;
   }
 
-  /* Narrow screen Enquire Now - maintain capsule */
+  /* Narrow screen orange capsule CTA */
   .btn-nav-enquire {
-    border-radius: 999px !important;
-    font-size: 12px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 0 11px !important;
+    font-size: 11px !important;
   }
 }
 
