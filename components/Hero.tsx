@@ -166,7 +166,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             </motion.div>
           </div>
 
-          {/* Right — image (optimized WebP) */}
+          {/* Right — image (same as mobile) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -174,7 +174,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
             className="hero-image-panel lg:w-[55%] relative min-h-[55vw] lg:min-h-0"
           >
             <Image
-              src="/assets/pavilion-hero.webp"
+              src="/images/pavilion-mobile-hero.jpg"
               alt="The Pavillion community living aerial view, Surya Hills Boduppal East Hyderabad"
               fill
               className="object-cover object-center"
