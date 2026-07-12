@@ -289,33 +289,49 @@ header {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   NAVBAR — glass overlay (theme-aware via CSS vars)
+   NAVBAR — translucent glass effect (theme-aware)
    ═══════════════════════════════════════════════════════════════════ */
 .nav-glass {
-  /* Mobile: solid background for better visibility */
-  background: var(--bg);
-  backdrop-filter:         blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter:         blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
-/* Desktop: gradient glass effect */
-@media (min-width: 768px) {
-  .nav-glass {
-    background: linear-gradient(
-      to bottom,
-      var(--nav-a)  0%,
-      var(--nav-b) 65%,
-      transparent 100%
-    );
-  }
+/* Dark mode glass effect */
+[data-theme="dark"] .nav-glass {
+  background: rgba(12, 12, 14, 0.38);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
 }
 
 .nav-glass-scrolled {
-  background: var(--bg);
-  border-bottom: 1px solid var(--edge);
-  backdrop-filter:         blur(20px) saturate(1.6);
-  -webkit-backdrop-filter: blur(20px) saturate(1.6);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.55);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter:         blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode scrolled */
+[data-theme="dark"] .nav-glass-scrolled {
+  background: rgba(12, 12, 14, 0.48);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .nav-glass,
+  .nav-glass-scrolled {
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  [data-theme="dark"] .nav-glass,
+  [data-theme="dark"] .nav-glass-scrolled {
+    background: rgba(12, 12, 14, 0.88);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
