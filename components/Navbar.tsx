@@ -22,11 +22,16 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-[backdrop-filter] duration-500 ${
-          scrolled ? "nav-glass-scrolled" : "nav-glass"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 pointer-events-none"
+        style={{ background: "transparent" }}
       >
-        <div className="max-w-7xl mx-auto px-4 lg:px-10 h-[64px] sm:h-[72px] lg:h-[80px] xl:h-[88px] flex items-center justify-between">
+        <nav
+          className={`navbar-floating ${
+            scrolled ? "nav-glass-scrolled" : "nav-glass"
+          }`}
+          style={{ pointerEvents: "auto" }}
+        >
+          <div className="flex items-center justify-between h-full">
 
           {/* Logo */}
           <a href="/" className="flex-shrink-0 bg-transparent">
@@ -68,7 +73,8 @@ export default function Navbar() {
               Enquire Now
             </a>
           </div>
-        </div>
+          </div>
+        </nav>
       </header>
 
       {modalOpen && (
