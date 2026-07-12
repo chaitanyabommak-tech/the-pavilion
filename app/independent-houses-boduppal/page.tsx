@@ -3,13 +3,13 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Independent Houses in Boduppal | The Pavillion - 40 Standalone Villas",
+  title: "Independent Houses in Boduppal | The Pavillion - 33 Standalone Villas",
   description:
-    "40 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. Design freedom. Book site visit today.",
+    "33 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. Design freedom. Book site visit today.",
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
-    title: "Independent Houses in Boduppal | The Pavillion - 40 Villas",
-    description: "40 independent standalone houses in Boduppal. No shared walls, design freedom, ₹1.87 Cr. HMDA registered.",
+    title: "Independent Houses in Boduppal | The Pavillion - 33 Villas",
+    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹1.87 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/independent-houses-boduppal",
   },

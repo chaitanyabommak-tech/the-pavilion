@@ -300,7 +300,7 @@ export default function VillasNearUppalPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            The Pavillion — 40 Standalone Villas Near Uppal Metro
+            The Pavillion — 33 Standalone Villas Near Uppal Metro
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
@@ -312,7 +312,7 @@ export default function VillasNearUppalPage() {
           <ul className="space-y-3 mb-8" style={{ color: "var(--ink-2)" }}>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>
-              <span className="text-sm"><strong>Only 40 Villas:</strong> Low-density living (most projects have 100-200 units)</span>
+              <span className="text-sm"><strong>Only 33 Villas:</strong> Low-density living (most projects have 100-200 units)</span>
             </li>
             <li className="flex items-start gap-3">
               <span style={{ color: "var(--accent)" }}>✓</span>

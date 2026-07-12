@@ -4,12 +4,12 @@ import Script from "next/script";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas in Surya Hills",
+  title: "Villas in Boduppal | The Pavillion - 33 Standalone Luxury Villas in Surya Hills",
   description:
     "33 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. 8 min to Uppal Metro. Book site visit.",
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
-    title: "Villas in Boduppal | The Pavillion - 40 Standalone Luxury Villas",
+    title: "Villas in Boduppal | The Pavillion - 33 Standalone Luxury Villas",
     description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
     type: "article",
     url: "https://bommakugroup.com/villas-in-boduppal",
@@ -419,7 +419,7 @@ export default function VillasInBodupalPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            24,000 SFT Recreation Zone — For Just 40 Families
+            24,000 SFT Recreation Zone — For Just 33 Families
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 

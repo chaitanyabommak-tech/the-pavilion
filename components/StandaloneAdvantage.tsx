@@ -87,7 +87,7 @@ export default function StandaloneAdvantage() {
           >
             <div>
               <p className="text-stone-beige text-xs tracking-[0.3em] uppercase mb-4">
-                Only 40 Families
+                Only 33 Families
               </p>
               <h3 className="font-heading text-off-white text-2xl font-light leading-relaxed">
                 Limited by design. Unlimited by freedom.

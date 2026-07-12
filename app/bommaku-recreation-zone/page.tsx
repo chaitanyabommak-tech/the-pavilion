@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Bommaku Recreation Zone | 24,000 SFT for 40 Families | The Pavillion",
+  title: "Bommaku Recreation Zone | 24,000 SFT for 33 Families | The Pavillion",
   description:
     "24,000 SFT recreation zone exclusively for 33 families = 750 SFT per family. Swimming pool, gym, sports courts, restaurant. First year free. The Pavillion, Boduppal.",
   alternates: { canonical: "https://bommakugroup.com/bommaku-recreation-zone" },
