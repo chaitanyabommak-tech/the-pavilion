@@ -269,7 +269,7 @@ export default function BlogPost() {
                   <strong style={{ color: "var(--ink)" }}>Documents required:</strong> CA certificate showing sale proceeds, tax clearance (Form 15CA/15CB), original purchase proof, sale deed.
                 </li>
                 <li className="leading-relaxed">
-                  <strong style={{ color: "var(--ink)" }}>Tax on capital gains:</strong> NRIs pay Long-Term Capital Gains Tax (LTCG) at 20% with indexation (if property held >2 years). Short-term gains taxed at slab rates.
+                  <strong style={{ color: "var(--ink)" }}>Tax on capital gains:</strong> NRIs pay Long-Term Capital Gains Tax (LTCG) at 20% with indexation (if property held &gt;2 years). Short-term gains taxed at slab rates.
                 </li>
               </ul>
               <p className="leading-relaxed mt-4">
