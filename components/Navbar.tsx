@@ -9,6 +9,7 @@ import ThemeAwareLogo from "./ThemeAwareLogo";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [isNarrow, setIsNarrow] = useState(false);
 
   useEffect(() => {
     setScrolled(window.scrollY > 60);
@@ -17,6 +18,13 @@ export default function Navbar() {
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkWidth = () => setIsNarrow(window.innerWidth <= 360);
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
   return (
@@ -72,7 +80,7 @@ export default function Navbar() {
 
             {/* Enquire Now — always visible */}
             <a href="#contact" className="btn-nav-enquire">
-              Enquire Now
+              {isNarrow ? "Enquire" : "Enquire Now"}
             </a>
           </div>
         </nav>
