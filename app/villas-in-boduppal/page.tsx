@@ -6,11 +6,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Villas in Boduppal | The Pavillion - 33 Standalone Luxury Villas in Surya Hills",
   description:
-    "33 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹1.87 Cr onwards. 8 min to Uppal Metro. Book site visit.",
+    "33 standalone luxury villas in Boduppal, Surya Hills. G+1+Penthouse, no shared walls, design freedom, 24,000 SFT recreation. ₹2.1 Cr onwards. 8 min to Uppal Metro. Book site visit.",
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
     title: "Villas in Boduppal | The Pavillion - 33 Standalone Luxury Villas",
-    description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹1.87 Cr. HMDA registered. 8 min to Uppal Metro.",
+    description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹2.1 Cr. HMDA registered. 8 min to Uppal Metro.",
     type: "article",
     url: "https://bommakugroup.com/villas-in-boduppal",
   },
@@ -49,7 +49,7 @@ export default function VillasInBodupalPage() {
                 "name": "What is the price range for villas in Boduppal at The Pavillion?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Villa prices start from ₹1.87 Cr for 150 Sq. Yds East/West facing villas, up to ₹3.0 Cr for larger premium plots. Early bird discount: 2% (save ₹3.74L+)."
+                  "text": "Villa prices start from ₹2.1 Cr for 165 Sq. Yds East/West facing villas, up to ₹3.0 Cr for larger premium plots. Early bird discount: 2% (save ₹3.74L+)."
                 }
               },
               {
@@ -128,7 +128,7 @@ export default function VillasInBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Discover 33 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 33 families. Starting ₹1.87 Cr.
+            Discover 33 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 33 families. Starting ₹2.1 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -185,7 +185,7 @@ export default function VillasInBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹1.87 Cr to ₹3.0 Cr</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Recreation Zone</td>
@@ -266,7 +266,7 @@ export default function VillasInBodupalPage() {
             <div>
               <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">💰 Value Pricing</h3>
               <p className="text-sm leading-relaxed">
-                40% cheaper than Gachibowli for same villa quality. Boduppal villas: ₹1.87 Cr vs Gachibowli: ₹3.5+ Cr. Better value, same lifestyle. <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="underline" style={{ color: "var(--accent)" }}>See complete pricing guide →</Link>
+                40% cheaper than Gachibowli for same villa quality. Boduppal villas: ₹2.1 Cr vs Gachibowli: ₹3.5+ Cr. Better value, same lifestyle. <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="underline" style={{ color: "var(--accent)" }}>See complete pricing guide →</Link>
               </p>
             </div>
 
@@ -361,20 +361,7 @@ export default function VillasInBodupalPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Type A - East/West Facing</h3>
-              <p style={{ color: "var(--ink-2)" }} className="text-sm mb-4">
-                <strong>Plot:</strong> 150 Sq. Yds (30 × 45 ft)<br />
-                <strong>Built-up:</strong> 2,200 SFT (G: 888 | F: 888 | P: 590 SFT)<br />
-                <strong>Configuration:</strong> 3 BHK + Pooja Room<br />
-                <strong>Price:</strong> ₹1.87 Cr onwards
-              </p>
-              <a href="/#main-content" className="btn-primary px-6 py-3 text-xs tracking-[0.2em] uppercase inline-block">
-                View Floor Plan
-              </a>
-            </div>
-
-            <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Type B - NE/NW Facing</h3>
+              <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Silver Type - NE/NW Facing</h3>
               <p style={{ color: "var(--ink-2)" }} className="text-sm mb-4">
                 <strong>Plot:</strong> 165-167 Sq. Yds (33/30 × 45/50 ft)<br />
                 <strong>Built-up:</strong> 2,300-2,400 SFT<br />
@@ -387,7 +374,7 @@ export default function VillasInBodupalPage() {
             </div>
 
             <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Type C - Premium Plots</h3>
+              <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Platinum Type - Premium Plots</h3>
               <p style={{ color: "var(--ink-2)" }} className="text-sm mb-4">
                 <strong>Plot:</strong> 222-228 Sq. Yds (varies)<br />
                 <strong>Built-up:</strong> 2,500+ SFT<br />
@@ -668,7 +655,7 @@ export default function VillasInBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">3. What is the price range?</h3>
-              <p className="text-sm">Villa prices start from ₹1.87 Cr for 150 Sq. Yds East/West facing, up to ₹3.0 Cr for larger premium plots. Early bird discount: 2% (save ₹3.74L+).</p>
+              <p className="text-sm">Villa prices start from ₹2.1 Cr for 165 Sq. Yds East/West facing, up to ₹3.0 Cr for larger premium plots. Early bird discount: 2% (save ₹3.74L+).</p>
             </div>
 
             <div>

@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Villas in Ghatkesar & Pocharam | Near Infosys SEZ | The Pavillion Boduppal",
   description:
-    "Luxury villas near Ghatkesar and Infosys Pocharam SEZ. The Pavillion in Boduppal - 12 km from Ghatkesar, 15 km from Infosys Pocharam. Warangal Highway corridor. From ₹1.87 Cr.",
+    "Luxury villas near Ghatkesar and Infosys Pocharam SEZ. The Pavillion in Boduppal - 12 km from Ghatkesar, 15 km from Infosys Pocharam. Warangal Highway corridor. From ₹2.1 Cr.",
   alternates: { canonical: "https://bommakugroup.com/villas-in-ghatkesar-pocharam" },
   openGraph: {
     title: "Villas in Ghatkesar & Pocharam | The Pavillion Boduppal",
@@ -93,7 +93,7 @@ export default function GhatkesarPochalamPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹1.87 Cr to ₹3.0 Cr</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Metro Connectivity</td>
@@ -230,11 +230,11 @@ export default function GhatkesarPochalamPage() {
 
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <div>
-              <p style={{ color: "var(--accent)" }} className="font-medium mb-1">₹1.87 Cr onwards</p>
+              <p style={{ color: "var(--accent)" }} className="font-medium mb-1">₹2.1 Cr onwards</p>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">Pricing</p>
             </div>
             <div>
-              <p style={{ color: "var(--accent)" }} className="font-medium mb-1">150-250 Sq. Yds</p>
+              <p style={{ color: "var(--accent)" }} className="font-medium mb-1">165-250 Sq. Yds</p>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">Plot Sizes</p>
             </div>
             <div>

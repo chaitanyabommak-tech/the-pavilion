@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "What are the villa configurations available?",
-    answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 150 to 250 Sq. Yds with built-up areas from 2,200 to 2,500 SFT."
+    answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 165 to 228 Sq. Yds with built-up areas from 2,300 to 2,500 SFT."
   },
   {
     question: "Is The Pavillion HMDA approved?",

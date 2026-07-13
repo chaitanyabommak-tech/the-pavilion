@@ -9,19 +9,16 @@ import FloorPlanViewer from "./floorplan/FloorPlanViewer";
 import { pavilionVillas as fallbackPavillionVillas, Villa } from "@/data/pavilionVillas-v2-complete";
 
 const types = [
-  { id: "a", label: "Type A" },
-  { id: "b", label: "Type B" },
-  { id: "c", label: "Type C" },
+  { id: "b", label: "Silver Type" },
+  { id: "c", label: "Platinum Type" },
 ];
 
 const villas = [
-  { typeId:"a", label:"Type A — East Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-150e.webp",  price:"₹1.87 Cr onwards"  },
-  { typeId:"a", label:"Type A — West Facing",    plot:"150 Sq. Yds", dimensions:"30 × 45 ft", builtup:"Ground: 888 | First: 888 | Second: 590 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-150w.webp",  price:"₹1.87 Cr onwards"  },
-  { typeId:"b", label:"Type B — 165 NE Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North East", floorplan:"/assets/floorplan-165ne.webp", price:"₹1.9 Cr onwards"  },
-  { typeId:"b", label:"Type B — 165 NW Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North West", floorplan:"/assets/floorplan-165nw.webp", price:"₹1.9 Cr onwards"  },
-  { typeId:"b", label:"Type B — 167 East Facing",plot:"167 Sq. Yds", dimensions:"30 × 50 ft", builtup:"Ground: 866 | First: 866 | Second: 603 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-167e.webp",  price:"₹2.1 Cr onwards"  },
-  { typeId:"c", label:"Type C — 222 West Facing",plot:"222 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 925 | First: 925 | Second: 925 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-222w.webp",  price:"₹2.25 Cr onwards" },
-  { typeId:"c", label:"Type C — 227 East Facing",plot:"227 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 950 | First: 950 | Second: 616 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-227e.webp",  price:"₹2.5 Cr onwards"  },
+  { typeId:"b", label:"Silver Type — 165 NE Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North East", floorplan:"/assets/floorplan-165ne.webp", price:"₹1.9 Cr onwards"  },
+  { typeId:"b", label:"Silver Type — 165 NW Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North West", floorplan:"/assets/floorplan-165nw.webp", price:"₹1.9 Cr onwards"  },
+  { typeId:"b", label:"Silver Type — 167 East Facing",plot:"167 Sq. Yds", dimensions:"30 × 50 ft", builtup:"Ground: 866 | First: 866 | Second: 603 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-167e.webp",  price:"₹2.1 Cr onwards"  },
+  { typeId:"c", label:"Platinum Type — 222 West Facing",plot:"222 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 925 | First: 925 | Second: 925 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-222w.webp",  price:"₹2.25 Cr onwards" },
+  { typeId:"c", label:"Platinum Type — 227 East Facing",plot:"227 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 950 | First: 950 | Second: 616 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-227e.webp",  price:"₹2.5 Cr onwards"  },
 ];
 
 const specs = [
@@ -40,7 +37,7 @@ export default function VillaConfigurations({ villas: dbVillas }: VillaConfigura
   // Use database villas if provided, fallback to hardcoded
   const pavilionVillas = dbVillas || fallbackPavillionVillas;
   // Original floor plan state
-  const [activeType, setActiveType] = useState("a");
+  const [activeType, setActiveType] = useState("b");
   const [activeVilla, setActiveVilla] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -110,7 +107,7 @@ export default function VillaConfigurations({ villas: dbVillas }: VillaConfigura
                 Floor Plans.
               </h2>
               <p style={{ color: "var(--ink-2)" }} className="text-sm max-w-xs">
-                Three types, seven configurations. All G+1+Penthouse.
+                Two types, five configurations. All G+1+Penthouse.
               </p>
             </div>
             <div className="w-12 h-px mt-4" style={{ background: "var(--accent)" }} />

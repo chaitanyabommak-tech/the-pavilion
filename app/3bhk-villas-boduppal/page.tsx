@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "3 BHK Villas in Boduppal | The Pavillion - Standalone Luxury Homes",
   description:
-    "3 BHK luxury villas in Boduppal with Pooja Room. 2,200+ SFT standalone homes, 150-228 Sq. Yds plots, G+1+Penthouse. ₹1.87 Cr onwards. NO shared walls. Design freedom. Book now.",
+    "3 BHK luxury villas in Boduppal with Pooja Room. 2,300-2,500 SFT standalone homes, 165-228 Sq. Yds plots, G+1+Penthouse. ₹2.1 Cr onwards. NO shared walls. Design freedom. Book now.",
   alternates: { canonical: "https://bommakugroup.com/3bhk-villas-boduppal" },
   openGraph: {
-    title: "3 BHK Villas in Boduppal | The Pavillion - ₹1.87 Cr",
-    description: "3 BHK + Pooja Room luxury villas in Boduppal. 2,200+ SFT, standalone, G+1+Penthouse. From ₹1.87 Cr.",
+    title: "3 BHK Villas in Boduppal | The Pavillion - ₹2.1 Cr",
+    description: "3 BHK + Pooja Room luxury villas in Boduppal. 2,300+ SFT, standalone, G+1+Penthouse. From ₹2.1 Cr.",
     type: "article",
     url: "https://bommakugroup.com/3bhk-villas-boduppal",
   },
@@ -33,7 +33,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Spacious 3 BHK + Pooja Room luxury villas in Surya Hills, Boduppal. 2,200-2,500 SFT standalone homes spread across G+1+Penthouse. 150-228 Sq. Yds plots. No shared walls. From ₹1.87 Cr onwards.
+            Spacious 3 BHK + Pooja Room luxury villas in Surya Hills, Boduppal. 2,300-2,500 SFT standalone homes spread across G+1+Penthouse. 165-228 Sq. Yds plots. No shared walls. From ₹2.1 Cr onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -78,11 +78,11 @@ export default function ThreeBHKVillasBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Plot Sizes</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>150 to 228 Sq. Yds (standalone plots, no shared walls)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>165 to 228 Sq. Yds (standalone plots, no shared walls)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹1.87 Cr to ₹3.0 Cr (based on plot size and orientation)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr (based on plot size and orientation)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Units</td>
@@ -241,35 +241,8 @@ export default function ThreeBHKVillasBodupalPage() {
             <div className="p-6" style={{ background: "var(--bg)", border: "2px solid var(--accent)", borderRadius: "8px" }}>
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-2">Type A - Standard 3 BHK</h3>
-                  <p style={{ color: "var(--ink-2)" }} className="text-sm">East/West Facing | Most Popular</p>
-                </div>
-                <div className="text-right">
-                  <p style={{ color: "var(--accent)" }} className="text-3xl font-light">₹1.87 Cr</p>
-                  <p style={{ color: "var(--ink-2)" }} className="text-xs">onwards</p>
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-3 gap-4 text-sm" style={{ color: "var(--ink-2)" }}>
-                <div>
-                  <p className="font-semibold mb-1">Plot Size</p>
-                  <p>150 Sq. Yds (30×45 ft)</p>
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Built-up Area</p>
-                  <p>2,200 SFT (G+1+Penthouse)</p>
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Configuration</p>
-                  <p>3 BHK + Pooja + Terrace</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-2">Type B - Premium 3 BHK</h3>
-                  <p style={{ color: "var(--ink-2)" }} className="text-sm">North-East/North-West Facing | Larger Plot</p>
+                  <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-2">Silver Type - Premium 3 BHK</h3>
+                  <p style={{ color: "var(--ink-2)" }} className="text-sm">North-East/North-West Facing | Most Popular</p>
                 </div>
                 <div className="text-right">
                   <p style={{ color: "var(--accent)" }} className="text-3xl font-light">₹2.1-2.3 Cr</p>
@@ -295,7 +268,7 @@ export default function ThreeBHKVillasBodupalPage() {
             <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-2">Type C - Luxury Corner 3 BHK</h3>
+                  <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-2">Platinum Type - Luxury Corner 3 BHK</h3>
                   <p style={{ color: "var(--ink-2)" }} className="text-sm">Corner Plots | Maximum Privacy</p>
                 </div>
                 <div className="text-right">
@@ -380,28 +353,28 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <div className="p-6 mb-6" style={{ background: "var(--bg)", border: "2px solid var(--accent)", borderRadius: "8px" }}>
-            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-4">Type A - 3 BHK Villa (150 Sq. Yds)</h3>
+            <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-4">Silver Type - 3 BHK Villa (165-167 Sq. Yds)</h3>
             <div className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
               <div className="flex justify-between py-2 border-b" style={{ borderColor: "var(--edge)" }}>
-                <span>Plot Cost (150 Sq. Yds @ ₹45,000/Sq. Yd)</span>
-                <span className="font-semibold">₹67.5 L</span>
+                <span>Plot Cost (165 Sq. Yds @ ₹48,000/Sq. Yd)</span>
+                <span className="font-semibold">₹79.2 L</span>
               </div>
               <div className="flex justify-between py-2 border-b" style={{ borderColor: "var(--edge)" }}>
-                <span>Construction Cost (2,200 SFT @ ₹5,000/SFT)</span>
-                <span className="font-semibold">₹1.10 Cr</span>
+                <span>Construction Cost (2,300 SFT @ ₹5,200/SFT)</span>
+                <span className="font-semibold">₹1.20 Cr</span>
               </div>
               <div className="flex justify-between py-2 border-b" style={{ borderColor: "var(--edge)" }}>
                 <span>Development Charges (amenities, landscaping)</span>
-                <span className="font-semibold">₹9.5 L</span>
+                <span className="font-semibold">₹10.8 L</span>
               </div>
               <div className="flex justify-between py-3 text-lg" style={{ color: "var(--ink)" }}>
                 <span className="font-semibold">Total Price</span>
-                <span className="font-semibold" style={{ color: "var(--accent)" }}>₹1.87 Cr</span>
+                <span className="font-semibold" style={{ color: "var(--accent)" }}>₹2.1 Cr</span>
               </div>
             </div>
 
             <p style={{ color: "var(--ink-2)" }} className="text-xs mt-4">
-              <strong>Effective Rate:</strong> ₹8,000/SFT (All-inclusive) | <strong>EMI:</strong> ₹1.45 L/month @ 9% for 20 years (80% loan)
+              <strong>Effective Rate:</strong> ₹9,100/SFT (All-inclusive) | <strong>EMI:</strong> ₹1.63 L/month @ 9% for 20 years (80% loan)
             </p>
           </div>
 
@@ -445,7 +418,7 @@ export default function ThreeBHKVillasBodupalPage() {
             <div>
               <h3 style={{ color: "var(--ink)" }} className="text-lg font-semibold mb-3">Why Boduppal for 3 BHK?</h3>
               <ul className="space-y-2 text-sm">
-                <li>✓ <strong>Affordable:</strong> ₹1.87 Cr vs ₹3.5 Cr in Gachibowli</li>
+                <li>✓ <strong>Affordable:</strong> ₹2.1 Cr vs ₹3.5 Cr in Gachibowli</li>
                 <li>✓ <strong>Connected:</strong> Metro (8 min), ORR (12 km), IT hubs (20 min)</li>
                 <li>✓ <strong>Schools Nearby:</strong> DPS, Oakridge, Sancta Maria</li>
                 <li>✓ <strong>Hospitals:</strong> Medicity, Yashoda, Apollo within 6 km</li>
@@ -496,7 +469,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="space-y-6" style={{ color: "var(--ink-2)" }}>
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">1. What is the price of 3 BHK villas in Boduppal?</h3>
-              <p className="text-sm">3 BHK villas in Boduppal start from ₹1.87 Cr at The Pavillion. This is for 150 Sq. Yds standalone villa with 2,200 SFT built-up area (G+1+Penthouse). Best value in the area.</p>
+              <p className="text-sm">3 BHK villas in Boduppal start from ₹2.1 Cr at The Pavillion. This is for 165 Sq. Yds standalone villa with 2,300 SFT built-up area (G+1+Penthouse). Best value in the area.</p>
             </div>
 
             <div>
@@ -506,17 +479,17 @@ export default function ThreeBHKVillasBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">3. What is the built-up area of 3 BHK villa?</h3>
-              <p className="text-sm">Standard 3 BHK villa has 2,200 SFT built-up area across G+1+Penthouse. Includes 3 bedrooms (all with attached baths), living, dining, kitchen, pooja room, balcony, and open terrace.</p>
+              <p className="text-sm">Standard 3 BHK villa has 2,300-2,400 SFT built-up area across G+1+Penthouse. Includes 3 bedrooms (all with attached baths), living, dining, kitchen, pooja room, balcony, and open terrace.</p>
             </div>
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">4. Is 3 BHK enough for a family of 4-5 people?</h3>
-              <p className="text-sm">Yes, absolutely! 3 BHK with 2,200 SFT is perfect for families of 4-6 people. Couple + 2 kids + grandparents can comfortably live. Plus you have pooja room, terrace, and option to convert penthouse to 4th bedroom.</p>
+              <p className="text-sm">Yes, absolutely! 3 BHK with 2,300+ SFT is perfect for families of 4-6 people. Couple + 2 kids + grandparents can comfortably live. Plus you have pooja room, terrace, and option to convert penthouse to 4th bedroom.</p>
             </div>
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">5. Can I get a home loan for this 3 BHK villa?</h3>
-              <p className="text-sm">Yes. HMDA registered project, approved by SBI, HDFC, ICICI, Axis banks. Loan up to 80% of property value. For ₹1.87 Cr villa, you can get ₹1.5 Cr loan (EMI ₹1.45 L/month @ 9% for 20 years).</p>
+              <p className="text-sm">Yes. HMDA registered project, approved by SBI, HDFC, ICICI, Axis banks. Loan up to 80% of property value. For ₹2.1 Cr villa, you can get ₹1.68 Cr loan (EMI ₹1.63 L/month @ 9% for 20 years).</p>
             </div>
 
             <div>
@@ -531,7 +504,7 @@ export default function ThreeBHKVillasBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">8. What is the resale value of 3 BHK villas?</h3>
-              <p className="text-sm">3 BHK villas in Boduppal appreciate at 10-12% YoY. Buy at ₹1.87 Cr today → worth ₹3.0-3.5 Cr in 5 years. Higher appreciation than apartments due to land ownership + scarcity of standalone villas.</p>
+              <p className="text-sm">3 BHK villas in Boduppal appreciate at 10-12% YoY. Buy at ₹2.1 Cr today → worth ₹3.4-4.0 Cr in 5 years. Higher appreciation than apartments due to land ownership + scarcity of standalone villas.</p>
             </div>
 
             <div>
@@ -556,7 +529,7 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-16 h-px mx-auto mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Only 33 villas. Limited 3 BHK units available. Starting ₹1.87 Cr. Early bird pricing. Book site visit now.
+            Only 33 villas. Limited 3 BHK units available. Starting ₹2.1 Cr. Early bird pricing. Book site visit now.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

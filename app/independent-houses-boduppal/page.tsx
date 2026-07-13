@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Independent Houses in Boduppal | The Pavillion - 33 Standalone Villas",
   description:
-    "33 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 150-228 Sq. Yds plots. ₹1.87 Cr onwards. Design freedom. Book site visit today.",
+    "33 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 165-228 Sq. Yds plots. ₹2.1 Cr onwards. Design freedom. Book site visit today.",
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
     title: "Independent Houses in Boduppal | The Pavillion - 33 Villas",
-    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹1.87 Cr. HMDA registered.",
+    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹2.1 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/independent-houses-boduppal",
   },
@@ -33,7 +33,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            33 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 165-225 Sq. Yds plots. From ₹1.87 Cr onwards.
+            33 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 165-228 Sq. Yds plots. From ₹2.1 Cr onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -90,7 +90,7 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹1.87 Cr to ₹3.0 Cr</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Shared Walls</td>
@@ -271,7 +271,7 @@ export default function IndependentHousesBodupalPage() {
               <h3 style={{ color: "var(--accent)" }} className="text-lg font-semibold mb-3">What Makes Us Independent?</h3>
               <ul className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
                 <li>• Zero shared walls (100% standalone)</li>
-                <li>• Four-side open plots (150-228 Sq. Yds)</li>
+                <li>• Four-side open plots (165-228 Sq. Yds)</li>
                 <li>• Individual compound walls</li>
                 <li>• Private gate & entrance</li>
                 <li>• No dependency on neighbors</li>
@@ -287,7 +287,7 @@ export default function IndependentHousesBodupalPage() {
                 <li>• 3 BHK + Pooja Room</li>
                 <li>• 24,000 SFT recreation zone</li>
                 <li>• HMDA registered project</li>
-                <li>• Starting ₹1.87 Cr onwards</li>
+                <li>• Starting ₹2.1 Cr onwards</li>
               </ul>
             </div>
           </div>
@@ -295,21 +295,14 @@ export default function IndependentHousesBodupalPage() {
           <h3 style={{ color: "var(--ink)" }} className="text-2xl font-semibold mb-4">House Configurations:</h3>
           <div className="space-y-4">
             <div className="p-4" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Type A - East/West Facing</h4>
-              <p style={{ color: "var(--ink-2)" }} className="text-sm">
-                <strong>Plot:</strong> 150 Sq. Yds (30 × 45 ft) | <strong>Built-up:</strong> 2,200 SFT | <strong>Price:</strong> ₹1.87 Cr onwards
-              </p>
-            </div>
-
-            <div className="p-4" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Type B - NE/NW Facing</h4>
+              <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Silver Type - NE/NW Facing</h4>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">
                 <strong>Plot:</strong> 165-167 Sq. Yds | <strong>Built-up:</strong> 2,300-2,400 SFT | <strong>Price:</strong> ₹2.1-2.3 Cr onwards
               </p>
             </div>
 
             <div className="p-4" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
-              <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Type C - Premium Corner Plots</h4>
+              <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Platinum Type - Premium Corner Plots</h4>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">
                 <strong>Plot:</strong> 222-228 Sq. Yds | <strong>Built-up:</strong> 2,500+ SFT | <strong>Price:</strong> ₹2.5-3.0 Cr onwards
               </p>
@@ -474,7 +467,7 @@ export default function IndependentHousesBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">3. What is the price of independent houses in Boduppal?</h3>
-              <p className="text-sm">Independent houses in Boduppal range from ₹1.65 Cr (semi-attached/row house) to ₹3.5 Cr (luxury standalone). The Pavillion starts at ₹1.87 Cr for true standalone villas — best value in the area.</p>
+              <p className="text-sm">Independent houses in Boduppal range from ₹1.65 Cr (semi-attached/row house) to ₹3.5 Cr (luxury standalone). The Pavillion starts at ₹2.1 Cr for true standalone villas — best value in the area.</p>
             </div>
 
             <div>
@@ -489,7 +482,7 @@ export default function IndependentHousesBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">6. What are plot sizes available?</h3>
-              <p className="text-sm">The Pavillion offers 150-228 Sq. Yds plots. Type A (150 Sq. Yds): ₹1.87 Cr | Type B (165-167 Sq. Yds): ₹2.1-2.3 Cr | Type C (222-228 Sq. Yds): ₹2.5-3.0 Cr. All standalone, no shared walls.</p>
+              <p className="text-sm">The Pavillion offers 165-228 Sq. Yds plots. Silver Type (165-167 Sq. Yds): ₹2.1-2.3 Cr | Platinum Type (222-228 Sq. Yds): ₹2.5-3.0 Cr. All standalone, no shared walls.</p>
             </div>
 
             <div>

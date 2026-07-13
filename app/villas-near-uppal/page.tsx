@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Villas Near Uppal Metro | The Pavillion Boduppal - Just 8 Min Away",
   description:
-    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 33 standalone villas just 8 min from metro. G+1+Penthouse, ₹1.87 Cr. Easy commute to HITEC City, Gachibowli.",
+    "Luxury villas near Uppal Metro Station. The Pavillion in Boduppal offers 33 standalone villas just 8 min from metro. G+1+Penthouse, ₹2.1 Cr. Easy commute to HITEC City, Gachibowli.",
   alternates: { canonical: "https://bommakugroup.com/villas-near-uppal" },
   openGraph: {
     title: "Villas Near Uppal Metro | The Pavillion - 8 Min Away",
-    description: "33 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹1.87 Cr. HMDA registered.",
+    description: "33 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹2.1 Cr. HMDA registered.",
     type: "article",
     url: "https://bommakugroup.com/villas-near-uppal",
   },
@@ -33,7 +33,7 @@ export default function VillasNearUppalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Just 8 minutes from Uppal Metro Station. 33 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹1.87 Cr.
+            Just 8 minutes from Uppal Metro Station. 33 standalone luxury villas in Boduppal with metro connectivity, IT hub access, and premium lifestyle. G+1+Penthouse, no shared walls, from ₹2.1 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -90,7 +90,7 @@ export default function VillasNearUppalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹1.87 Cr to ₹3.0 Cr</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Commute to Ameerpet</td>
@@ -268,8 +268,8 @@ export default function VillasNearUppalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}><strong>Plot Sizes</strong></td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>150-228 Sq. Yds (larger)</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>120-150 Sq. Yds</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>165-228 Sq. Yds (larger)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>120-165 Sq. Yds</td>
                 </tr>
                 <tr>
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}><strong>Appreciation</strong></td>
@@ -338,7 +338,7 @@ export default function VillasNearUppalPage() {
 
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">₹1.87 Cr</p>
+              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">₹2.1 Cr</p>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">Starting Price</p>
             </div>
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
@@ -429,7 +429,7 @@ export default function VillasNearUppalPage() {
                   <th className="p-3 text-left border" style={{ borderColor: "var(--edge)" }}>Location</th>
                   <th className="p-3 text-left border" style={{ borderColor: "var(--edge)" }}>Distance to Metro</th>
                   <th className="p-3 text-left border" style={{ borderColor: "var(--edge)" }}>Villa Type</th>
-                  <th className="p-3 text-left border" style={{ borderColor: "var(--edge)" }}>Price (150 Sq. Yds)</th>
+                  <th className="p-3 text-left border" style={{ borderColor: "var(--edge)" }}>Price (165 Sq. Yds)</th>
                 </tr>
               </thead>
               <tbody style={{ color: "var(--ink-2)" }}>
@@ -438,7 +438,7 @@ export default function VillasNearUppalPage() {
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>Boduppal</td>
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>8 min</td>
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>Standalone</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}><strong>₹1.87 Cr</strong></td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}><strong>₹2.1 Cr</strong></td>
                 </tr>
                 <tr>
                   <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>Project A</td>
@@ -511,7 +511,7 @@ export default function VillasNearUppalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">4. What is the villa price near Uppal Metro?</h3>
-              <p className="text-sm">The Pavillion villas near Uppal Metro start from ₹1.87 Cr for 150 Sq. Yds standalone villa. This is 10-15% cheaper than projects right in Uppal.</p>
+              <p className="text-sm">The Pavillion villas near Uppal Metro start from ₹2.1 Cr for 165 Sq. Yds standalone villa. This is 10-15% cheaper than projects right in Uppal.</p>
             </div>
 
             <div>
@@ -526,7 +526,7 @@ export default function VillasNearUppalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">7. Which is better for IT professionals — Gachibowli or near Uppal?</h3>
-              <p className="text-sm">Near Uppal (Boduppal) is better for value. Same villa in Gachibowli costs ₹3.5 Cr vs ₹1.87 Cr here. Commute is 25 min via ORR. Save ₹1.5 Cr+.</p>
+              <p className="text-sm">Near Uppal (Boduppal) is better for value. Same villa in Gachibowli costs ₹3.5 Cr vs ₹2.1 Cr here. Commute is 25 min via ORR. Save ₹1.5 Cr+.</p>
             </div>
 
             <div>
