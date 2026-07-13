@@ -10,7 +10,7 @@ export default function ThemeAwareLogo() {
   useEffect(() => {
     const readDark = () =>
       document.documentElement.getAttribute("data-theme") === "dark";
-    const checkMobile = () => window.innerWidth < 480;
+    const checkMobile = () => window.innerWidth <= 767;
 
     setDark(readDark());
     setIsMobile(checkMobile());

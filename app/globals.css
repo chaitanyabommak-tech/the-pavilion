@@ -591,6 +591,13 @@ blockquote {
     overflow: visible;
   }
 
+  /* Mobile logo - compact icon sizing */
+  .navbar__logo {
+    width: 32px !important;
+    height: 28px !important;
+    max-height: 28px !important;
+  }
+
   /* Actions zone - better spacing */
   .navbar__actions {
     margin-left: auto;
