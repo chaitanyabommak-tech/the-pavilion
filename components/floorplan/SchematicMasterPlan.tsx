@@ -289,7 +289,7 @@ export default function SchematicMasterPlan({
           >
             All
           </button>
-          {["East", "West", "North East", "North West"].map(direction => (
+          {["East", "West"].map(direction => (
             <button
               key={direction}
               onClick={() => setFacingFilter(direction)}
@@ -301,7 +301,7 @@ export default function SchematicMasterPlan({
                 boxShadow: facingFilter === direction ? "0 1px 3px rgba(0,0,0,0.1)" : "none"
               }}
             >
-              {direction === "North East" ? "NE" : direction === "North West" ? "NW" : direction}
+              {direction}
             </button>
           ))}
         </div>
