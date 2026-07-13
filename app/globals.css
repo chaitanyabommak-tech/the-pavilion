@@ -498,14 +498,14 @@ header {
     left: 2px !important;
   }
 
-  /* ORANGE CAPSULE CTA — flush right, near-full height */
+  /* PLASTER PILL CTA — light pill on dark nav (approved exception: pill radius) */
   .btn-nav-enquire {
     width: auto !important;
     min-width: max-content !important;
     height: 48px !important;
     min-height: 48px !important;
     max-height: 48px !important;
-    padding: 0 16px !important;
+    padding: 0 24px !important;
 
     display: inline-flex !important;
     align-items: center !important;
@@ -513,44 +513,52 @@ header {
     flex: 0 0 auto !important;
     box-sizing: border-box !important;
 
-    background: #FF7043 !important;
-    color: #FFFFFF !important;
+    background: #F5F3EF !important;
+    color: #0C0C0C !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border: 0 !important;
     border-radius: 999px !important;
 
-    font: inherit !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
+    font-family: var(--font-body, sans-serif) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
     line-height: 1 !important;
-    letter-spacing: 0.06em !important;
+    letter-spacing: 0.08em !important;
     white-space: nowrap !important;
     text-align: center !important;
-    text-transform: none !important;
+    text-transform: uppercase !important;
 
-    box-shadow:
-      0 4px 12px rgba(255, 112, 67, 0.20),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 2px 10px rgba(12, 12, 12, 0.18) !important;
 
     transition:
-      background-color 160ms ease,
-      box-shadow 160ms ease,
-      transform 100ms ease !important;
+      background-color 200ms ease,
+      box-shadow 200ms ease !important;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .btn-nav-enquire {
+      transition:
+        background-color 200ms ease,
+        box-shadow 200ms ease,
+        transform 150ms ease !important;
+    }
+    .btn-nav-enquire:active {
+      transform: translateY(1px) !important;
+    }
   }
 
   .btn-nav-enquire:hover {
-    background: #F76539 !important;
+    background: #C5B79E !important;
+    box-shadow: 0 3px 14px rgba(12, 12, 12, 0.24) !important;
   }
 
   .btn-nav-enquire:active {
-    transform: translateY(1px) !important;
+    box-shadow: 0 1px 6px rgba(12, 12, 12, 0.18) !important;
   }
 
   .btn-nav-enquire:focus-visible {
-    box-shadow:
-      0 0 0 2px rgba(255, 255, 255, 0.9),
-      0 4px 12px rgba(255, 112, 67, 0.20),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    outline: 2px solid #7A4A3A !important;
+    outline-offset: 3px !important;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -595,13 +603,13 @@ header {
     height: 28px !important;
   }
 
-  /* Narrow screen orange capsule CTA */
+  /* Narrow screen Plaster pill CTA */
   .btn-nav-enquire {
     height: 44px !important;
     min-height: 44px !important;
     max-height: 44px !important;
-    padding: 0 11px !important;
-    font-size: 11px !important;
+    padding: 0 16px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -650,23 +658,43 @@ header {
 }
 
 .btn-nav-enquire {
-  background:   var(--nv-en-bg);
-  border:       1px solid var(--nv-en-bd);
-  color:        var(--nv-en-cl);
-  border-radius: 3px;
-  padding:      0.5rem 1.25rem;
-  font-size:    0.7rem;
+  background:   #F5F3EF;
+  color:        #0C0C0C;
+  border:       0;
+  border-radius: 999px;
+  padding:      0.5rem 1.5rem;
+  min-height:   44px;
+  font-family:  var(--font-body, sans-serif);
+  font-size:    0.875rem;
   font-weight:  600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition:   background 250ms ease, border-color 250ms ease, color 250ms ease;
+  box-shadow:   0 2px 10px rgba(12, 12, 12, 0.18);
+  transition:   background-color 200ms ease, box-shadow 200ms ease, transform 150ms ease;
   display:      inline-flex;
   align-items:  center;
+  justify-content: center;
   white-space:  nowrap;
 }
 .btn-nav-enquire:hover {
-  background:    var(--nv-en-hbg);
-  border-color:  var(--nv-en-hbd);
+  background:  #C5B79E;
+  box-shadow:  0 3px 14px rgba(12, 12, 12, 0.24);
+}
+.btn-nav-enquire:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 6px rgba(12, 12, 12, 0.18);
+}
+.btn-nav-enquire:focus-visible {
+  outline: 2px solid #7A4A3A;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-nav-enquire {
+    transition: none;
+  }
+  .btn-nav-enquire:active {
+    transform: none;
+  }
 }
 
 /* Navbar is always dark glass — force light/white logo regardless of theme */
@@ -1124,12 +1152,7 @@ header a span img:nth-child(2) { opacity: 1 !important; }
   #contact h2        { font-size: clamp(28px, 8vw, 42px) !important; }
 
   /* ─── 3. NAVBAR ───────────────────────────────────────────────── */
-  .btn-nav-enquire {
-    padding: 13px 16px !important;
-    font-size: 11px !important;
-    letter-spacing: 0.10em !important;
-    border-radius: 4px !important;
-  }
+  /* btn-nav-enquire styling handled globally - see lines 652-685 */
   header .flex.items-center.gap-2,
   header .flex.items-center.gap-3 { gap: 8px !important; }
 
