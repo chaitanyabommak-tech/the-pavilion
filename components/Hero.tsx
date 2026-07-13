@@ -102,19 +102,19 @@ export default function Hero({ heroData }: HeroProps = {}) {
               className="w-full"
             >
               {/* SEO Eyebrow */}
-              <p style={{ color: "var(--accent)" }} className="text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 font-semibold">
+              <p style={{ color: "var(--accent)" }} className="type-eyebrow mb-3">
                 {eyebrow}
               </p>
 
               <h1
                 style={{ color: "var(--ink)" }}
-                className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.05] mb-4"
+                className="type-display mb-4"
               >
                 {headline}
               </h1>
               <h2
                 style={{ color: "var(--ink-3)" }}
-                className="font-heading text-3xl lg:text-4xl xl:text-5xl font-light italic leading-snug mb-6"
+                className="type-body-lg italic mb-6"
               >
                 {subheadline.split('\n').map((line, i) => (
                   <span key={i}>
@@ -126,7 +126,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
 
               <div className="w-12 h-px bg-muted-gold mb-6" />
 
-              <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed mb-10">
+              <p style={{ color: "var(--ink-2)" }} className="type-body mb-10">
                 {bodyCopy.split('\n').map((line, i) => (
                   <span key={i}>
                     {line}
@@ -281,10 +281,10 @@ export default function Hero({ heroData }: HeroProps = {}) {
               className="py-6 text-center"
               style={{ borderLeft: i > 0 ? "1px solid var(--hero-stats-div)" : undefined }}
             >
-              <p style={{ color: "var(--hero-stats-tx)" }} className="font-stat text-2xl">
+              <p style={{ color: "var(--hero-stats-tx)" }} className="type-stat">
                 {s.value}
               </p>
-              <p style={{ color: "var(--hero-stats-tx2)" }} className="text-xs tracking-wider uppercase mt-1">
+              <p style={{ color: "var(--hero-stats-tx2)" }} className="type-stat-label mt-1">
                 {s.label}
               </p>
             </div>
