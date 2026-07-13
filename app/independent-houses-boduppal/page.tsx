@@ -33,7 +33,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            40 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 150-228 Sq. Yds plots. From ₹1.87 Cr onwards.
+            33 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 165-225 Sq. Yds plots. From ₹1.87 Cr onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -70,7 +70,7 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Units</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>40 independent houses (limited gated community)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 independent houses (limited gated community)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Configuration</td>
@@ -263,7 +263,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-6">
-            The Pavillion in Surya Hills, Boduppal offers 40 TRUE independent houses (standalone villas) in a low-density gated community. Unlike most projects claiming to be "villas" but actually row houses, every home at The Pavillion is completely independent.
+            The Pavillion in Surya Hills, Boduppal offers 33 TRUE independent houses (standalone villas) in a low-density gated community. Unlike most projects claiming to be "villas" but actually row houses, every home at The Pavillion is completely independent.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -524,7 +524,7 @@ export default function IndependentHousesBodupalPage() {
           <div className="w-16 h-px mx-auto mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Only 40 independent standalone houses. Early bird pricing. Book site visit today to reserve your villa.
+            Only 33 independent standalone houses. Early bird pricing. Book site visit today to reserve your villa.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

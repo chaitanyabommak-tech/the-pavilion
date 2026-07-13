@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Villa } from "@/data/pavilionVillas";
+import { Villa } from "@/data/pavilionVillas-v2-complete";
 
 interface SelectedVillaPanelProps {
   villa: Villa | null;

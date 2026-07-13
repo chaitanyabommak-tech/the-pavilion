@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { Villa, getVillaFloorPlan } from "@/data/pavilionVillas";
+import { Villa, getVillaFloorPlan } from "@/data/pavilionVillas-v2-complete";
 
 interface FloorPlanViewerProps {
   villa: Villa | null;

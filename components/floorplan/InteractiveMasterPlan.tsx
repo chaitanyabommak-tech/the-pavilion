@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Villa } from "@/data/pavilionVillas";
+import { Villa } from "@/data/pavilionVillas-v2-complete";
 
 interface InteractiveMasterPlanProps {
   villas: Villa[];
