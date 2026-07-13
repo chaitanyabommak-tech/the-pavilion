@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import VillaBox from "./VillaBox";
-import { Villa, pavilionVillas as fallbackVillas } from "@/data/pavilionVillas";
+import { Villa, pavilionVillas as fallbackVillas } from "@/data/pavilionVillas-v2-complete";
 
 interface SchematicMasterPlanProps {
   selectedVillaId: string | null;

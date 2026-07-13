@@ -6,7 +6,7 @@ import LeadFormModal from "./LeadFormModal";
 import SchematicMasterPlan from "./floorplan/SchematicMasterPlan";
 import SelectedVillaPanel from "./floorplan/SelectedVillaPanel";
 import FloorPlanViewer from "./floorplan/FloorPlanViewer";
-import { pavilionVillas as fallbackPavillionVillas, Villa } from "@/data/pavilionVillas";
+import { pavilionVillas as fallbackPavillionVillas, Villa } from "@/data/pavilionVillas-v2-complete";
 
 const types = [
   { id: "a", label: "Type A" },

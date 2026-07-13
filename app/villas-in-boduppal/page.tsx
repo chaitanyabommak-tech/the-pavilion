@@ -128,7 +128,7 @@ export default function VillasInBodupalPage() {
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Discover 40 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 33 families. Starting ₹1.87 Cr.
+            Discover 33 luxury standalone villas in Boduppal's most exclusive community. G+1+Penthouse design, no shared walls, complete design freedom, and a 24,000 SFT recreation zone for just 33 families. Starting ₹1.87 Cr.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">

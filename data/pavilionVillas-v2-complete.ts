@@ -35,7 +35,7 @@ export interface Villa {
 const SOLD_IDS = new Set(["A1", "A3", "B1", "B2", "C1", "C2", "D3", "F2", "G1", "G2", "G3", "H1", "H2", "H3"]);
 
 const blocks = ["A", "B", "C", "D", "E", "F", "G", "H"];
-const blockX = { A: 83, B: 74.5, C: 66, D: 57.5, E: 49, F: 40.5, G: 32, H: 23.5 };
+const blockX: Record<string, number> = { A: 83, B: 74.5, C: 66, D: 57.5, E: 49, F: 40.5, G: 32, H: 23.5 };
 const eastBlocks = new Set(["A", "C", "E", "G"]);
 
 function makeVilla(block: string, pos: number, plot: number, type: string, sft: number): Villa {
