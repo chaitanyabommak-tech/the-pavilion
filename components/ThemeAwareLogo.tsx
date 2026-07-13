@@ -5,18 +5,30 @@ import { useEffect, useState } from "react";
 export default function ThemeAwareLogo() {
   const [mounted, setMounted] = useState(false);
   const [dark, setDark] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const readDark = () =>
       document.documentElement.getAttribute("data-theme") === "dark";
+    const checkMobile = () => window.innerWidth < 480;
+
     setDark(readDark());
+    setIsMobile(checkMobile());
     setMounted(true);
+
     const observer = new MutationObserver(() => setDark(readDark()));
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-theme"],
     });
-    return () => observer.disconnect();
+
+    const handleResize = () => setIsMobile(checkMobile());
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   if (!mounted) {
@@ -24,8 +36,8 @@ export default function ThemeAwareLogo() {
       <div
         className="navbar__logo"
         style={{
-          width: "clamp(128px, 10.5vw, 168px)",
-          height: "auto"
+          width: "32px",
+          height: "28px"
         }}
       />
     );
@@ -33,13 +45,13 @@ export default function ThemeAwareLogo() {
 
   return (
     <img
-      src="/images/logo-bommaku.svg"
+      src={isMobile ? "/images/logo-icon.svg" : "/images/logo-bommaku.svg"}
       alt="Bommaku Group"
       className="navbar__logo block"
       style={{
-        width: "clamp(128px, 10.5vw, 168px)",
-        height: "auto",
-        maxHeight: "46px",
+        width: isMobile ? "32px" : "clamp(128px, 10.5vw, 168px)",
+        height: isMobile ? "28px" : "auto",
+        maxHeight: isMobile ? "28px" : "46px",
         objectFit: "contain",
         objectPosition: "left center",
         filter: dark ? "invert(1) brightness(2)" : "none",

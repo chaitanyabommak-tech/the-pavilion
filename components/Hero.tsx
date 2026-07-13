@@ -279,12 +279,23 @@ export default function Hero({ heroData }: HeroProps = {}) {
             <div
               key={s.label}
               className="py-6 text-center"
-              style={{ borderLeft: i > 0 ? "1px solid var(--hero-stats-div)" : undefined }}
+              style={{
+                borderLeft: i > 0 ? "1px solid var(--hero-stats-div)" : undefined,
+                display: "grid",
+                gridTemplateRows: "1fr auto",
+                rowGap: "0.5rem",
+                height: "100%",
+                minWidth: 0,
+                padding: "0 1rem",
+              }}
             >
-              <p style={{ color: "var(--hero-stats-tx)" }} className="type-stat">
+              <p
+                style={{ color: "var(--hero-stats-tx)", alignSelf: "center" }}
+                className="type-stat"
+              >
                 {s.value}
               </p>
-              <p style={{ color: "var(--hero-stats-tx2)" }} className="type-stat-label mt-1">
+              <p style={{ color: "var(--hero-stats-tx2)" }} className="type-stat-label">
                 {s.label}
               </p>
             </div>
