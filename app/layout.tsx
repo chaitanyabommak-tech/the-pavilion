@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Space_Grotesk, Inter, Cormorant_Garamond } from "next/font/google";
 import Script from "next/script";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { Providers } from "./providers";
@@ -20,6 +20,15 @@ const body = Inter({
   display: "swap",
 });
 
+// Typography v2.1 amendment: Hero H1 "The Pavillion" serif exception (Rishi approved, Jul 2026)
+// FORBIDDEN everywhere else on the site — use only via .type-hero-serif class
+const heroSerif = Cormorant_Garamond({
+  variable: "--font-hero-serif",
+  subsets: ["latin"],
+  weight: ["300"], // Light weight only - minimal payload
+  display: "swap",
+});
+
 // Dynamic metadata from database (falls back to hardcoded if DB unavailable)
 export async function generateMetadata(): Promise<Metadata> {
   return await getMetadataForPage('/')
@@ -31,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${display.variable} ${body.variable} ${heroSerif.variable}`} suppressHydrationWarning>
       <head>
         {/* Performance: preconnect for fonts already handled by next/font */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />

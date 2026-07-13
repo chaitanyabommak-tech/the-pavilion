@@ -273,6 +273,22 @@ header {
    Per Brand Guidelines Edition One p.08
    ═══════════════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════════════
+   TYPOGRAPHY v2.1 AMENDMENT — Hero H1 Serif Exception
+   Approved by Rishi, Jul 2026
+
+   SCOPE: Hero H1 "The Pavillion" on landing page (/) ONLY
+   This serif family is FORBIDDEN everywhere else on the site.
+   All other headings use Space Grotesk per v2.
+   ═══════════════════════════════════════════════════════════════════ */
+.type-hero-serif {
+  font-family: var(--font-hero-serif), "Cormorant Garamond", Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
 /* Display (H1) - Space Grotesk 500 */
 .type-display {
   font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;

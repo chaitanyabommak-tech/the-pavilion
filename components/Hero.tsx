@@ -108,7 +108,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
 
               <h1
                 style={{ color: "var(--ink)" }}
-                className="type-display mb-4"
+                className="type-hero-serif mb-4"
               >
                 {headline}
               </h1>
@@ -201,7 +201,7 @@ export default function Hero({ heroData }: HeroProps = {}) {
           <span className="hero-mob-eyebrow">{eyebrow}</span>
 
           {/* Project title */}
-          <h1 className="hero-mob-title font-heading">{headline}</h1>
+          <h1 className="hero-mob-title type-hero-serif">{headline}</h1>
 
           {/* One-liner */}
           <span className="hero-mob-subtitle">
