@@ -60,7 +60,7 @@ export default function SelectedVillaPanel({ villa, onEnquire }: SelectedVillaPa
       <div className="p-6 pb-5" style={{ borderBottom: "1px solid var(--edge)" }}>
         <div className="flex items-start justify-between gap-4 mb-3">
           <div>
-            <h3 className="font-heading text-3xl font-light mb-1" style={{ color: "var(--ink)" }}>
+            <h3 className="type-h3 mb-1" style={{ color: "var(--ink)" }}>
               Villa {villa.id}
             </h3>
             <p className="text-xs tracking-wider uppercase" style={{ color: "var(--ink-2)" }}>

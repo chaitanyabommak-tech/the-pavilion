@@ -62,7 +62,7 @@ export default function FloorPlanViewer({ villa }: FloorPlanViewerProps) {
         <div className="mb-4">
           <div className="flex items-baseline gap-3 mb-2">
             <h3
-              className="font-heading text-2xl md:text-3xl font-light"
+              className="type-h3"
               style={{ color: "var(--ink)" }}
             >
               Villa {villa.id}

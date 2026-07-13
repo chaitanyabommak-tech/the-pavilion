@@ -67,7 +67,7 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
             <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.4em] uppercase mb-4 font-medium">
               The Clean Slate
             </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
+            <h2 style={{ color: "var(--ink)" }} className="type-display leading-tight mb-6">
               Designed For You,
               <br />
               <span style={{ color: "var(--ink-3)" }} className="italic">By You</span>
@@ -109,7 +109,7 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-16"
           >
-            <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light text-center mb-12">
+            <h3 style={{ color: "var(--ink)" }} className="type-h3 text-center mb-12">
               The Clean Slate <span style={{ color: "var(--ink-3)" }} className="italic">Process</span>
             </h3>
 
@@ -132,11 +132,11 @@ export default function CleanSlate({ steps: dbSteps }: CleanSlateProps = {}) {
                     className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
                     style={{ background: "var(--accent)", color: "white" }}
                   >
-                    <span className="font-heading text-xl font-medium">{s.step}</span>
+                    <span className="type-h3">{s.step}</span>
                   </div>
 
                   {/* Title */}
-                  <h4 style={{ color: "var(--ink)" }} className="font-heading text-xl font-medium mb-3 leading-tight">
+                  <h4 style={{ color: "var(--ink)" }} className="type-h3 mb-3 leading-tight">
                     {s.title}
                   </h4>
 

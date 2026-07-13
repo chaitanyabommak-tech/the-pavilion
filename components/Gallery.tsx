@@ -46,7 +46,7 @@ export default function Gallery() {
             <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
               Visual Gallery
             </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
+            <h2 style={{ color: "var(--ink)" }} className="type-h2">
               The Pavillion,{" "}
               <span style={{ color: "var(--ink-3)" }} className="italic">in detail.</span>
             </h2>

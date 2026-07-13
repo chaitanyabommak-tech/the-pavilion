@@ -109,7 +109,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
               <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
                 Lifestyle &amp; Recreation
               </p>
-              <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light">
+              <h2 style={{ color: "var(--ink)" }} className="type-h2">
                 24,000 SFT
                 <br />
                 <span style={{ color: "var(--ink-3)" }} className="italic">Recreation Zone.</span>
@@ -197,7 +197,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
             <p style={{ color: "var(--accent)" }} className="text-xs tracking-[0.4em] uppercase mb-4 font-medium">
               Bommaku Recreation Zone
             </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
+            <h2 style={{ color: "var(--ink)" }} className="type-display leading-tight mb-6">
               A Private Recreation Destination
               <br />
               <span style={{ color: "var(--ink-3)" }} className="italic">Attached to The Pavillion</span>
@@ -342,7 +342,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
 
             {/* Content */}
             <div className="text-center max-w-2xl mx-auto">
-              <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light mb-6">
+              <h3 style={{ color: "var(--ink)" }} className="type-h3 mb-6">
                 Exclusive Benefits for Pavillion Villa Owners
               </h3>
 
@@ -395,7 +395,7 @@ export default function RecreationZone({ amenityGroups }: RecreationZoneProps = 
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mb-16 max-w-3xl"
           >
-            <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light mb-4">
+            <h3 style={{ color: "var(--ink)" }} className="type-h3 mb-4">
               Private Membership Model
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="text-sm sm:text-base leading-relaxed mb-4">

@@ -86,7 +86,7 @@ export default function WestFacingSection() {
             <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
               West Facing
             </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light mb-6">
+            <h2 style={{ color: "var(--ink)" }} className="type-h2 mb-6">
               West Facing Villa Facades
             </h2>
             <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />

@@ -44,7 +44,7 @@ export default function LocationAdvantage() {
           <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
             Location
           </p>
-          <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light mb-6">
+          <h2 style={{ color: "var(--ink)" }} className="type-h2 mb-6">
             Surya Hills, Boduppal.
             <br />
             <span style={{ color: "var(--ink-3)" }} className="italic">East Hyderabad.</span>

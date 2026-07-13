@@ -400,7 +400,7 @@ export default function VillaConfigurations({ villas: dbVillas }: VillaConfigura
                 <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-3">
                   Choose Your Villa
                 </p>
-                <h3 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl lg:text-4xl font-light">
+                <h3 style={{ color: "var(--ink)" }} className="type-h3">
                   Choose Your Villa From the Master Plan
                 </h3>
                 <p style={{ color: "var(--ink-2)" }} className="text-sm mt-2 max-w-2xl">

@@ -145,7 +145,7 @@ export default function LeadFormModal({ type, onClose }: LeadFormModalProps) {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <h4 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">
+                <h4 style={{ color: "var(--ink)" }} className="type-h3 mb-3">
                   Thank You!
                 </h4>
                 <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">

@@ -101,7 +101,7 @@ export default function Contact({ settings = {} }: ContactProps) {
             <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
               Reach Us
             </p>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl font-light leading-tight mb-4">
+            <h2 style={{ color: "var(--ink)" }} className="type-h2 leading-tight mb-4">
               Just a call away.
             </h2>
             <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
@@ -120,7 +120,7 @@ export default function Contact({ settings = {} }: ContactProps) {
                 <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.2em] uppercase mb-3">
                   Developer
                 </p>
-                <h3 style={{ color: "var(--ink)" }} className="font-heading text-xl font-medium mb-4">
+                <h3 style={{ color: "var(--ink)" }} className="type-h3 mb-4">
                   {companyName}
                 </h3>
                 <div className="space-y-2">
@@ -166,7 +166,7 @@ export default function Contact({ settings = {} }: ContactProps) {
             className="contact-form-panel p-6 sm:p-8 md:p-10"
             style={{ background: "var(--card)", border: "1px solid var(--edge)" }}
           >
-            <h3 style={{ color: "var(--ink)" }} className="font-heading text-3xl font-light mb-2">
+            <h3 style={{ color: "var(--ink)" }} className="type-h3 mb-2">
               Submit Enquiry
             </h3>
             <div className="w-10 h-px mb-8" style={{ background: "var(--accent)" }} />

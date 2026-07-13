@@ -43,16 +43,16 @@ export default function Navbar() {
 
           {/* CENTRE ZONE: Navigation - hidden on mobile, visible on lg+ */}
           <nav className="navbar__navigation hidden lg:flex">
-            <Link href="/the-pavillion" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
+            <Link href="/the-pavillion" className="type-nav transition-all hover:opacity-60" style={{ color: "var(--ink)" }}>
               The Project
             </Link>
-            <Link href="/about" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
+            <Link href="/about" className="type-nav transition-all hover:opacity-60" style={{ color: "var(--ink)" }}>
               About
             </Link>
-            <Link href="/blog" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
+            <Link href="/blog" className="type-nav transition-all hover:opacity-60" style={{ color: "var(--ink)" }}>
               Blog
             </Link>
-            <Link href="/contact" className="font-heading text-base font-light tracking-wide transition-all hover:opacity-60" style={{ color: "var(--ink)", letterSpacing: "0.02em" }}>
+            <Link href="/contact" className="type-nav transition-all hover:opacity-60" style={{ color: "var(--ink)" }}>
               Contact
             </Link>
           </nav>
