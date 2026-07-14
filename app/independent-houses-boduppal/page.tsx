@@ -304,7 +304,7 @@ export default function IndependentHousesBodupalPage() {
             <div className="p-4" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
               <h4 style={{ color: "var(--ink)" }} className="font-semibold mb-2">Platinum Type - Premium Corner Plots</h4>
               <p style={{ color: "var(--ink-2)" }} className="text-sm">
-                <strong>Plot:</strong> 222-228 Sq. Yds | <strong>Built-up:</strong> 2,500+ SFT | <strong>Price:</strong> ₹2.5-3.0 Cr onwards
+                <strong>Plot:</strong> 225-228 Sq. Yds | <strong>Built-up:</strong> 2,500+ SFT | <strong>Price:</strong> ₹2.5-3.0 Cr onwards
               </p>
             </div>
           </div>
@@ -482,7 +482,7 @@ export default function IndependentHousesBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">6. What are plot sizes available?</h3>
-              <p className="text-sm">The Pavillion offers 165-228 Sq. Yds plots. Silver Type (165-167 Sq. Yds): ₹2.1-2.3 Cr | Platinum Type (222-228 Sq. Yds): ₹2.5-3.0 Cr. All standalone, no shared walls.</p>
+              <p className="text-sm">The Pavillion offers 165-228 Sq. Yds plots. Silver Type (165-167 Sq. Yds): ₹2.1-2.3 Cr | Platinum Type (225-228 Sq. Yds): ₹2.5-3.0 Cr. All standalone, no shared walls.</p>
             </div>
 
             <div>

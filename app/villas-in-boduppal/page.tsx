@@ -376,7 +376,7 @@ export default function VillasInBodupalPage() {
             <div className="p-6" style={{ background: "var(--bg)", border: "1px solid var(--edge)", borderRadius: "8px" }}>
               <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-3">Platinum Type - Premium Plots</h3>
               <p style={{ color: "var(--ink-2)" }} className="text-sm mb-4">
-                <strong>Plot:</strong> 222-228 Sq. Yds (varies)<br />
+                <strong>Plot:</strong> 225-228 Sq. Yds (varies)<br />
                 <strong>Built-up:</strong> 2,500+ SFT<br />
                 <strong>Configuration:</strong> 3 BHK + Pooja Room<br />
                 <strong>Price:</strong> ₹2.5-3.0 Cr onwards

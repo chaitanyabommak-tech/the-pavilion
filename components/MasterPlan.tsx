@@ -138,9 +138,6 @@ export default function MasterPlan({ villas = [] }: MasterPlanProps) {
                   sizes="(max-width: 1920px) 95vw, 3840px"
                   style={{ display: 'block' }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="font-heading text-4xl text-[#9A8F87] font-light">Master Plan</p>
-                </div>
               </div>
               <p className="text-[#8A7F78] text-xs text-center mt-4 tracking-widest uppercase">
                 The Pavillion — Surya Hills, Boduppal · GPS: 17°24&apos;59.1&quot;N, 78°34&apos;32.2&quot;E

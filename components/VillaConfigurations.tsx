@@ -17,8 +17,8 @@ const villas = [
   { typeId:"b", label:"Silver Type — 165 NE Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North East", floorplan:"/assets/floorplan-165ne.webp", price:"₹1.9 Cr onwards"  },
   { typeId:"b", label:"Silver Type — 165 NW Facing",  plot:"165 Sq. Yds", dimensions:"33 × 45 ft", builtup:"Ground: 802 | First: 802 | Second: 546 SFT", floors:"G+1+Penthouse", facing:"North West", floorplan:"/assets/floorplan-165nw.webp", price:"₹1.9 Cr onwards"  },
   { typeId:"b", label:"Silver Type — 167 East Facing",plot:"167 Sq. Yds", dimensions:"30 × 50 ft", builtup:"Ground: 866 | First: 866 | Second: 603 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-167e.webp",  price:"₹2.1 Cr onwards"  },
-  { typeId:"c", label:"Platinum Type — 222 West Facing",plot:"222 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 925 | First: 925 | Second: 925 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-222w.webp",  price:"₹2.25 Cr onwards" },
-  { typeId:"c", label:"Platinum Type — 227 East Facing",plot:"227 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 950 | First: 950 | Second: 616 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-227e.webp",  price:"₹2.5 Cr onwards"  },
+  { typeId:"c", label:"Platinum Type — 225 West Facing",plot:"225 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 925 | First: 925 | Second: 925 SFT", floors:"G+1+Penthouse", facing:"West",       floorplan:"/assets/floorplan-222w.webp",  price:"₹2.25 Cr onwards" },
+  { typeId:"c", label:"Platinum Type — 225 East Facing",plot:"225 Sq. Yds", dimensions:"Varies",      builtup:"Ground: 950 | First: 950 | Second: 616 SFT", floors:"G+1+Penthouse", facing:"East",       floorplan:"/assets/floorplan-227e.webp",  price:"₹2.5 Cr onwards"  },
 ];
 
 const specs = [

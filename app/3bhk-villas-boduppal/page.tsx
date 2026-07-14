@@ -279,7 +279,7 @@ export default function ThreeBHKVillasBodupalPage() {
               <div className="grid sm:grid-cols-3 gap-4 text-sm" style={{ color: "var(--ink-2)" }}>
                 <div>
                   <p className="font-semibold mb-1">Plot Size</p>
-                  <p>222-228 Sq. Yds</p>
+                  <p>225-228 Sq. Yds</p>
                 </div>
                 <div>
                   <p className="font-semibold mb-1">Built-up Area</p>
