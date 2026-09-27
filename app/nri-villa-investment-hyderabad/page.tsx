@@ -269,7 +269,7 @@ export default function NRIPage() {
             >
               WhatsApp Us
             </a>
-            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href="https://wa.me/919676077142?text=Hi%2C%20I%27m%20interested%20in%20The%20Pavillion%20villas" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call India: +91 96760 77142
             </a>
           </div>

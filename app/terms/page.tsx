@@ -102,7 +102,7 @@ export default function TermsPage() {
               <strong style={{ color: "var(--ink)" }}>Bommaku Constructions</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039, Telangana<br />
               Email: <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a><br />
-              Phone: <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
+              Phone: <a href="https://wa.me/919676077142?text=Hi%2C%20I%27m%20interested%20in%20The%20Pavillion%20villas" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
             </p>
           </section>
 
