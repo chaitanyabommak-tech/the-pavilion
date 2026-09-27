@@ -77,7 +77,7 @@ export default function FinalCTA() {
                 Download Brochure
               </button>
               <a
-                href="tel:+919676077142"
+                href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
                 onClick={() => track("call", "final_cta")}
                 className="border border-stone-beige/40 text-stone-beige hover:border-muted-gold hover:text-muted-gold px-10 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
               >

@@ -193,7 +193,7 @@ export default function RecreationZonePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919676077142" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call: +91 96760 77142
             </a>
             <Link href="/contact" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">

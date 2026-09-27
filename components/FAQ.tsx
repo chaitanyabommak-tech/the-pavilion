@@ -170,7 +170,7 @@ export default function FAQ() {
               Have more questions?
             </p>
             <a
-              href="tel:+919676077142"
+              href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
               className="btn-primary inline-block px-8 py-4 text-xs tracking-[0.2em] uppercase"
             >
               Speak to Sales
