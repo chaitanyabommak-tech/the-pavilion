@@ -78,7 +78,7 @@ export default function ProjectOverview() {
                   Book Site Visit
                 </button>
                 <a
-                  href="https://wa.me/919676077142"
+                  href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => track("whatsapp", "project_overview")}

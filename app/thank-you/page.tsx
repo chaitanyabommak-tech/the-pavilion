@@ -83,7 +83,7 @@ export default function ThankYouPage() {
         <p style={{ color: "var(--ink-3)" }} className="text-sm">
           Surya Hills, Boduppal, Hyderabad &nbsp;|&nbsp;{" "}
           <a
-            href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
             onClick={() => trackPhoneClick('+919676077142', 'thank_you_page')}
             style={{ color: "var(--accent)" }}
           >

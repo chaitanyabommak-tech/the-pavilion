@@ -45,7 +45,7 @@ export default function MobileStickyCTA() {
         >
           {/* WhatsApp Chat Button */}
           <a
-            href="https://wa.me/919676077142"
+            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
