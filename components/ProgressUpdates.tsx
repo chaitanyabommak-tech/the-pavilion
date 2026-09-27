@@ -119,7 +119,7 @@ export default function ProgressUpdates() {
           className="mt-10 flex items-center gap-4"
         >
           <a
-            href="https://wa.me/919676077142?text=Hi%2C%20I%27m%20interested%20in%20The%20Pavillion%20villas"
+            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("whatsapp", "progress_updates")}
