@@ -268,7 +268,7 @@ export default function GhatkesarPochalamPage() {
               Call: +91 96760 77142
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=919676077142?text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion.%20I%20work%20near%20Ghatkesar/Pocharam."
+              href="https://api.whatsapp.com/send?phone=919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion.%20I%20work%20near%20Ghatkesar/Pocharam."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"

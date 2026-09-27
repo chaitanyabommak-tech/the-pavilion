@@ -220,7 +220,7 @@ export default function ThePavillionPage() {
               Call: +91 96760 77142
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=919676077142?text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20book%20a%20site%20visit."
+              href="https://api.whatsapp.com/send?phone=919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20book%20a%20site%20visit."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"
