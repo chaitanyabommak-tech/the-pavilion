@@ -43,9 +43,9 @@ export default function MobileStickyCTA() {
             boxShadow: "0 -2px 10px rgba(0,0,0,0.1)",
           }}
         >
-          {/* WhatsApp Call Button */}
+          {/* WhatsApp Chat Button */}
           <a
-            href="https://api.whatsapp.com/send?phone=919676077142"
+            href="https://wa.me/919676077142"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}

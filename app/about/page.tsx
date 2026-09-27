@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div className="space-y-4 mb-8 text-center">
             <p style={{ color: "var(--ink-2)" }}>
               <strong style={{ color: "var(--ink)" }}>Phone:</strong>{" "}
-              <a href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
+              <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
                 +91 96760 77142
               </a>
             </p>

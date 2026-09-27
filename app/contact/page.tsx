@@ -48,7 +48,7 @@ export default function ContactPage() {
                   PHONE
                 </h3>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
                   style={{ color: "var(--ink)" }}
                   className="text-lg hover:opacity-70 transition-opacity"
                 >
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   WHATSAPP
                 </h3>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20know%20more."
+                  href="https://wa.me/919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20know%20more."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "var(--ink)" }}
@@ -109,13 +109,13 @@ export default function ContactPage() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
                 className="btn-primary px-6 py-3 text-xs tracking-[0.2em] uppercase inline-block text-center"
               >
                 Call Now
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas."
+                href="https://wa.me/919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary px-6 py-3 text-xs tracking-[0.2em] uppercase inline-block text-center"

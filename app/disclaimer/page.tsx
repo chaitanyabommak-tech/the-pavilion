@@ -86,7 +86,7 @@ export default function DisclaimerPage() {
             <p>
               <strong style={{ color: "var(--ink)" }}>Bommaku Constructions</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039<br />
-              <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a> · <a href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
+              <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a> · <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
             </p>
           </section>
 

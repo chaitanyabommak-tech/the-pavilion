@@ -262,14 +262,14 @@ export default function NRIPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://api.whatsapp.com/send?phone=919676077142&text=Hi%2C%20I'm%20an%20NRI%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20schedule%20a%20consultation."
+              href="https://wa.me/919676077142&text=Hi%2C%20I'm%20an%20NRI%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20schedule%20a%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"
             >
               WhatsApp Us
             </a>
-            <a href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call India: +91 96760 77142
             </a>
           </div>
