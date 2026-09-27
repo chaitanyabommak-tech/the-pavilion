@@ -214,7 +214,7 @@ export default function Pricing() {
               Book Site Visit
             </button>
             <a
-              href="https://wa.me/919676077142"
+              href="https://api.whatsapp.com/send?phone=919676077142"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("whatsapp", "pricing")}

@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">7. Your Rights</h2>
             <p className="text-sm leading-relaxed">
-              You have the right to request access to, correction of, or deletion of your personal data held by us. To exercise these rights, contact us at <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a> or call <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>.
+              You have the right to request access to, correction of, or deletion of your personal data held by us. To exercise these rights, contact us at <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a> or call <a href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>.
             </p>
           </section>
 
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
               <strong style={{ color: "var(--ink)" }}>Bommaku Constructions</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039, Telangana<br />
               Email: <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a><br />
-              Phone: <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
+              Phone: <a href="https://api.whatsapp.com/send?phone=919676077142" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
             </p>
           </section>
 

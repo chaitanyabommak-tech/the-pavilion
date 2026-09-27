@@ -45,10 +45,10 @@ export default function MobileStickyCTA() {
         >
           {/* WhatsApp Call Button */}
           <a
-            href="https://wa.me/919676077142"
+            href="https://api.whatsapp.com/send?phone=919676077142"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={handleCallClick}
+            onClick={handleWhatsAppClick}
             className="flex flex-col items-center justify-center py-3 transition-colors hover:opacity-80"
             style={{ background: "var(--bg)" }}
           >
@@ -72,7 +72,7 @@ export default function MobileStickyCTA() {
           {/* Phone Call Button */}
           <a
             href="tel:+919676077142"
-            onClick={handleWhatsAppClick}
+            onClick={handleCallClick}
             className="flex flex-col items-center justify-center py-3 transition-colors hover:opacity-80"
             style={{ background: "var(--bg)" }}
           >
