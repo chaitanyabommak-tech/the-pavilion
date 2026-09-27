@@ -61,7 +61,7 @@ export default function LocationAdvantage() {
               Get Location <span aria-hidden="true">→</span>
             </a>
             <a
-              href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer"
               onClick={() => trackPhoneClick('+919676077142', 'location_section')}
               className="btn-get-location flex items-center gap-2"
             >

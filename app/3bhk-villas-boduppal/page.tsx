@@ -37,7 +37,7 @@ export default function ThreeBHKVillasBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call: +91 96760 77142
             </a>
             <a href="/#main-content" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
@@ -533,10 +533,10 @@ export default function ThreeBHKVillasBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               Call: +91 96760 77142
             </a>
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href="https://wa.me/919676077142" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               WhatsApp Us
             </a>
           </div>
