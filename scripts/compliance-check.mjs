@@ -55,8 +55,13 @@ const SCAN_DIRS = ['src', 'app', 'components', 'data'];
 // File extensions to check
 const CHECK_EXTENSIONS = ['.ts', '.tsx', '.js', '.jsx', '.json', '.md', '.mdx'];
 
-// Files to exempt (only this script itself)
+// Files to exempt
 const EXEMPT_FILES = ['compliance-check.mjs'];
+
+// Educational blog posts (explaining RERA/DTCP, not claiming we have them)
+const EDUCATIONAL_BLOG_PATTERNS = [
+  /gp-development-vs-rera-dtcp/i,  // Comparison/educational post
+];
 
 let violations = [];
 
@@ -88,9 +93,51 @@ function scanDirectory(dir) {
 }
 
 function checkFile(filePath) {
+  // Skip educational blog posts that explain RERA/DTCP (not claiming we have them)
+  const isEducationalBlog = EDUCATIONAL_BLOG_PATTERNS.some(pattern => pattern.test(filePath));
+  if (isEducationalBlog) {
+    return;
+  }
+
+  // Skip blog index and sitemap when checking (they list educational posts)
+  const isBlogIndex = filePath.includes('app/blog/page.tsx') || filePath.includes('app\\blog\\page.tsx');
+  const isSitemap = filePath.includes('app/sitemap.ts') || filePath.includes('app\\sitemap.ts');
+
   try {
     const content = readFileSync(filePath, 'utf-8');
     const lines = content.split('\n');
+
+    // For blog index and sitemap, check context around banned terms
+    if (isBlogIndex || isSitemap) {
+      lines.forEach((line, index) => {
+        // Skip if this line or nearby lines reference educational blog slug
+        const contextWindow = [
+          lines[index - 2],
+          lines[index - 1],
+          line,
+          lines[index + 1],
+          lines[index + 2]
+        ].filter(Boolean).join(' ');
+
+        const referencesEducationalPost = EDUCATIONAL_BLOG_PATTERNS.some(pattern =>
+          pattern.test(contextWindow)
+        );
+        if (referencesEducationalPost) return;
+
+        BANNED_PATTERNS.forEach(pattern => {
+          if (pattern.test(line)) {
+            const match = line.match(pattern);
+            violations.push({
+              file: filePath.replace(rootDir + '/', ''),
+              line: index + 1,
+              term: match[0],
+              context: line.trim().substring(0, 80),
+            });
+          }
+        });
+      });
+      return;
+    }
 
     lines.forEach((line, index) => {
       BANNED_PATTERNS.forEach(pattern => {

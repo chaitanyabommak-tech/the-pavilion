@@ -17,6 +17,24 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "gp-development-vs-rera-dtcp",
+    title: "GP Development vs RERA vs DTCP: What's the Difference?",
+    description: "Understand GP Development, RERA, and DTCP approvals. Legal differences, bank approvals, and resale impact explained for villa buyers.",
+    category: "Legal Guide",
+  },
+  {
+    slug: "standalone-villas-vs-row-houses-complete-guide",
+    title: "Standalone Villas vs Row Houses: Complete Buyer's Guide",
+    description: "Privacy, resale value, noise, modifications, pricing differences. Understand what you're actually buying and why it matters.",
+    category: "Buyer's Guide",
+  },
+  {
+    slug: "home-loan-approval-for-villas-complete-guide",
+    title: "Home Loan Approval for Villas: Complete Guide 2026",
+    description: "Documents needed, eligibility, bank-approved projects, GP Development vs apartments, interest rates, and processing time.",
+    category: "Home Loans",
+  },
+  {
     slug: "is-boduppal-good-place-to-buy-villa-2026",
     title: "Is Boduppal a Good Place to Buy a Villa in 2026?",
     description: "Location analysis, infrastructure growth, metro connectivity, and appreciation trends in Boduppal and East Hyderabad.",

@@ -197,6 +197,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/gp-development-vs-rera-dtcp`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/standalone-villas-vs-row-houses-complete-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/home-loan-approval-for-villas-complete-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/is-boduppal-good-place-to-buy-villa-2026`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
