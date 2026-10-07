@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
 
 interface FooterProps {
   settings?: Record<string, string>
@@ -41,7 +42,7 @@ function FooterLogo() {
   return (
     <img
       src={dark ? "/assets/logo-pavilion-light.png" : "/assets/logo-pavilion-dark.png"}
-      alt="The Pavillion — Bommaku Group"
+      alt={`${project.name} — ${company.brandName}`}
       className="footer-logo"
     />
   );
@@ -49,11 +50,11 @@ function FooterLogo() {
 
 export default function Footer({ settings = {} }: FooterProps) {
   // Use database settings with fallbacks
-  const facebookUrl = settings.facebook_url || 'https://facebook.com'
-  const instagramUrl = settings.instagram_url || 'https://instagram.com'
-  const youtubeUrl = settings.youtube_url || 'https://youtube.com'
-  const companyName = settings.company_name || 'Bommaku Constructions'
-  const projectName = settings.project_name || 'The Pavillion'
+  const facebookUrl = settings.facebook_url || company.social.facebook
+  const instagramUrl = settings.instagram_url || company.social.instagram
+  const youtubeUrl = settings.youtube_url || company.social.youtube
+  const companyName = settings.company_name || company.brandName
+  const projectName = settings.project_name || project.name
 
   return (
     <>
@@ -132,7 +133,7 @@ export default function Footer({ settings = {} }: FooterProps) {
               © 2026 {companyName}. All rights reserved.
             </p>
             <p className="footer-tagline" style={{ fontSize: '11px', marginTop: '8px', opacity: 0.7 }}>
-              A Bommaku Group Development · GP Development
+              A {company.brandName} Development · {APPROVAL_LABEL}
             </p>
           </div>
         </div>
