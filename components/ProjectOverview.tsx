@@ -12,18 +12,18 @@ import LeadFormModal from "./LeadFormModal";
 
 const projectFacts = [
   { label: "Developer", value: "Bommaku Group" },
-  { label: "Registration", value: "Registered HMDA Circle Project" },
+  { label: "Development Type", value: "GP Development" },
   { label: "Location", value: "Surya Hills, Boduppal, East Hyderabad" },
   { label: "Total Site Area", value: "3 Acres" },
   { label: "Total Villas", value: "33 Standalone Units" },
   { label: "Villa Type", value: "G+1+Penthouse Standalone" },
-  { label: "Built-up Area", value: "2,200 – 2,500 SFT" },
-  { label: "Plot Sizes", value: "150 | 165 | 167 | 183 | 222–250 Sq. Yards" },
-  { label: "Internal Roads", value: "30 ft Main · 25 ft Internal · 33 ft Entry" },
+  { label: "Built-up Area", value: "2,400 – 2,600 SFT" },
+  { label: "Plot Sizes", value: "165 | 167 | 183 | 225 Sq. Yards" },
+  { label: "Internal Roads", value: "30 ft Main · 25 ft Internal" },
   { label: "Vastu", value: "100% Vastu-Compliant Planning" },
   {
     label: "Bank Loans",
-    value: "SBI · HDFC · ICICI · KVB · LIC Housing Finance",
+    value: "SBI · HDFC · ICICI · Bajaj · Kotak · Karur Vysya",
   },
 ];
 

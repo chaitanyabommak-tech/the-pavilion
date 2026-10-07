@@ -42,10 +42,10 @@ export default function Hero({ heroData }: HeroProps = {}) {
   const [modalType, setModalType] = useState<"visit" | "brochure">("visit");
 
   // Use database values with fallbacks to current hardcoded text
-  const eyebrow = heroData?.eyebrow || "40 Luxury Villas in Boduppal, Hyderabad"
+  const eyebrow = heroData?.eyebrow || "33 Villas in Boduppal, East Hyderabad"
   const headline = heroData?.headline || "The Pavillion"
   const subheadline = heroData?.subheadline || "Your parents dreamed of a home like this.\nYou're buying it."
-  const bodyCopy = heroData?.body_copy || "Premium standalone villas in Surya Hills, Boduppal.\nG+1+Penthouse | 3BHK | 24,000 SFT Recreation Zone\nHMDA Registered | From ₹1.87 Cr onwards"
+  const bodyCopy = heroData?.body_copy || "G+1+Penthouse villas in Surya Hills, Boduppal.\n3 BHK | 24,000 SFT Recreation Zone\nGP Development | From ₹1.95 Cr onwards"
   const ctaPrimary = heroData?.cta_primary_label || "Book Site Visit"
   const ctaSecondary = heroData?.cta_secondary_label || "Download Brochure"
 

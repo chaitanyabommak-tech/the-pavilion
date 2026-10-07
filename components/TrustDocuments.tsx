@@ -42,8 +42,8 @@ const documents = [
   },
   {
     icon: "✓",
-    title: "HMDA Registration",
-    body: "Registered HMDA Circle Project. Regulatory compliance in place.",
+    title: "GP Development",
+    body: "GP Development. All documents available for independent verification with your lawyer.",
   },
 ];
 

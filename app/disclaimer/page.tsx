@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | The Pavillion — Bommaku Constructions",
-  description: "Disclaimer for The Pavillion by Bommaku Constructions. Important information for prospective buyers.",
+  title: "Disclaimer | The Pavillion — Bommaku Group",
+  description: "Disclaimer for The Pavillion by Bommaku Group. Important information for prospective buyers.",
   alternates: { canonical: "https://bommakugroup.com/disclaimer" },
 };
 
@@ -35,7 +35,7 @@ export default function DisclaimerPage() {
           <section>
             <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">Project Information</h3>
             <p>
-              The Pavillion is a residential development by Bommaku Constructions at Surya Hills, Boduppal. All details — specifications, amenities, floor plans, pricing, timelines — are indicative and subject to revision without notice.
+              The Pavillion is a residential development by Bommaku Group at Surya Hills, Boduppal. All details — specifications, amenities, floor plans, pricing, timelines — are indicative and subject to revision without notice.
             </p>
           </section>
 
@@ -56,14 +56,14 @@ export default function DisclaimerPage() {
           <section>
             <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">Amenities</h3>
             <p>
-              All amenities and specifications are proposed and subject to approvals. Bommaku Constructions reserves the right to modify or remove any amenity without notice.
+              All amenities and specifications are proposed and subject to approvals. Bommaku Group reserves the right to modify or remove any amenity without notice.
             </p>
           </section>
 
           <section>
-            <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">RERA Notice</h3>
+            <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">Development Type</h3>
             <p>
-              RERA registration in process. Prospective buyers should verify all details — approvals, RERA, title — independently through legal counsel before investment.
+              The Pavillion is a GP Development. Prospective buyers should verify title, layout and all documents independently through their own legal counsel before purchase.
             </p>
           </section>
 
@@ -77,14 +77,14 @@ export default function DisclaimerPage() {
           <section>
             <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">No Liability</h3>
             <p>
-              Bommaku Constructions shall not be liable for any loss, damage, or inconvenience from reliance on this Website. Users access at their own risk.
+              Bommaku Group shall not be liable for any loss, damage, or inconvenience from reliance on this Website. Users access at their own risk.
             </p>
           </section>
 
           <section>
             <h3 style={{ color: "var(--ink)" }} className="font-heading text-[10px] font-semibold mb-0.5">Contact</h3>
             <p>
-              <strong style={{ color: "var(--ink)" }}>Bommaku Constructions</strong><br />
+              <strong style={{ color: "var(--ink)" }}>Bommaku Group</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039<br />
               <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a> · <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
             </p>

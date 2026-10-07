@@ -11,31 +11,39 @@ const faqs = [
   },
   {
     question: "How many villas are there in The Pavillion?",
-    answer: "The Pavillion comprises 33 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
+    answer: "The Pavillion comprises 33 villas across 8 blocks in Surya Hills, Boduppal. Each villa is G+1+Penthouse configuration with 3 BHK + Pooja Room."
   },
   {
     question: "What is the price range of villas?",
-    answer: "Villas at The Pavillion start from ₹1.87 Cr onwards, varying based on plot size, configuration, and facing direction."
+    answer: "Villas at The Pavillion start from ₹1.95 Cr onwards, varying based on plot size, configuration, and facing direction."
   },
   {
     question: "What are the villa configurations available?",
-    answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 165 to 228 Sq. Yds with built-up areas from 2,300 to 2,500 SFT."
+    answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 165 to 228 Sq. Yds with built-up areas from 2,400 to 2,600 SFT."
   },
   {
-    question: "Is The Pavillion HMDA approved?",
-    answer: "Yes, The Pavillion is a registered HMDA Circle Project. All legal approvals and documentation are in place and available for verification."
+    question: "What kind of development is The Pavillion?",
+    answer: "The Pavillion is a GP Development by Bommaku Group at Surya Hills, Boduppal. Each buyer owns their individual plot and the villa that Bommaku builds on it. Before you book, we share the full document set with you and your lawyer for independent verification."
+  },
+  {
+    question: "Can I verify the documents before booking?",
+    answer: "Yes. Visit our site office with your lawyer, or ask us to share copies in advance. We encourage every buyer to complete independent legal checks."
+  },
+  {
+    question: "Is it The Pavillion or The Pavilion?",
+    answer: "Our project is named The Pavillion, with a double L. Many people search for it as The Pavilion — both lead to the same 33-villa GP Development at Surya Hills, Boduppal."
   },
   {
     question: "What amenities are provided?",
-    answer: "The Pavillion features a 24,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga room, sauna, sports courts (football, pickleball, cricket), restaurant, cafe, Zen garden, kids' play area, and professionally managed wellness and lifestyle facilities."
+    answer: "The Pavillion features a 24,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga studio, Zumba studio, Zen garden, pickleball courts, basketball court, box cricket turf, game room, and supermarket."
   },
   {
     question: "Do you provide bank loan assistance?",
-    answer: "Yes, the project is approved by major banks including SBI, ICICI, HDFC, Bajaj Finance, Kotak, and Karur Vysya Bank for home loan financing."
+    answer: "Yes. Our team guides you through home-loan options and the documents lenders usually ask for. Loan eligibility and sanction are decided by the lender. The project is approved by major banks including SBI, ICICI, HDFC, Bajaj Finance, Kotak, and Karur Vysya Bank for home loan financing."
   },
   {
     question: "Can I customize my villa?",
-    answer: "Yes! The Pavillion offers a 'clean slate' concept where you can customize your villa during construction - from layouts to finishes - before the first pour of concrete."
+    answer: "Yes! The Pavillion offers 'The Clean Slate' — buyer-personalized internal planning before plan freeze. You can customize layouts and finishes before construction. The RCC framework stays fixed."
   },
   {
     question: "What is the possession timeline?",

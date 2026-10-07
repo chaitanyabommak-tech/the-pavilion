@@ -132,7 +132,7 @@ export default function Footer({ settings = {} }: FooterProps) {
               © 2026 {companyName}. All rights reserved.
             </p>
             <p className="footer-tagline" style={{ fontSize: '11px', marginTop: '8px', opacity: 0.7 }}>
-              A Bommaku Group Company | HMDA Registered Project
+              A Bommaku Group Development · GP Development
             </p>
           </div>
         </div>
