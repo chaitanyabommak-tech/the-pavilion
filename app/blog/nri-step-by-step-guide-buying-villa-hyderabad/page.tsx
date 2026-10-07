@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { project } from "@/src/content/facts";
 
 export const metadata: Metadata = {
   title: "NRI's Step-by-Step Guide to Buying a Villa in Hyderabad",
@@ -336,7 +337,7 @@ export default function BlogPost() {
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">NRI-Friendly Villa Project</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">The Pavillion - Power of Attorney accepted</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">{project.name} - Power of Attorney accepted</p>
               </Link>
             </div>
           </div>
@@ -344,7 +345,7 @@ export default function BlogPost() {
           {/* CTA */}
           <div className="mt-16 p-8 text-center" style={{ background: "var(--bg-subtle)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-2xl font-light mb-4">
-              NRI-Friendly Process at The Pavillion
+              NRI-Friendly Process at {project.name}
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
               Power of Attorney accepted. Video consultations across US/Gulf time zones. NRI home loans pre-approved.

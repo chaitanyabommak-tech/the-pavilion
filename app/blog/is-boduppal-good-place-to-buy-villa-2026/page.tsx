@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { project, recreation } from "@/src/content/facts";
 
 export const metadata: Metadata = {
   title: "Is Boduppal a Good Place to Buy a Villa in 2026? | Location Analysis",
@@ -186,7 +187,7 @@ export default function BlogPost() {
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">33 luxury villas at The Pavillion</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">{project.overview.totalVillas} luxury villas at {project.name}</p>
               </Link>
               <Link href="/villas-near-uppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Nearby</p>
@@ -199,10 +200,10 @@ export default function BlogPost() {
           {/* CTA */}
           <div className="mt-16 p-8 text-center" style={{ background: "var(--bg-subtle)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-2xl font-light mb-4">
-              Explore The Pavillion in Boduppal
+              Explore {project.name} in Boduppal
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
-              33 standalone villas, 8 min to Uppal Metro, 24,000 SFT recreation zone. From ₹1.87 Cr.
+              {project.overview.totalVillas} standalone villas, 8 min to Uppal Metro, {recreation.totalAreaDisplay} recreation zone. From {project.families.silver.priceDisplay}.
             </p>
             <Link href="/the-pavillion" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block">
               View Project Details

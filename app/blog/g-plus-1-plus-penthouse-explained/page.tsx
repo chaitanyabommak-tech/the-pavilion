@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { project } from "@/src/content/facts";
 
 export const metadata: Metadata = {
   title: "G+1+Penthouse Explained: Why This Configuration Wins for Families",
@@ -301,12 +302,12 @@ export default function BlogPost() {
               <Link href="/3bhk-villas-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">3 BHK</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">3 BHK G+1+Penthouse Villas</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">Configurations at The Pavillion</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">Configurations at {project.name}</p>
               </Link>
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">G+1+Penthouse at The Pavillion</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">G+1+Penthouse at {project.name}</p>
               </Link>
             </div>
           </div>
@@ -314,7 +315,7 @@ export default function BlogPost() {
           {/* CTA */}
           <div className="mt-16 p-8 text-center" style={{ background: "var(--bg-subtle)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-2xl font-light mb-4">
-              Experience G+1+Penthouse at The Pavillion
+              Experience G+1+Penthouse at {project.name}
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
               Walk through a G+1+Penthouse villa. Understand the space, test the privacy zones, see the penthouse possibilities.
