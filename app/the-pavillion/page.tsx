@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, APPROVAL_LABEL, banks, recreation } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "The Pavillion Boduppal | 33 Luxury Villas by Bommaku Group",
+  title: `${project.name} Boduppal | ${project.overview.totalVillas} Luxury Villas by ${company.brandName}`,
   description:
-    "The Pavillion - 33 standalone luxury villas in Surya Hills, Boduppal. G+1+Penthouse, 24,000 SFT recreation zone, 3 BHK + Pooja Room. GP Layout. From ₹1.87 Cr. Bommaku Group.",
+    `${project.name} - ${project.overview.totalVillas} standalone luxury villas in ${project.location.area}. ${project.overview.configuration}, ${recreation.totalArea} SFT recreation zone, 3 BHK + Pooja Room. ${APPROVAL_LABEL}. From ${project.families.silver.priceDisplay}. ${company.brandName}.`,
   alternates: { canonical: "https://bommakugroup.com/the-pavillion" },
   openGraph: {
-    title: "The Pavillion Boduppal | 33 Luxury Villas by Bommaku Group",
-    description: "33 standalone luxury villas in Boduppal. G+1+Penthouse, 24,000 SFT recreation zone. GP Layout. From ₹1.87 Cr.",
+    title: `${project.name} Boduppal | ${project.overview.totalVillas} Luxury Villas by ${company.brandName}`,
+    description: `${project.overview.totalVillas} standalone luxury villas in Boduppal. ${project.overview.configuration}, ${recreation.totalArea} SFT recreation zone. ${APPROVAL_LABEL}. From ${project.families.silver.priceDisplay}.`,
     type: "website",
     url: "https://bommakugroup.com/the-pavillion",
   },
@@ -24,15 +25,15 @@ export default function ThePavillionPage() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
-            BOMMAKU GROUP PRESENTS
+            {company.brandName.toUpperCase()} PRESENTS
           </p>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-7xl font-light leading-tight mb-6">
-            The Pavillion
+            {project.name}
           </h1>
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-xl md:text-2xl leading-relaxed mb-12 max-w-3xl font-light">
-            33 standalone luxury villas in Surya Hills, Boduppal. Where architecture meets autonomy.
+            {project.overview.totalVillas} standalone luxury villas in {project.location.area}. Where architecture meets autonomy.
           </p>
         </div>
       </section>
@@ -49,19 +50,19 @@ export default function ThePavillionPage() {
               <tbody>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Project Name</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>The Pavillion by Bommaku Group</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{project.name} by {company.brandName}</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Location</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>Surya Hills, Boduppal, East Hyderabad, Telangana 500039</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{company.address.full}</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Total Units</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>33 standalone villas</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{project.overview.totalVillas} standalone villas</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Configuration</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>G+1+Penthouse (3 floors)</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{project.overview.configuration} (3 floors)</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Type</td>
@@ -77,19 +78,19 @@ export default function ThePavillionPage() {
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Site Area</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>3 Acres</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{project.overview.siteArea}</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Recreation Zone</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>24,000 SFT Bommaku Recreation Zone (750 SFT per family)</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{recreation.totalAreaDisplay} Bommaku Recreation Zone (750 SFT per family)</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Price Range</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>Starting ₹1.87 Crore</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>Starting {project.families.silver.priceDisplay}</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Project Type</td>
-                  <td className="py-4" style={{ color: "var(--ink)" }}>GP Layout (Plotted Development)</td>
+                  <td className="py-4" style={{ color: "var(--ink)" }}>{APPROVAL_LABEL} (Plotted Development)</td>
                 </tr>
                 <tr style={{ borderBottom: "1px solid var(--ink-4)" }}>
                   <td className="py-4 pr-8 font-medium" style={{ color: "var(--ink-2)" }}>Bank Approvals</td>

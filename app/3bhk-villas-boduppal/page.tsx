@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "3 BHK Villas in Boduppal | The Pavillion - Standalone Luxury Homes",
+  title: `3 BHK Villas in Boduppal | ${project.name} - Standalone Luxury Homes`,
   description:
-    "3 BHK luxury villas in Boduppal with Pooja Room. 2,300-2,500 SFT standalone homes, 165-228 Sq. Yds plots, G+1+Penthouse. ₹2.1 Cr onwards. NO shared walls. Design freedom. Book now.",
+    `3 BHK luxury villas in Boduppal with Pooja Room. 2,300-2,500 SFT standalone homes, 165-228 Sq. Yds plots, ${project.overview.configuration}. From ${project.families.silver.priceDisplay} onwards. NO shared walls. Design freedom. Book now.`,
   alternates: { canonical: "https://bommakugroup.com/3bhk-villas-boduppal" },
   openGraph: {
-    title: "3 BHK Villas in Boduppal | The Pavillion - ₹2.1 Cr",
-    description: "3 BHK + Pooja Room luxury villas in Boduppal. 2,300+ SFT, standalone, G+1+Penthouse. From ₹2.1 Cr.",
+    title: `3 BHK Villas in Boduppal | ${project.name} - ${project.families.silver.priceDisplay}`,
+    description: `3 BHK + Pooja Room luxury villas in Boduppal. 2,300+ SFT, standalone, ${project.overview.configuration}. From ${project.families.silver.priceDisplay}.`,
     type: "article",
     url: "https://bommakugroup.com/3bhk-villas-boduppal",
   },
