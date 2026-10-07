@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { project } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "The Clean Slate | Customize Your Villa Before Construction | The Pavillion",
+  title: `The Clean Slate | Customize Your Villa Before Construction | ${project.name}`,
   description:
-    "Customize your villa layout, elevation, and finishes before construction begins. Change room sizes, add features, choose materials. True design freedom at The Pavillion, Boduppal.",
+    `Customize your villa layout, elevation, and finishes before construction begins. Change room sizes, add features, choose materials. True design freedom at ${project.name}, Boduppal.`,
   alternates: { canonical: "https://bommakugroup.com/the-clean-slate" },
   openGraph: {
     title: "The Clean Slate | Design Your Villa Your Way",
-    description: "Customize layouts, elevations, finishes before construction. Your home, your design. The Pavillion, Boduppal.",
+    description: `Customize layouts, elevations, finishes before construction. Your home, your design. ${project.name}, Boduppal.`,
     type: "website",
     url: "https://bommakugroup.com/the-clean-slate",
   },
