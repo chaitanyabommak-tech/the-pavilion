@@ -1,10 +1,11 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { project, company } from '@/src/content/facts';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'The Pavillion by Bommaku Group',
-    short_name: 'The Pavillion',
-    description: '33 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse, 24,000 SFT recreation zone. From ₹1.87 Cr.',
+    name: `${project.name} by ${company.brandName}`,
+    short_name: project.name,
+    description: `${project.overview.totalVillas} luxury standalone villas in ${project.location.area}, Hyderabad. ${project.overview.configuration}, 24,000 SFT recreation zone. From ${project.families.silver.priceDisplay}.`,
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
@@ -12,8 +13,9 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: '/tab-icon.png',
-        sizes: 'any',
+        sizes: '192x192 512x512',
         type: 'image/png',
+        purpose: 'maskable',
       },
     ],
   }

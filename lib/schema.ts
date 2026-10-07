@@ -163,6 +163,46 @@ export function getWebSiteSchema() {
 }
 
 /**
+ * ImageObject schema for key project images
+ */
+export function getProjectImageSchema() {
+  return {
+    "@type": "ImageObject",
+    "contentUrl": "https://bommakugroup.com/images/pavilion-mobile-hero.jpg",
+    "url": "https://bommakugroup.com/images/pavilion-mobile-hero.jpg",
+    "name": `${project.name} - ${project.overview.totalVillas} Luxury Villas in ${project.location.area}`,
+    "description": `${project.overview.configuration} standalone villas in ${project.location.area}, Boduppal, East Hyderabad. ${project.overview.totalVillas} villas with 24,000 SFT recreation zone.`,
+    "author": {
+      "@id": "https://bommakugroup.com/#organization"
+    },
+    "creator": {
+      "@id": "https://bommakugroup.com/#organization"
+    },
+    "copyrightHolder": {
+      "@id": "https://bommakugroup.com/#organization"
+    },
+    "creditText": company.brandName,
+    "acquireLicensePage": "https://bommakugroup.com/contact",
+    "license": "https://bommakugroup.com/terms",
+    "contentLocation": {
+      "@type": "Place",
+      "name": project.location.area,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": company.address.city,
+        "addressRegion": company.address.state,
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": company.geo.latitude.toString(),
+        "longitude": company.geo.longitude.toString()
+      }
+    }
+  };
+}
+
+/**
  * Complete schema graph for homepage
  */
 export function getHomePageSchema() {
@@ -172,7 +212,8 @@ export function getHomePageSchema() {
       getOrganizationSchema(),
       getLocalBusinessSchema(),
       getProductSchema(),
-      getWebSiteSchema()
+      getWebSiteSchema(),
+      getProjectImageSchema()
     ]
   };
 }

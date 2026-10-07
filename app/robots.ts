@@ -16,7 +16,15 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
+      // Image crawlers
+      {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+      },
     ],
-    sitemap: 'https://bommakugroup.com/sitemap.xml',
+    sitemap: [
+      'https://bommakugroup.com/sitemap.xml',
+      'https://bommakugroup.com/image-sitemap.xml',
+    ],
   }
 }
