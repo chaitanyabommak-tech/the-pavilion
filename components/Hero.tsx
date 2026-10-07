@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import LeadFormModal from "./LeadFormModal";
 import { trackEvent } from "@/lib/tracking";
+import { project, APPROVAL_LABEL } from "@/src/content/facts";
 
 interface HeroSection {
   eyebrow?: string | null
@@ -19,18 +20,18 @@ interface HeroProps {
   heroData?: HeroSection | null
 }
 
-/* Desktop stats bar — unchanged */
+/* Desktop stats bar — from facts.ts */
 const stats = [
-  { value: "33", label: "Villas"           },
-  { value: "G+1+Penthouse", label: "Configuration"    },
-  { value: "3 Acres",       label: "Site Area"         },
+  { value: String(project.overview.totalVillas), label: "Villas"           },
+  { value: project.overview.configuration, label: "Configuration"    },
+  { value: project.overview.siteArea,       label: "Site Area"         },
   { value: "24,000 SFT",   label: "Recreation Zone"  },
   { value: "Boduppal",      label: "East Hyderabad"   },
 ];
 
 /* Mobile card stats — compact for 5-col strip */
 const mobStats = [
-  { value: "33", label: "Villas"    },
+  { value: String(project.overview.totalVillas), label: "Villas"    },
   { value: "G+1",   label: "Penthouse" },
   { value: "3 Ac.", label: "Site Area" },
   { value: "24K",   label: "Rec Zone"  },
@@ -41,11 +42,11 @@ export default function Hero({ heroData }: HeroProps = {}) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"visit" | "brochure">("visit");
 
-  // Use database values with fallbacks to current hardcoded text
-  const eyebrow = heroData?.eyebrow || "33 Villas in Boduppal, East Hyderabad"
-  const headline = heroData?.headline || "The Pavillion"
+  // Use database values with fallbacks from facts.ts
+  const eyebrow = heroData?.eyebrow || `${project.overview.totalVillas} Villas in Boduppal, East Hyderabad`
+  const headline = heroData?.headline || project.name
   const subheadline = heroData?.subheadline || "Your parents dreamed of a home like this.\nYou're buying it."
-  const bodyCopy = heroData?.body_copy || "G+1+Penthouse villas in Surya Hills, Boduppal.\n3 BHK | 24,000 SFT Recreation Zone\nGP Development | From ₹1.95 Cr onwards"
+  const bodyCopy = heroData?.body_copy || `${project.overview.configuration} villas in Surya Hills, Boduppal.\n3 BHK | 24,000 SFT Recreation Zone\n${APPROVAL_LABEL} | From ${project.families.silver.priceDisplay} onwards`
   const ctaPrimary = heroData?.cta_primary_label || "Book Site Visit"
   const ctaSecondary = heroData?.cta_secondary_label || "Download Brochure"
 

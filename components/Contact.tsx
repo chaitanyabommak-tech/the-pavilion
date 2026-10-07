@@ -7,6 +7,7 @@ import { type LeadFormData } from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
 import { enrichFormData } from "@/lib/utm";
 import { trackFormSubmit, trackConversion, trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
+import { company, project } from "@/src/content/facts";
 
 interface ContactProps {
   settings?: Record<string, string>
@@ -44,11 +45,11 @@ export default function Contact({ settings = {} }: ContactProps) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Use database settings with fallbacks
-  const phone = settings.primary_phone || '+919676077142'
-  const whatsappNumber = settings.whatsapp_number || '919676077142'
-  const whatsappMessage = settings.whatsapp_default_message || 'Hi! I am interested in The Pavillion villas in Boduppal.'
-  const companyName = settings.company_name || 'Bommaku Group'
+  // Use database settings with fallbacks from facts.ts
+  const phone = settings.primary_phone || company.contact.phone
+  const whatsappNumber = settings.whatsapp_number || company.contact.phone.replace('+', '')
+  const whatsappMessage = settings.whatsapp_default_message || `Hi! I am interested in ${project.name} villas in Boduppal.`
+  const companyName = settings.company_name || company.brandName
 
   const track = createTrackFunction(phone)
 

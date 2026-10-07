@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
+import { company, project, banks } from "@/src/content/facts";
 
 function track(type: "whatsapp" | "call", source: string) {
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
@@ -193,7 +194,7 @@ export default function Pricing() {
                 Bank Loans Available
               </p>
               <p className="text-stone-beige/60 text-sm mt-2">
-                SBI · HDFC · ICICI · KVB · LIC Housing Finance
+                {banks.approvedLenders.map(b => b.name).join(" · ")}
               </p>
             </div>
             <div>
@@ -214,7 +215,7 @@ export default function Pricing() {
               Book Site Visit
             </button>
             <a
-              href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
+              href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("whatsapp", "pricing")}
