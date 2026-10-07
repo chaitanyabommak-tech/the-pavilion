@@ -5,11 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Real Estate Insights & Villa Buying Guides | The Pavillion Blog",
   description:
-    "Expert guides on buying villas in Hyderabad. Learn about HMDA approvals, villa prices in Boduppal, NRI property investment, and choosing between villas and apartments.",
+    "Expert guides on buying villas in Hyderabad. Learn about villa prices in Boduppal, NRI property investment, GP Development, and choosing between villas and apartments.",
   alternates: { canonical: "https://bommakugroup.com/blog" },
   openGraph: {
     title: "Real Estate Insights | The Pavillion Blog",
-    description: "Expert guides on buying villas in Hyderabad. HMDA approvals, pricing, NRI investment, and more.",
+    description: "Expert guides on buying villas in Hyderabad. Pricing, NRI investment, legal due diligence, and more.",
     type: "website",
     url: "https://bommakugroup.com/blog",
   },
@@ -27,12 +27,6 @@ const blogPosts = [
     title: "Villa Prices in Boduppal & East Hyderabad: Complete 2026 Guide",
     description: "Current pricing, per-sq-ft rates, what drives villa costs, and how to evaluate value for money in East Hyderabad.",
     category: "Pricing Guide",
-  },
-  {
-    slug: "hmda-approved-vs-unapproved-projects-what-buyers-must-check",
-    title: "HMDA-Approved vs Unapproved Projects: What Buyers Must Check",
-    description: "Understanding HMDA, RERA, GP layouts, and the legal due diligence checklist before buying a villa in Hyderabad.",
-    category: "Legal & Approvals",
   },
   {
     slug: "g-plus-1-plus-penthouse-explained",

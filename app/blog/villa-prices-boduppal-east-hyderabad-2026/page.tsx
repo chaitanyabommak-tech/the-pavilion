@@ -238,11 +238,6 @@ export default function BlogPost() {
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Is Boduppal Good for Villas?</p>
                 <p style={{ color: "var(--ink-3)" }} className="text-sm">Metro, infrastructure, appreciation potential</p>
               </Link>
-              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
-                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved vs Unapproved</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">Verify before you buy</p>
-              </Link>
               <Link href="/3bhk-villas-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">3 BHK Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">3 BHK Villas in Boduppal</p>

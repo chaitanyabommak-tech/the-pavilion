@@ -106,7 +106,7 @@ export default function ThreeBHKVillasBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>
@@ -384,7 +384,7 @@ export default function ThreeBHKVillasBodupalPage() {
               <ul className="space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>
                 <li>✓ Complete villa construction</li>
                 <li>✓ All amenities access</li>
-                <li>✓ HMDA registration</li>
+                <li>✓ GP Development documentation</li>
                 <li>✓ 24/7 security setup</li>
                 <li>✓ Individual sale deed</li>
                 <li>✓ Bank loan assistance</li>
@@ -489,7 +489,7 @@ export default function ThreeBHKVillasBodupalPage() {
 
             <div>
               <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">5. Can I get a home loan for this 3 BHK villa?</h3>
-              <p className="text-sm">Yes. HMDA registered project, approved by SBI, HDFC, ICICI, Axis banks. Loan up to 80% of property value. For ₹2.1 Cr villa, you can get ₹1.68 Cr loan (EMI ₹1.63 L/month @ 9% for 20 years).</p>
+              <p className="text-sm">Yes. GP Development, approved by SBI, HDFC, ICICI, Bajaj, Kotak, and Karur Vysya Bank. Loan up to 80% of property value. For ₹2.1 Cr villa, you can get ₹1.68 Cr loan (EMI ₹1.63 L/month @ 9% for 20 years).</p>
             </div>
 
             <div>

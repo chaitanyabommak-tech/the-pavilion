@@ -183,11 +183,6 @@ export default function BlogPost() {
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villa Prices in Boduppal 2026</p>
                 <p style={{ color: "var(--ink-3)" }} className="text-sm">Complete pricing breakdown by location</p>
               </Link>
-              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
-                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved vs Unapproved</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">What buyers must check before buying</p>
-              </Link>
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Standalone Villas in Boduppal</p>
