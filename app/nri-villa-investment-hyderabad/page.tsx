@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "NRI Villa Investment in Hyderabad | The Pavillion Boduppal | Bommaku Group",
+  title: `NRI Villa Investment in Hyderabad | ${project.name} Boduppal | ${company.brandName}`,
   description:
-    "NRI-friendly villa investment in East Hyderabad. Power of Attorney accepted. Home loans available. Bank approved by SBI, ICICI, HDFC. The Pavillion standalone villas from ₹1.87 Cr.",
+    `NRI-friendly villa investment in East Hyderabad. Power of Attorney accepted. Home loans available. Bank approved by SBI, ICICI, HDFC. ${project.name} standalone villas from ${project.families.silver.priceDisplay}.`,
   alternates: { canonical: "https://bommakugroup.com/nri-villa-investment-hyderabad" },
   openGraph: {
-    title: "NRI Villa Investment in Hyderabad | The Pavillion",
-    description: "NRI-friendly process. PoA accepted. Home loans available. Bank approved villas in Boduppal from ₹1.87 Cr.",
+    title: `NRI Villa Investment in Hyderabad | ${project.name}`,
+    description: `NRI-friendly process. PoA accepted. Home loans available. Bank approved villas in Boduppal from ${project.families.silver.priceDisplay}.`,
     type: "website",
     url: "https://bommakugroup.com/nri-villa-investment-hyderabad",
   },
