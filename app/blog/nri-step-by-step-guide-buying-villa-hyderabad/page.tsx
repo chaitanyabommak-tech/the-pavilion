@@ -130,7 +130,7 @@ export default function BlogPost() {
                     Legal Document Pre-Verification
                   </h3>
                   <p className="leading-relaxed">
-                    Before booking, request: sale deed, Encumbrance Certificate, project registration documents, approved layout plan. Email these to a property lawyer in India for verification (cost: ₹10,000-25,000 for full due diligence).
+                    Before booking, request: sale deed, Encumbrance Certificate, project registration documents, layout plan. Email these to a property lawyer in India for verification (cost: ₹10,000-25,000 for full due diligence).
                   </p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function BlogPost() {
                 <li>• 6 months' bank statements (NRE/NRO/foreign account)</li>
                 <li>• Employment letter from current employer</li>
                 <li>• IT returns for last 2 years</li>
-                <li>• Property documents (sale deed, RERA, approved plan — builder provides)</li>
+                <li>• Property documents (sale deed, project documents, approved plan — builder provides)</li>
               </ul>
               <p className="leading-relaxed mt-4">
                 <strong style={{ color: "var(--ink)" }}>Processing time:</strong> 3-6 weeks for NRI loans. Some banks allow online application; others require you to visit India once for final signing.
@@ -283,7 +283,7 @@ export default function BlogPost() {
               </h2>
               <ul className="space-y-3 ml-6">
                 <li className="leading-relaxed">
-                  <strong style={{ color: "var(--ink)" }}>1. Not verifying legal documents upfront:</strong> Don't book based on brochure alone. Verify sale deed, EC, RERA, and approvals before paying booking amount.
+                  <strong style={{ color: "var(--ink)" }}>1. Not verifying legal documents upfront:</strong> Don't book based on brochure alone. Verify sale deed, EC, project documents, and layout approvals before paying booking amount.
                 </li>
                 <li className="leading-relaxed">
                   <strong style={{ color: "var(--ink)" }}>2. Choosing an unreliable PoA holder:</strong> Your PoA holder has legal authority to sign on your behalf. Choose someone trustworthy (immediate family or vetted lawyer).

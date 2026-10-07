@@ -41,7 +41,7 @@ const faqSchema = {
       name: "What factors affect villa prices in East Hyderabad?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Key factors: proximity to metro stations (Uppal, Nagole), ORR access, plot size, construction quality, HMDA/RERA approvals, amenities (clubhouse, security), and builder reputation. Metro-adjacent projects command 15-20% premium over non-metro areas.",
+        text: "Key factors: proximity to metro stations (Uppal, Nagole), ORR access, plot size, construction quality, GP Development approvals, amenities (clubhouse, security), and builder reputation. Metro-adjacent projects command 15-20% premium over non-metro areas.",
       },
     },
   ],
@@ -132,7 +132,7 @@ export default function BlogPost() {
                 A 3 BHK villa (1,800-2,200 sq. ft built-up) on a 150-200 sq. yard plot costs ₹1.5-2 Cr in Boduppal. Premium projects with clubhouses and gated security are at the higher end (₹1.87-2.2 Cr).
               </p>
               <p className="leading-relaxed">
-                <strong style={{ color: "var(--ink)" }}>What you get for ₹1.87 Cr at The Pavillion:</strong> 200 sq. yard plot, G+1+Penthouse villa (~2,000 sq. ft built-up), 3 BHK + pooja room, 24,000 SFT recreation zone for 33 families, HMDA-compliant GP layout, metro proximity (8 min to Uppal station).
+                <strong style={{ color: "var(--ink)" }}>What you get for ₹1.95 Cr at The Pavillion:</strong> 200 sq. yard plot, G+1+Penthouse villa (~2,400 sq. ft built-up), 3 BHK + pooja room, 24,000 SFT recreation zone for 33 families, GP Development layout, metro proximity (8 min to Uppal station).
               </p>
             </section>
 
@@ -153,7 +153,7 @@ export default function BlogPost() {
                 <strong style={{ color: "var(--ink)" }}>4. Amenities:</strong> Projects with clubhouses, swimming pools, and 24×7 security add ₹10-20 lakh to the base price. The key is <em>amenity density</em> — how many families share the facilities.
               </p>
               <p className="leading-relaxed">
-                <strong style={{ color: "var(--ink)" }}>5. Legal approvals:</strong> HMDA-approved layouts or RERA-registered projects command premium pricing because banks approve loans faster and resale is smoother.
+                <strong style={{ color: "var(--ink)" }}>5. Legal approvals:</strong> GP Development layouts command premium pricing because banks approve loans faster and resale is smoother.
               </p>
             </section>
 
@@ -212,7 +212,7 @@ export default function BlogPost() {
                 <strong style={{ color: "var(--ink)" }}>3. Amenity density:</strong> Calculate SFT per family (total amenity area ÷ number of villas). 750+ SFT per family is excellent. 200-300 SFT is typical. Below 200 means overcrowding.
               </p>
               <p className="leading-relaxed">
-                <strong style={{ color: "var(--ink)" }}>4. Legal clarity:</strong> HMDA/RERA-approved projects have better resale value and loan approval rates. Unapproved projects should be priced 10-15% lower to compensate for legal risk.
+                <strong style={{ color: "var(--ink)" }}>4. Legal clarity:</strong> GP Development-approved projects have better resale value and loan approval rates. Unapproved projects should be priced 10-15% lower to compensate for legal risk.
               </p>
             </section>
 

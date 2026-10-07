@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://bommakugroup.com/villas-in-boduppal" },
   openGraph: {
     title: "Villas in Boduppal | The Pavillion - 33 Standalone Luxury Villas",
-    description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹2.1 Cr. HMDA registered. 8 min to Uppal Metro.",
+    description: "33 standalone villas in Boduppal. G+1+Penthouse, no shared walls, ₹2.1 Cr. GP Development. 8 min to Uppal Metro.",
     type: "article",
     url: "https://bommakugroup.com/villas-in-boduppal",
   },
@@ -62,10 +62,10 @@ export default function VillasInBodupalPage() {
               },
               {
                 "@type": "Question",
-                "name": "Is The Pavillion HMDA approved?",
+                "name": "Is The Pavillion GP Development?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. The Pavillion is HMDA registered (Circle Project). All approvals are in place, with clear land title and 30-year EC available. The project has bank approvals from SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank."
+                  "text": "Yes. The Pavillion is GP Development (Circle Project). All approvals are in place, with clear land title and 30-year EC available. The project has bank approvals from SBI, ICICI, HDFC, Kotak, Bajaj Finance, and Karur Vysya Bank."
                 }
               },
               {
@@ -193,7 +193,7 @@ export default function VillasInBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>
@@ -605,14 +605,14 @@ export default function VillasInBodupalPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            HMDA Registered. Bank Approved. Legally Sound.
+            GP Development. Bank Approved. Legally Sound.
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">HMDA</p>
-              <p style={{ color: "var(--ink-2)" }} className="text-sm">Registered Project</p>
+              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">GP Development</p>
+              <p style={{ color: "var(--ink-2)" }} className="text-sm">Layout Project</p>
             </div>
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
               <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">6 Banks</p>
@@ -625,7 +625,7 @@ export default function VillasInBodupalPage() {
           </div>
 
           <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed mb-6">
-            <strong>Bank Approvals:</strong> SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur Vysya Bank have completed full due diligence and approved home loans for The Pavillion. <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="underline" style={{ color: "var(--accent)" }}>Understand legal due diligence →</Link>
+            <strong>Bank Approvals:</strong> SBI, ICICI, HDFC, Kotak, Bajaj Finance, Karur Vysya Bank have completed full due diligence and approved home loans for The Pavillion.
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-sm leading-relaxed">
@@ -664,8 +664,8 @@ export default function VillasInBodupalPage() {
             </div>
 
             <div>
-              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">5. Is RERA/HMDA approval in place?</h3>
-              <p className="text-sm">Yes. The Pavillion is HMDA registered (Circle Project). All approvals, clear land title, and bank approvals from SBI, ICICI, HDFC, Kotak are in place.</p>
+              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">5. Is GP Development approval in place?</h3>
+              <p className="text-sm">Yes. The Pavillion is GP Development (Circle Project). All approvals, clear land title, and bank approvals from SBI, ICICI, HDFC, Kotak are in place.</p>
             </div>
 
             <div>

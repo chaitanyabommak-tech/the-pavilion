@@ -7,8 +7,8 @@ import LeadFormModal from "./LeadFormModal";
 const documents = [
   {
     icon: "✓",
-    title: "Approved Layout",
-    body: "Layout approved with all necessary permissions from competent authorities.",
+    title: "Layout Plan",
+    body: "Layout plan with all necessary permissions from competent authorities.",
   },
   {
     icon: "✓",

@@ -102,12 +102,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
       url: `${baseUrl}/blog/g-plus-1-plus-penthouse-explained`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

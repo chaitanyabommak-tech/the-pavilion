@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
     title: "Independent Houses in Boduppal | The Pavillion - 33 Villas",
-    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹2.1 Cr. HMDA registered.",
+    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹2.1 Cr. GP Development.",
     type: "article",
     url: "https://bommakugroup.com/independent-houses-boduppal",
   },
@@ -110,7 +110,7 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>
@@ -286,7 +286,7 @@ export default function IndependentHousesBodupalPage() {
                 <li>• G+1+Penthouse (3 levels)</li>
                 <li>• 3 BHK + Pooja Room</li>
                 <li>• 24,000 SFT recreation zone</li>
-                <li>• HMDA registered project</li>
+                <li>• GP Development project</li>
                 <li>• Starting ₹2.1 Cr onwards</li>
               </ul>
             </div>
@@ -486,8 +486,8 @@ export default function IndependentHousesBodupalPage() {
             </div>
 
             <div>
-              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">7. Is this HMDA approved?</h3>
-              <p className="text-sm">Yes. The Pavillion is HMDA registered project in Surya Hills Layout. All legal approvals in place. Individual sale deeds for each villa plot. Bank loan approved project.</p>
+              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">7. Is this GP Development?</h3>
+              <p className="text-sm">Yes. The Pavillion is GP Development project in Surya Hills Layout. Individual sale deeds for each villa plot. Bank loan approved project.</p>
             </div>
 
             <div>

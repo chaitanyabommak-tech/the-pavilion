@@ -109,7 +109,7 @@ export default function GhatkesarPochalamPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>

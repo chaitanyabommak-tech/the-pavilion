@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://bommakugroup.com/villas-near-uppal" },
   openGraph: {
     title: "Villas Near Uppal Metro | The Pavillion - 8 Min Away",
-    description: "33 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹2.1 Cr. HMDA registered.",
+    description: "33 standalone villas near Uppal Metro. Just 8 min drive. G+1+Penthouse, ₹2.1 Cr. GP Development.",
     type: "article",
     url: "https://bommakugroup.com/villas-near-uppal",
   },
@@ -110,7 +110,7 @@ export default function VillasNearUppalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>
@@ -346,8 +346,8 @@ export default function VillasNearUppalPage() {
               <p style={{ color: "var(--ink-2)" }} className="text-sm">+ Pooja Room</p>
             </div>
             <div className="text-center p-6" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">HMDA</p>
-              <p style={{ color: "var(--ink-2)" }} className="text-sm">Registered</p>
+              <p style={{ color: "var(--accent)" }} className="text-2xl font-semibold mb-2">GP Development</p>
+              <p style={{ color: "var(--ink-2)" }} className="text-sm">Layout</p>
             </div>
           </div>
         </div>
