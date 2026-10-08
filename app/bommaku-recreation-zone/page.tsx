@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, recreation } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "Bommaku Recreation Zone | 24,000 SFT for 33 Families | The Pavillion",
+  title: `${company.brandName} Recreation Zone | ${recreation.totalAreaDisplay} for ${project.overview.totalVillas} Families | ${project.name}`,
   description:
-    "24,000 SFT recreation zone exclusively for 33 families = 750 SFT per family. Swimming pool, gym, sports courts, restaurant. First year free. The Pavillion, Boduppal.",
+    `${recreation.totalAreaDisplay} recreation zone exclusively for ${project.overview.totalVillas} families = 750 SFT per family. Swimming pool, gym, sports courts, restaurant. First year free. ${project.name}, Boduppal.`,
   alternates: { canonical: "https://bommakugroup.com/bommaku-recreation-zone" },
   openGraph: {
-    title: "Bommaku Recreation Zone | 24,000 SFT Private Amenities",
-    description: "24,000 SFT for just 33 families. 750 SFT per family vs 200 typical. Swimming pool, gym, sports, wellness.",
+    title: `${company.brandName} Recreation Zone | ${recreation.totalAreaDisplay} Private Amenities`,
+    description: `${recreation.totalAreaDisplay} for just ${project.overview.totalVillas} families. 750 SFT per family vs 200 typical. Swimming pool, gym, sports, wellness.`,
     type: "website",
     url: "https://bommakugroup.com/bommaku-recreation-zone",
   },
@@ -24,19 +25,19 @@ export default function RecreationZonePage() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <p style={{ color: "var(--ink-2)" }} className="text-xs tracking-[0.4em] uppercase mb-4">
-            THE PAVILLION AMENITIES
+            {project.name.toUpperCase()} AMENITIES
           </p>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
-            Bommaku Recreation Zone
+            {company.brandName} Recreation Zone
           </h1>
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-2xl md:text-3xl leading-relaxed mb-6 font-light">
-            24,000 SFT for 33 families
+            {recreation.totalAreaDisplay} for {project.overview.totalVillas} families
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed max-w-3xl">
-            Not a conventional clubhouse. A private recreation zone designed exclusively for 33 families — giving you <strong style={{ color: "var(--ink)" }}>750 SFT per family</strong> when most projects offer 200 SFT.
+            Not a conventional clubhouse. A private recreation zone designed exclusively for {project.overview.totalVillas} families — giving you <strong style={{ color: "var(--ink)" }}>750 SFT per family</strong> when most projects offer 200 SFT.
           </p>
         </div>
       </section>

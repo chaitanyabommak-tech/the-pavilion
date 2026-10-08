@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { project } from "@/src/content/facts";
 
 export const metadata: Metadata = {
   title: "Standalone Villa vs Apartment in East Hyderabad: The Honest Comparison",
@@ -336,8 +337,8 @@ export default function BlogPost() {
               </Link>
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
-                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">The Pavillion Villas</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">33 standalone villas, from ₹1.87 Cr</p>
+                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">{project.name} Villas</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">{project.overview.totalVillas} standalone villas, from {project.families.silver.priceDisplay}</p>
               </Link>
             </div>
           </div>
@@ -345,7 +346,7 @@ export default function BlogPost() {
           {/* CTA */}
           <div className="mt-16 p-8 text-center" style={{ background: "var(--bg-subtle)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-2xl font-light mb-4">
-              Experience Villa Living at The Pavillion
+              Experience Villa Living at {project.name}
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
               Visit a standalone villa, walk the private gardens, understand the privacy difference. See if villa living suits your family.

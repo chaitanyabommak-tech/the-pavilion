@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { trackPhoneClick, trackWhatsAppClick, trackEvent } from "@/lib/tracking";
+import { company, project } from "@/src/content/facts";
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,7 @@ export default function MobileStickyCTA() {
   }, []);
 
   const handleCallClick = () => {
-    trackPhoneClick("+919676077142", "mobile_sticky_cta");
+    trackPhoneClick(company.contact.phone, "mobile_sticky_cta");
   };
 
   const handleWhatsAppClick = () => {
@@ -45,7 +46,7 @@ export default function MobileStickyCTA() {
         >
           {/* WhatsApp Chat Button */}
           <a
-            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
+            href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
@@ -71,7 +72,7 @@ export default function MobileStickyCTA() {
 
           {/* Phone Call Button */}
           <a
-            href="tel:+919676077142"
+            href={company.contact.telUrl}
             onClick={handleCallClick}
             className="flex flex-col items-center justify-center py-3 transition-colors hover:opacity-80"
             style={{ background: "var(--bg)" }}

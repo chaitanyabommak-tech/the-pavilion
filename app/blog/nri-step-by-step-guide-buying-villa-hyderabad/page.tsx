@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { project } from "@/src/content/facts";
 
 export const metadata: Metadata = {
   title: "NRI's Step-by-Step Guide to Buying a Villa in Hyderabad",
@@ -33,7 +34,7 @@ const faqSchema = {
       name: "What is the step-by-step process for NRIs to buy a villa in Hyderabad?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Step 1: Shortlist projects remotely (video tours, virtual consultations). Step 2: Verify legal documents (sale deed, EC, RERA, approvals). Step 3: Execute Power of Attorney if not visiting India. Step 4: Pay booking amount via NRE/NRO account or wire transfer. Step 5: Apply for NRI home loan if needed. Step 6: Sign sale agreement and pay installments. Step 7: Final registration and possession.",
+        text: "Step 1: Shortlist projects remotely (video tours, virtual consultations). Step 2: Verify legal documents (sale deed, EC, project documents, layout approvals). Step 3: Execute Power of Attorney if not visiting India. Step 4: Pay booking amount via NRE/NRO account or wire transfer. Step 5: Apply for NRI home loan if needed. Step 6: Sign sale agreement and pay installments. Step 7: Final registration and possession.",
       },
     },
     {
@@ -130,7 +131,7 @@ export default function BlogPost() {
                     Legal Document Pre-Verification
                   </h3>
                   <p className="leading-relaxed">
-                    Before booking, request: sale deed, Encumbrance Certificate, RERA registration, approved layout plan. Email these to a property lawyer in India for verification (cost: ₹10,000-25,000 for full due diligence).
+                    Before booking, request: sale deed, Encumbrance Certificate, project registration documents, layout plan. Email these to a property lawyer in India for verification (cost: ₹10,000-25,000 for full due diligence).
                   </p>
                 </div>
               </div>
@@ -205,7 +206,7 @@ export default function BlogPost() {
                 <li>• 6 months' bank statements (NRE/NRO/foreign account)</li>
                 <li>• Employment letter from current employer</li>
                 <li>• IT returns for last 2 years</li>
-                <li>• Property documents (sale deed, RERA, approved plan — builder provides)</li>
+                <li>• Property documents (sale deed, project documents, approved plan — builder provides)</li>
               </ul>
               <p className="leading-relaxed mt-4">
                 <strong style={{ color: "var(--ink)" }}>Processing time:</strong> 3-6 weeks for NRI loans. Some banks allow online application; others require you to visit India once for final signing.
@@ -283,7 +284,7 @@ export default function BlogPost() {
               </h2>
               <ul className="space-y-3 ml-6">
                 <li className="leading-relaxed">
-                  <strong style={{ color: "var(--ink)" }}>1. Not verifying legal documents upfront:</strong> Don't book based on brochure alone. Verify sale deed, EC, RERA, and approvals before paying booking amount.
+                  <strong style={{ color: "var(--ink)" }}>1. Not verifying legal documents upfront:</strong> Don't book based on brochure alone. Verify sale deed, EC, project documents, and layout approvals before paying booking amount.
                 </li>
                 <li className="leading-relaxed">
                   <strong style={{ color: "var(--ink)" }}>2. Choosing an unreliable PoA holder:</strong> Your PoA holder has legal authority to sign on your behalf. Choose someone trustworthy (immediate family or vetted lawyer).
@@ -308,7 +309,7 @@ export default function BlogPost() {
                 Before you commit:
               </p>
               <ul className="space-y-2 ml-6">
-                <li className="leading-relaxed">✓ Verify legal documents (sale deed, EC, RERA, approvals)</li>
+                <li className="leading-relaxed">✓ Verify legal documents (sale deed, EC, project documents, layout approvals)</li>
                 <li className="leading-relaxed">✓ Execute Power of Attorney at Indian consulate</li>
                 <li className="leading-relaxed">✓ Confirm NRI home loan pre-approval (if taking loan)</li>
                 <li className="leading-relaxed">✓ Check if project is bank-approved for NRI loans</li>
@@ -323,11 +324,6 @@ export default function BlogPost() {
           <div className="mt-16 pt-8" style={{ borderTop: "1px solid var(--edge)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-xl font-semibold mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/blog/hmda-approved-vs-unapproved-projects-what-buyers-must-check" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
-                <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Legal Guide</p>
-                <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">HMDA Approved Projects</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">What to verify before buying</p>
-              </Link>
               <Link href="/blog/villa-prices-boduppal-east-hyderabad-2026" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Pricing</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">Villa Prices in Boduppal</p>
@@ -341,7 +337,7 @@ export default function BlogPost() {
               <Link href="/villas-in-boduppal" className="p-4 hover:opacity-80 transition-opacity" style={{ background: "var(--surface)", borderRadius: "8px" }}>
                 <p style={{ color: "var(--accent)" }} className="text-xs uppercase tracking-wide mb-2">Villas</p>
                 <p style={{ color: "var(--ink)" }} className="font-semibold mb-1">NRI-Friendly Villa Project</p>
-                <p style={{ color: "var(--ink-3)" }} className="text-sm">The Pavillion - Power of Attorney accepted</p>
+                <p style={{ color: "var(--ink-3)" }} className="text-sm">{project.name} - Power of Attorney accepted</p>
               </Link>
             </div>
           </div>
@@ -349,7 +345,7 @@ export default function BlogPost() {
           {/* CTA */}
           <div className="mt-16 p-8 text-center" style={{ background: "var(--bg-subtle)" }}>
             <h3 style={{ color: "var(--ink)" }} className="text-2xl font-light mb-4">
-              NRI-Friendly Process at The Pavillion
+              NRI-Friendly Process at {project.name}
             </h3>
             <p style={{ color: "var(--ink-2)" }} className="mb-6">
               Power of Attorney accepted. Video consultations across US/Gulf time zones. NRI home loans pre-approved.

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, APPROVAL_LABEL, recreation } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "About Bommaku Group | Luxury Villa Developers in Hyderabad",
+  title: `About ${company.brandName} | Luxury Villa Developers in Hyderabad`,
   description:
-    "Bommaku Group - Premium real estate developers in East Hyderabad. Creators of The Pavillion, 33 luxury standalone villas in Boduppal. GP Layout specialists. Quality construction since inception.",
+    `${company.brandName} - Premium real estate developers in East Hyderabad. Creators of ${project.name}, ${project.overview.totalVillas} luxury standalone villas in ${project.location.area}. ${APPROVAL_LABEL} specialists. Quality construction since inception.`,
   alternates: { canonical: "https://bommakugroup.com/about" },
   openGraph: {
-    title: "About Bommaku Group | Luxury Villa Developers",
-    description: "Premium villa developers in East Hyderabad. Creators of The Pavillion luxury villa community in Boduppal.",
+    title: `About ${company.brandName} | Luxury Villa Developers`,
+    description: `Premium villa developers in East Hyderabad. Creators of ${project.name} luxury villa community in ${project.location.area}.`,
     type: "website",
     url: "https://bommakugroup.com/about",
   },
@@ -27,7 +28,7 @@ export default function AboutPage() {
             ABOUT US
           </p>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
-            Bommaku Group
+            {company.brandName}
           </h1>
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
@@ -46,11 +47,11 @@ export default function AboutPage() {
 
           <div className="space-y-6" style={{ color: "var(--ink-2)" }}>
             <p className="text-lg leading-relaxed">
-              Bommaku Group Private Limited is a real estate developer focused on creating premium standalone villa communities in East Hyderabad. We specialize in GP Layout (plotted development) projects that give buyers true ownership — land, building, and complete design freedom.
+              {company.legalName} is a real estate developer focused on creating premium standalone villa communities in East Hyderabad. We specialize in {APPROVAL_LABEL} (plotted development) projects that give buyers true ownership — land, building, and complete design freedom.
             </p>
 
             <p className="text-lg leading-relaxed">
-              Our flagship project, <strong style={{ color: "var(--ink)" }}>The Pavillion</strong>, represents our core philosophy: low-density luxury, architectural autonomy, and community-scale amenities without the compromises of high-density apartment living.
+              Our flagship project, <strong style={{ color: "var(--ink)" }}>{project.name}</strong>, represents our core philosophy: low-density luxury, architectural autonomy, and community-scale amenities without the compromises of high-density apartment living.
             </p>
 
             <p className="text-lg leading-relaxed">
@@ -115,7 +116,7 @@ export default function AboutPage() {
           </h2>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-6">
-            Our current flagship: 33 standalone luxury villas in Surya Hills, Boduppal. 3 acres, GP Layout, with a 24,000 SFT recreation zone exclusively for 33 families.
+            Our current flagship: {project.overview.totalVillas} standalone luxury villas in {project.location.area}. {project.overview.siteArea}, {APPROVAL_LABEL}, with a {recreation.totalArea} SFT recreation zone exclusively for {project.overview.totalVillas} families.
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8">
@@ -142,14 +143,14 @@ export default function AboutPage() {
           <div className="space-y-4 mb-8 text-center">
             <p style={{ color: "var(--ink-2)" }}>
               <strong style={{ color: "var(--ink)" }}>Phone:</strong>{" "}
-              <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
-                +91 96760 77142
+              <a href={company.contact.whatsappUrl + `?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
+                {company.contact.phoneDisplay}
               </a>
             </p>
             <p style={{ color: "var(--ink-2)" }}>
               <strong style={{ color: "var(--ink)" }}>Email:</strong>{" "}
-              <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }} className="hover:opacity-70">
-                bommakugroup@gmail.com
+              <a href={`mailto:${company.contact.email}`} style={{ color: "var(--accent)" }} className="hover:opacity-70">
+                {company.contact.email}
               </a>
             </p>
             <p style={{ color: "var(--ink-2)" }}>

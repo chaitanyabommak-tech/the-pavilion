@@ -7,8 +7,8 @@ import LeadFormModal from "./LeadFormModal";
 const documents = [
   {
     icon: "✓",
-    title: "Approved Layout",
-    body: "Layout approved with all necessary permissions from competent authorities.",
+    title: "Layout Plan",
+    body: "Layout plan with all necessary permissions from competent authorities.",
   },
   {
     icon: "✓",
@@ -42,8 +42,8 @@ const documents = [
   },
   {
     icon: "✓",
-    title: "HMDA Registration",
-    body: "Registered HMDA Circle Project. Regulatory compliance in place.",
+    title: "GP Development",
+    body: "GP Development. All documents available for independent verification with your lawyer.",
   },
 ];
 

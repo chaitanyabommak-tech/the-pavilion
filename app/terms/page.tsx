@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | The Pavillion — Bommaku Constructions",
-  description: "Terms and Conditions for The Pavillion by Bommaku Constructions, Boduppal, Hyderabad.",
+  title: "Terms and Conditions | The Pavillion — Bommaku Group",
+  description: "Terms and Conditions for The Pavillion by Bommaku Group, Boduppal, Hyderabad.",
   alternates: { canonical: "https://bommakugroup.com/terms" },
 };
 
@@ -35,21 +35,21 @@ export default function TermsPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">2. About the Project</h2>
             <p className="text-sm leading-relaxed">
-              The Pavillion is a residential villa development by Bommaku Constructions comprising 33 standalone G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad. All information on this Website is provided for general informational purposes and is subject to change without notice.
+              The Pavillion is a residential villa development by Bommaku Group comprising 33 standalone G+1+Penthouse villas at Surya Hills, Boduppal, East Hyderabad. All information on this Website is provided for general informational purposes and is subject to change without notice.
             </p>
           </section>
 
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">3. No Offer or Contract</h2>
             <p className="text-sm leading-relaxed">
-              Nothing on this Website constitutes an offer, invitation to offer, or contract of any kind. All details — including pricing, specifications, floor plans, amenities, and availability — are indicative and subject to change at the sole discretion of Bommaku Constructions. Any booking or sale shall be governed solely by the formal agreement executed between the buyer and Bommaku Constructions.
+              Nothing on this Website constitutes an offer, invitation to offer, or contract of any kind. All details — including pricing, specifications, floor plans, amenities, and availability — are indicative and subject to change at the sole discretion of Bommaku Group. Any booking or sale shall be governed solely by the formal agreement executed between the buyer and Bommaku Group.
             </p>
           </section>
 
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">4. Accuracy of Information</h2>
             <p className="text-sm leading-relaxed">
-              While we make every effort to ensure the information on this Website is accurate and up to date, Bommaku Constructions makes no warranties or representations regarding the completeness, accuracy, or reliability of any information provided. Visitors are advised to independently verify all details before making any investment decisions.
+              While we make every effort to ensure the information on this Website is accurate and up to date, Bommaku Group makes no warranties or representations regarding the completeness, accuracy, or reliability of any information provided. Visitors are advised to independently verify all details before making any investment decisions.
             </p>
           </section>
 
@@ -70,21 +70,21 @@ export default function TermsPage() {
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">7. Intellectual Property</h2>
             <p className="text-sm leading-relaxed">
-              All content on this Website — including text, graphics, logos, images, and software — is the property of Bommaku Constructions or its content suppliers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.
+              All content on this Website — including text, graphics, logos, images, and software — is the property of Bommaku Group or its content suppliers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.
             </p>
           </section>
 
           <section>
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">8. Limitation of Liability</h2>
             <p className="text-sm leading-relaxed">
-              Bommaku Constructions shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this Website or reliance on any information contained herein. Your use of the Website is entirely at your own risk.
+              Bommaku Group shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this Website or reliance on any information contained herein. Your use of the Website is entirely at your own risk.
             </p>
           </section>
 
           <section>
-            <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">9. RERA Compliance</h2>
+            <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">9. Development Type</h2>
             <p className="text-sm leading-relaxed">
-              The Pavillion is a project by Bommaku Constructions. RERA registration details will be updated upon approval. Prospective buyers are advised to verify the RERA registration of this project at the official Telangana RERA portal before making any purchase decision.
+              The Pavillion is a GP Development by Bommaku Group. Prospective buyers are advised to verify all project documents, layout approvals, and title with their own legal counsel before making any purchase decision.
             </p>
           </section>
 
@@ -99,7 +99,7 @@ export default function TermsPage() {
             <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl font-light mb-3">11. Contact</h2>
             <p className="text-sm leading-relaxed">
               For any queries regarding these Terms, please contact:<br /><br />
-              <strong style={{ color: "var(--ink)" }}>Bommaku Constructions</strong><br />
+              <strong style={{ color: "var(--ink)" }}>Bommaku Group</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039, Telangana<br />
               Email: <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a><br />
               Phone: <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>

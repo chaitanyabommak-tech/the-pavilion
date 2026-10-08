@@ -4,6 +4,8 @@ import Script from "next/script";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { Providers } from "./providers";
 import { getMetadataForPage } from "@/lib/metadata";
+import { getHomePageSchema } from "@/lib/schema";
+import { company } from "@/src/content/facts";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -61,145 +63,28 @@ export default function RootLayout({
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KD57FLT8');`,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${company.analytics.gtmId}');`,
           }}
         />
-        {/* Google Analytics 4 — G-QGJ61SEN5Y */}
+        {/* Google Analytics 4 */}
         <Script
           id="ga4-script"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-QGJ61SEN5Y"
+          src={`https://www.googletagmanager.com/gtag/js?id=${company.analytics.ga4Id}`}
         />
         <Script
           id="ga4-config"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QGJ61SEN5Y');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${company.analytics.ga4Id}');`,
           }}
         />
-        {/* Schema.org structured data */}
+        {/* Schema.org structured data — Generated from facts.ts */}
         <Script
           id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "https://bommakugroup.com/#organization",
-                  "name": "Bommaku Group",
-                  "alternateName": "Bommaku Constructions",
-                  "url": "https://bommakugroup.com",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://bommakugroup.com/tab-icon.png"
-                  },
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+91-9676077142",
-                    "contactType": "Sales",
-                    "areaServed": "IN",
-                    "availableLanguage": ["English", "Hindi", "Telugu"]
-                  },
-                  "sameAs": [
-                    "https://www.facebook.com/bommakugroup",
-                    "https://www.instagram.com/bommakugroup"
-                  ]
-                },
-                {
-                  "@type": ["RealEstateAgent", "LocalBusiness"],
-                  "@id": "https://bommakugroup.com/#realestateagent",
-                  "name": "Bommaku Constructions",
-                  "description": "Premium villa developer in Hyderabad specializing in luxury standalone villa communities",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Surya Hills, Boduppal",
-                    "addressLocality": "Hyderabad",
-                    "addressRegion": "Telangana",
-                    "postalCode": "500039",
-                    "addressCountry": "IN"
-                  },
-                  "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "17.416403",
-                    "longitude": "78.575600"
-                  },
-                  "hasMap": "https://maps.app.goo.gl/3gEbRXmKsENAkjXi7",
-                  "telephone": "+91-9676077142",
-                  "email": "bommakugroup@gmail.com",
-                  "priceRange": "₹₹₹",
-                  "openingHoursSpecification": [
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                      "opens": "10:00",
-                      "closes": "18:00"
-                    },
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": "Sunday",
-                      "opens": "10:00",
-                      "closes": "17:00"
-                    }
-                  ],
-                  "areaServed": ["Boduppal", "Uppal", "Ghatkesar", "Pocharam", "Peerzadiguda", "Medipally", "East Hyderabad"]
-                },
-                {
-                  "@type": "Product",
-                  "@id": "https://bommakugroup.com/#product",
-                  "name": "The Pavillion - Luxury Villas in Boduppal",
-                  "description": "33 luxury standalone villas in Boduppal, Hyderabad. G+1+Penthouse configuration with 3BHK, 24,000 SFT recreation zone.",
-                  "dateModified": "2026-07-12",
-                  "brand": {
-                    "@id": "https://bommakugroup.com/#organization"
-                  },
-                  "offers": {
-                    "@type": "AggregateOffer",
-                    "priceCurrency": "INR",
-                    "lowPrice": "18700000",
-                    "highPrice": "24000000",
-                    "offerCount": "33",
-                    "availability": "https://schema.org/InStock",
-                    "seller": {
-                      "@id": "https://bommakugroup.com/#organization"
-                    }
-                  },
-                  "category": "Residential Villa",
-                  "additionalProperty": [
-                    {
-                      "@type": "PropertyValue",
-                      "name": "Villa Type",
-                      "value": "G+1+Penthouse"
-                    },
-                    {
-                      "@type": "PropertyValue",
-                      "name": "Configuration",
-                      "value": "3 BHK + Pooja Room"
-                    },
-                    {
-                      "@type": "PropertyValue",
-                      "name": "Total Units",
-                      "value": "33"
-                    }
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://bommakugroup.com/#website",
-                  "url": "https://bommakugroup.com",
-                  "name": "The Pavillion by Bommaku Group",
-                  "publisher": {
-                    "@id": "https://bommakugroup.com/#organization"
-                  },
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://bommakugroup.com/?s={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                  }
-                }
-              ]
-            })
+            __html: JSON.stringify(getHomePageSchema())
           }}
         />
       </head>

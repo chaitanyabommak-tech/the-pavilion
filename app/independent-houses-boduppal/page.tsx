@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
 
 export const metadata: Metadata = {
-  title: "Independent Houses in Boduppal | The Pavillion - 33 Standalone Villas",
+  title: `Independent Houses in Boduppal | ${project.name} - ${project.overview.totalVillas} Standalone Villas`,
   description:
-    "33 independent houses in Boduppal, Surya Hills. True standalone villas, no shared walls, G+1+Penthouse, 165-228 Sq. Yds plots. ₹2.1 Cr onwards. Design freedom. Book site visit today.",
+    `${project.overview.totalVillas} independent houses in Boduppal, ${project.location.area}. True standalone villas, no shared walls, ${project.overview.configuration}, 165-228 Sq. Yds plots. From ${project.families.silver.priceDisplay} onwards. Design freedom. Book site visit today.`,
   alternates: { canonical: "https://bommakugroup.com/independent-houses-boduppal" },
   openGraph: {
-    title: "Independent Houses in Boduppal | The Pavillion - 33 Villas",
-    description: "33 independent standalone houses in Boduppal. No shared walls, design freedom, ₹2.1 Cr. HMDA registered.",
+    title: `Independent Houses in Boduppal | ${project.name} - ${project.overview.totalVillas} Villas`,
+    description: `${project.overview.totalVillas} independent standalone houses in Boduppal. No shared walls, design freedom, from ${project.families.silver.priceDisplay}. ${APPROVAL_LABEL}.`,
     type: "article",
     url: "https://bommakugroup.com/independent-houses-boduppal",
   },
@@ -28,17 +29,17 @@ export default function IndependentHousesBodupalPage() {
             INDEPENDENT HOUSES BODUPPAL
           </p>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
-            Independent Houses in Boduppal – <span className="italic" style={{ color: "var(--ink-3)" }}>The Pavillion</span>
+            Independent Houses in Boduppal – <span className="italic" style={{ color: "var(--ink-3)" }}>{project.name}</span>
           </h1>
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            33 luxury independent houses in Surya Hills, Boduppal. TRUE standalone homes with no shared walls, complete privacy, and design freedom. G+1+Penthouse, 165-228 Sq. Yds plots. From ₹2.1 Cr onwards.
+            {project.overview.totalVillas} luxury independent houses in {project.location.area}. TRUE standalone homes with no shared walls, complete privacy, and design freedom. {project.overview.configuration}, 165-228 Sq. Yds plots. From {project.families.silver.priceDisplay} onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
-              Call: +91 96760 77142
+            <a href={company.contact.whatsappUrl + `?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+              Call: {company.contact.phoneDisplay}
             </a>
             <a href="/#main-content" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Book Site Visit
@@ -51,18 +52,18 @@ export default function IndependentHousesBodupalPage() {
       <section className="py-12 px-6" style={{ background: "var(--bg)", borderTop: "1px solid var(--edge)", borderBottom: "1px solid var(--edge)" }}>
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light mb-6 text-center">
-            Quick Facts — Independent Houses at The Pavillion
+            Quick Facts — Independent Houses at {project.name}
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
               <tbody style={{ color: "var(--ink-2)" }}>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)", width: "35%" }}>Project Name</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>The Pavillion by Bommaku Group</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{project.name} by {company.brandName}</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Location</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>Surya Hills, Boduppal, Hyderabad 500039</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{company.address.full}</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Property Type</td>
@@ -70,11 +71,11 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Total Units</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>33 independent houses (limited gated community)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{project.overview.totalVillas} independent houses (limited gated community)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Configuration</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>G+1+Penthouse (Ground + First Floor + Private Penthouse)</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{project.overview.configuration} (Ground + First Floor + Private Penthouse)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>BHK</td>
@@ -90,7 +91,7 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Price Range</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>₹2.1 Cr to ₹3.0 Cr</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>From {project.families.silver.priceDisplay} onwards</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Shared Walls</td>
@@ -110,7 +111,7 @@ export default function IndependentHousesBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Approvals</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>HMDA Registered, 30-year clear title EC available</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>GP Development, 30-year clear title EC available</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Bank Approvals</td>
@@ -286,7 +287,7 @@ export default function IndependentHousesBodupalPage() {
                 <li>• G+1+Penthouse (3 levels)</li>
                 <li>• 3 BHK + Pooja Room</li>
                 <li>• 24,000 SFT recreation zone</li>
-                <li>• HMDA registered project</li>
+                <li>• GP Development project</li>
                 <li>• Starting ₹2.1 Cr onwards</li>
               </ul>
             </div>
@@ -486,8 +487,8 @@ export default function IndependentHousesBodupalPage() {
             </div>
 
             <div>
-              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">7. Is this HMDA approved?</h3>
-              <p className="text-sm">Yes. The Pavillion is HMDA registered project in Surya Hills Layout. All legal approvals in place. Individual sale deeds for each villa plot. Bank loan approved project.</p>
+              <h3 style={{ color: "var(--ink)" }} className="font-semibold mb-2">7. Is this GP Development?</h3>
+              <p className="text-sm">Yes. The Pavillion is GP Development project in Surya Hills Layout. Individual sale deeds for each villa plot. Bank loan approved project.</p>
             </div>
 
             <div>

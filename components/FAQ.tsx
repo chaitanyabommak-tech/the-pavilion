@@ -3,47 +3,56 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Script from "next/script";
+import { project, company, recreation, banks, APPROVAL_LABEL } from "@/src/content/facts";
 
 const faqs = [
   {
-    question: "Where is The Pavillion located?",
-    answer: "The Pavillion is located in Surya Hills, Boduppal, East Hyderabad. It's just 5 minutes from Uppal Main Road, 8 minutes from Uppal Metro Station, and 12 km from ORR Exit No. 9."
+    question: `Where is ${project.name} located?`,
+    answer: `${project.name} is located in ${project.location.area}, East Hyderabad. It's just 5 minutes from Uppal Main Road, 8 minutes from Uppal Metro Station, and 12 km from ORR Exit No. 9.`
   },
   {
-    question: "How many villas are there in The Pavillion?",
-    answer: "The Pavillion comprises 33 luxury standalone villas in a low-density gated community, ensuring privacy and exclusivity for residents."
+    question: `How many villas are there in ${project.name}?`,
+    answer: `${project.name} comprises ${project.overview.totalVillas} villas across ${project.overview.totalBlocks} blocks in ${project.location.area}. Each villa is ${project.overview.configuration} configuration with 3 BHK + Pooja Room.`
   },
   {
     question: "What is the price range of villas?",
-    answer: "Villas at The Pavillion start from ₹1.87 Cr onwards, varying based on plot size, configuration, and facing direction."
+    answer: `Villas at ${project.name} start from ${project.families.silver.priceDisplay} onwards, varying based on plot size, configuration, and facing direction.`
   },
   {
     question: "What are the villa configurations available?",
-    answer: "We offer G+1+Penthouse villas with 3 BHK + Pooja Room configuration. Plot sizes range from 165 to 228 Sq. Yds with built-up areas from 2,300 to 2,500 SFT."
+    answer: `We offer ${project.overview.configuration} villas with 3 BHK + Pooja Room configuration. Plot sizes range from ${project.families.silver.plotSizes[0]} to 250 Sq. Yds with built-up areas from ${project.families.silver.builtUpSft} to 2,600 SFT.`
   },
   {
-    question: "Is The Pavillion HMDA approved?",
-    answer: "Yes, The Pavillion is a registered HMDA Circle Project. All legal approvals and documentation are in place and available for verification."
+    question: `What kind of development is ${project.name}?`,
+    answer: `${project.name} is a ${APPROVAL_LABEL} by ${company.brandName} at ${project.location.area}. Each buyer owns their individual plot and the villa that Bommaku builds on it. Before you book, we share the full document set with you and your lawyer for independent verification.`
+  },
+  {
+    question: "Can I verify the documents before booking?",
+    answer: "Yes. Visit our site office with your lawyer, or ask us to share copies in advance. We encourage every buyer to complete independent legal checks."
+  },
+  {
+    question: `Is it ${project.name} or The Pavilion?`,
+    answer: `Our project is named ${project.name}, with a double L. Many people search for it as The Pavilion — both lead to the same ${project.overview.totalVillas}-villa ${APPROVAL_LABEL} at ${project.location.area}.`
   },
   {
     question: "What amenities are provided?",
-    answer: "The Pavillion features a 24,000 SFT Bommaku Recreation Zone with swimming pool, infinity pool, gym, yoga room, sauna, sports courts (football, pickleball, cricket), restaurant, cafe, Zen garden, kids' play area, and professionally managed wellness and lifestyle facilities."
+    answer: `${project.name} features a ${recreation.totalAreaDisplay} Bommaku Recreation Zone with ${recreation.confirmed.join(", ").toLowerCase()}.`
   },
   {
     question: "Do you provide bank loan assistance?",
-    answer: "Yes, the project is approved by major banks including SBI, ICICI, HDFC, Bajaj Finance, Kotak, and Karur Vysya Bank for home loan financing."
+    answer: `Yes. Our team guides you through home-loan options and the documents lenders usually ask for. Loan eligibility and sanction are decided by the lender. ${banks.faqAnswer}`
   },
   {
     question: "Can I customize my villa?",
-    answer: "Yes! The Pavillion offers a 'clean slate' concept where you can customize your villa during construction - from layouts to finishes - before the first pour of concrete."
+    answer: `Yes! ${project.name} offers 'The Clean Slate' — ${project.cleanSlate.description}. You can customize layouts and finishes before construction. ${project.cleanSlate.note}.`
   },
   {
     question: "What is the possession timeline?",
-    answer: "Construction is ongoing. Please contact our sales team at +91 96760 77142 for current project status and expected possession timelines."
+    answer: `Construction is ongoing. Please contact our sales team at ${company.contact.phoneDisplay} for current project status and expected possession timelines.`
   },
   {
     question: "How can I book a site visit?",
-    answer: "You can book a site visit by calling +91 96760 77142, WhatsApp at +91 96760 77142, or filling the enquiry form on our website. Our team typically responds within 2 hours."
+    answer: `You can book a site visit by calling ${company.contact.phoneDisplay}, WhatsApp at ${company.contact.phoneDisplay}, or filling the enquiry form on our website. Our team typically responds within 2 hours.`
   }
 ];
 
