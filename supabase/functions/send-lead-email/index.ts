@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const TO_EMAIL = "groupbommaku@gmail.com";
 const FROM_EMAIL = "The Pavillion <noreply@bommakugroup.com>";
+const WHATSAPP_URL = "https://wa.me/message/B4OTHVQIALB3I1";
 
 serve(async (req: Request) => {
   try {
@@ -38,7 +39,7 @@ serve(async (req: Request) => {
             ${r.message ? `<tr><td style="padding:8px 0;color:#7a7068;font-size:13px;vertical-align:top;">Message</td><td style="padding:8px 0;color:#1a1510;">${r.message}</td></tr>` : ""}
           </table>
           <div style="margin-top:24px;">
-            <a href="https://wa.me/919676077142?text=Hi%20${encodeURIComponent(r.name)}%2C%20this%20is%20Bommak%20Constructions%20regarding%20your%20enquiry%20about%20The%20Pavilion." style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Reply on WhatsApp</a>
+            <a href="${WHATSAPP_URL}" style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Reply on WhatsApp</a>
           </div>
         </div>`;
     } else if (table === "site_visits") {
@@ -56,7 +57,7 @@ serve(async (req: Request) => {
             ${r.message ? `<tr><td style="padding:8px 0;color:#7a7068;font-size:13px;vertical-align:top;">Notes</td><td style="padding:8px 0;color:#1a1510;">${r.message}</td></tr>` : ""}
           </table>
           <div style="margin-top:24px;">
-            <a href="https://wa.me/919676077142?text=Hi%20${encodeURIComponent(r.name)}%2C%20confirming%20your%20site%20visit%20to%20The%20Pavilion." style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Confirm on WhatsApp</a>
+            <a href="${WHATSAPP_URL}" style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Confirm on WhatsApp</a>
           </div>
         </div>`;
     } else if (table === "brochure_downloads") {
@@ -72,7 +73,7 @@ serve(async (req: Request) => {
             ${r.email ? `<tr><td style="padding:8px 0;color:#7a7068;font-size:13px;">Email</td><td style="padding:8px 0;"><a href="mailto:${r.email}" style="color:#536878;">${r.email}</a></td></tr>` : ""}
           </table>
           <div style="margin-top:24px;">
-            <a href="https://wa.me/919676077142?text=Hi%20${encodeURIComponent(r.name)}%2C%20thanks%20for%20downloading%20The%20Pavilion%20brochure.%20Can%20I%20help%20you%20with%20anything%3F" style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Follow up on WhatsApp</a>
+            <a href="${WHATSAPP_URL}" style="background:#536878;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-size:14px;">📲 Follow up on WhatsApp</a>
           </div>
         </div>`;
     }

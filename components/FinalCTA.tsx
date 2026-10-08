@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 function track(type: "whatsapp" | "call", source: string) {
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
@@ -77,7 +78,9 @@ export default function FinalCTA() {
                 Download Brochure
               </button>
               <a
-                href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => track("call", "final_cta")}
                 className="border border-stone-beige/40 text-stone-beige hover:border-muted-gold hover:text-muted-gold px-10 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-300"
               >

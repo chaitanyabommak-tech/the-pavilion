@@ -20,6 +20,5 @@ export default async function FloatingCTADB() {
 
   return <FloatingCTA
     phoneNumber={settings.primary_phone}
-    whatsappNumber={settings.whatsapp_number}
   />
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 import Link from "next/link";
 import Script from "next/script";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -132,7 +133,7 @@ export default function VillasInBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call Now: +91 96760 77142
             </a>
             <a href="/#main-content" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
@@ -394,7 +395,7 @@ export default function VillasInBodupalPage() {
                 <strong>Priority Villa Selection</strong><br />
                 <strong>Offer Valid Till:</strong> June 30, 2026
               </p>
-              <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-6 py-3 text-xs tracking-[0.2em] uppercase inline-block rounded">
+              <a href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-6 py-3 text-xs tracking-[0.2em] uppercase inline-block rounded">
                 Call to Book
               </a>
             </div>
@@ -709,10 +710,10 @@ export default function VillasInBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               Call: +91 96760 77142
             </a>
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               WhatsApp Us
             </a>
           </div>

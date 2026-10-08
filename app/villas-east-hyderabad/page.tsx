@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { project, company, APPROVAL_LABEL } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `Villas in East Hyderabad | ${project.name} Boduppal - ${project.overview.totalVillas} Luxury Villas`,
@@ -35,7 +36,7 @@ export default function VillasEastHyderabadPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas in East Hyderabad`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               WhatsApp: {company.contact.phoneDisplay}
             </a>
             <Link href="/#book-site-visit" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">

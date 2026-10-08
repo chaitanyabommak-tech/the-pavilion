@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { project, company } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `Customizable Villas in Boduppal | ${project.name} - Design Your Dream Home`,
@@ -24,7 +25,7 @@ export default function VillasWithCustomizationPage() {
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
             Complete design freedom. Customize elevations, floor plans, and finishes before construction. In-house architects guide you through every choice. From {project.families.silver.priceDisplay}.
           </p>
-          <a href={`${company.contact.whatsappUrl}?text=Hi, I want to customize a villa at ${project.name}`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block">
             Start Customizing
           </a>
         </div>

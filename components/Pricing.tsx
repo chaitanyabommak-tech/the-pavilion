@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
 import { company, project, banks } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 function track(type: "whatsapp" | "call", source: string) {
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
@@ -215,7 +216,7 @@ export default function Pricing() {
               Book Site Visit
             </button>
             <a
-              href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("whatsapp", "pricing")}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `NRI Villa Investment in Hyderabad | ${project.name} Boduppal | ${company.brandName}`,
@@ -263,14 +264,14 @@ export default function NRIPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919676077142&text=Hi%2C%20I'm%20an%20NRI%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20schedule%20a%20consultation."
+              href="WHATSAPP_URL"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"
             >
               WhatsApp Us
             </a>
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call India: {company.contact.phoneDisplay}
             </a>
           </div>

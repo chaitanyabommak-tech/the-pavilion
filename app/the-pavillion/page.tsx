@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { company, project, APPROVAL_LABEL, banks, recreation } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `${project.name} Boduppal | ${project.overview.totalVillas} Luxury Villas by ${company.brandName}`,
@@ -217,11 +218,11 @@ export default function ThePavillionPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call: {company.contact.phoneDisplay}
             </a>
             <a
-              href={`${company.contact.whatsappUrl}?text=Hi%2C%20I'm%20interested%20in%20${encodeURIComponent(project.name)}%20villas.%20I'd%20like%20to%20book%20a%20site%20visit.`}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"

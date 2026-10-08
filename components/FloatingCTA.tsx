@@ -4,15 +4,14 @@ import { useState } from "react";
 import LeadFormModal from "./LeadFormModal";
 import { getDb } from "@/lib/supabase";
 import { trackPhoneClick, trackWhatsAppClick, trackEvent } from "@/lib/tracking";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 interface FloatingCTAProps {
   phoneNumber?: string;
-  whatsappNumber?: string;
 }
 
 export default function FloatingCTA({
-  phoneNumber = "+919676077142",
-  whatsappNumber = "919676077142"
+  phoneNumber = "+919676077142"
 }: FloatingCTAProps = {}) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -31,7 +30,7 @@ export default function FloatingCTA({
     <>
       {/* Floating WhatsApp — desktop only (lg+) */}
       <a
-        href={`https://wa.me/${whatsappNumber}`}
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => track("whatsapp", "floating_desktop")}
@@ -94,7 +93,7 @@ export default function FloatingCTA({
 
         {/* WhatsApp */}
         <a
-          href={`https://wa.me/${whatsappNumber}`}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open WhatsApp"

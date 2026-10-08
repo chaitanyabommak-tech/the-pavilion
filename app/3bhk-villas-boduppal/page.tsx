@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { company, project, APPROVAL_LABEL } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `3 BHK Villas in Boduppal | ${project.name} - Standalone Luxury Homes`,
@@ -38,7 +39,7 @@ export default function ThreeBHKVillasBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Call: {company.contact.phoneDisplay}
             </a>
             <a href="/#main-content" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
@@ -534,10 +535,10 @@ export default function ThreeBHKVillasBodupalPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               Call: {company.contact.phoneDisplay}
             </a>
-            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               WhatsApp Us
             </a>
           </div>

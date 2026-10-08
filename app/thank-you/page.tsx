@@ -1,4 +1,5 @@
 'use client';
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 import { useEffect } from "react";
 import type { Metadata } from "next";
@@ -63,7 +64,7 @@ export default function ThankYouPage() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <a
-            href="https://wa.me/919676077142&text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20for%20The%20Pavillion.%20Can%20you%20help%20me%3F"
+            href="WHATSAPP_URL"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick('thank_you_page')}
@@ -83,7 +84,7 @@ export default function ThankYouPage() {
         <p style={{ color: "var(--ink-3)" }} className="text-sm">
           Surya Hills, Boduppal, Hyderabad &nbsp;|&nbsp;{" "}
           <a
-            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
+            href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer"
             onClick={() => trackPhoneClick('+919676077142', 'thank_you_page')}
             style={{ color: "var(--accent)" }}
           >

@@ -27,7 +27,7 @@ export const company = {
   contact: {
     phone: "+919676077142",
     phoneDisplay: "+91 96760 77142",
-    whatsappUrl: "https://wa.me/919676077142",
+    // whatsappUrl removed - use WHATSAPP_URL from @/src/lib/constants instead
     telUrl: "tel:+919676077142",
     email: "bommakugroup@gmail.com",
     emailRecommended: "sales@bommakugroup.com", // TODO_CONFIRM: Set up domain email

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { trackEvent, trackPhoneClick } from "@/lib/tracking";
+import { company } from "@/src/content/facts";
 
 const highlights = [
   { time: "5 min",  label: "away from Uppal Main Road" },
@@ -61,8 +62,8 @@ export default function LocationAdvantage() {
               Get Location <span aria-hidden="true">→</span>
             </a>
             <a
-              href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
-              onClick={() => trackPhoneClick('+919676077142', 'location_section')}
+              href={company.contact.telUrl}
+              onClick={() => trackPhoneClick(company.contact.phone, 'location_section')}
               className="btn-get-location flex items-center gap-2"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

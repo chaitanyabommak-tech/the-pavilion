@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { company, project, APPROVAL_LABEL, recreation } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 export const metadata: Metadata = {
   title: `About ${company.brandName} | Luxury Villa Developers in Hyderabad`,
@@ -143,7 +144,7 @@ export default function AboutPage() {
           <div className="space-y-4 mb-8 text-center">
             <p style={{ color: "var(--ink-2)" }}>
               <strong style={{ color: "var(--ink)" }}>Phone:</strong>{" "}
-              <a href={company.contact.whatsappUrl + `?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }} className="hover:opacity-70">
                 {company.contact.phoneDisplay}
               </a>
             </p>

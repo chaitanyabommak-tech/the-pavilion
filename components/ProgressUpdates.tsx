@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { getDb } from "@/lib/supabase";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 function track(type: "whatsapp" | "call", source: string) {
   getDb()?.from("interactions").insert({ type, source }).then(() => {});
@@ -119,7 +120,7 @@ export default function ProgressUpdates() {
           className="mt-10 flex items-center gap-4"
         >
           <a
-            href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("whatsapp", "progress_updates")}

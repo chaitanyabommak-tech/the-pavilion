@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ export default function TermsPage() {
               <strong style={{ color: "var(--ink)" }}>Bommaku Group</strong><br />
               Surya Hills, Boduppal, Hyderabad — 500039, Telangana<br />
               Email: <a href="mailto:bommakugroup@gmail.com" style={{ color: "var(--accent)" }}>bommakugroup@gmail.com</a><br />
-              Phone: <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
+              Phone: <a href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>+91 96760 77142</a>
             </p>
           </section>
 

@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Script from "next/script";
 import { project, company, recreation, banks, APPROVAL_LABEL } from "@/src/content/facts";
+import { WHATSAPP_URL } from "@/src/lib/constants";
 
 const faqs = [
   {
@@ -52,7 +53,7 @@ const faqs = [
   },
   {
     question: "How can I book a site visit?",
-    answer: `You can book a site visit by calling ${company.contact.phoneDisplay}, WhatsApp at ${company.contact.phoneDisplay}, or filling the enquiry form on our website. Our team typically responds within 2 hours.`
+    answer: `You can book a site visit by calling ${company.contact.phoneDisplay}, messaging us on WhatsApp, or filling the enquiry form on our website. Our team typically responds within 2 hours.`
   }
 ];
 
@@ -179,7 +180,9 @@ export default function FAQ() {
               Have more questions?
             </p>
             <a
-              href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-block px-8 py-4 text-xs tracking-[0.2em] uppercase"
             >
               Speak to Sales
