@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { trackPhoneClick, trackWhatsAppClick, trackEvent } from "@/lib/tracking";
-import { company, project } from "@/src/content/facts";
+import { company } from "@/src/content/facts";
+import { WHATSAPP_BUSINESS_URL } from "@/src/lib/constants";
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,9 +47,10 @@ export default function MobileStickyCTA() {
         >
           {/* WhatsApp Chat Button */}
           <a
-            href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`}
+            href={WHATSAPP_BUSINESS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Chat with Bommaku Group on WhatsApp"
             onClick={handleWhatsAppClick}
             className="flex flex-col items-center justify-center py-3 transition-colors hover:opacity-80"
             style={{ background: "var(--bg)" }}
