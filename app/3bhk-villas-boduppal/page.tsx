@@ -29,17 +29,17 @@ export default function ThreeBHKVillasBodupalPage() {
             3 BHK VILLAS BODUPPAL
           </p>
           <h1 style={{ color: "var(--ink)" }} className="font-heading text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
-            3 BHK Villas in Boduppal – <span className="italic" style={{ color: "var(--ink-3)" }}>The Pavillion</span>
+            3 BHK Villas in Boduppal – <span className="italic" style={{ color: "var(--ink-3)" }}>{project.name}</span>
           </h1>
           <div className="w-16 h-px mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Spacious 3 BHK + Pooja Room luxury villas in Surya Hills, Boduppal. 2,300-2,500 SFT standalone homes spread across G+1+Penthouse. 165-228 Sq. Yds plots. No shared walls. From ₹2.1 Cr onwards.
+            Spacious 3 BHK + Pooja Room luxury villas in {project.location.area}. 2,300-2,500 SFT standalone homes spread across {project.overview.configuration}. 165-228 Sq. Yds plots. No shared walls. From {project.families.silver.priceDisplay} onwards.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
-              Call: +91 96760 77142
+            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+              Call: {company.contact.phoneDisplay}
             </a>
             <a href="/#main-content" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
               Book Site Visit
@@ -52,14 +52,14 @@ export default function ThreeBHKVillasBodupalPage() {
       <section className="py-12 px-6" style={{ background: "var(--bg)", borderTop: "1px solid var(--edge)", borderBottom: "1px solid var(--edge)" }}>
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-2xl sm:text-3xl font-light mb-6 text-center">
-            Quick Facts — 3 BHK Villas at The Pavillion
+            Quick Facts — 3 BHK Villas at {project.name}
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
               <tbody style={{ color: "var(--ink-2)" }}>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)", width: "35%" }}>Project Name</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>The Pavillion by Bommaku Group</td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{project.name} by {company.brandName}</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Location</td>
@@ -135,7 +135,7 @@ export default function ThreeBHKVillasBodupalPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-semibold border" style={{ borderColor: "var(--edge)", color: "var(--ink)" }}>Contact</td>
-                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>+91 96760 77142 | <a href="https://bommakugroup.com" className="underline" style={{ color: "var(--accent)" }}>bommakugroup.com</a></td>
+                  <td className="p-3 border" style={{ borderColor: "var(--edge)" }}>{company.contact.phoneDisplay} | <a href="https://bommakugroup.com" className="underline" style={{ color: "var(--accent)" }}>bommakugroup.com</a></td>
                 </tr>
               </tbody>
             </table>
@@ -234,7 +234,7 @@ export default function ThreeBHKVillasBodupalPage() {
       <section className="py-16 px-6" style={{ background: "var(--surface)" }}>
         <div className="max-w-4xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl sm:text-4xl font-light mb-6">
-            3 BHK Villa Types at The Pavillion
+            3 BHK Villa Types at {project.name}
           </h2>
           <div className="w-12 h-px mb-8" style={{ background: "var(--accent)" }} />
 
@@ -530,14 +530,14 @@ export default function ThreeBHKVillasBodupalPage() {
           <div className="w-16 h-px mx-auto mb-8" style={{ background: "var(--accent)" }} />
 
           <p style={{ color: "var(--ink-2)" }} className="text-base leading-relaxed mb-8">
-            Only 33 villas. Limited 3 BHK units available. Starting ₹2.1 Cr. Early bird pricing. Book site visit now.
+            Only {project.overview.totalVillas} villas. Limited 3 BHK units available. Starting {project.families.silver.priceDisplay}. Early bird pricing. Book site visit now.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
-              Call: +91 96760 77142
+            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+              Call: {company.contact.phoneDisplay}
             </a>
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
+            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-secondary px-10 py-4 text-xs tracking-[0.2em] uppercase">
               WhatsApp Us
             </a>
           </div>
@@ -554,7 +554,7 @@ export default function ThreeBHKVillasBodupalPage() {
             <Link href="/villas-in-boduppal" style={{ color: "var(--accent)" }}>Villas in Boduppal</Link>
             <Link href="/villas-near-uppal" style={{ color: "var(--accent)" }}>Villas Near Uppal Metro</Link>
             <Link href="/independent-houses-boduppal" style={{ color: "var(--accent)" }}>Independent Houses Boduppal</Link>
-            <Link href="/" style={{ color: "var(--accent)" }}>The Pavillion Homepage</Link>
+            <Link href="/" style={{ color: "var(--accent)" }}>{project.name} Homepage</Link>
           </div>
         </div>
       </section>

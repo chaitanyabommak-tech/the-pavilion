@@ -37,7 +37,7 @@ export default function NRIPage() {
           </p>
 
           <p style={{ color: "var(--ink-2)" }} className="text-lg leading-relaxed max-w-3xl">
-            The Pavillion is designed for NRI families investing in Hyderabad real estate. We handle the process remotely — you don't need to fly down for every signature. <Link href="/blog/nri-step-by-step-guide-buying-villa-hyderabad" className="underline" style={{ color: "var(--accent)" }}>Read the complete NRI step-by-step guide →</Link>
+            {project.name} is designed for NRI families investing in Hyderabad real estate. We handle the process remotely — you don't need to fly down for every signature. <Link href="/blog/nri-step-by-step-guide-buying-villa-hyderabad" className="underline" style={{ color: "var(--accent)" }}>Read the complete NRI step-by-step guide →</Link>
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function NRIPage() {
                 NRI HOME LOANS
               </h3>
               <p style={{ color: "var(--ink-2)" }} className="leading-relaxed">
-                The Pavillion is approved by SBI, ICICI, HDFC, Bajaj Finance, Kotak, and Karur Vysya for NRI home loans. Most banks offer up to 80% LTV (Loan-to-Value) for NRIs with valid documentation.
+                {project.name} is approved by SBI, ICICI, HDFC, Bajaj Finance, Kotak, and Karur Vysya for NRI home loans. Most banks offer up to 80% LTV (Loan-to-Value) for NRIs with valid documentation.
               </p>
             </div>
 
@@ -223,7 +223,7 @@ export default function NRIPage() {
                 Can I get a home loan as an NRI?
               </h3>
               <p style={{ color: "var(--ink-2)" }} className="leading-relaxed">
-                Yes. The Pavillion is approved by major banks for NRI home loans. Loan terms: up to 80% LTV, 15-20 year tenure, interest rates typically 0.5-1% higher than resident Indian rates.
+                Yes. {project.name} is approved by major banks for NRI home loans. Loan terms: up to 80% LTV, 15-20 year tenure, interest rates typically 0.5-1% higher than resident Indian rates.
               </p>
             </div>
 
@@ -270,8 +270,8 @@ export default function NRIPage() {
             >
               WhatsApp Us
             </a>
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
-              Call India: +91 96760 77142
+            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+              Call India: {company.contact.phoneDisplay}
             </a>
           </div>
         </div>
