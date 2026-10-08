@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function ThePavillionPage() {
   return (
     <main className="min-h-screen" style={{ background: "var(--bg)" }}>
-      <Breadcrumbs items={[{ label: "The Pavillion", href: "/the-pavillion" }]} />
+      <Breadcrumbs items={[{ label: project.name, href: "/the-pavillion" }]} />
 
       {/* Hero */}
       <section className="py-16 md:py-24 px-6">
@@ -114,7 +114,7 @@ export default function ThePavillionPage() {
       <section className="py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 style={{ color: "var(--ink)" }} className="font-heading text-3xl md:text-4xl font-light mb-8">
-            What Makes The Pavillion Different
+            What Makes {project.name} Different
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -132,7 +132,7 @@ export default function ThePavillionPage() {
                 LOW DENSITY
               </h3>
               <p style={{ color: "var(--ink-2)" }} className="leading-relaxed">
-                33 families across 3 acres = 750 SFT of recreation per family. Most projects offer 200 SFT per family. You get 3-4X more space, fewer crowds, more privacy.
+                {project.overview.totalVillas} families across {project.overview.siteArea} = 750 SFT of recreation per family. Most projects offer 200 SFT per family. You get 3-4X more space, fewer crowds, more privacy.
               </p>
             </div>
 
@@ -217,11 +217,11 @@ export default function ThePavillionPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/919676077142?text=Hi, I am interested in The Pavillion villas" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
-              Call: +91 96760 77142
+            <a href={`${company.contact.whatsappUrl}?text=Hi, I am interested in ${project.name} villas`} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center">
+              Call: {company.contact.phoneDisplay}
             </a>
             <a
-              href="https://wa.me/919676077142&text=Hi%2C%20I'm%20interested%20in%20The%20Pavillion%20villas.%20I'd%20like%20to%20book%20a%20site%20visit."
+              href={`${company.contact.whatsappUrl}?text=Hi%2C%20I'm%20interested%20in%20${encodeURIComponent(project.name)}%20villas.%20I'd%20like%20to%20book%20a%20site%20visit.`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary px-8 py-4 text-xs tracking-[0.2em] uppercase inline-block text-center"
